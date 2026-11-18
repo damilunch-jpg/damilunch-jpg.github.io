@@ -1,13 +1,21 @@
 /* Generato da scripts/sync_albo.py. Elenco degli atti letti dagli albi pretori. */
 window.M5S_ALBO = {
-  "aggiornato": "2026-11-18T13:22:53+01:00",
+  "aggiornato": "2026-11-18T18:19:20+01:00",
   "comuni": {
     "cori": {
       "ok": true,
+      "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
-      "aggiornato": "2026-11-18T13:20:04+01:00",
+      "aggiornato": "2026-11-18T17:15:26+01:00",
       "atti": [
+        {
+          "titolo": "VENDITA A CORPO DEL MATERIALE LEGNOSO RITRAIBILE DALLE PARTICELLE FORESTALI COMUNALI N. 17 \"FRANNO PIANO\" (TAGLIO DI FINE TURNO) E NN. 12 \"FOLEGARE MURIATORE\", 20 \"COLLE ROSELLO\" E 21 \"SELVA DI CORI\" (TAGLIO DI DIRADAMENTO) A SEGUITO DI TRATTATIVA PRIVATA (EX ART. 26 R.D. 827/1924). AGGIUDICAZIONE DEFINITIVA IN FAVORE DELLA DITTA MONTE ARTEMISIO LEGNAMI S.R.L., APPROVAZIONE QUADRO ECONOMICO COMPLESSIVO (€ 72.822,48), RIMODULAZIONE SCADENZE RATEALI E APPROVAZIONE SCHEMA DI CONTRATTO (DETERMINA/20",
+          "data": "2026-11-18",
+          "tipo": "Determinazioni",
+          "numero": "1298/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8528"
+        },
         {
           "titolo": "LAVORI ANTINCENDIO DELLA SCUOLA MATERNA RODARI IN GIULIANELLO DI CORI - CUP J68H25002250001 - DECRETO MINISTERIALE DEL 30 GENNAIO 2026, N. 14 E A SEGUITO DI AVVISO PUBBLICO DEL 26 NOVEMBRE 2025 E DEL SUCCESSIVO AVVISO PUBBLICO DI RIAPERTURA DEI TERMINI DEL 16 MARZO 2026. I^ LOTTO DELL'IMPORTO OO.PP. € 50.000,00. APPROVAZIONE PROGETTO ESECUTIVO ED AFFIDAMENTO DEI LAVORI DI APPALTO. (DETERMINA/2026/935/17-11-2026)(AREA 4- GRANDI OPERE E LAVORI PUBBLICI - 80)",
           "data": "2026-11-18",
@@ -210,21 +218,15 @@ window.M5S_ALBO = {
           "tipo": "Determinazioni",
           "numero": "1269/2026",
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8499"
-        },
-        {
-          "titolo": "LIQUIDAZIONE FATTURA - NARDINI LEONARDO 05-11-2026/FPA 1/26 (2026.01.844) (DETERMINA/2026/907/11-11-2026)(AREA 4- GRANDI OPERE E LAVORI PUBBLICI - 76)",
-          "data": "2026-11-11",
-          "tipo": "Determinazioni",
-          "numero": "1268/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8498"
         }
       ]
     },
     "bassiano": {
       "ok": true,
+      "esito": "atti",
       "errore": "",
       "fonte": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145",
-      "aggiornato": "2026-11-18T13:21:42+01:00",
+      "aggiornato": "2026-11-18T18:04:46+01:00",
       "atti": [
         {
           "titolo": "LIQUIDAZIONE DI SPESA ALLA SOCIETÀ WINTEL SRL, PER FORNITURA SCHEDA VOIP DSP PER CENTRALINO PANASONIC E INSTALLAZIONE E PROGRAMMAZIONE DEL CENTRALINO CON AGGIORNAMENTO PRESSO LA CASA COMUNALE – C.I.G. BA733CD1FE. (DETERMINA/2026/296/16-11-2026)(TECNICO - 131)",
@@ -440,17 +442,26 @@ window.M5S_ALBO = {
     },
     "sonnino": {
       "ok": false,
+      "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-18T13:22:53+01:00",
+      "aggiornato": "2026-11-18T18:19:20+01:00",
       "atti": []
     },
     "roccagorga": {
       "ok": true,
+      "esito": "atti",
       "errore": "",
       "fonte": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/",
-      "aggiornato": "2026-11-18T13:22:06+01:00",
+      "aggiornato": "2026-11-18T18:06:40+01:00",
       "atti": [
+        {
+          "titolo": "AVVISO DI CONVOCAZIONE DEL CONSIGLIO COMUNALE IN SEDUTA STRAORDINARIA DI PRIMA CONVOCAZIONE PER IL GIONO 24-11-2026 - ORE 11:00, ED IN SECONDA CONVOCAZIONE IN DATA 25 NOVEMBRE 2026 - ORE 11:00.",
+          "data": "2026-11-18",
+          "tipo": "Avvisi",
+          "numero": "",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/avvisi/2026/Pratica_1795012808266/"
+        },
         {
           "titolo": "DETERMINAZIONE DEL DIPARTIMENTO 2 N. 40 DEL 16-11-2026 AVENTE AD OGGETTO \"COSTITUZIONE FONDO RISORSE DECENTRATE ANNO 2026\"",
           "data": "2026-11-16",
@@ -560,16 +571,18 @@ window.M5S_ALBO = {
     },
     "norma": {
       "ok": false,
-      "errore": "La pagina del Comune non elenca atti e l'albo Halley indicato in homepage non è raggiungibile",
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059016/mc/mc_gridev_messi_datigrid.php?x=",
-      "aggiornato": "2026-11-18T13:21:00+01:00",
+      "aggiornato": "2026-11-18T17:52:12+01:00",
       "atti": []
     },
     "cisterna-di-latina": {
       "ok": false,
+      "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
-      "aggiornato": "2026-11-18T13:20:35+01:00",
+      "aggiornato": "2026-11-18T17:32:29+01:00",
       "atti": [
         {
           "titolo": "Allineamento consumi e integrazione impegno di spesa per il pagamento di consumi derivanti dalla fornitura di energia elettrica per il Pod IT001E60513480 - Centro Sportivo San Valentino attivato con ODA n. 9196613",
@@ -624,16 +637,18 @@ window.M5S_ALBO = {
     },
     "sezze": {
       "ok": false,
-      "errore": "Fonte non raggiungibile: il sito non ha risposto in tempo",
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi_datigrid.php?x=",
-      "aggiornato": "2026-11-18T13:21:35+01:00",
+      "aggiornato": "2026-11-18T18:04:18+01:00",
       "atti": []
     },
     "priverno": {
       "ok": false,
+      "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "aggiornato": "2026-11-18T13:22:51+01:00",
+      "aggiornato": "2026-11-18T18:19:07+01:00",
       "atti": [
         {
           "titolo": "AVVISO DI DEPOSITO ATTI PRESSO LA CASA COMUNALE DI PRIVERNO",
