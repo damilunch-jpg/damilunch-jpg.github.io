@@ -13,12 +13,6 @@ on:
     - cron: "0 2 * * *"    # 04:00 ora legale
     - cron: "0 3 * * *"    # 04:00 ora solare
   workflow_dispatch:
-  # Prova: il push di questo file avvia la stessa lettura completa di workflow_dispatch.
-  # La riga push si toglie a fine prova; restano schedule e workflow_dispatch.
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/sync-albo.yml"
 
 permissions:
   contents: write
