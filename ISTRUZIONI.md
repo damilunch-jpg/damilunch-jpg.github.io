@@ -201,7 +201,7 @@ Fonti usate:
 | Priverno | Scheda «Albo pretorio» su ServiziOnLine; in alternativa l'albo Halley del Comune |
 | Sonnino | Albo URBI del Comune (`DB_NAME=n1201895`) |
 
-Sezze, Priverno e diversi portali Halley, al momento della prima pubblicazione, non completavano la connessione cifrata da questa rete. Sonnino rispondeva che il sistema è in manutenzione. In quei casi la pagina del comune lo dice esplicitamente. L'azione notturna riprova da sola.
+Alla prima prova dell'azione (18 novembre 2026) sono stati letti atti per Cori (30), Bassiano (30), Roccagorga (15), Cisterna di Latina (7) e Priverno (10). Norma e Sezze hanno risposto, ma l'elenco Halley risultava vuoto. Sonnino segnala che il portale è in manutenzione. I siti Halley a volte interrompono la connessione: in quel caso gli atti già raccolti restano in pagina e compare la nota «Fonte non raggiungibile». L'azione notturna riprova da sola.
 
 ---
 
