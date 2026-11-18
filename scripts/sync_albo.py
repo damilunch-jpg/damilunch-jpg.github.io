@@ -362,9 +362,13 @@ def parse_grid(xml_text: str, page_url: str):
 
 
 def enrich_halley_details(client: Client, acts, page_url: str):
-    """Se la griglia ha solo l'identificativo, legge la scheda dell'atto
-    (oggetto, tipo, numero, data). Non scarica i PDF."""
-    weak = [a for a in acts if a["titolo"].startswith("Atto ") or len(a["titolo"]) < 12]
+    """Legge la scheda dell'atto per tipo, numero e data. Non scarica i PDF."""
+    weak = [
+        a
+        for a in acts
+        if "dettaglio" in a.get("url", "")
+        and (not a.get("tipo") or a["titolo"].startswith("Atto ") or len(a["titolo"]) < 12)
+    ]
     if not weak:
         return acts
     mc = page_url.split("/mc/")[0] + "/mc/" if "/mc/" in page_url else page_url.rsplit("/", 1)[0] + "/"
@@ -444,7 +448,7 @@ def scrape_halley(client: Client, url: str):
         mc = folder.split("/mc/")[0] + "/mc/"
     else:
         mc = folder.rsplit("/", 1)[0] + "/"
-    grid = abs_url(mc, "mc_gridev_messi_datigrid.php?x=")
+    grid = abs_url(mc, "mc_gridev_messi_datigrid.php?x=&posStart=0&count=40")
     if grid not in candidates:
         candidates.append(grid)
     ricerca = abs_url(mc, "mc_p_ricerca.php")
@@ -455,20 +459,22 @@ def scrape_halley(client: Client, url: str):
     if ricerca not in candidates and "mc_p_ricerca" not in url:
         candidates.append(ricerca)
 
+    reachable_empty = False
     for candidate in candidates:
         try:
-            if candidate.endswith("mc_gridev_messi_datigrid.php?x=") or "datigrid.php" in candidate:
+            if "datigrid.php" in candidate:
                 body, final, _status = client.get(candidate)
                 parsed = parse_grid(body, final)
                 if parsed is None:
                     errors.append("griglia non in formato atteso")
+                    print(f"  griglia non XML ({len(body)} byte): {clean(body)[:160]}")
                     continue
-                if parsed:
-                    parsed = enrich_halley_details(client, parsed, final)
-                elif not re.search(r"<rows?\b", body, flags=re.I):
-                    errors.append("griglia vuota o illeggibile")
+                if not parsed:
+                    total = re.search(r'total_count="(\d+)"', body)
+                    print(f"  griglia senza righe utili ({len(body)} byte, total={total.group(1) if total else '?'})")
+                    reachable_empty = True
                     continue
-                return parsed, final
+                return enrich_halley_details(client, parsed, final), final
             body, final, _status = client.get(candidate)
             if "in manutenzione" in body.lower():
                 raise SourceError("Il portale dell'albo segnala una manutenzione in corso")
@@ -488,9 +494,12 @@ def scrape_halley(client: Client, url: str):
                     parsed = enrich_halley_details(client, parsed, grid_final)
                     return parsed, grid_final
             if found:
-                return found, final
+                return enrich_halley_details(client, found, final), final
+            reachable_empty = True
         except SourceError as exc:
             errors.append(str(exc))
+    if reachable_empty and not errors:
+        return [], url
     detail = "; ".join(errors[:3]) if errors else "pagina senza elenco di atti"
     raise SourceError(f"Albo Halley non utilizzabile ({detail})")
 

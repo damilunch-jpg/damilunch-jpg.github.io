@@ -7,8 +7,8 @@ on:
     # Mezzanotte in Europa/Roma durante l'ora solare (CET, UTC+1).
     - cron: "0 23 * * *"
   workflow_dispatch:
-  # Avvio una tantum: il push di questo file fa partire la prova.
-  # Il trigger push viene tolto subito dopo, restano schedule e workflow_dispatch.
+  # Avvio di prova: il push di questo file fa partire la sincronizzazione.
+  # Il trigger push viene tolto al termine della prova.
   push:
     branches: [main]
     paths:
