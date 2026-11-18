@@ -1,0 +1,89 @@
+[
+  {
+    "slug": "cori",
+    "nome": "Cori",
+    "alboUrl": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://www.comune.cori.lt.it/",
+    "scraper": "urbi",
+    "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954"
+  },
+  {
+    "slug": "cisterna-di-latina",
+    "nome": "Cisterna di Latina",
+    "alboUrl": "https://comune.cisterna.latina.it/it/page/albo-pretorio",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://comune.cisterna.latina.it/",
+    "scraper": "halley",
+    "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
+    "fallback": [
+      "https://www.halleyweb.com/c059005/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
+      "https://www.halleyweb.com/c059005/mc/mc_gridev_messi.php"
+    ]
+  },
+  {
+    "slug": "norma",
+    "nome": "Norma",
+    "alboUrl": "https://comune.norma.lt.it/documenti-albo-pretorio",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://comune.norma.lt.it/",
+    "scraper": "mycity",
+    "fonte": "https://comune.norma.lt.it/documenti-albo-pretorio",
+    "fallback": [
+      "https://www.halleyweb.com/c059016/mc/mc_gridev_messi.php",
+      "https://www.halleyweb.com/c059016/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059016"
+    ]
+  },
+  {
+    "slug": "sezze",
+    "nome": "Sezze",
+    "alboUrl": "https://servizi.comune.sezze.lt.it/ServiziOnLine/Istanze/landingIstanza?Id=1",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://www.comune.sezze.lt.it/",
+    "scraper": "servizionline",
+    "fonte": "https://servizi.comune.sezze.lt.it/ServiziOnLine/Istanze/landingIstanza?Id=1",
+    "fallback": [
+      "https://www.halleyweb.com/c059028/mc/mc_gridev_messi.php"
+    ]
+  },
+  {
+    "slug": "bassiano",
+    "nome": "Bassiano",
+    "alboUrl": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://comune.bassiano.lt.it/",
+    "scraper": "urbi",
+    "fonte": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145"
+  },
+  {
+    "slug": "roccagorga",
+    "nome": "Roccagorga",
+    "alboUrl": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://www.comune.roccagorga.lt.it/",
+    "scraper": "gazzetta",
+    "fonte": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/"
+  },
+  {
+    "slug": "priverno",
+    "nome": "Priverno",
+    "alboUrl": "https://servizi.comune.priverno.latina.it/ServiziOnLine/Istanze/landingIstanza?Id=17",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://www.comune.priverno.latina.it/",
+    "scraper": "servizionline",
+    "fonte": "https://servizi.comune.priverno.latina.it/ServiziOnLine/Istanze/landingIstanza?Id=17",
+    "fallback": [
+      "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
+      "https://www.halleyweb.com/c059019/mc/mc_gridev_messi.php"
+    ]
+  },
+  {
+    "slug": "sonnino",
+    "nome": "Sonnino",
+    "alboUrl": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://comune.sonnino.latina.it/",
+    "scraper": "urbi",
+    "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895"
+  }
+]

@@ -1,0 +1,101 @@
+# Editor degli articoli – https://app.pagescms.org
+# I publisher accedono con GitHub. Il salvataggio pubblica subito su main,
+# senza approvazione. Vedi ISTRUZIONI.md.
+
+media:
+  - name: immagini
+    label: Immagini degli articoli
+    input: img/articoli
+    output: /img/articoli
+    extensions: [png, jpg, jpeg, gif, webp]
+    rename: safe
+
+settings:
+  content:
+    merge: true
+  commit:
+    identity: user
+    templates:
+      create: "Articolo creato: {filename} ({userName})"
+      update: "Articolo aggiornato: {filename} ({userName})"
+      delete: "Articolo eliminato: {filename} ({userName})"
+      rename: "Articolo rinominato: {oldFilename} -> {newFilename} ({userName})"
+
+content:
+  - name: articoli
+    label: Articoli
+    type: collection
+    path: content/articoli
+    format: yaml-frontmatter
+    filename:
+      template: "{year}-{month}-{day}-{titolo}.md"
+      field: create
+    exclude: ["README.md"]
+    view:
+      fields: [titolo, data, comune, esempio]
+      primary: titolo
+      sort: [data, titolo, comune]
+      search: [titolo, estratto, comune]
+      default:
+        sort: data
+        order: desc
+    fields:
+      - name: titolo
+        label: Titolo
+        type: string
+        required: true
+      - name: data
+        label: Data
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: comune
+        label: Comune
+        type: select
+        required: true
+        description: Comune a cui si riferisce l'articolo. Compare nella pagina di quel comune e in homepage.
+        options:
+          values:
+            - name: cori
+              label: Cori
+            - name: cisterna-di-latina
+              label: Cisterna di Latina
+            - name: norma
+              label: Norma
+            - name: sezze
+              label: Sezze
+            - name: bassiano
+              label: Bassiano
+            - name: roccagorga
+              label: Roccagorga
+            - name: priverno
+              label: Priverno
+            - name: sonnino
+              label: Sonnino
+      - name: estratto
+        label: Estratto
+        type: text
+        required: true
+        description: Breve testo mostrato nell'elenco, prima di aprire l'articolo.
+      - name: esempio
+        label: Articolo di esempio
+        type: boolean
+        description: Se attivo, in pagina compare la dicitura «Articolo di esempio». Lasciare disattivo per gli articoli veri.
+      - name: immagine
+        label: Immagine (facoltativa)
+        type: image
+        options:
+          media: immagini
+          extensions: [png, jpg, jpeg, gif, webp]
+          rename: safe
+      - name: body
+        label: Testo
+        type: rich-text
+        required: true
+        description: Testo completo dell'articolo. Si possono usare titoli, elenchi, grassetto e link.
+        options:
+          format: markdown
+          media: immagini
+          path: img/articoli
+          rename: safe

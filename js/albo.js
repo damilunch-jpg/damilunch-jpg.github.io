@@ -1,0 +1,590 @@
+/* Generato da scripts/sync_albo.py. Elenco degli atti letti dagli albi pretori. */
+window.M5S_ALBO = {
+  "aggiornato": "2026-11-18T13:01:41+01:00",
+  "comuni": {
+    "cori": {
+      "ok": true,
+      "errore": "",
+      "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
+      "aggiornato": "2026-11-18T12:58:51+01:00",
+      "atti": [
+        {
+          "titolo": "LAVORI ANTINCENDIO DELLA SCUOLA MATERNA RODARI IN GIULIANELLO DI CORI - CUP J68H25002250001 - DECRETO MINISTERIALE DEL 30 GENNAIO 2026, N. 14 E A SEGUITO DI AVVISO PUBBLICO DEL 26 NOVEMBRE 2025 E DEL SUCCESSIVO AVVISO PUBBLICO DI RIAPERTURA DEI TERMINI DEL 16 MARZO 2026. I^ LOTTO DELL'IMPORTO OO.PP. € 50.000,00. APPROVAZIONE PROGETTO ESECUTIVO ED AFFIDAMENTO DEI LAVORI DI APPALTO. (DETERMINA/2026/935/17-11-2026)(AREA 4- GRANDI OPERE E LAVORI PUBBLICI - 80)",
+          "data": "2026-11-18",
+          "tipo": "Determinazioni",
+          "numero": "1297/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8527"
+        },
+        {
+          "titolo": "LAVORI ANTINCENDIO DELLA SCUOLA ELEMENTARE RADICCHI IN GIULIANELLO DI CORI - CUP J68H25002240001 - DECRETO MINISTERIALE DEL 30 GENNAIO 2026, N. 14 E A SEGUITO DI AVVISO PUBBLICO DEL 26 NOVEMBRE 2025 E DEL SUCCESSIVO AVVISO PUBBLICO DI RIAPERTURA DEI TERMINI DEL 16 MARZO 2026. I^ LOTTO DELL'IMPORTO OO.PP. € 130.000,00. APPROVAZIONE PROGETTO ESECUTIVO ED AFFIDAMENTO DEI LAVORI DI APPALTO. (DETERMINA/2026/934/17-11-2026)(AREA 4- GRANDI OPERE E LAVORI PUBBLICI - 79)",
+          "data": "2026-11-18",
+          "tipo": "Determinazioni",
+          "numero": "1296/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8526"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURE - PAGO PA 15-04-2026/5226012831 (2026.01.586) - PAGO PA 15-10-2026/5226035388 (2026.01.855) (DETERMINA/2026/933/17-11-2026)( AREA 1- ECONOMICO - FINANZIARIA - 151)",
+          "data": "2026-11-17",
+          "tipo": "Determinazioni",
+          "numero": "1294/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8524"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - SO.G.E.I. SRL 05-05-2026/8 (2026.01.875) (DETERMINA/2026/931/17-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 214)",
+          "data": "2026-11-17",
+          "tipo": "Determinazioni",
+          "numero": "1293/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8523"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - PROVINCIA RELIGIOSA DI SAN PIETRO 15-12-2025/430/700/GZ (2026.01.111) (DETERMINA/2026/924/13-11-2026)(AREA 2 - WELFARE - 237)",
+          "data": "2026-11-17",
+          "tipo": "Determinazioni",
+          "numero": "1291/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8521"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - IMMOBILIARE F.LLI CIOETA S.R.L. 01-10-2026/100/RV (2026.01.873) (DETERMINA/2026/930/17-11-2026)( AREA 1- ECONOMICO - FINANZIARIA - 150)",
+          "data": "2026-11-17",
+          "tipo": "Determinazioni",
+          "numero": "1290/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8520"
+        },
+        {
+          "titolo": "DOMANDA DI CONCESSIONE DERIVAZIONE DA CORPO IDRICO SOTTERRANEO SIGN. NARDIN G. PROT 22034 DEL 17-11-2026",
+          "data": "2026-11-17",
+          "tipo": "Atti altri enti",
+          "numero": "1292/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8522"
+        },
+        {
+          "titolo": "ACCERTAMENTO DI ENTRATA ED IMPEGNO DI SPESA DEL CONTRIBUTO REGIONALE PER RIMBORSI ALLE FAMIGLIE A BASSO REDDITO PER L'ACQUISTO DEI LIBRI DI TESTO. ANNO SCOLASTICO 2026-2027. LEGGE 23.12.98 N.448. (DETERMINA/2026/932/17-11-2026)(AREA 2 - WELFARE - 238)",
+          "data": "2026-11-17",
+          "tipo": "Determinazioni",
+          "numero": "1295/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8525"
+        },
+        {
+          "titolo": "SPESE DI SPEDIZIONE ATTI TRAMITE PIATTAFORMA SEND (DETERMINA/2026/925/16-11-2026)( AREA 1- ECONOMICO - FINANZIARIA - 148)",
+          "data": "2026-11-16",
+          "tipo": "Determinazioni",
+          "numero": "1287/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8517"
+        },
+        {
+          "titolo": "IMPEGNO DI SPESA AI SENSI DELL'ART. 50 COMMA 1 LETT. A) E B) DEL D.LGS.36/2023 E SS.MM.II (DETERMINA/2026/926/16-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 211)",
+          "data": "2026-11-16",
+          "tipo": "Determinazioni",
+          "numero": "1289/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8519"
+        },
+        {
+          "titolo": "APPLICAZIONE CONTRATTO COLLETTIVO NAZIONALE DI LAVORO RELATIVO AL PERSONALE DEL COMPARTO FUNZIONI LOCALI TRIENNIO 2025 - 2027 DEL 28 OTTOBRE 2026. IMPEGNO DI SPESA EMOLUMENTI ARRETRATI AI DIPENDENTI (DETERMINA/2026/927/16-11-2026)( AREA 1- ECONOMICO - FINANZIARIA - 149)",
+          "data": "2026-11-16",
+          "tipo": "Determinazioni",
+          "numero": "1288/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8518"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURE - S.M.T.2000 DI PISTILLI TONINO 04-11-2026/16 (2026.01.853) - S.M.T.2000 DI PISTILLI TONINO 04-11-2026/17 (2026.01.854) (DETERMINA/2026/923/13-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 210)",
+          "data": "2026-11-13",
+          "tipo": "Determinazioni",
+          "numero": "1286/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8516"
+        },
+        {
+          "titolo": "FINANZIAMENTO \"MIM - PNRR - M4C1 - CONTRIBUTI IN FAVORE DI ENTI LOCALI PER L'ADEGUAMENTO ALLA NORMATIVA ANTINCENDIO E PER INTERVENTI URGENTI DI MESSA IN SICUREZZA DEGLI EDIFICI PUBBLICI ADIBITI AD USO SCOLASTICO DM 21/11/2025 N. 229\". PROGETTO DI FATTIBILITÀ TECNICO ECONOMICO (PFTE) DEI \"LAVORI DI ADEGUAMENTO ANTINCENDIO DELLA SCUOLA PRIMARIA V. LAURIENTI DI CORI\" - CUP J28H25001300001 - I LOTTO DELL'IMPORTO O.P. PARI A € 200.000,00 - APPROVAZIONE (GIUNTA/2026/74/10-11-2026)",
+          "data": "2026-11-13",
+          "tipo": "Delibere di giunta",
+          "numero": "1283/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8513"
+        },
+        {
+          "titolo": "BILANCIO CONSOLIDATO AL 31.12.2025 DEL COMUNE DI CORI - INDIVIDUAZIONE DEGLI ENTI E SOCIETÀ DA INCLUDERE NEL \"GRUPPO AMMINISTRAZIONE PUBBLICA COMUNE DI CORI\" E NEL PERIMETRO DI CONSOLIDAMENTO (GIUNTA/2026/62/24-09-2026)",
+          "data": "2026-11-13",
+          "tipo": "Delibere di giunta",
+          "numero": "1284/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8514"
+        },
+        {
+          "titolo": "AVVIO TIROCINIO FORMATIVO E DI ORIENTAMENTO DELLA TIROCINANTE F.S.S. PRESA D'ATTO (DETERMINA/2026/920/13-11-2026)(AREA 2 - WELFARE - 236)",
+          "data": "2026-11-13",
+          "tipo": "Determinazioni",
+          "numero": "1279/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8509"
+        },
+        {
+          "titolo": "ASSEGNAZIONE ALLOGGIO ERP N.17_2026 SIG.RA OMISSIS (ORDIRESP/2026/100/13-11-2026)",
+          "data": "2026-11-13",
+          "tipo": "Ordinanze dei responsabili",
+          "numero": "1278/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8508"
+        },
+        {
+          "titolo": "APPROVAZIONE PROGETTO DI FATTIBILITÀ TECNICO ECONOMICO (PFTE) DEI LAVORI ANTINCENDIO DELLA SCUOLA MATERNA RODARI IN GIULIANELLO DI CORI - CUP: J68H25002250001 - DECRETO MINISTERIALE DEL 30 GENNAIO 2026, N. 14. AVVISO PUBBLICO DEL 26/11/2025 E DEL SUCCESSIVO AVVISO DI RIAPERTURA DEI TERMINI DEL 16/03/2026. PRIMO LOTTO DELL'IMPORTO O.P. PARI A € 50.000,00. RIF: FINANZIAMENTO MINISTERO DELL'ISTRUZIONE RIGUARDO L'INTERVENTO DENOMINATO \"MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO ",
+          "data": "2026-11-13",
+          "tipo": "Delibere di giunta",
+          "numero": "1285/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8515"
+        },
+        {
+          "titolo": "APPROVAZIONE PROGETTO DI FATTIBILITÀ TECNICO ECONOMICO (PFTE) DEI LAVORI ANTINCENDIO DELLA SCUOLA ELEMENTARE RADICCHI IN GIULIANELLO DI CORI - CUP: J68H25002240001 - DECRETO MINISTERIALE DEL 30 GENNAIO 2026, N. 14. AVVISO PUBBLICO DEL 26/11/2025 E SUCCESSIVO AVVISO DI RIAPERTURA TERMINI DEL 16/03/2026. PRIMO LOTTO DELL'IMPORTO O.P. PARI A € 130.000. RIF: LAVORI DI MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO IMPIANTO NORMATIVA VIGENTE E REALIZZAZIONE RISERVA IDRICA DA COLLEGAR",
+          "data": "2026-11-13",
+          "tipo": "Delibere di giunta",
+          "numero": "1282/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8512"
+        },
+        {
+          "titolo": "\"LAVORI DI MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO IMPIANTO ALLA NORMATIVA VIGENTE VIA GIANNI RODARI MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO IMPIANTO ALLA NORMATIVA VIGENTE CUP J68H25002250001 IN CORI\" – I LOTTO. AFFIDAMENTO DEL SERVIZIO DI PROGETTAZIONE ESECUTIVA, C.S.P., D.LL. E C.S.E.. IMPEGNO DI SPESA ED ACCERTAMENTO (DETERMINA/2026/921/13-11-2026)(AREA 4- GRANDI OPERE E LAVORI PUBBLICI - 77)",
+          "data": "2026-11-13",
+          "tipo": "Determinazioni",
+          "numero": "1280/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8510"
+        },
+        {
+          "titolo": "\"LAVORI DI MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO IMPIANTO ALLA NORMATIVA ESISTENTE ED REALIZZAZIONE RISERVA IDRICA DA COLLEGARE AL GRUPPO POMPE GI REALIZZATO VIA DON SILVESTRO RADICCHI MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO IMPIANTO ALLA NORMATIVA ESISTENTE ED REALIZZAZIONE RISERVA IDRICA DA COLLEGARE AL GRUPPO POMPE GIÀ REALIZZATO. L'INTERVENTO SARÀ IN GRADO DI GARANTIRE L'ADEGUAMENTO ALL'ATTUALE IMPIANTO ANTINCENDIO IN QUANTO DAL 2009 NON SONO",
+          "data": "2026-11-13",
+          "tipo": "Determinazioni",
+          "numero": "1281/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8511"
+        },
+        {
+          "titolo": "ORDINANZA DIVIETO DI SOSTA PER LAVORI DI MESSA IN SICUREZZA E RECUPERO PIAZZA MATTEI E PIAZZA DON OTTAVIANO MAURIZI - LAVORI MURO PERIMETRALE , PAVIMENTAZIONE E OPERE ACCESSORIE . (ORDIRESP/2026/99/11-11-2026)",
+          "data": "2026-11-12",
+          "tipo": "Ordinanze dei responsabili",
+          "numero": "1270/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8500"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - GIORGI FABIO 26-10-2026/63/E (2026.01.852) (DETERMINA/2026/918/12-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 209)",
+          "data": "2026-11-12",
+          "tipo": "Determinazioni",
+          "numero": "1274/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8504"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - COOPERATIVA BENESSERE 28-04-2026/FPA 570/26 (2026.01.365) (DETERMINA/2026/919/12-11-2026)(AREA 2 - WELFARE - 235)",
+          "data": "2026-11-12",
+          "tipo": "Determinazioni",
+          "numero": "1276/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8506"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - ALFEI MICHAEL - ENI 31-10-2026/2026/FE54021/1997 (2026.01.847) (DETERMINA/2026/913/12-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 208)",
+          "data": "2026-11-12",
+          "tipo": "Determinazioni",
+          "numero": "1273/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8503"
+        },
+        {
+          "titolo": "IMPIANTI FOTOVOLTAICI DEL COMUNE DI CORI - ASSUNZIONE ACCERTAMENTO PROVENTI DERIVANTI DALLA CESSIONE IN RETE DELL'ENERGIA ELETTRICA TRAMISTE MECCANISMO DI SCAMBIO SUL POSTO CONGUAGLIO ANNO 2025 E ACCONTO E SALDO ANNUALITA' 2026 IMPEGNO DI SPESA A FAVORE DEL GSE PER COSTI AMMINISTRATIVI ED AD-DISTRIBUZIONE PER COSTI GESTIONE CONTATORI A SERVIZIO DEGLI IMPIANTI FOTOVOLTAICI ED IMPEGNO DI SPESA PER PAGAMENTO F24 CONTRIBUTO LICENZA OFFICINA ELETTRICA (DETERMINA/2026/911/12-11-2026)(AREA 6 - AREA TEC",
+          "data": "2026-11-12",
+          "tipo": "Determinazioni",
+          "numero": "1271/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8501"
+        },
+        {
+          "titolo": "IMPEGNO DI SPESA A FAVORE DELLA DITTA PISTILLI TONINO AI SENSI DELL'ART. 50 COMMA 1 LETT. A DEL D.LGS 36/2023 (DETERMINA/2026/912/12-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 207)",
+          "data": "2026-11-12",
+          "tipo": "Determinazioni",
+          "numero": "1272/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8502"
+        },
+        {
+          "titolo": "ATTIVAZIONE TEMPORANEA DEL CENTRO OPERATIVO COMUNALE DIPROTEZIONE CIVILE A SEGUITO DELL'AVVISO DI CONDIZIONIMETEREOLOGICHE AVVERSE DEL 12.11.2026 EMESSO DALLAPRESIDENZA DEL CONSIGLIO DEI MINISTRI - DIPARTIMENTO DELLAPROTEZIONE CIVILE DI CRITICITÀ IDROGEOLOGICA CONVALUTAZIONE DI LIVELLI DI ALLERTA ARANCIONE, PREVISTA DALLATARDA SERATA DI OGGI, 12.11.2026 E PER LE SUCCESSIVE 24-30 ORE. (ORDISIND/2026/13/12-11-2026)",
+          "data": "2026-11-12",
+          "tipo": "Ordinanze del sindaco",
+          "numero": "1277/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8507"
+        },
+        {
+          "titolo": "7 LIQUIDAZIONE CONTRIBUTO ECONOMICI INDIGENTI (DETERMINA/2026/908/11-11-2026)(AREA 2 - WELFARE - 234)",
+          "data": "2026-11-12",
+          "tipo": "Determinazioni",
+          "numero": "1275/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8505"
+        },
+        {
+          "titolo": "OGGETTO: AGGIUDICAZIONE PROVVISORIA MEDIANTE TRATTATIVA PRIVATA DELL'UTILIZZAZIONE BOSCHIVA DELLA PARTICELLA FORESTALE N. 17 \"FRANNO PIANO\" E DEI TAGLI DI DIRADAMENTO DELLE PARTICELLE FORESTALI N. 12, \"FOLEGARE_MURIATORE\" 20 \"COLLE ROSELLO\" E 21 \"SELVA DI CORI\" ALLA DITTA \"MONTE ARTEMISIO LEGNAMI S.R.L.\" AI SENSI DEL R.D. 23 MAGGIO 1924, N. 827. RICEVIMENTO OFFERTA ECONOMICA E APPROVAZIONE PIANO DELLE RATE IN MORE DELLA TRASMISSIONE DELLA DOCUMENTAZIONE INTEGRATIVA DI GARA. (DETERMINA/2026/910/1",
+          "data": "2026-11-11",
+          "tipo": "Determinazioni",
+          "numero": "1269/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8499"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - NARDINI LEONARDO 05-11-2026/FPA 1/26 (2026.01.844) (DETERMINA/2026/907/11-11-2026)(AREA 4- GRANDI OPERE E LAVORI PUBBLICI - 76)",
+          "data": "2026-11-11",
+          "tipo": "Determinazioni",
+          "numero": "1268/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8498"
+        }
+      ]
+    },
+    "bassiano": {
+      "ok": true,
+      "errore": "",
+      "fonte": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145",
+      "aggiornato": "2026-11-18T13:00:29+01:00",
+      "atti": [
+        {
+          "titolo": "LIQUIDAZIONE DI SPESA ALLA SOCIETÀ WINTEL SRL, PER FORNITURA SCHEDA VOIP DSP PER CENTRALINO PANASONIC E INSTALLAZIONE E PROGRAMMAZIONE DEL CENTRALINO CON AGGIORNAMENTO PRESSO LA CASA COMUNALE – C.I.G. BA733CD1FE. (DETERMINA/2026/296/16-11-2026)(TECNICO - 131)",
+          "data": "2026-11-17",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "485/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11095"
+        },
+        {
+          "titolo": "COMUNE DI BASSIANO",
+          "data": "2026-11-16",
+          "tipo": "Avviso pubblico",
+          "numero": "484/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11094"
+        },
+        {
+          "titolo": "ALLERTAMENTO DEL SISTEMA DI PROTEZIONE CIVILE REGIONALE (PROT. A/2026/7405/16-11-2026)",
+          "data": "2026-11-16",
+          "tipo": "Avviso pubblico",
+          "numero": "483/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11093"
+        },
+        {
+          "titolo": "ORD. N°18/2026OGGETTO: ORDINANZA PER LA REGOLAMENTAZIONE DELLA CIRCOLAZIONE STRADALE CON ISTITUZIONE DEL DIVIETO DI SOSTA TEMPORANEO IN VIA ALDO MANUZIO DAL CIVICO 117 AL CIVICO 08, PER ALLESTIMENTO PONTEGGIO EDILE.",
+          "data": "2026-11-15",
+          "tipo": "Ordinanze",
+          "numero": "482/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11092"
+        },
+        {
+          "titolo": "REGIONE LAZIO - AVVISO PUBBLICO - DETERMINAZIONE N. G13415 DEL 02/10/2026 AVVISO PUBBLICO PER LA PRESENTAZIONE DI MANIFESTAZIONI DI INTERESSE PER LA MISURA \"SPAZIO ARGENTO\", DI CUI ALL'ADDENDUM DEL \"PIANO TRIENNALE PER LA RIQUALIFICAZIONE DEI PICCOLI COMUNI\", ANNUALITÀ 2025-2027, APPROVATO CON DGR N. 809/2026. (GIUNTA/2026/47/12-11-2026)",
+          "data": "2026-11-12",
+          "tipo": "Deliberazione di giunta comunale",
+          "numero": "481/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11091"
+        },
+        {
+          "titolo": "LIQUIDAZIONE DI SPESA PER SERVIZIO CATTURA E RICOVERO ANIMALI RANDAGI – CIG ASSEGNATO N° BB4DED0BCA - DITTA VETERINARIA PACIFICO – FATTURA FT.PA 98. (DETERMINA/2026/295/12-11-2026)(POLIZIA LOCALE - 22)",
+          "data": "2026-11-12",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "477/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11087"
+        },
+        {
+          "titolo": "LIQUIDAZIONE DI SPESA PER SERVIZIO CATTURA E RICOVERO ANIMALI RANDAGI – CIG ASSEGNATO N° BB4DED0BCA - DITTA VETERINARIA PACIFICO – FATTURA FT.PA 90. (DETERMINA/2026/273/28-10-2026)(POLIZIA LOCALE - 21)",
+          "data": "2026-11-12",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "478/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11088"
+        },
+        {
+          "titolo": "CONSERVAZIONE DEL CATASTO TERRENI – VERIFICAZIONI QUINQUENNALIGRATUITE - ARTT. 118 E 119 - REGOLAMENTO 8 DICEMBRE 1938, N. 2153",
+          "data": "2026-11-12",
+          "tipo": "Avviso pubblico",
+          "numero": "479/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11089"
+        },
+        {
+          "titolo": "COMUNE DI BASSIANO",
+          "data": "2026-11-12",
+          "tipo": "Avviso pubblico",
+          "numero": "476/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11086"
+        },
+        {
+          "titolo": "ALLERTAMETEO ERRATA CORRIGE - REGIONE LAZIO",
+          "data": "2026-11-12",
+          "tipo": "Avviso pubblico",
+          "numero": "480/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11090"
+        },
+        {
+          "titolo": "LIQUIDAZIONE DI SPESA PER SERVIZIO DI ASSISTENZA SCOLASTICA SPECIALISTICA FATTURA N° 237/A/FE A FAVORE DELLA SFERA IMPRESA SOCIALE S.R.L. – CIG BD29B44A86 (DETERMINA/2026/293/11-11-2026)(AFFARI GENERALI - 91)",
+          "data": "2026-11-11",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "474/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11084"
+        },
+        {
+          "titolo": "LIQUIDAZIONE DI SPESA FATTURE N° N0422666 -SOC. EDENRED ITALIA SRL- BUONI PASTO - CIG ASSEGNATO: BCDA07CEEE (DETERMINA/2026/294/11-11-2026)(FINANZIARIO - 52)",
+          "data": "2026-11-11",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "475/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11085"
+        },
+        {
+          "titolo": "LIQUIDAZIONE DI SPESA CEDOLE LIBRARIE ANNO AS 2026/2027 – (DETERMINA/2026/292/11-11-2026)(AFFARI GENERALI - 90)",
+          "data": "2026-11-11",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "473/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11083"
+        },
+        {
+          "titolo": "SERVIZIO DI RECUPERO RSU NON DIFFERENZIATI EER 200301 - LIQUIDAZIONE FATTURA RIDA AMBIENTE S.R.L. – SETTEMBRE E OTTOBRE 2026 – CIG: B9D615D73E (DETERMINA/2026/289/09-11-2026)(TECNICO - 130)",
+          "data": "2026-11-09",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "468/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11078"
+        },
+        {
+          "titolo": "ORD. N°17/2026OGGETTO: ORDINANZA PER LA REGOLAMENTAZIONE DELLA CIRCOLAZIONE STRADALE CON ISTITUZIONE DEL DIVIETO DI SOSTA TEMPORANEO IN VIA ALDO MANUZIO DAL CIVICO 117 AL CIVICO 08, PER ALLESTIMENTO PONTEGGIO EDILE.",
+          "data": "2026-11-09",
+          "tipo": "Ordinanze",
+          "numero": "471/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11081"
+        },
+        {
+          "titolo": "LIQUIDAZIONE DI SPESA – AGENZIA DELLE ENTRATE (DETERMINA/2026/291/09-11-2026)(FINANZIARIO - 51)",
+          "data": "2026-11-09",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "470/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11080"
+        },
+        {
+          "titolo": "LIQUIDAZIONE ALLA DITTA VIAGGI LIFE S.R.L.S. FATTURA N° 80 PER IL SERVIZIO TRASPORTO SCOLASTICO CIG BCEEBA67F5 (DETERMINA/2026/290/09-11-2026)(AFFARI GENERALI - 89)",
+          "data": "2026-11-09",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "469/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11079"
+        },
+        {
+          "titolo": "IMPEGNO DI SPESA – AGENZIA DELLE ENTRATE (DETERMINA/2026/287/09-11-2026)(FINANZIARIO - 50)",
+          "data": "2026-11-09",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "466/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11076"
+        },
+        {
+          "titolo": "FORNITURA DI LAMPADINE CIMITERIALI ALLA DITTA EDIL NORMA SRL. PROCEDURA CON AFFIDAMENTO DIRETTO. (ART. 50 COMMA 1 LETT. B) DEL D.LGS. N. 36/2023) – C.I.G.: BD9C9983D7 (DETERMINA/2026/288/09-11-2026)(TECNICO - 129)",
+          "data": "2026-11-09",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "467/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11077"
+        },
+        {
+          "titolo": "COMUNE DI BASSIANO",
+          "data": "2026-11-09",
+          "tipo": "Avviso pubblico",
+          "numero": "472/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11082"
+        },
+        {
+          "titolo": "REGIONE LAZIO – PIANO TRIENNALE PER LA RIQUALIFICAZIONE DEI PICCOLI COMUNI – L.R. N. 9/2020, ART. 13 – ANNUALITÀ 2025–2027 – MISURA 2 «SMART MAP» – AMBITO A: DIGITALIZZAZIONE GEOREFERENZIATA DELLO STRUMENTO URBANISTICO GENERALE COMUNALE – APPROVAZIONE DELLA CANDIDATURA, DELLA RELAZIONE TECNICO-ILLUSTRATIVA E DEL QUADRO ECONOMICO DI € 15.000,00. (GIUNTA/2026/44/03-11-2026)",
+          "data": "2026-11-06",
+          "tipo": "Deliberazione di giunta comunale",
+          "numero": "465/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11075"
+        },
+        {
+          "titolo": "LIQUIDAZIONE DI SPESA SERVIZIO MENSA SCOLASTICA PER L'A.S. 2026/2027 - CIG BD5B17C678 FATTURA N° 6/PA (DETERMINA/2026/281/05-11-2026)(AFFARI GENERALI - 85)",
+          "data": "2026-11-05",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "458/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11068"
+        },
+        {
+          "titolo": "LIQUIDAZIONE DI SPESA - POSTE ITALIANE – FATTURA 2026 N° 1026221185 (DETERMINA/2026/282/05-11-2026)(AFFARI GENERALI - 86)",
+          "data": "2026-11-05",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "459/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11069"
+        },
+        {
+          "titolo": "IMPEGNO DI SPESA PER INTERVENTO DI SOSTITUZIONE POMPA CALDAIA SCUOLA MATERNA VIALE DELLA CROCE, PROCEDURA CON AFFIDAMENTO DIRETTO. (ART. 50 COMMA 1 LETT. A) DEL D.LGS. N. 36/2023) – C.I.G.: BD9C8F1A05. (DETERMINA/2026/285/05-11-2026)(TECNICO - 127)",
+          "data": "2026-11-05",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "462/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11072"
+        },
+        {
+          "titolo": "IMPEGNO DI SPESA CEDOLE LIBRARIE ANNO AS 2026/2027 (DETERMINA/2026/284/05-11-2026)(AFFARI GENERALI - 88)",
+          "data": "2026-11-05",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "461/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11071"
+        },
+        {
+          "titolo": "FORNITURE DI MATERIALE VARIO DI FERRAMENTA ALLA DITTA EDILIZIA VENDITTI. PROCEDURA CON AFFIDAMENTO DIRETTO. (ART. 50 COMMA 1 LETT. B) DEL D.LGS. N. 36/2023) – C.I.G.: BD9C7A68DF (DETERMINA/2026/286/05-11-2026)(TECNICO - 128)",
+          "data": "2026-11-05",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "463/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11073"
+        },
+        {
+          "titolo": "FATTURA N° 1875/2026 - F&G SISTEMI SRL SERVIZIO DI NOLEGGIO DI MACCHINE FOTOCOPIATRICI. - CIG B9D0F2805E (DETERMINA/2026/283/05-11-2026)(AFFARI GENERALI - 87)",
+          "data": "2026-11-05",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "460/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11070"
+        },
+        {
+          "titolo": "COMUNE DI BASSIANO",
+          "data": "2026-11-05",
+          "tipo": "Avviso pubblico",
+          "numero": "464/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11074"
+        },
+        {
+          "titolo": "SOSPENSIONE DELLA RACCOLTA DELLA PLASTICA E DEL MULTIMATERIALE",
+          "data": "2026-11-04",
+          "tipo": "Avviso pubblico",
+          "numero": "457/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11067"
+        },
+        {
+          "titolo": "ELENCO DEI BENEFICIARI DELLA “CARTA DEDICATA A TE”",
+          "data": "2026-11-04",
+          "tipo": "Avviso pubblico",
+          "numero": "456/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11066"
+        }
+      ]
+    },
+    "sonnino": {
+      "ok": false,
+      "errore": "Il portale dell'albo segnala una manutenzione in corso",
+      "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
+      "aggiornato": "2026-11-18T13:01:41+01:00",
+      "atti": []
+    },
+    "roccagorga": {
+      "ok": true,
+      "errore": "",
+      "fonte": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/",
+      "aggiornato": "2026-11-18T13:00:55+01:00",
+      "atti": [
+        {
+          "titolo": "DETERMINAZIONE DEL DIPARTIMENTO 2 N. 40 DEL 16-11-2026 AVENTE AD OGGETTO \"COSTITUZIONE FONDO RISORSE DECENTRATE ANNO 2026\"",
+          "data": "2026-11-16",
+          "tipo": "Determinazioni",
+          "numero": "40",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/determinazioni/2026/Pratica_1794846709391/"
+        },
+        {
+          "titolo": "INTERVENTI URGENTI DI MESSA IN SICUREZZA IN VIA VARIANTE A SEGUITO DI CEDIMENTO DEL TERRENO SOVRASTANTE IL MURO DI CONTENIMENTO – DISCONNESSIONE POZZETTI DI COLLEGAMENTO E DISCIPLINA TEMPORANEA DELLA CIRCOLAZIONE STRADALE PER TUTELA DELLA PUBBLICA INCOLUMITÀ.",
+          "data": "2026-11-15",
+          "tipo": "Ordinanze",
+          "numero": "",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/ordinanze/2026/Pratica_1794764317785/"
+        },
+        {
+          "titolo": "ORDINANZA AREA VIGILANZA N.59 DEL 12-13-2026 AVENTE AD OGGETTO NUOVA REGOLAMENTAZIONE TEMPORANEA DELLA CIRCOLAZIONE STRADALE IN VIA C. COLOMBO IN DATA 13-11-2026 DAL CIVICO 56 AL CIVICO 86.",
+          "data": "2026-11-13",
+          "tipo": "Ordinanze",
+          "numero": "59",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/ordinanze/2026/Pratica_1794567356281/"
+        },
+        {
+          "titolo": "ORDINANZA AREA VIGILANZA N. 58 DEL 12-11-2026 AVENTE AD OGGETTO NUOVA REGOLAMENTAZIONE TEMPORANEA DELLA CIRCOLAZIONE STRADALE IN VIA C.COLOMBO ED IN LARGO 10 NOVEMBRE IN DATA 15 NOVEMBRE 2026.",
+          "data": "2026-11-13",
+          "tipo": "Ordinanze",
+          "numero": "58",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/ordinanze/2026/Pratica_1794567259122/"
+        },
+        {
+          "titolo": "ORDINANZA SINDACALE CONTINGIBILE ED URGENTE N. 23 DEL 12-11-2026 AVENTE AD OGGETTO L'ATTIVAZIONE DEL C.O.C. - CENTRO OPERATIVO COMUNALE DI PROTEZIONE CIVILE - IN RELAZIONE ALL’ALLERTAMENTO DEL SISTEMA DI PROTEZIONE CIVILE N.26072 DEL 11.11.2026.",
+          "data": "2026-11-12",
+          "tipo": "Ordinanze",
+          "numero": "23",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/ordinanze/2026/Pratica_1794496953012/"
+        },
+        {
+          "titolo": "Oggetto: ORDINANZA CONTINGIBILE E URGENTE DI EVACUAZIONE IMMEDIATA, DI TUTTE LE SCUOLE DEL TERRITORIO, A SEGUITO DI SEGNALAZIONE DI ALLARME BOMBA",
+          "data": "2026-11-11",
+          "tipo": "Ordinanze",
+          "numero": "",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/ordinanze/2026/Pratica_1794402237787/"
+        },
+        {
+          "titolo": "ORDINANZA SINDACALE DI REVOCA DELL’ORDINANZA SINDACALE N. 21 DEL 11.11.2026 AVENTE AD OGGETTO LA CHIUSURA ED EVACUAZIONE DEGLI ISTITUTI SCOLASTICI DEL TERRITORIO COMUNALE PER ALLARME BOMBA. RIPRESA DELLE ATTIVITÀ DIDATTICHE DAL GIORNO 12.11.2026",
+          "data": "2026-11-11",
+          "tipo": "Ordinanze",
+          "numero": "21",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/ordinanze/2026/Pratica_1794431886504/"
+        },
+        {
+          "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.82 DEL 30-10-2026 AVENTE AD OGGETTO AUTORIZZAZIONE ALLA COSTITUZIONE IN GIUDIZIO E CONFERIMENTO DI INCARICO LEGALE ALL'AVV. LUIGI PERRINO, DEL FORO DI LATINA, PER LA DIFESA E RAPPRESENTANZA DEL COMUNE NEL PROCEDIMENTO PROMOSSO DA PARENTE LAVORI S.R.L. DINANZI ALLA SUPREMA CORTE DI CASSAZIONE.",
+          "data": "2026-11-11",
+          "tipo": "Delibere",
+          "numero": "82",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1794408338831/"
+        },
+        {
+          "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.84 DEL 06-11-2026 AVENTE AD OGGETTO DOMANDA PER LA CONCESSIONE DI CONTRIBUTI, AI SENSI DELL'ART.12 DEL \"REGOLAMENTO PER LA CONCESSIONE DI PATROCINI E DI CONTRIBUTI DA PARTE DELL'UFFICIO DI PRESIDENZA DEL CONSIGLIO REGIONALE\" DI CUI ALL'ALLEGATO A) DELLA DELIBERAZIONE DI PRESIDENZA DEL 13 SETTEMBRE 2022, N.127. PROGETTO \"\"ROCCAGORGA LUCIGRAFICHE INCANTATE NELLA MERAVIGLIA DEL BAROCСО\".",
+          "data": "2026-11-10",
+          "tipo": "Delibere",
+          "numero": "84",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1794335671952/"
+        },
+        {
+          "titolo": "ORDINANZA AREA VIGILANZA 57/2026 AVENTE AD OGGETTO NUOVA REGOLAMENTAZIONE TEMPORANEA DELLA CIRCOLAZIONE STRADALE IN VIA BORGO MADONNA DAL CIVICO 136 AL CIVICO 138 A PARTIRE DAL 11 NOVEMBRE 2026 AL 25 NOVEMBRE 2026.",
+          "data": "2026-11-09",
+          "tipo": "Ordinanze",
+          "numero": "",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/ordinanze/2026/Pratica_1794224543960/"
+        },
+        {
+          "titolo": "ORDINANZA AREA VIGILANZA N.56 DEL 05-11-2026 AVENTE AD OGGETTO NUOVA REGOLAMENTAZIONE TEMPORANEA DELLA CIRCOLAZIONE STRADALE IN VIA CRISTOFORO COLOMBO IL 06.11.2026 DALLE ORE 7:00 FINO A FINE LAVORI.",
+          "data": "2026-11-06",
+          "tipo": "Ordinanze",
+          "numero": "56",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/ordinanze/2026/Pratica_1793959328396/"
+        },
+        {
+          "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.86 DEL 06-11-2026 AVENTE AD OGGETTO PIANO TRIENNALE PER LA RIQUALIFICAZIONE DEI PICCOLI COMUNI (L.R. LAZIO N. 9/2020, ART. 13), ANNUALITÀ 2025-2027 - MISURA 2 \"SMART МАР\". APPROVAZIONE DELLA PROPOSTA PROGETTUALE \"ROCCAGORGA SMART МАР\" Е AUTORIZZAZIONE ALLA PRESENTAZIONE DELLA DOMANDA DI CONTRIBUTO REGIONALE.",
+          "data": "2026-11-06",
+          "tipo": "Delibere",
+          "numero": "86",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1793974482889/"
+        },
+        {
+          "titolo": "Pubblicazione avviso deposito del motociclo, di colore blu, marca Yamaha, modello Majesty, targato AF29968 presso custode acquirente convenzionato \"Italsoccorso Ditta Falso\" in Pontinia (LT) via Migliara 47 n. 1100",
+          "data": "2026-11-05",
+          "tipo": "Avvisi",
+          "numero": "1100",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/avvisi/2026/Pratica_1793886272471/"
+        },
+        {
+          "titolo": "Vincolo Idrogeologico (L.R. 53/1998 – R.D.L. 3267/1923 – R.D. 1126/1926 – D.G.R. 1038/2024) - Fasc. V.I. 13279 - Nulla Osta all’Autorizzazione della Sanatoria a SAPUTO Eleuterio nel Comune di Roccagorga. Trasmissione provvedimento dirigenziale",
+          "data": "2026-11-04",
+          "tipo": "Atti",
+          "numero": "",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/atti/2026/Pratica_1793797218127/"
+        },
+        {
+          "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.76 DEL 09-10-2026 AVENTE AD OGGETTO APPROVAZIONE DELLO SCHEMA E AUTORIZZAZIONE ALLA SOTTOSCRIZIONE DEL PROTOCOLLO D'INTESA TRA IL COMUNE DI ROCCAGORGA E LA FAITA FEDERCAMPING LAZIO PER LE ATTIVITÀ DI PROMOZIONE, DIFFUSIONE E RIQUALIFICAZIONE DEL COMPARTO TURISTICO-RICETTIVO ALL'ARIA APERTA E PER L'APPLICAZIONE DELLA DISCIPLINA NORMATIVA DI SETTORE (L.R. N. 14/2011 E R.R. N. 18/2008 E SS.MM.ІІ.).",
+          "data": "2026-11-04",
+          "tipo": "Delibere",
+          "numero": "76",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1793793319241/"
+        }
+      ]
+    },
+    "norma": {
+      "ok": false,
+      "errore": "La pagina del Comune non elenca atti e l'albo Halley indicato in homepage non è raggiungibile",
+      "fonte": "https://comune.norma.lt.it/documenti-albo-pretorio",
+      "aggiornato": "2026-11-18T12:59:45+01:00",
+      "atti": []
+    },
+    "cisterna-di-latina": {
+      "ok": false,
+      "errore": "Fonte non raggiungibile",
+      "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
+      "aggiornato": "2026-11-18T12:59:21+01:00",
+      "atti": []
+    },
+    "sezze": {
+      "ok": false,
+      "errore": "Fonte non raggiungibile: il sito non ha risposto in tempo",
+      "fonte": "https://servizi.comune.sezze.lt.it/ServiziOnLine/Istanze/landingIstanza?Id=1",
+      "aggiornato": "2026-11-18T13:00:21+01:00",
+      "atti": []
+    },
+    "priverno": {
+      "ok": false,
+      "errore": "Fonte non raggiungibile: il sito non ha risposto in tempo",
+      "fonte": "https://servizi.comune.priverno.latina.it/ServiziOnLine/Istanze/landingIstanza?Id=17",
+      "aggiornato": "2026-11-18T13:01:39+01:00",
+      "atti": []
+    }
+  }
+};
