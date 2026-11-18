@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 """Legge gli albi pretori dei comuni e aggiorna data/albo.json e js/albo.js.
 
-Un errore su un comune non interrompe gli altri. L'elenco è scorrevole:
-si tengono i 30 atti più recenti per comune e si conservano quelli già noti
-se la fonte, quel giorno, non risponde. I PDF restano sul sito del Comune:
-qui si salva solo il collegamento.
+Un errore su un comune non interrompe gli altri. Le richieste sono una alla volta,
+con una pausa e ritentativi, perché Halley chiude i collegamenti troppo ravvicinati.
+A mezzanotte si leggono tutti i comuni; alle 01:00, 02:30 e 04:00 (ora di Roma)
+si ritentano solo quelli falliti o rimasti vuoti. Un elenco già riuscito non viene
+sostituito con una risposta vuota. I PDF restano sul sito del Comune.
 """
 
 from __future__ import annotations
@@ -12,9 +13,11 @@ from __future__ import annotations
 import http.cookiejar
 import json
 import os
+import random
 import re
 import ssl
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -29,9 +32,22 @@ ALBO_PATH = ROOT / "data" / "albo.json"
 JS_PATH = ROOT / "js" / "albo.js"
 
 LIMIT = 30
-TIMEOUT = 22
-UA = "GT-Lepini-Ausoni-albo/1.0 (+https://damilunch-jpg.github.io/; lettura albo pretorio)"
+TIMEOUT = 80
+MAX_ATTEMPTS = 4
+# Browser normale: alcuni portali (Halley) chiudono le richieste che sembrano di un bot.
+UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+    "(KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+)
 ROME = ZoneInfo("Europe/Rome")
+# Orari di Roma coperti dai cron UTC. Il primo è la lettura completa,
+# gli altri ritentano solo i comuni falliti o rimasti vuoti.
+ROME_SLOTS = {
+    (0, 0): "full",
+    (1, 0): "retry",
+    (2, 30): "retry",
+    (4, 0): "retry",
+}
 
 DATE_RE = re.compile(r"\b(\d{2})[./-](\d{2})[./-](\d{4})\b")
 
@@ -44,19 +60,62 @@ def now_iso() -> str:
     return datetime.now(ROME).isoformat(timespec="seconds")
 
 
-def should_run() -> bool:
+def scheduled_mode(schedule: str, offset_hours: float):
+    """Traduce il cron UTC nell'orario di Roma con l'offset attuale (CET/CEST).
+
+    Ritorna "full", "retry" oppure None se questo cron, con l'ora legale di
+    oggi, non corrisponde a uno degli orari previsti.
+    """
+    parts = (schedule or "").split()
+    if len(parts) < 2:
+        return None
+    try:
+        minute = int(parts[0])
+        hour = int(parts[1])
+    except ValueError:
+        return None
+    total = hour * 60 + minute + int(round(offset_hours * 60))
+    total %= 24 * 60
+    return ROME_SLOTS.get(divmod(total, 60))
+
+
+def run_plan() -> str | None:
+    """full = tutti i comuni; retry = solo i falliti o vuoti di stanotte; None = non eseguire."""
     event = os.environ.get("GITHUB_EVENT_NAME", "")
     if event != "schedule":
-        return True
-    schedule = os.environ.get("ALBO_SCHEDULE", "")
+        return "full"
     offset = datetime.now(ROME).utcoffset().total_seconds() / 3600
-    # 22:00 UTC = mezzanotte a Roma solo con l'ora legale (UTC+2).
-    # 23:00 UTC = mezzanotte a Roma solo con l'ora solare (UTC+1).
-    if schedule.startswith("0 22"):
-        return abs(offset - 2) < 0.1
-    if schedule.startswith("0 23"):
-        return abs(offset - 1) < 0.1
-    return datetime.now(ROME).hour == 0
+    return scheduled_mode(os.environ.get("ALBO_SCHEDULE", ""), offset)
+
+
+def midnight_today(now: datetime) -> datetime:
+    return now.replace(hour=0, minute=0, second=0, microsecond=0)
+
+
+def parse_stamp(value: str):
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(value)
+    except ValueError:
+        return None
+
+
+def succeeded_tonight(record: dict, now: datetime) -> bool:
+    """Elenco non vuoto ottenuto dopo la mezzanotte di Roma."""
+    if not record or not record.get("atti"):
+        return False
+    esito = record.get("esito")
+    if esito is None:
+        esito = "atti" if record.get("ok") else "errore"
+    if esito != "atti":
+        return False
+    stamp = parse_stamp(record.get("aggiornato") or "")
+    if stamp is None:
+        return False
+    if stamp.tzinfo is None:
+        stamp = stamp.replace(tzinfo=ROME)
+    return stamp >= midnight_today(now)
 
 
 def clean(text: str) -> str:
@@ -84,7 +143,26 @@ def origin_of(url: str) -> str:
     return urllib.parse.urlunsplit((parts.scheme, parts.netloc, "", "", ""))
 
 
+def is_halley(url: str) -> bool:
+    host = (urllib.parse.urlsplit(url).hostname or "").lower()
+    return "halleyweb" in host or host.endswith("halley.it")
+
+
+def halley_mc(url: str) -> str:
+    """Cartella /mc/ dello stesso ente, anche se il link di partenza è index.php."""
+    parts = urllib.parse.urlsplit(url)
+    path = parts.path or "/"
+    if "/mc/" in path:
+        base = path.split("/mc/")[0] + "/mc/"
+    else:
+        match = re.search(r"(/c\d+/)", path)
+        base = (match.group(1) + "mc/") if match else "/mc/"
+    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, base, "", ""))
+
+
 class Client:
+    """Una richiesta alla volta, con pausa e ritentativi. Nessun parallelismo."""
+
     def __init__(self):
         self.jar = http.cookiejar.CookieJar()
         self.ssl = ssl.create_default_context()
@@ -93,6 +171,15 @@ class Client:
         except ssl.SSLError:
             pass
         self.extra_ca = None
+        self.label = ""
+        self.request_count = 0
+        self.last_status = "-"
+        self._started = False
+
+    def start_comune(self, nome: str):
+        self.label = nome
+        self.request_count = 0
+        self.last_status = "-"
 
     def _opener(self):
         return urllib.request.build_opener(
@@ -100,8 +187,51 @@ class Client:
             urllib.request.HTTPSHandler(context=self.ssl),
         )
 
-    def _request(self, url: str, data=None, headers=None, _retried=False):
-        hdrs = {"User-Agent": UA, "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"}
+    def _pause(self, url: str, attempt: int):
+        """Pausa fra una richiesta e l'altra. I ritentativi allungano l'attesa."""
+        host = urllib.parse.urlsplit(url).hostname or url
+        if attempt == 1:
+            if not self._started:
+                self._started = True
+                return
+            low, high = (8.0, 15.0) if is_halley(url) else (5.0, 12.0)
+            delay = random.uniform(low, high)
+        else:
+            delay = min(120.0, 15.0 * (2 ** (attempt - 2))) + random.uniform(0, 8)
+        print(f"  {self.label}: attesa {delay:.0f}s prima di {host} (tentativo {attempt}/{MAX_ATTEMPTS})", flush=True)
+        time.sleep(delay)
+
+    def _retryable(self, exc: SourceError) -> bool:
+        message = str(exc).lower()
+        if "http 404" in message or "manutenzione" in message:
+            return False
+        return any(
+            token in message
+            for token in (
+                "tempo scaduto",
+                "timed out",
+                "connessione",
+                "tls",
+                "ssl",
+                "eof",
+                "reset",
+                "http 403",
+                "http 408",
+                "http 425",
+                "http 429",
+                "http 500",
+                "http 502",
+                "http 503",
+                "http 504",
+            )
+        )
+
+    def _once(self, url: str, data=None, headers=None, _cert_retry=False):
+        hdrs = {
+            "User-Agent": UA,
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+            "Accept-Language": "it-IT,it;q=0.9,en;q=0.8",
+        }
         if headers:
             hdrs.update(headers)
         body = None
@@ -117,18 +247,48 @@ class Client:
                 return text, res.geturl(), getattr(res, "status", 200)
         except urllib.error.HTTPError as exc:
             detail = exc.read(400).decode("utf-8", "replace")
-            raise SourceError(f"HTTP {exc.code} da {url}" + (f" ({clean(detail)[:120]})" if detail else "")) from exc
+            raise SourceError(f"HTTP {exc.code}" + (f" ({clean(detail)[:80]})" if detail else "")) from exc
         except urllib.error.URLError as exc:
             reason = getattr(exc, "reason", exc)
             message = str(reason)
-            if not _retried and ("CERTIFICATE_VERIFY_FAILED" in message or "certificate verify failed" in message):
+            if not _cert_retry and ("CERTIFICATE_VERIFY_FAILED" in message or "certificate verify failed" in message):
                 self._trust_peer(url)
-                return self._request(url, data=data, headers=headers, _retried=True)
+                return self._once(url, data=data, headers=headers, _cert_retry=True)
             raise SourceError(f"Connessione non riuscita: {message}") from exc
         except TimeoutError as exc:
             raise SourceError("Tempo scaduto in attesa della fonte") from exc
         except ssl.SSLError as exc:
             raise SourceError(f"Errore TLS: {exc}") from exc
+
+    def _call(self, url: str, data=None, headers=None):
+        host = urllib.parse.urlsplit(url).hostname or url
+        method = "POST" if data is not None else "GET"
+        last = None
+        for attempt in range(1, MAX_ATTEMPTS + 1):
+            self._pause(url, attempt)
+            self.request_count += 1
+            try:
+                text, final, status = self._once(url, data=data, headers=headers)
+            except SourceError as exc:
+                last = exc
+                self.last_status = str(exc).split(" (")[0][:80]
+                print(
+                    f"  {self.label}: {method} {host} tentativo {attempt}/{MAX_ATTEMPTS} -> {self.last_status}",
+                    flush=True,
+                )
+                if attempt == MAX_ATTEMPTS or not self._retryable(exc):
+                    raise
+                continue
+            self.last_status = f"HTTP {status}"
+            print(
+                f"  {self.label}: {method} {host} tentativo {attempt}/{MAX_ATTEMPTS} -> HTTP {status}",
+                flush=True,
+            )
+            return text, final, status
+        raise last or SourceError("Richiesta non riuscita")
+
+    def _request(self, url: str, data=None, headers=None, _retried=False):
+        return self._call(url, data=data, headers=headers)
 
     def _trust_peer(self, url: str):
         """Alcuni portali pubblici (Gazzetta Amministrativa) non inviano
@@ -443,17 +603,17 @@ def acts_from_html(html: str, page_url: str):
 def scrape_halley(client: Client, url: str):
     errors = []
     candidates = [url]
-    folder = url.split("?")[0]
-    if "/mc/" in folder:
-        mc = folder.split("/mc/")[0] + "/mc/"
-    else:
-        mc = folder.rsplit("/", 1)[0] + "/"
+    mc = halley_mc(url)
     grid = abs_url(mc, "mc_gridev_messi_datigrid.php?x=&posStart=0&count=40")
     if grid not in candidates:
         candidates.append(grid)
     ricerca = abs_url(mc, "mc_p_ricerca.php")
     query = urllib.parse.parse_qs(urllib.parse.urlsplit(url).query)
     multi = (query.get("multiente") or [""])[0]
+    if not multi:
+        code = re.search(r"/c(\d{6})/", urllib.parse.urlsplit(url).path)
+        if code:
+            multi = "c" + code.group(1)
     if multi:
         ricerca = abs_url(mc, f"mc_p_ricerca.php?noHeaderFooter=1&multiente={urllib.parse.quote(multi)}")
     if ricerca not in candidates and "mc_p_ricerca" not in url:
@@ -758,48 +918,82 @@ def write_outputs(comuni_state: dict):
 
 
 def main(argv):
-    if not should_run():
-        print("Non è mezzanotte a Roma: esecuzione programmata ignorata.")
+    plan = run_plan()
+    if plan is None:
+        print("Questo cron non cade in una finestra prevista (00:00, 01:00, 02:30, 04:00 ora di Roma): ignorato.")
         return 0
     only = ""
     if "--only" in argv:
         only = argv[argv.index("--only") + 1]
+        plan = "full"
     comuni = json.loads(COMUNI_PATH.read_text(encoding="utf-8"))
     previous = load_previous()
     state = dict(previous)
     client = Client()
-    print("Sincronizzazione albi, ora di Roma:", now_iso())
+    now = datetime.now(ROME)
+    print(f"Sincronizzazione albi, ora di Roma: {now.isoformat(timespec='seconds')} modalità={plan}", flush=True)
     for comune in comuni:
         slug = comune["slug"]
         if only and slug != only:
             continue
         nome = comune["nome"]
         prior = previous.get(slug) or {}
+        if plan == "retry" and succeeded_tonight(prior, now):
+            print(
+                f"RISULTATO {nome} | saltato | già letto stanotte | atti={len(prior.get('atti') or [])}",
+                flush=True,
+            )
+            continue
+        client.start_comune(nome)
         try:
             acts, used = scrape_comune(client, comune)
-            merged = merge_atti(prior.get("atti"), acts)
-            state[slug] = {
-                "ok": True,
-                "errore": "",
-                "fonte": used,
-                "aggiornato": now_iso(),
-                "atti": merged,
-            }
-            print(f"OK  {nome}: {len(acts)} atti letti, {len(merged)} in elenco ({used})")
+            if acts:
+                merged = merge_atti(prior.get("atti"), acts)
+                state[slug] = {
+                    "ok": True,
+                    "esito": "atti",
+                    "errore": "",
+                    "fonte": used,
+                    "aggiornato": now_iso(),
+                    "atti": merged,
+                }
+                print(
+                    f"RISULTATO {nome} | richieste={client.request_count} | ultimo={client.last_status} | atti={len(acts)} | in elenco={len(merged)} | esito=atti",
+                    flush=True,
+                )
+            else:
+                kept = list(prior.get("atti") or [])
+                state[slug] = {
+                    "ok": True,
+                    "esito": "vuoto",
+                    "errore": "",
+                    "fonte": used or prior.get("fonte") or comune.get("fonte") or "",
+                    "aggiornato": now_iso(),
+                    "atti": kept,
+                }
+                print(
+                    f"RISULTATO {nome} | richieste={client.request_count} | ultimo={client.last_status} | atti=0 | elenco precedente conservato ({len(kept)}) | esito=vuoto",
+                    flush=True,
+                )
         except Exception as exc:  # un comune non deve bloccare gli altri
             technical = str(exc).strip() or exc.__class__.__name__
             if not isinstance(exc, SourceError):
                 technical = f"Errore imprevisto: {technical}"
+            kept = list(prior.get("atti") or [])
             state[slug] = {
                 "ok": False,
+                "esito": "errore",
                 "errore": friendly_error(technical),
                 "fonte": prior.get("fonte") or comune.get("fonte") or comune.get("alboUrl") or "",
                 "aggiornato": now_iso(),
-                "atti": prior.get("atti") or [],
+                "atti": kept,
             }
-            print(f"ERR {nome}: {technical}")
+            print(
+                f"RISULTATO {nome} | richieste={client.request_count} | ultimo={client.last_status} | atti conservati={len(kept)} | esito=errore | {technical}",
+                flush=True,
+            )
     write_outputs(state)
-    print("File aggiornati:", ALBO_PATH.relative_to(ROOT), JS_PATH.relative_to(ROOT))
+    print("File aggiornati:", ALBO_PATH.relative_to(ROOT), JS_PATH.relative_to(ROOT), flush=True)
     return 0
 
 

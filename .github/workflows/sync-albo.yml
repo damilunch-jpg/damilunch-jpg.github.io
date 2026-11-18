@@ -2,10 +2,16 @@ name: Sincronizza albi pretori
 
 on:
   schedule:
-    # Mezzanotte in Europa/Roma durante l'ora legale (CEST, UTC+2).
-    - cron: "0 22 * * *"
-    # Mezzanotte in Europa/Roma durante l'ora solare (CET, UTC+1).
-    - cron: "0 23 * * *"
+    # Ogni riga è un orario UTC. Lo script la traduce in ora di Roma (CET o CEST)
+    # e parte solo se cade su 00:00, 01:00, 02:30 o 04:00. La mezzanotte legge
+    # tutti i comuni; gli orari successivi ritentano solo i falliti o vuoti.
+    - cron: "0 22 * * *"   # 00:00 ora legale
+    - cron: "0 23 * * *"   # 00:00 ora solare, oppure 01:00 ora legale
+    - cron: "0 0 * * *"    # 01:00 ora solare
+    - cron: "30 0 * * *"   # 02:30 ora legale
+    - cron: "30 1 * * *"   # 02:30 ora solare
+    - cron: "0 2 * * *"    # 04:00 ora legale
+    - cron: "0 3 * * *"    # 04:00 ora solare
   workflow_dispatch:
 
 permissions:
@@ -18,7 +24,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v4
       - name: Leggi gli albi e aggiorna l'elenco

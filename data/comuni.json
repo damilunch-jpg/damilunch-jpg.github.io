@@ -27,8 +27,8 @@
     "alboUrl": "https://comune.norma.lt.it/documenti-albo-pretorio",
     "alboVerificato": true,
     "sitoIstituzionale": "https://comune.norma.lt.it/",
-    "scraper": "mycity",
-    "fonte": "https://comune.norma.lt.it/documenti-albo-pretorio",
+    "scraper": "halley",
+    "fonte": "https://www.halleyweb.com/c059016/index.php?servizio=304",
     "fallback": [
       "https://www.halleyweb.com/c059016/mc/mc_gridev_messi.php",
       "https://www.halleyweb.com/c059016/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059016"
@@ -37,13 +37,13 @@
   {
     "slug": "sezze",
     "nome": "Sezze",
-    "alboUrl": "https://servizi.comune.sezze.lt.it/ServiziOnLine/Istanze/landingIstanza?Id=1",
+    "alboUrl": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi.php?x=&servizio=&bck=https%3A%2F%2Fwww.comune.sezze.lt.it%2Fc059028%2Fhh%2Findex.php",
     "alboVerificato": true,
     "sitoIstituzionale": "https://www.comune.sezze.lt.it/",
-    "scraper": "servizionline",
-    "fonte": "https://servizi.comune.sezze.lt.it/ServiziOnLine/Istanze/landingIstanza?Id=1",
+    "scraper": "halley",
+    "fonte": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi.php?x=&servizio=&bck=https%3A%2F%2Fwww.comune.sezze.lt.it%2Fc059028%2Fhh%2Findex.php",
     "fallback": [
-      "https://www.halleyweb.com/c059028/mc/mc_gridev_messi.php"
+      "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028"
     ]
   },
   {

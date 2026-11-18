@@ -33,7 +33,7 @@ Se https://damilunch-jpg.github.io/ non mostra ancora il sito:
 Due azioni GitHub tengono aggiornato il sito:
 
 - **Aggiorna indice articoli**: dopo ogni articolo nuovo o modificato ricostruisce `js/articles.js`.
-- **Sincronizza albi pretori**: ogni notte, a mezzanotte ora di Roma, legge gli albi e aggiorna le pagine dei comuni.
+- **Sincronizza albi pretori**: di notte, fra mezzanotte e le 5 ora di Roma, legge gli albi. Alle 00:00 li legge tutti; all'01:00, alle 02:30 e alle 04:00 riprova solo i comuni che erano falliti o vuoti. Le richieste sono una alla volta, con pause, quindi il lavoro può durare a lungo.
 
 Se un'azione fallisce con un errore di permesso (`403` in fase di `git push`):
 
@@ -169,8 +169,11 @@ finché qualcuno con accesso non li cancella.
 
 ## 8. Albo pretorio
 
-Ogni notte, a **mezzanotte ora di Roma** (sia con l'ora solare sia con l'ora legale),
+Ogni notte, fra le **00:00 e le 05:00 ora di Roma** (ora solare e ora legale),
 l'azione **Sincronizza albi pretori** legge gli albi degli otto comuni.
+A mezzanotte li interroga tutti. All'01:00, alle 02:30 e alle 04:00 riprova
+solo quelli falliti o rimasti senza atti. Un elenco già riuscito non viene
+sostituito con una risposta vuota, e se il sito non risponde resta l'elenco precedente.
 
 Sulla pagina di ciascun comune compaiono:
 
@@ -194,8 +197,8 @@ Fonti usate:
 | --- | --- |
 | Cori | Albo URBI del Comune |
 | Cisterna di Latina | Albo Halley (`halleyweb`) collegato dalla pagina comunale |
-| Norma | Pagina «Documenti albo pretorio» del sito comunale; se è vuota, albo Halley indicato in homepage |
-| Sezze | Scheda «Albo pretorio» su ServiziOnLine; in alternativa l'albo Halley del Comune |
+| Norma | Albo Halley indicato in homepage come «Albo Pretorio» (`halleyweb.com/c059016`, servizio 304) |
+| Sezze | Albo Halley aperto dal pulsante «Accedi al servizio» della scheda Albo pretorio su comune.sezze.lt.it (`halleyweb.com/c059028/mc/mc_gridev_messi.php`) |
 | Bassiano | Albo URBI del Comune |
 | Roccagorga | Albo sulla Gazzetta Amministrativa, link ufficiale nel piè del sito comunale (`comuneroccagorga.it` al momento non risolve; il sito che risponde è `www.comune.roccagorga.lt.it`) |
 | Priverno | Scheda «Albo pretorio» su ServiziOnLine; in alternativa l'albo Halley del Comune |

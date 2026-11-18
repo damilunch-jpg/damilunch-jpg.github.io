@@ -29,7 +29,7 @@ window.M5S_DATA = {
     {
       "slug": "sezze",
       "nome": "Sezze",
-      "alboUrl": "https://servizi.comune.sezze.lt.it/ServiziOnLine/Istanze/landingIstanza?Id=1",
+      "alboUrl": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi.php?x=&servizio=&bck=https%3A%2F%2Fwww.comune.sezze.lt.it%2Fc059028%2Fhh%2Findex.php",
       "alboVerificato": true,
       "sitoIstituzionale": "https://www.comune.sezze.lt.it/"
     },
