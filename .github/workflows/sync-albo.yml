@@ -7,6 +7,12 @@ on:
     # Mezzanotte in Europa/Roma durante l'ora solare (CET, UTC+1).
     - cron: "0 23 * * *"
   workflow_dispatch:
+  # Avvio una tantum: il push di questo file fa partire la prova.
+  # Il trigger push viene tolto subito dopo, restano schedule e workflow_dispatch.
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/sync-albo.yml"
 
 permissions:
   contents: write
