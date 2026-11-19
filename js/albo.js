@@ -1,6 +1,6 @@
 /* Generato da scripts/sync_albo.py. Elenco degli atti letti dagli albi pretori. */
 window.M5S_ALBO = {
-  "aggiornato": "2026-11-19T05:59:17+01:00",
+  "aggiornato": "2026-11-19T07:30:37+01:00",
   "comuni": {
     "cori": {
       "ok": true,
@@ -445,7 +445,7 @@ window.M5S_ALBO = {
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-19T05:59:17+01:00",
+      "aggiornato": "2026-11-19T07:30:37+01:00",
       "atti": []
     },
     "roccagorga": {
@@ -584,20 +584,84 @@ window.M5S_ALBO = {
       ]
     },
     "norma": {
-      "ok": false,
-      "esito": "errore",
-      "errore": "Fonte non raggiungibile",
-      "fonte": "https://www.halleyweb.com/c059016/mc/mc_gridev_messi_datigrid.php?x=",
-      "aggiornato": "2026-11-19T05:31:40+01:00",
-      "atti": []
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
+      "fonte": "https://www.halleyweb.com/c059016/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059016",
+      "aggiornato": "2026-11-19T07:22:57+01:00",
+      "atti": [
+        {
+          "titolo": "Servizio di Mensa Sociale - Approvazione dell'avviso pubblico per indagine esplorativa sull'interesse della cittadinanza e del modello di manifestazione di interesse. Indirizzi attuativi",
+          "data": "2026-10-28",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4816"
+        },
+        {
+          "titolo": "Servizio comunale di trasporto sociale \"Prontobus\". Approvazione degli schemi di avviso pubblico per procedura comparativa e di domanda di partecipazione. Atto di indirizzo per l'attivazione della collaborazione con associazioni senza scopo di lucro",
+          "data": "2026-10-28",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4817"
+        },
+        {
+          "titolo": "NOVEMBRE - MESE DELLA SALUTE 2026\". Approvazione del programma di iniziative di prevenzione, sensibilizzazione e formazione sanitaria. Indirizzi agli uffici competenti.",
+          "data": "2026-10-28",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4812"
+        },
+        {
+          "titolo": "Concessione del patrocinio comunale e di contributo economico per la VI edizione della competizione podistica NORMISSIMA 2026. -Atto di indirizzo-",
+          "data": "2026-10-28",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4814"
+        },
+        {
+          "titolo": "Bilancio Partecipato - annualità 2026. Approvazione dell'avviso pubblico e dei relativi modelli di domanda e scheda sintetica del progetto.",
+          "data": "2026-10-28",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4818"
+        },
+        {
+          "titolo": "Approvazione dell'iniziativa culturale e formativa \"Corso di Fumetto\", rivolta ai giovani dagli 8 ai 14 anni. Concessione del patrocinio e messa a disposizione temporanea di locali comunali presso l'ex Scuola Media di Norma.",
+          "data": "2026-10-28",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4813"
+        },
+        {
+          "titolo": "Asilo Nido comunale \"Grazia Viani\" - Integrazione della deliberazione di Giunta comunale n. 66 del 04/09/2026. Introduzione della riduzione del 20% delle rette mensili per la frequenza part-time - Anno educativo 2026/2027.",
+          "data": "2026-09-04",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4815"
+        }
+      ]
     },
     "cisterna-di-latina": {
-      "ok": false,
-      "esito": "errore",
-      "errore": "Fonte non raggiungibile",
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
       "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
-      "aggiornato": "2026-11-19T05:12:27+01:00",
+      "aggiornato": "2026-11-19T07:21:11+01:00",
       "atti": [
+        {
+          "titolo": "Procedura di interpello a seguito di accordo per la gestione associata della formazione di elenchi di idonei, di cui all'3 bis del D.L. n. 80/2021, convertito in Legge n.113/2021, per l'assunzione di n.4 Istruttori Amministrativi - Area degli Istruttori. Assunzione candidati vincitori.",
+          "data": "2026-11-18",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48918"
+        },
+        {
+          "titolo": "C.C.N.L. PERSONALE NON DIRIGENTE COMPARTO FUNZIONI LOCALI TRIENNIO 2025/2027 - ATTO DI IMPEGNO PER CORRESPONSIONE EMOLUMENTI ARRETRATI ANNO 2025 E ANNO 2026.",
+          "data": "2026-11-18",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48917"
+        },
         {
           "titolo": "Allineamento consumi e integrazione impegno di spesa per il pagamento di consumi derivanti dalla fornitura di energia elettrica per il Pod IT001E60513480 - Centro Sportivo San Valentino attivato con ODA n. 9196613",
           "data": "2026-11-18",
@@ -650,19 +714,160 @@ window.M5S_ALBO = {
       ]
     },
     "sezze": {
-      "ok": false,
-      "esito": "errore",
-      "errore": "Fonte non raggiungibile",
-      "fonte": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi_datigrid.php?x=",
-      "aggiornato": "2026-11-19T05:43:51+01:00",
-      "atti": []
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
+      "fonte": "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028",
+      "aggiornato": "2026-11-19T07:27:54+01:00",
+      "atti": [
+        {
+          "titolo": "LAVORI DEMOLIZIONE- RICOSTRUZIONE CENTRO SOCIALE VIA PUGLIE- DIVIETO DI TRANSITO IL 20.11.2026",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27005"
+        },
+        {
+          "titolo": "Rettifica ordinanza nrg 159/26",
+          "data": "2026-11-18",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27010"
+        },
+        {
+          "titolo": "LAVORI MESSA IN SICUREZZA CORNICIONE - PIAZZA MARGHERITA IL 20.11.26- DIVIETO SOSTA E RIMOZIONE FORZATA",
+          "data": "2026-11-18",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27006"
+        },
+        {
+          "titolo": "TAGLIO PINO - PERICOLO CADUTA- PROPRIETA' SAMBUCCI ALESSANDRO- VIA CARIZIA 11",
+          "data": "2026-11-17",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27003"
+        },
+        {
+          "titolo": "LAVORI EDILI VIA CORRADINI, 5- DIVIETO SOSTA CON RIMOZIONE E DIVIETO TRANSITO 20 NOVEMBRE 2026",
+          "data": "2026-11-17",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27002"
+        },
+        {
+          "titolo": "Istanza di rinuncia all'assegnazione del loculo a colombario n. 124 (Corpo \"C\") e contestuale rimborso del deposito cauzionale di  1.500,00.",
+          "data": "2026-11-16",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27000"
+        },
+        {
+          "titolo": "Cimitero comunale - Accettazione della rinuncia all'assegnazione del loculo n. 124, primo livello, corpo C - Restituzione del deposito di  1.500,00 e impegno di spesa.",
+          "data": "2026-11-16",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=26999"
+        },
+        {
+          "titolo": "Variazione di urgenza al Bilancio di Previsione Finanziario 2026 - 2028 (Art. 175 C. 4) del D. Lgs. n. 267/2000.",
+          "data": "2026-11-12",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27009"
+        },
+        {
+          "titolo": "Donazione di fontana in pietra al Comune di Sezze. Atto di accettazione della donazione",
+          "data": "2026-11-12",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27008"
+        },
+        {
+          "titolo": "Aggiornamento in corso d'anno del Programma triennale degli acquisti di beni e servizi 2026-2028 e del relativo elenco annuale 2026, ai sensi dell'art. 37 del D.Lgs. 31 marzo 2023, n. 36 e dell'art. 7 dell'Allegato I.5 al medesimo decreto.",
+          "data": "2026-11-12",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27007"
+        },
+        {
+          "titolo": "Prosecuzione temporanea del servizio di ricovero, custodia, mantenimento e cura degli animali randagi, profilassi sanitaria e prestazioni sanitarie canine e feline, in continuità nelle more della conclusione della gara e dell'effettivo subentro del nuovo affidatario",
+          "data": "2026-11-11",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27001"
+        },
+        {
+          "titolo": "Restituzione somma versata in eccedenza per pratica istanza di autorizzazione allo scarico di acque reflue domestiche ex D.lgs n. 152/2006. Accertamento dell'indebito versamento e impegno di spesa in favore del richiedente - Importo  150,00",
+          "data": "2026-11-05",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=26998"
+        },
+        {
+          "titolo": "Programma Regionale FESR Lazio 2021-2027 - Obiettivi specifici 2.1 e 2.2 - Intervento di riqualificazione ed efficientamento energetico di Palazzo De Magistris, sede comunale - CUP C14J25000060002 - CIG BD6788BB29. Decisione di contrarre e contestuale affidamento diretto dei servizi tecnici di progettazione esecutiva, pratiche autorizzative e paesaggistiche, diagnosi energetica, coordinamento della sicurezza, direzione lavori, contabilità e attività conclusive, ai sensi degli artt. 17, comma 2, ",
+          "data": "2026-11-05",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=26996"
+        },
+        {
+          "titolo": "PR FESR Lazio 2021-2027 - Azione 2.1.1 - Efficientamento energetico del Palazzo De Magistris, sede comunale - CUP C14J25000060002 - Codice progetto regionale A0850B0064. Accertamento dell'entrata del contributo regionale di  958.656,00 ai sensi dell'art. 179 del D.Lgs. n. 267/2000 (TUEL) e del D.Lgs. n. 118/2011.",
+          "data": "2026-11-05",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=26995"
+        },
+        {
+          "titolo": "Interventi di manutenzione ordinaria e straordinaria delle pavimentazioni stradali - Approvazione della perizia di variante e suppletiva e di assestamento ai sensi dell'art. 120 del D.Lgs. n. 36/2023. CUP C17H23002340004 - CIG A0442FCFDB.",
+          "data": "2026-11-05",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=26997"
+        },
+        {
+          "titolo": "Programma Regionale FESR Lazio 2021-2027 - Obiettivi specifici 2.1 e 2.2 - Intervento di riqualificazione ed efficientamento energetico della Biblioteca Comunale - Palazzo ex Seminario - Piazza Margherita - CUP C14H25000090002 - CIG BD8070E7E8. Decisione di contrarre e contestuale affidamento diretto dei servizi tecnici di diagnosi energetica post operam e delle ulteriori prestazioni specialistiche previste nella richiesta di offerta, ai sensi degli artt. 17, comma 2, e 50, comma 1, lett. b), de",
+          "data": "2026-11-02",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=26993"
+        },
+        {
+          "titolo": "PR FESR Lazio 2021-2027 - Azione 2.1.1 - Intervento di efficientamento energetico della Biblioteca comunale presso il Palazzo ex Seminario - CUP C14H25000090002 - Codice progetto regionale A0850B0065. Accertamento dell'entrata del contributo regionale di  370.134,00 ai sensi dell'art. 179 del D.Lgs. n. 267/2000 (TUEL) e del D.Lgs. n. 118/2011.",
+          "data": "2026-11-02",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=26992"
+        },
+        {
+          "titolo": "Determinazione di avvio del procedimento finalizzato all'affidamento triennale del servizio di conferimento, trattamento e recupero dei rifiuti biodegradabili da cucine e mense, codice EER 20 01 08 - Periodo 2027-2029. Approvazione e avvio della consultazione preliminare di mercato ai sensi degli artt. 77 e 78 del D.Lgs. n. 36/2023, propedeutica alla successiva determinazione a contrarre ai sensi dell'art. 17 del medesimo decreto. Approvazione dell'avviso pubblico e degli allegati A, B e C.",
+          "data": "2026-11-02",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=26994"
+        },
+        {
+          "titolo": "Lavori di ristrutturazione ed efficientamento energetico dell'Impianto Sportivo Comunale \"Augusto Tasciotti\" - CUP C13I25000180004 - CIG BD1AAF39CA - Impegno di spesa per il contributo dovuto all'Autorità Nazionale Anticorruzione (ANAC) per l'anno 2026.",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=26991"
+        },
+        {
+          "titolo": "Determinazione a contrarre e contestuale affidamento diretto, ai sensi degli artt. 17, comma 2, e 50, comma 1, lett. b), del D.Lgs. 31 marzo 2023, n. 36, del servizio di consulenza giuridico-amministrativa specialistica a supporto del Settore V - Servizi al Territorio per la gestione di n. 2 procedimenti di vigilanza e repressione dell'abusivismo edilizio, in favore dell'Avv. Michele Francaviglia - Importo di  3.500,00, oltre CPA e IVA di legge - CIG BD71381BE1.",
+          "data": "2026-10-27",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27004"
+        }
+      ]
     },
     "priverno": {
-      "ok": false,
-      "esito": "errore",
-      "errore": "Fonte non raggiungibile",
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
       "fonte": "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "aggiornato": "2026-11-19T05:59:09+01:00",
+      "aggiornato": "2026-11-19T07:30:27+01:00",
       "atti": [
         {
           "titolo": "AVVISO DI DEPOSITO ATTI PRESSO LA CASA COMUNALE DI PRIVERNO",
