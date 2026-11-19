@@ -1,13 +1,13 @@
 /* Generato da scripts/sync_albo.py. Elenco degli atti letti dagli albi pretori. */
 window.M5S_ALBO = {
-  "aggiornato": "2026-11-18T18:19:20+01:00",
+  "aggiornato": "2026-11-19T05:59:17+01:00",
   "comuni": {
     "cori": {
       "ok": true,
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
-      "aggiornato": "2026-11-18T17:15:26+01:00",
+      "aggiornato": "2026-11-19T04:55:22+01:00",
       "atti": [
         {
           "titolo": "VENDITA A CORPO DEL MATERIALE LEGNOSO RITRAIBILE DALLE PARTICELLE FORESTALI COMUNALI N. 17 \"FRANNO PIANO\" (TAGLIO DI FINE TURNO) E NN. 12 \"FOLEGARE MURIATORE\", 20 \"COLLE ROSELLO\" E 21 \"SELVA DI CORI\" (TAGLIO DI DIRADAMENTO) A SEGUITO DI TRATTATIVA PRIVATA (EX ART. 26 R.D. 827/1924). AGGIUDICAZIONE DEFINITIVA IN FAVORE DELLA DITTA MONTE ARTEMISIO LEGNAMI S.R.L., APPROVAZIONE QUADRO ECONOMICO COMPLESSIVO (€ 72.822,48), RIMODULAZIONE SCADENZE RATEALI E APPROVAZIONE SCHEMA DI CONTRATTO (DETERMINA/20",
@@ -226,7 +226,7 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145",
-      "aggiornato": "2026-11-18T18:04:46+01:00",
+      "aggiornato": "2026-11-19T05:44:30+01:00",
       "atti": [
         {
           "titolo": "LIQUIDAZIONE DI SPESA ALLA SOCIETÀ WINTEL SRL, PER FORNITURA SCHEDA VOIP DSP PER CENTRALINO PANASONIC E INSTALLAZIONE E PROGRAMMAZIONE DEL CENTRALINO CON AGGIORNAMENTO PRESSO LA CASA COMUNALE – C.I.G. BA733CD1FE. (DETERMINA/2026/296/16-11-2026)(TECNICO - 131)",
@@ -445,7 +445,7 @@ window.M5S_ALBO = {
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-18T18:19:20+01:00",
+      "aggiornato": "2026-11-19T05:59:17+01:00",
       "atti": []
     },
     "roccagorga": {
@@ -453,8 +453,22 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/",
-      "aggiornato": "2026-11-18T18:06:40+01:00",
+      "aggiornato": "2026-11-19T05:46:38+01:00",
       "atti": [
+        {
+          "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.81 DEL 30-10-2026 AVENTE AD OGGETTO LINEE DI INDIRIZZO PER LA DELEGAZIONE TRATTANTE DI PARTE DATORIALE NELLA CONTRATTAZIONE COLLETTIVA DECENTRATA INTEGRATIVA ANNO 2026 COMPARTO PERSONALE FUNZIONI LOCALI.",
+          "data": "2026-11-18",
+          "tipo": "Delibere",
+          "numero": "81",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1795024225872/"
+        },
+        {
+          "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.80 DEL 30-10-2026 AVENTE AD OGGETTO COSTITUZIONE DELLA DELEGAZIONE TRATTANTE DI PARTE PUBBLICA AI SENSI DELL’ART.7, COMMA 3, E DELL’ART.8, COMMA 2, DEL CCNL FUNZIONI LOCALI DEL 23/02/2026 PER LA CONTRATTAZIONE COLLETTIVA INTEGRATIVA DEL PERSONALE DIPENDENTE.",
+          "data": "2026-11-18",
+          "tipo": "Delibere",
+          "numero": "80",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1795024108657/"
+        },
         {
           "titolo": "AVVISO DI CONVOCAZIONE DEL CONSIGLIO COMUNALE IN SEDUTA STRAORDINARIA DI PRIMA CONVOCAZIONE PER IL GIONO 24-11-2026 - ORE 11:00, ED IN SECONDA CONVOCAZIONE IN DATA 25 NOVEMBRE 2026 - ORE 11:00.",
           "data": "2026-11-18",
@@ -574,7 +588,7 @@ window.M5S_ALBO = {
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059016/mc/mc_gridev_messi_datigrid.php?x=",
-      "aggiornato": "2026-11-18T17:52:12+01:00",
+      "aggiornato": "2026-11-19T05:31:40+01:00",
       "atti": []
     },
     "cisterna-di-latina": {
@@ -582,7 +596,7 @@ window.M5S_ALBO = {
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
-      "aggiornato": "2026-11-18T17:32:29+01:00",
+      "aggiornato": "2026-11-19T05:12:27+01:00",
       "atti": [
         {
           "titolo": "Allineamento consumi e integrazione impegno di spesa per il pagamento di consumi derivanti dalla fornitura di energia elettrica per il Pod IT001E60513480 - Centro Sportivo San Valentino attivato con ODA n. 9196613",
@@ -640,7 +654,7 @@ window.M5S_ALBO = {
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi_datigrid.php?x=",
-      "aggiornato": "2026-11-18T18:04:18+01:00",
+      "aggiornato": "2026-11-19T05:43:51+01:00",
       "atti": []
     },
     "priverno": {
@@ -648,7 +662,7 @@ window.M5S_ALBO = {
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "aggiornato": "2026-11-18T18:19:07+01:00",
+      "aggiornato": "2026-11-19T05:59:09+01:00",
       "atti": [
         {
           "titolo": "AVVISO DI DEPOSITO ATTI PRESSO LA CASA COMUNALE DI PRIVERNO",
