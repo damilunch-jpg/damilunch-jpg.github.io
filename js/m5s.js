@@ -1,6 +1,6 @@
 /* Generato da scripts/sync_m5s.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_UFFICIALE = {
-  "aggiornato": "2026-11-20T12:44:27+01:00",
+  "aggiornato": "2026-11-20T23:24:44+01:00",
   "giorni": 60,
   "fonti": [
     {
@@ -13,7 +13,7 @@ window.M5S_UFFICIALE = {
       "id": "regionale",
       "nome": "Movimento 5 Stelle Lazio",
       "esito": "ok",
-      "nuove": 2
+      "nuove": 0
     }
   ],
   "voci": [
@@ -42,6 +42,36 @@ window.M5S_UFFICIALE = {
       "titolo": "Più armi, meno servizi: la manovra scarica il conto sui Comuni",
       "anteprima": "Ogni giorno, da sindaco, vedo cosa significa garantire un autobus che passa all’orario giusto, un’assistente che accompagna un bambino con disabilità in classe, una strada sistemata, un servizio per le famiglie che funziona. È per questo che la…",
       "data": "2026-11-11",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
+    {
+      "url": "https://www.movimento5stelle.eu/nuova-taranto-il-futuro-della-citta-si-costruisce-nei-quartieri",
+      "titolo": "N(U)OVA TARANTO: il futuro della città si costruisce nei quartieri",
+      "anteprima": "Il 23 ottobre, con l’assemblea provinciale del Movimento 5 Stelle, abbiamo avviato un percorso collettivo per costruire il futuro di Taranto oltre l’Ilva. Avevamo promesso che non sarebbe rimasto chiuso in una sala: ora quel percorso scende in…",
+      "data": "2026-11-11",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
+    {
+      "url": "https://www.movimento5stelle.eu/i-numeri-impietosi-del-ridicolo-decreto-bollette-di-meloni",
+      "titolo": "I numeri impietosi del ridicolo decreto bollette di Meloni",
+      "anteprima": "L’ennesimo decreto Bollette del governo Meloni è l’ennesima risposta del tutto inadeguata a un’emergenza che sta mettendo in ginocchio milioni di famiglie e imprese. Vediamo i numeri, perchè sono davvero impietosi. Istat certifica che a ottobre…",
+      "data": "2026-11-11",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
+    {
+      "url": "https://www.movimento5stelle.eu/la-guerra-la-paghi-tu-come-ci-tolgono-i-soldi-per-spenderli-in-armi-2",
+      "titolo": "La guerra la paghi tu! Come ci tolgono i soldi per spenderli in armi",
+      "anteprima": "📍 Teatro del Pavone, Piazza della Repubblica, Perugia📅 Venerdì 13 novembre, ore 18.00 Con la partecipazione del Presidente Giuseppe Conte 🎙 ModeraDavid Fantauzzi, coordinatore regionale M5S Umbria 🏛 Saluti istituzionaliStefania Proietti, Presidente…",
+      "data": "2026-11-10",
       "fonte": "nazionale",
       "fonteNome": "Movimento 5 Stelle",
       "etichetta": "Dal Nazionale",
