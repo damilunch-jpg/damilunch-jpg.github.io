@@ -15,9 +15,9 @@ window.M5S_DATA = {
     {
       "slug": "fondi",
       "nome": "Fondi",
-      "alboUrl": "",
-      "alboVerificato": false,
-      "sitoIstituzionale": "",
+      "alboUrl": "https://comunefondi.epublic.it/it-it/amministrazione/atti-pubblicazioni/albo-pretorio",
+      "alboVerificato": true,
+      "sitoIstituzionale": "https://comune.fondi.lt.it/",
       "alboAutomatico": false
     },
     {
@@ -37,9 +37,9 @@ window.M5S_DATA = {
     {
       "slug": "monte-san-biagio",
       "nome": "Monte San Biagio",
-      "alboUrl": "",
-      "alboVerificato": false,
-      "sitoIstituzionale": "",
+      "alboUrl": "https://www.comune.montesanbiagio.lt.it/EG0/EGHOMEPAGE.HBL?ss=1&F=MC09&en=eg255&freeze=1",
+      "alboVerificato": true,
+      "sitoIstituzionale": "https://www.comune.montesanbiagio.lt.it/",
       "alboAutomatico": false
     },
     {
@@ -74,34 +74,32 @@ window.M5S_DATA = {
     {
       "slug": "lenola",
       "nome": "Lenola",
-      "alboUrl": "",
-      "alboVerificato": false,
-      "sitoIstituzionale": "",
+      "alboUrl": "https://comune.lenola.lt.it/albo-pretorio",
+      "alboVerificato": true,
+      "sitoIstituzionale": "https://comune.lenola.lt.it/",
       "alboAutomatico": false
     },
     {
       "slug": "sermoneta",
       "nome": "Sermoneta",
-      "alboUrl": "",
-      "alboVerificato": false,
-      "sitoIstituzionale": "",
-      "alboAutomatico": false
+      "alboUrl": "https://www.comunedisermoneta.it/c059027/mc/mc_p_ricerca.php",
+      "alboVerificato": true,
+      "sitoIstituzionale": "https://comune.sermoneta.latina.it/"
     },
     {
       "slug": "terracina",
       "nome": "Terracina",
-      "alboUrl": "",
-      "alboVerificato": false,
-      "sitoIstituzionale": "",
+      "alboUrl": "https://portaledeiservizi.comune.terracina.lt.it/openweb/albo/albo_pretorio.php",
+      "alboVerificato": true,
+      "sitoIstituzionale": "https://comune.terracina.lt.it/",
       "alboAutomatico": false
     },
     {
       "slug": "rocca-massima",
       "nome": "Rocca Massima",
-      "alboUrl": "",
-      "alboVerificato": false,
-      "sitoIstituzionale": "",
-      "alboAutomatico": false
+      "alboUrl": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_ricerca.php",
+      "alboVerificato": true,
+      "sitoIstituzionale": "http://www.comune.roccamassima.latina.it/"
     },
     {
       "slug": "roccagorga",
@@ -113,10 +111,9 @@ window.M5S_DATA = {
     {
       "slug": "ceccano",
       "nome": "Ceccano",
-      "alboUrl": "",
-      "alboVerificato": false,
-      "sitoIstituzionale": "",
-      "alboAutomatico": false
+      "alboUrl": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597",
+      "alboVerificato": true,
+      "sitoIstituzionale": "https://comune.ceccano.fr.it/"
     },
     {
       "slug": "sonnino",

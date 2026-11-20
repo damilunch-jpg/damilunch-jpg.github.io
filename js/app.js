@@ -234,7 +234,14 @@
     "cisterna-di-latina": true,
     norma: true,
     sezze: true,
-    priverno: true
+    priverno: true,
+    fondi: true,
+    "monte-san-biagio": true,
+    lenola: true,
+    sermoneta: true,
+    terracina: true,
+    "rocca-massima": true,
+    ceccano: true
   };
 
   function socialVisibili() {
@@ -529,8 +536,13 @@
           '<a class="btn-albo-ufficiale" href="' +
           escapeHtml(comune.alboUrl) +
           '" target="_blank" rel="noopener noreferrer">Vai all\'albo ufficiale</a>';
-        html +=
-          '<p class="nota-albo">L\'elenco automatico qui sotto può non essere completo. L\'albo ufficiale del Comune resta sempre raggiungibile dal pulsante.</p>';
+        if (comune.alboAutomatico === false) {
+          html +=
+            '<p class="nota-albo">L\'elenco automatico degli atti non è ancora attivo per questo comune. L\'albo ufficiale resta raggiungibile dal pulsante.</p>';
+        } else {
+          html +=
+            '<p class="nota-albo">L\'elenco automatico qui sotto può non essere completo. L\'albo ufficiale del Comune resta sempre raggiungibile dal pulsante.</p>';
+        }
       }
       html +=
         '<a class="btn-esterno" href="' +
@@ -553,7 +565,7 @@
         '<p class="nota-albo">Se l\'indirizzo dell\'albo ufficiale verrà confermato, lo inseriremo direttamente in questa sezione.</p>';
     }
 
-    html += renderAlboElenco(slug);
+    if (comune.alboAutomatico !== false) html += renderAlboElenco(slug);
     html += "</section>";
     mount.innerHTML = html;
   }
