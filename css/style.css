@@ -354,9 +354,22 @@ a:focus-visible {
   border: 1px solid var(--bordo);
 }
 
-.badge-comunicato {
+.badge-comunicato,
+.badge-nazionale {
   background: var(--giallo);
   color: var(--grigio-scuro);
+}
+
+.badge-regionale {
+  background: var(--grigio);
+  color: var(--bianco);
+}
+
+.logo-fonte {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .excerpt,

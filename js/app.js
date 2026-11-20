@@ -152,6 +152,17 @@
     });
   }
 
+  function vociUfficiali(fonte) {
+    var lista = ((window.M5S_UFFICIALE && window.M5S_UFFICIALE.voci) || []).slice();
+    if (fonte === "nazionale" || fonte === "regionale") {
+      lista = lista.filter(function (v) { return v.fonte === fonte; });
+    }
+    lista.sort(function (a, b) {
+      return String(b.data || "").localeCompare(String(a.data || ""));
+    });
+    return lista;
+  }
+
   function findArticle(id) {
     for (var i = 0; i < DATA.articles.length; i++) {
       if (DATA.articles[i].id === id) return DATA.articles[i];
@@ -160,7 +171,60 @@
   }
 
   function tipoLabel(tipo) {
-    return tipo === "comunicato" ? "Comunicato stampa" : "Articolo";
+    if (tipo === "comunicato") return "Comunicato stampa";
+    if (tipo === "nazionale") return "Dal Nazionale";
+    if (tipo === "regionale") return "Dal Regionale";
+    return "Articolo";
+  }
+
+  function cardVoce(voce, base, heading) {
+    var tag = heading || "h3";
+    var fonte = voce.fonte === "regionale" ? "regionale" : "nazionale";
+    var logo = voce.logo
+      ? '<img src="' + base + escapeHtml(voce.logo) + '" alt="" width="28" height="28">'
+      : "";
+    var quando = formatDate(voce.data);
+    var anteprima = voce.anteprima
+      ? '<p class="notizia-anteprima">' + escapeHtml(voce.anteprima) + "</p>"
+      : "";
+    var nome = voce.fonteNome || "Movimento 5 Stelle";
+    return (
+      '<article class="card notizia">' +
+      '<p class="notizia-testata">' +
+      logo +
+      "<span>" + escapeHtml(nome) + "</span>" +
+      (quando ? '<time datetime="' + escapeHtml(voce.data) + '">' + escapeHtml(quando) + "</time>" : "") +
+      "</p>" +
+      '<p class="meta"><span class="badge-tipo badge-' + fonte + '">' + escapeHtml(voce.etichetta || tipoLabel(fonte)) + "</span></p>" +
+      "<" + tag + '><a href="' + escapeHtml(voce.url) + '" target="_blank" rel="noopener noreferrer">' +
+      escapeHtml(voce.titolo) +
+      "</a></" + tag + ">" +
+      anteprima +
+      '<p class="notizia-leggi"><a href="' + escapeHtml(voce.url) + '" target="_blank" rel="noopener noreferrer">Leggi su ' +
+      escapeHtml(nome) +
+      "</a></p>" +
+      "</article>"
+    );
+  }
+
+  function featuredVoce(voce, base) {
+    var fonte = voce.fonte === "regionale" ? "regionale" : "nazionale";
+    var logo = voce.logo
+      ? '<img class="logo-fonte" src="' + base + escapeHtml(voce.logo) + '" alt="" width="36" height="36">'
+      : "";
+    var nome = voce.fonteNome || "Movimento 5 Stelle";
+    return (
+      '<article class="featured">' +
+      '<p class="page-kicker">' + escapeHtml(voce.etichetta || tipoLabel(fonte)) + "</p>" +
+      '<p class="notizia-testata">' + logo + "<span>" + escapeHtml(nome) + "</span>" +
+      '<time datetime="' + escapeHtml(voce.data) + '">' + escapeHtml(formatDate(voce.data)) + "</time></p>" +
+      "<h2><a href=\"" + escapeHtml(voce.url) + "\" target=\"_blank\" rel=\"noopener noreferrer\">" +
+      escapeHtml(voce.titolo) + "</a></h2>" +
+      (voce.anteprima ? '<p class="excerpt">' + escapeHtml(voce.anteprima) + "</p>" : "") +
+      '<a class="leggi-tutto" href="' + escapeHtml(voce.url) + '" target="_blank" rel="noopener noreferrer">Leggi su ' +
+      escapeHtml(nome) + "</a>" +
+      "</article>"
+    );
   }
 
   function metaHtml(article, base) {
@@ -596,28 +660,42 @@
     var base = basePath();
     document.title = "Gruppo Territoriale – Movimento 5 Stelle, GT Lepini Ausoni";
     var tipo = (window.location.hash || "").replace(/^#/, "") || "tutti";
-    if (tipo !== "articolo" && tipo !== "comunicato") tipo = "tutti";
-    var tutti = articlesGruppo("tutti");
-    var lista = articlesGruppo(tipo);
+    if (tipo !== "articolo" && tipo !== "comunicato" && tipo !== "nazionale" && tipo !== "regionale") tipo = "tutti";
+    var articoliTutti = articlesGruppo("tutti");
+    var vociTutte = vociUfficiali("tutti");
+    var pezzi = [];
+    if (tipo === "tutti" || tipo === "articolo" || tipo === "comunicato") {
+      articlesGruppo(tipo).forEach(function (a) {
+        pezzi.push({ data: a.data || "", html: cardHtml(a, base) });
+      });
+    }
+    if (tipo === "tutti" || tipo === "nazionale" || tipo === "regionale") {
+      vociUfficiali(tipo === "tutti" ? "tutti" : tipo).forEach(function (v) {
+        pezzi.push({ data: v.data || "", html: cardVoce(v, base) });
+      });
+    }
+    pezzi.sort(function (a, b) { return String(b.data).localeCompare(String(a.data)); });
 
     var html =
       '<p class="page-kicker">Movimento 5 Stelle</p>' +
       "<h1>Gruppo Territoriale</h1>" +
-      '<p class="lead">Articoli e comunicati stampa del Gruppo Territoriale Lepini Ausoni nel suo insieme, non legati a un solo comune.</p>';
+      '<p class="lead">Articoli e comunicati del Gruppo Territoriale Lepini Ausoni, insieme alle notizie ufficiali del Movimento nazionale e del Movimento in Lazio. Di quelle si mostra solo il riassunto già pubblicato nel feed, con il link alla fonte.</p>';
 
     html += '<div class="filtri-comune" role="group" aria-label="Filtra per tipo">';
     html += '<a class="filtro' + (tipo === "tutti" ? " is-active" : "") + '" href="' + base + 'gruppo.html#tutti">Tutti</a>';
     html += '<a class="filtro' + (tipo === "articolo" ? " is-active" : "") + '" href="' + base + 'gruppo.html#articolo">Articoli</a>';
     html += '<a class="filtro' + (tipo === "comunicato" ? " is-active" : "") + '" href="' + base + 'gruppo.html#comunicato">Comunicati stampa</a>';
+    html += '<a class="filtro' + (tipo === "nazionale" ? " is-active" : "") + '" href="' + base + 'gruppo.html#nazionale">Dal Nazionale</a>';
+    html += '<a class="filtro' + (tipo === "regionale" ? " is-active" : "") + '" href="' + base + 'gruppo.html#regionale">Dal Regionale</a>';
     html += "</div>";
 
-    if (!tutti.length) {
+    if (!articoliTutti.length && !vociTutte.length) {
       html += '<p class="vuoto">Presto i primi comunicati del gruppo.</p>';
-    } else if (!lista.length) {
+    } else if (!pezzi.length) {
       html += '<p class="vuoto">Non ci sono ancora contenuti di questo tipo.</p>';
     } else {
       html += '<div class="lista-articoli">';
-      lista.forEach(function (a) { html += cardHtml(a, base); });
+      pezzi.forEach(function (p) { html += p.html; });
       html += "</div>";
     }
     mount.innerHTML = html;
@@ -631,7 +709,16 @@
     var mount = $("#contenuto");
     if (!mount) return;
     var base = basePath();
-    var all = sortedArticles();
+    var all = sortedArticles().map(function (a) {
+      return { data: a.data || "", id: "a-" + a.id, article: a };
+    });
+    vociUfficiali("tutti").forEach(function (v) {
+      all.push({ data: v.data || "", id: "v-" + v.url, voce: v });
+    });
+    all.sort(function (a, b) {
+      if (a.data === b.data) return a.id < b.id ? 1 : -1;
+      return a.data < b.data ? 1 : -1;
+    });
     var latest = all[0];
     var recent = all.slice(1);
 
@@ -640,21 +727,23 @@
       '<h1 class="page-title">Gruppo Territoriale Lepini Ausoni</h1>' +
       '<p class="lead">Aggiornamenti dal territorio e, per ciascun comune, gli articoli e gli atti recenti dell\'albo pretorio. Gli articoli contrassegnati come esempio sono testi di prova.</p>';
 
-    if (latest) {
-      html += featuredHtml(latest, base);
+    if (latest && latest.voce) {
+      html += featuredVoce(latest.voce, base);
+    } else if (latest && latest.article) {
+      html += featuredHtml(latest.article, base);
     } else {
       html += '<p class="vuoto">Non ci sono ancora articoli pubblicati.</p>';
     }
 
-    html += "<h2 class=\"section-title\">Articoli recenti</h2>";
+    html += "<h2 class=\"section-title\">Ultime notizie</h2>";
     if (recent.length) {
       html += '<div class="lista-articoli">';
-      recent.forEach(function (a) {
-        html += cardHtml(a, base);
+      recent.forEach(function (item) {
+        html += item.voce ? cardVoce(item.voce, base) : cardHtml(item.article, base);
       });
       html += "</div>";
     } else {
-      html += '<p class="vuoto">Non ci sono altri articoli al momento.</p>';
+      html += '<p class="vuoto">Non ci sono altre notizie al momento.</p>';
     }
 
     mount.innerHTML = html;

@@ -1,0 +1,71 @@
+/* Generato da scripts/sync_m5s.py. Anteprime prese solo dal campo description/summary del feed. */
+window.M5S_UFFICIALE = {
+  "aggiornato": "2026-11-20T12:44:27+01:00",
+  "giorni": 60,
+  "fonti": [
+    {
+      "id": "nazionale",
+      "nome": "Movimento 5 Stelle",
+      "esito": "ok",
+      "nuove": 3
+    },
+    {
+      "id": "regionale",
+      "nome": "Movimento 5 Stelle Lazio",
+      "esito": "ok",
+      "nuove": 2
+    }
+  ],
+  "voci": [
+    {
+      "url": "https://www.movimento5stelle.eu/sanita-umbra-dopo-17-anni-torna-la-programmazione-la-sfida-e-mettere-in-sicurezza-il-servizio-pubblico",
+      "titolo": "Sanità umbra, dopo 17 anni torna la programmazione. La sfida è mettere in sicurezza il servizio pubblico",
+      "anteprima": "Dopo diciassette anni l’Umbria torna ad avere un Piano sociosanitario. Non è un semplice aggiornamento amministrativo, ma una scelta politica che segna un cambio di passo nella gestione della sanità regionale. L’obiettivo è arrivare alla fine della…",
+      "data": "2026-11-20",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
+    {
+      "url": "https://www.movimento5stelle.eu/ci-siamo-il-21-novembre-e-la-giornata-nazionale-degli-alberi",
+      "titolo": "Ci siamo: il 21 novembre è la Giornata nazionale degli alberi!",
+      "anteprima": "Ci siamo! Il 21 novembre è la Giornata nazionale degli alberi. Come ogni anno da undici anni, il MoVimento 5 Stelle la festeggia con Alberi per il futuro, una grande festa di eventi in tutta Italia. Quest’anno l’undicesima edizione è dedicata al…",
+      "data": "2026-11-20",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
+    {
+      "url": "https://www.movimento5stelle.eu/piu-armi-meno-servizi-la-manovra-scarica-il-conto-sui-comuni",
+      "titolo": "Più armi, meno servizi: la manovra scarica il conto sui Comuni",
+      "anteprima": "Ogni giorno, da sindaco, vedo cosa significa garantire un autobus che passa all’orario giusto, un’assistente che accompagna un bambino con disabilità in classe, una strada sistemata, un servizio per le famiglie che funziona. È per questo che la…",
+      "data": "2026-11-11",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
+    {
+      "url": "https://www.movimento5stelle.eu/gli-alberi-di-roma-non-si-toccano-no-alle-deroghe-al-regolamento-del-verde-si-a-una-citta-che-guarda-al-futuro-alberiperilfuturo",
+      "titolo": "Gli alberi di Roma non si toccano: no alle deroghe al Regolamento del Verde, sì a una città che guarda al futuro #Alberiperilfuturo",
+      "anteprima": "Non possiamo chiedere agli alberi di salvarci dal caldo e, allo stesso tempo, sacrificare le loro radici per fare spazio a tavolini e dehors. Roma ha bisogno di più verde, più suolo libero e regole rispettate, non di nuove deroghe. Gli alberi non…",
+      "data": "2026-10-29",
+      "fonte": "regionale",
+      "fonteNome": "Movimento 5 Stelle Lazio",
+      "etichetta": "Dal Regionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
+    {
+      "url": "https://www.movimento5stelle.eu/roma-cantieri-metro-c-e-vivibilita-a-rischio-nel-quartiere-prati-al-via-la-petizione-dei-residenti",
+      "titolo": "Roma: cantieri Metro C e vivibilità a rischio nel quartiere Prati. Al via la petizione dei residenti",
+      "anteprima": "Al via la raccolta firme per la petizione voluta dai residenti del I Municipio Prati/Delle Vittorie, e sostenuta dalla nostra consigliera municipale del Movimento 5 stelle Federica Festa, per richiedere compensazioni per i disagi subiti durante il…",
+      "data": "2026-09-22",
+      "fonte": "regionale",
+      "fonteNome": "Movimento 5 Stelle Lazio",
+      "etichetta": "Dal Regionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    }
+  ]
+};
