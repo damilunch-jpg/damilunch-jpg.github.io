@@ -1,6 +1,6 @@
 /* Generato da scripts/sync_albo.py. Elenco degli atti letti dagli albi pretori. */
 window.M5S_ALBO = {
-  "aggiornato": "2026-11-20T09:47:26+01:00",
+  "aggiornato": "2026-11-20T11:13:29+01:00",
   "comuni": {
     "cori": {
       "ok": true,
@@ -1099,6 +1099,225 @@ window.M5S_ALBO = {
           "tipo": "",
           "numero": "",
           "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31536"
+        }
+      ]
+    },
+    "roccasecca-dei-volsci": {
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
+      "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611",
+      "aggiornato": "2026-11-20T11:13:29+01:00",
+      "atti": [
+        {
+          "titolo": "APPROVAZIONE E PRESENTAZIONE AL CONSIGLIO COMUNALE DEL DOCUMENTO UNICO DI PROGRAMMAZIONE DUP SEMPLIFICATO 2027 -2029 (GIUNTA/2026/57/20-11-2026)",
+          "data": "2026-11-20",
+          "tipo": "Delibere di Giunta",
+          "numero": "515/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3486"
+        },
+        {
+          "titolo": "APPROVAZIONE DELLO SCHEMA DEL BILANCIO DI PREVISIONE FINANZIARIO 2027-2029 E RELATIVI ALLEGATI (ART. 174 DEL D.LGS. N. 267/2000 E ART. 11 DEL D.LGS. N. 118/2011). (GIUNTA/2026/56/20-11-2026)",
+          "data": "2026-11-20",
+          "tipo": "Delibere di Giunta",
+          "numero": "514/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3485"
+        },
+        {
+          "titolo": "ORGANIZZAZIONE DI INIZIATIVE NATALIZIE 2026/2027 - CONCESSIONE CONTRIBUTO ALL'ASSOCIAZIONE PRO LOCO DI ROCCASECCA DEI VOLSCI. (GIUNTA/2026/55/18-11-2026)",
+          "data": "2026-11-19",
+          "tipo": "Delibere di Giunta",
+          "numero": "513/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3484"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURE - IDIOTESI MARIO S.R.L. 31-08-2026/3/11 (2026.99.350) - DITTA R.B. ELETTRONICA 10-10-2026/304 (2026.99.419) - DITTA R.B. ELETTRONICA 10-10-2026/303 (2026.99.420) (DETERMINA/2026/327/18-11-2026)",
+          "data": "2026-11-18",
+          "tipo": "Determine",
+          "numero": "509/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3480"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURE - ASSOCIAZIONE CIOCIA WORLD MUSIC E.T.S. 30-09-2026/23 (2026.99.372) - GRAFICA BIANCONI DI CONTI ANTONIO E FABIO S.N.C. 30-10-2026/FAPA000261 (2026.99.416) (DETERMINA/2026/329/18-11-2026)",
+          "data": "2026-11-18",
+          "tipo": "Determine",
+          "numero": "511/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3482"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - PICOZZA S.N.C. DI FRANCESCO PICOZZA & C. 13-10-2026/01/136 (2026.99.398) (DETERMINA/2026/330/18-11-2026)",
+          "data": "2026-11-18",
+          "tipo": "Determine",
+          "numero": "512/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3483"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - L'AQUILONE SOCIETA' COOPERATIVA SOCIALE 09-11-2026/FPA 52/26 (2026.CO.6) (DETERMINA/2026/328/18-11-2026)",
+          "data": "2026-11-18",
+          "tipo": "Determine",
+          "numero": "510/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3481"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - R.I.D.A. AMBIENTE SRL 31-10-2026/000613 (2026.99.423) (DETERMINA/2026/324/16-11-2026)",
+          "data": "2026-11-16",
+          "tipo": "Determine",
+          "numero": "506/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3477"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - KUWAIT PETROLEUM SPA 31-10-2026/PJ12238101 (2026.99.429) (DETERMINA/2026/323/16-11-2026)",
+          "data": "2026-11-16",
+          "tipo": "Determine",
+          "numero": "505/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3476"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - HALLEY INFORMATICA S.R.L.. 05-11-2026/24421/16/10 (2026.99.430) (DETERMINA/2026/325/16-11-2026)",
+          "data": "2026-11-16",
+          "tipo": "Determine",
+          "numero": "507/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3478"
+        },
+        {
+          "titolo": "ERRATA CORRIGE - AFFIDAMENTO DIRETTO AI SENSI DELL'ART. 50, COMMA 1, LETT. B) DEL D.L.GS. 36/2023 ALLA DITTA AUDAX ENERGIA S.R.L. ATTRAVERSO LA SOCIETA' LAF SOLUTION, PER LA FORNITURA DI ENERGIA ELETTRICA OCCORRENTE PER LE UTENZE DELL'ENTE. PERIODO: 01/11/2026-01/11/2028. (DETERMINA/2026/326/16-11-2026)",
+          "data": "2026-11-16",
+          "tipo": "Determine",
+          "numero": "508/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3479"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - SATLINE S.R.L. 31-10-2026/264PN (2026.TR.6) (DETERMINA/2026/321/13-11-2026)",
+          "data": "2026-11-13",
+          "tipo": "Determine",
+          "numero": "503/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3474"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - SATLINE S.R.L. 31-10-2026/263PN (2026.TR.5) (DETERMINA/2026/320/13-11-2026)",
+          "data": "2026-11-13",
+          "tipo": "Determine",
+          "numero": "502/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3473"
+        },
+        {
+          "titolo": "DETERMINAZIONE A CONTRARRE AI SENSI DELL'ART. 50, COMMA 1, LETTERA B) DEL D.LGS. 36/2023, PER L'AFFIDAMENTO DEL \"SERVIZIO RELATIVO ALLA PRATICA AUTOMOBILISTICA PER IL PASSAGGIO DI PROPRIETÀ\" DELL'AUTOVEICOLO FIAT PANDA TARGATO EH816RP ASSEGNATO A TITOLO GRATUITO DALLA PROVINCIA DI LATINA AL COMUNE DI ROCCASECCA DEI VOLSCI CON D.D. N. 302 DEL 08/04/2026, NELL'AMBITO DEL BANDO PER LA \"CESSIONE GRATUITA DI AUTOVEICOLI OBSOLETI DI PROPRIETÀ DELLA PROVINCIA DI LATINA A FAVORE DI AMMINISTRAZIONI PUBBL",
+          "data": "2026-11-13",
+          "tipo": "Determine",
+          "numero": "504/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3475"
+        },
+        {
+          "titolo": "AUTORIZZAZIONE IN VIA ECCEZIONALE E TEMPORANEA ALL'APERTURA DELL'IMPIANTO SPORTIVO COMUNALE \"A. DE SIMONI\" (LOC. SERRONI) PER LO SVOLGIMENTO DELLA PARTITA UFFICIALE DI CAMPIONATO DI TERZA CATEGORIA TRA LE SQUADRE \"POLISPORTIVA ROCCASECCA DEI VOLSCI A.S.D.\" E \"ASD POLISPORTIVA PONZA\", PROGRAMMATA PER DOMENICA 15 NOVEMBRE 2026 DALLE ORE 12:30 ALLE ORE 15:30. (ORDINANZE/2026/39/13-11-2026)",
+          "data": "2026-11-13",
+          "tipo": "Ordinanze sindacali",
+          "numero": "501/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3472"
+        },
+        {
+          "titolo": "VARIAZIONE URGENTE AL BILANCIO DI PREVISIONE 2026-2028 - ESERCIZIO FINANZIARIO 2026 (GIUNTA/2026/51/10-11-2026)",
+          "data": "2026-11-12",
+          "tipo": "Delibere di Giunta",
+          "numero": "497/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3468"
+        },
+        {
+          "titolo": "PIANO DELLE ALIENAZIONI E DELLE VALORIZZAZIONE IMMOBILIARI PER IL TRIENNIO 2027/2029. INDIVIDUAZIONE DEGLI IMMOBILI DA VALORIZZARE E DA DISMETTERE. ESERCIZIO 2027. (GIUNTA/2026/52/10-11-2026)",
+          "data": "2026-11-12",
+          "tipo": "Delibere di Giunta",
+          "numero": "498/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3469"
+        },
+        {
+          "titolo": "APPROVAZIONE DEL PROGETTO DENOMINATO \"BETLEMME IN CAMMINO – LUCIGRAFIE DI BETLEMME – SECONDA EDIZIONE\" E DEI RELATIVI ELABORATI PROGETTUALI. AUTORIZZAZIONE ALLA PRESENTAZIONE DI DOMANDA DI CONTRIBUTO AL CONSIGLIO REGIONALE DEL LAZIO AI SENSI DELL'ARTICOLO 12 DEL REGOLAMENTO PER LA CONCESSIONE DI PATROCINI E DI CONTRIBUTI DA PARTE DELL'UFFICIO DI PRESIDENZA DEL CONSIGLIO REGIONALE. (GIUNTA/2026/54/10-11-2026)",
+          "data": "2026-11-12",
+          "tipo": "Delibere di Giunta",
+          "numero": "500/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3471"
+        },
+        {
+          "titolo": "ADOZIONE DEL PROGRAMMA TRIENNALE DEI LAVORI PUBBLICI PER GLI ANNI 2027-2029 E DELL'ELENCO ANNUALE DEI LAVORI PER L'ANNO 2027 E IL PROGRAMMA TRIENNALE DEI SERVIZI E FORNITURE (ART. 37, COMMA 2, D.LGS. N. 36/2023 E S.M.I.) (GIUNTA/2026/53/10-11-2026)",
+          "data": "2026-11-12",
+          "tipo": "Delibere di Giunta",
+          "numero": "499/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3470"
+        },
+        {
+          "titolo": "IMPEGNO DI SPESA - ATTIVAZIONE DELLA FIGURA DI SUPPORTO EDUCATIVA SPECIALISTICA. (DETERMINA/2026/319/10-11-2026)",
+          "data": "2026-11-10",
+          "tipo": "Determine",
+          "numero": "496/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3467"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - IMPRESA DIONISIO PICOZZA DI LAURENZIO PICOZZA E C. S.N. 26-10-2026/FPA 10/26 (2026.99.424) (DETERMINA/2026/315/09-11-2026)",
+          "data": "2026-11-09",
+          "tipo": "Determine",
+          "numero": "492/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3463"
+        },
+        {
+          "titolo": "ESONERO PER I SERVIZI COMUNALI PER L' ANNO SCOLASTICO 2026/2027 E ANNO 2027/2028. (DETERMINA/2026/317/09-11-2026)",
+          "data": "2026-11-09",
+          "tipo": "Determine",
+          "numero": "494/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3465"
+        },
+        {
+          "titolo": "DETERMINAZIONE A CONTRARRE AI SENSI DELL'ART. L'ART. 17, COMMA 2, DEL D.LGS. 36/2023 PER L'AFFIDAMENTO, AI SENSI DELL'ART. 50, COMMA 1, LETTERA B) DEL D.LGS. 36/2023, DEL SERVIZIO DI FORNITURA DI ATTREZZATURE SPORTIVE E DI PROTEZIONE PER IL CAMPO DA GIOCO, ARREDI ED ALLESTIMENTI DI CAMPO E SPOGLIATOIO, PRESIDI MEDICO-SANITARI E DI SICUREZZA, A SERVIZIO DELL'IMPIANTO SPORTIVO A. DE SIMONI, PREVISTO ALL'INTERNO DEL QUADRO ECONOMICO DELL'INTERVENTO PRINCIPALE DENOMINATO: SPORT MISSIONE COMUNE - BAN",
+          "data": "2026-11-09",
+          "tipo": "Determine",
+          "numero": "493/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3464"
+        },
+        {
+          "titolo": "COMUNE DI ROCCASECCA DEI VOLSCI",
+          "data": "2026-11-09",
+          "tipo": "09-11-2026)",
+          "numero": "495/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3466"
+        },
+        {
+          "titolo": "AVVISO AD OPPONENDUM(REDATTO AI SENSI E PER GLI EFFETTI DELL’ART. 16 DELL’ALLEGATO II.14 DEL D.LGS. 31 MARZO 2023, N. 36)OGGETTO: “REALIZZAZIONE INTERVENTI DI COMPLETAMENTO PER LA RIQUALIFICAZIONE FUNZIONALE E L’ADEGUAMENTO ALLE NORME DI SICUREZZA DELL’IMPIANTO SPORTIVO “A.DE SIMONI” – LOC. ”SERRONI” - BANDO ICS 2022 – SPORT MISSIONE COMUNE - AVVISO PUBBLICO PER L’AMMISSIONE AI CONTRIBUTI DESTINATI AL TOTALE ABBATTIMENTO DELLA QUOTA INTERESSI SUI MUTUI PER IL FINANZIAMENTO DI PROGETTI DI IMPIANT",
+          "data": "2026-11-09",
+          "tipo": "Avvisi",
+          "numero": "491/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3462"
+        },
+        {
+          "titolo": "\"MONASTERO DI SAN SALVATORE DI MILETO\" SITO IN LOCALITÀ SAN SALVATORE. ACQUISIZIONE TERRENI – DETERMINAZIONE INDENNITÀ DEFINITIVE TERRENI CEDUTI VOLONTARIAMENTE AI SENSI ART. 45, C. 1, ED INDENNITÀ AGGIUNTIVA DI CUI ART. 42, CC. 1 - 2, D.P.R. 08 GIUGNO 2001 N° 327 – CONFERMA IMPEGNO DI SPESA ESISTENTE DI CUI ALLA PRECEDENTE DETERMINA N. 483 DEL 20/11/2023 E LIQUIDAZIONE INDENNITÀ. (DETERMINA/2026/314/07-11-2026)",
+          "data": "2026-11-07",
+          "tipo": "Determine",
+          "numero": "490/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3461"
+        },
+        {
+          "titolo": "ORDINANZA CONTINGIBILE E URGENTE PER IL DIVIETO TEMPORANEO DI UTILIZZO A FINI POTABILI E ALIMENTARI DELL'ACQUA DESTINATA AL CONSUMO UMANO EROGATA DALLA RETE IDRICA (ORDINANZE/2026/38/05-11-2026)",
+          "data": "2026-11-06",
+          "tipo": "Ordinanze sindacali",
+          "numero": "486/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3457"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURE - EDISER S.R.L. 22-07-2026/119/SP (2026.99.322) - ROSATI MAURO 26-08-2026/FPA 1/26 (2026.99.344) - ROSATI MAURO 26-08-2026/FPA 2/26 (2026.99.347) - TIPOGRAFIA SELENE DI RONCI STEFANO 15-09-2026/161 (2026.99.357) - VENDITTI ROBERTO 23-09-2026/2/147 (2026.99.375) - VENDITTI ROBERTO 23-09-2026/2/148 (2026.99.376) - DELTAGRAF DI DANIELE ZOMPARELLI 05-10-2026/FPA 44/26 (2026.99.377) (DETERMINA/2026/311/06-11-2026)",
+          "data": "2026-11-06",
+          "tipo": "Determine",
+          "numero": "487/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3458"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - CARTOLIBRERIA EUREKA DI PROCOPIO FLAVIA 14-09-2026/185 (2026.99.362) (DETERMINA/2026/312/06-11-2026)",
+          "data": "2026-11-06",
+          "tipo": "Determine",
+          "numero": "488/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3459"
+        },
+        {
+          "titolo": "ANTICIPO ALL'ECONOMO PER SPESE VARIE DI GESTIONE E ATTIVITA' DI FINE ANNO. (DETERMINA/2026/313/06-11-2026)",
+          "data": "2026-11-06",
+          "tipo": "Determine",
+          "numero": "489/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3460"
         }
       ]
     }

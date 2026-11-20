@@ -237,6 +237,7 @@
     priverno: true,
     fondi: true,
     "monte-san-biagio": true,
+    "roccasecca-dei-volsci": true,
     lenola: true,
     sermoneta: true,
     terracina: true,

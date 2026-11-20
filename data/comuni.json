@@ -56,10 +56,11 @@
   {
     "slug": "roccasecca-dei-volsci",
     "nome": "Roccasecca dei Volsci",
-    "alboUrl": "",
-    "alboVerificato": false,
-    "sitoIstituzionale": "",
-    "alboAutomatico": false
+    "alboUrl": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://comune.roccasecca-dei-volsci.lt.it/",
+    "scraper": "urbi",
+    "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611"
   },
   {
     "slug": "cori",
