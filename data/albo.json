@@ -1,13 +1,55 @@
 {
-  "aggiornato": "2026-11-19T12:14:34+01:00",
+  "aggiornato": "2026-11-20T05:03:01+01:00",
   "comuni": {
     "cori": {
       "ok": true,
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
-      "aggiornato": "2026-11-19T04:55:22+01:00",
+      "aggiornato": "2026-11-20T04:49:10+01:00",
       "atti": [
+        {
+          "titolo": "UFFICIO DI CONTROLLO AI SENSI DEL D.LGS 36/2023 ANNUALITÀ 2026 CONNESSO AL \"SERVIZIO DI IGIENE URBANA CON IMPLEMENTAZIONE DELLA TARIFFA PUNTUALE ED ALTRI SERVIZI CONNESSI PER LA DURATA DI 5 ANNI (2022-2026)\". LIQUIDAZIONE II ACCONTO COMPENSI INCENTIVANTI A FAVORE DEL COMUNE DI CORI ANNO 2026 (DETERMINA/2026/938/19-11-2026)(AREA 4- GRANDI OPERE E LAVORI PUBBLICI - 82)",
+          "data": "2026-11-19",
+          "tipo": "Determinazioni",
+          "numero": "1299/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8529"
+        },
+        {
+          "titolo": "UFFICIO DI CONTROLLO AI SENSI DEL D.LGS 36/2023 ANNUALITÀ 2026 CONNESSO AL \"SERVIZIO DI IGIENE URBANA CON IMPLEMENTAZIONE DELLA TARIFFA PUNTUALE ED ALTRI SERVIZI CONNESSI PER LA DURATA DI 5 ANNI (2022-2026)\". LIQUIDAZIONE II ACCONTO COMPENSI INCENTIVANTI A FAVORE DEI DIPENDENTI DEL COMUNE DI CORI (LUGLIO - OTTOBRE 2026). (DETERMINA/2026/937/19-11-2026)(AREA 4- GRANDI OPERE E LAVORI PUBBLICI - 81)",
+          "data": "2026-11-19",
+          "tipo": "Determinazioni",
+          "numero": "1300/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8530"
+        },
+        {
+          "titolo": "LIQUIDAZIONE COMPENSO INCENTIVANTE AI SENSI DELL'ART. 45 DEL D.LGS. 36/2023 A FAVORE DEL COMUNE DI CORE PER LAVORI DIOPERE DI MESSA IN SICUREZZA E RECUPERO DI PIAZZA SANTA MARIA IN CORI - VIA PIAZZA DELLA LIBERTÀ - (MURO PERIMETRALE, PAVIMENTAZIONE E OPERE ACCESSORIE\" CUP: J63C25000370001 - ACCONTO (DETERMINA/2026/929/16-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 213)",
+          "data": "2026-11-19",
+          "tipo": "Determinazioni",
+          "numero": "1303/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8533"
+        },
+        {
+          "titolo": "LIQUIDAZIONE COMPENSO INCENTIVANTE AI SENSI DELL'ART. 45 DEL D.LGS. 36/2023 A FAVORE DEI DIPENDENTI DEL COMUNE DI CORE PER LAVORI DIOPERE DI MESSA IN SICUREZZA E RECUPERO DI PIAZZA SANTA MARIA IN CORI - VIA PIAZZA DELLA LIBERTÀ - (MURO PERIMETRALE, PAVIMENTAZIONE E OPERE ACCESSORIE\" CUP: J63C25000370001 - ACCONTO (DETERMINA/2026/928/16-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 212)",
+          "data": "2026-11-19",
+          "tipo": "Determinazioni",
+          "numero": "1302/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8532"
+        },
+        {
+          "titolo": "IMPEGNO DI SPESA ALLA DITTA MYO SPA PER FORNITURA DI REGISTRO DELLE INUMAZIONI, CREMAZIONI AI SENSI DELL'ART. 50 COMMA 1 LEET.B DEL D.LGS 36/2023 (DETERMINA/2026/939/19-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 215)",
+          "data": "2026-11-19",
+          "tipo": "Determinazioni",
+          "numero": "1301/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8531"
+        },
+        {
+          "titolo": "\"LAVORI DI REALIZZAZIONE DELLA NUOVA PAVIMENTAZIONE BITUMINOSA, SEGNALETICA E LAVORI ACCESSORI DI VIA ANNUNZIATA ED UN TRATTO DI VIA ROMA IN CORI - CUP:J67H26001150004\". DETERMINA A CONTRARRE, INDIZIONE ED APPROVAZIONE ATTI DI GARA DEI LAVORI. (DETERMINA/2026/940/19-11-2026)(AREA 4- GRANDI OPERE E LAVORI PUBBLICI - 83)",
+          "data": "2026-11-19",
+          "tipo": "Determinazioni",
+          "numero": "1304/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8534"
+        },
         {
           "titolo": "VENDITA A CORPO DEL MATERIALE LEGNOSO RITRAIBILE DALLE PARTICELLE FORESTALI COMUNALI N. 17 \"FRANNO PIANO\" (TAGLIO DI FINE TURNO) E NN. 12 \"FOLEGARE MURIATORE\", 20 \"COLLE ROSELLO\" E 21 \"SELVA DI CORI\" (TAGLIO DI DIRADAMENTO) A SEGUITO DI TRATTATIVA PRIVATA (EX ART. 26 R.D. 827/1924). AGGIUDICAZIONE DEFINITIVA IN FAVORE DELLA DITTA MONTE ARTEMISIO LEGNAMI S.R.L., APPROVAZIONE QUADRO ECONOMICO COMPLESSIVO (€ 72.822,48), RIMODULAZIONE SCADENZE RATEALI E APPROVAZIONE SCHEMA DI CONTRATTO (DETERMINA/20",
           "data": "2026-11-18",
@@ -175,48 +217,6 @@
           "tipo": "Determinazioni",
           "numero": "1276/2026",
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8506"
-        },
-        {
-          "titolo": "LIQUIDAZIONE FATTURA - ALFEI MICHAEL - ENI 31-10-2026/2026/FE54021/1997 (2026.01.847) (DETERMINA/2026/913/12-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 208)",
-          "data": "2026-11-12",
-          "tipo": "Determinazioni",
-          "numero": "1273/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8503"
-        },
-        {
-          "titolo": "IMPIANTI FOTOVOLTAICI DEL COMUNE DI CORI - ASSUNZIONE ACCERTAMENTO PROVENTI DERIVANTI DALLA CESSIONE IN RETE DELL'ENERGIA ELETTRICA TRAMISTE MECCANISMO DI SCAMBIO SUL POSTO CONGUAGLIO ANNO 2025 E ACCONTO E SALDO ANNUALITA' 2026 IMPEGNO DI SPESA A FAVORE DEL GSE PER COSTI AMMINISTRATIVI ED AD-DISTRIBUZIONE PER COSTI GESTIONE CONTATORI A SERVIZIO DEGLI IMPIANTI FOTOVOLTAICI ED IMPEGNO DI SPESA PER PAGAMENTO F24 CONTRIBUTO LICENZA OFFICINA ELETTRICA (DETERMINA/2026/911/12-11-2026)(AREA 6 - AREA TEC",
-          "data": "2026-11-12",
-          "tipo": "Determinazioni",
-          "numero": "1271/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8501"
-        },
-        {
-          "titolo": "IMPEGNO DI SPESA A FAVORE DELLA DITTA PISTILLI TONINO AI SENSI DELL'ART. 50 COMMA 1 LETT. A DEL D.LGS 36/2023 (DETERMINA/2026/912/12-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 207)",
-          "data": "2026-11-12",
-          "tipo": "Determinazioni",
-          "numero": "1272/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8502"
-        },
-        {
-          "titolo": "ATTIVAZIONE TEMPORANEA DEL CENTRO OPERATIVO COMUNALE DIPROTEZIONE CIVILE A SEGUITO DELL'AVVISO DI CONDIZIONIMETEREOLOGICHE AVVERSE DEL 12.11.2026 EMESSO DALLAPRESIDENZA DEL CONSIGLIO DEI MINISTRI - DIPARTIMENTO DELLAPROTEZIONE CIVILE DI CRITICITÀ IDROGEOLOGICA CONVALUTAZIONE DI LIVELLI DI ALLERTA ARANCIONE, PREVISTA DALLATARDA SERATA DI OGGI, 12.11.2026 E PER LE SUCCESSIVE 24-30 ORE. (ORDISIND/2026/13/12-11-2026)",
-          "data": "2026-11-12",
-          "tipo": "Ordinanze del sindaco",
-          "numero": "1277/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8507"
-        },
-        {
-          "titolo": "7 LIQUIDAZIONE CONTRIBUTO ECONOMICI INDIGENTI (DETERMINA/2026/908/11-11-2026)(AREA 2 - WELFARE - 234)",
-          "data": "2026-11-12",
-          "tipo": "Determinazioni",
-          "numero": "1275/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8505"
-        },
-        {
-          "titolo": "OGGETTO: AGGIUDICAZIONE PROVVISORIA MEDIANTE TRATTATIVA PRIVATA DELL'UTILIZZAZIONE BOSCHIVA DELLA PARTICELLA FORESTALE N. 17 \"FRANNO PIANO\" E DEI TAGLI DI DIRADAMENTO DELLE PARTICELLE FORESTALI N. 12, \"FOLEGARE_MURIATORE\" 20 \"COLLE ROSELLO\" E 21 \"SELVA DI CORI\" ALLA DITTA \"MONTE ARTEMISIO LEGNAMI S.R.L.\" AI SENSI DEL R.D. 23 MAGGIO 1924, N. 827. RICEVIMENTO OFFERTA ECONOMICA E APPROVAZIONE PIANO DELLE RATE IN MORE DELLA TRASMISSIONE DELLA DOCUMENTAZIONE INTEGRATIVA DI GARA. (DETERMINA/2026/910/1",
-          "data": "2026-11-11",
-          "tipo": "Determinazioni",
-          "numero": "1269/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8499"
         }
       ]
     },
@@ -225,8 +225,15 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145",
-      "aggiornato": "2026-11-19T05:44:30+01:00",
+      "aggiornato": "2026-11-20T04:57:48+01:00",
       "atti": [
+        {
+          "titolo": "\"RISANAMENTO CONSERVATIVO TENSOSTRUTTURA CAMPO POLIFUNZIONALE COMPLESSO SPORTIVO \"LORENZO PICOZZI\" VIA NINFINA LOCALITÀ MADONNA DEGLI ANGELI\" ART. 4, COMMA 1, LETT. I) E DELL'ART. 5, COMMA 1, LETT. F) DELL'AVVISO PUBBLICO \"SPAZIO SPORT 2026\" (L.R. LAZIO 11 AGOSTO 2021, N. 14, ART.) (GIUNTA/2026/48/18-11-2026)",
+          "data": "2026-11-19",
+          "tipo": "Deliberazione di giunta comunale",
+          "numero": "486/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11096"
+        },
         {
           "titolo": "LIQUIDAZIONE DI SPESA ALLA SOCIETÀ WINTEL SRL, PER FORNITURA SCHEDA VOIP DSP PER CENTRALINO PANASONIC E INSTALLAZIONE E PROGRAMMAZIONE DEL CENTRALINO CON AGGIORNAMENTO PRESSO LA CASA COMUNALE – C.I.G. BA733CD1FE. (DETERMINA/2026/296/16-11-2026)(TECNICO - 131)",
           "data": "2026-11-17",
@@ -429,13 +436,6 @@
           "tipo": "Avviso pubblico",
           "numero": "457/2026",
           "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11067"
-        },
-        {
-          "titolo": "ELENCO DEI BENEFICIARI DELLA “CARTA DEDICATA A TE”",
-          "data": "2026-11-04",
-          "tipo": "Avviso pubblico",
-          "numero": "456/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11066"
         }
       ]
     },
@@ -444,7 +444,7 @@
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-19T12:14:34+01:00",
+      "aggiornato": "2026-11-20T05:03:01+01:00",
       "atti": []
     },
     "roccagorga": {
@@ -452,8 +452,15 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/",
-      "aggiornato": "2026-11-19T05:46:38+01:00",
+      "aggiornato": "2026-11-20T05:00:16+01:00",
       "atti": [
+        {
+          "titolo": "DETERMINAZIONE DEL DIPARTIMENTO 1 N. 535 DEL 13-11-2026 AVENTE AD OGGETTO IMPEGNO DI SPESA IN FAVORE DELL'AVV. MATTEO DI PUMPO DEL FORO DI ROMA PER CONFERIMENTO INCARICO DI PATROCINIO LEGALE PER LA COSTITUZIONE IN GIUDIZIO DEL COMUNE DI ROCCAGORGA.",
+          "data": "2026-11-19",
+          "tipo": "Determinazioni",
+          "numero": "535",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/determinazioni/2026/Pratica_1795111209060/"
+        },
         {
           "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.81 DEL 30-10-2026 AVENTE AD OGGETTO LINEE DI INDIRIZZO PER LA DELEGAZIONE TRATTANTE DI PARTE DATORIALE NELLA CONTRATTAZIONE COLLETTIVA DECENTRATA INTEGRATIVA ANNO 2026 COMPARTO PERSONALE FUNZIONI LOCALI.",
           "data": "2026-11-18",
@@ -587,7 +594,7 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://www.halleyweb.com/c059016/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059016",
-      "aggiornato": "2026-11-19T07:22:57+01:00",
+      "aggiornato": "2026-11-20T04:52:26+01:00",
       "atti": [
         {
           "titolo": "Servizio di Mensa Sociale - Approvazione dell'avviso pubblico per indagine esplorativa sull'interesse della cittadinanza e del modello di manifestazione di interesse. Indirizzi attuativi",
@@ -637,6 +644,13 @@
           "tipo": "",
           "numero": "",
           "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4815"
+        },
+        {
+          "titolo": "Fornitura luci led da installare presso il Centro Sociale Anziani sito in Norma via Dei Colli - Impegno di spesa e contestuale liquidazione fattura n.146143/V1 del 05/11/2025 - Ditta Elettrolazio S.P.A. - C.I.G. B8CBD25274",
+          "data": "2025-11-05",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4819"
         }
       ]
     },
@@ -645,8 +659,36 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
-      "aggiornato": "2026-11-19T07:21:11+01:00",
+      "aggiornato": "2026-11-20T04:50:44+01:00",
       "atti": [
+        {
+          "titolo": "REGOLAMENTAZIONE PROVVISORIA DELLA CIRCOLAZIONE VEICOLARE, DAL GIORNO 30 NOVEMBRE AL GIORNO 04 DICEMBRE 2026, IN VIA SAN BERNARDO DA CHIARAVALLE E VIA SAN TOMMASO D'AQUINO E TRAVERSE, PER RIPRISTINO DEGLI SCAVI DELLA FIBRA OTTICA.",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48920"
+        },
+        {
+          "titolo": "REGOLAMENTAZIONE PROVVISORIA DELLA CIRCOLAZIONE VEICOLARE, DAL 14 AL 18 DICEMBRE 2026, IN VARIE STRADE DELLA CITTA' PER RIPRISTINO DEGLI SCAVI DELLA FIBRA OTTICA.",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48919"
+        },
+        {
+          "titolo": "Prot. 58904 del 19.11.2026 Convocazione Conferenza Capigruppo Consiliari.",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48921"
+        },
+        {
+          "titolo": "ISTITUZIONE DEL DIVIETO DI SOSTA, CON RIMOZIONE FORZATA, E SOSPENSIONE MOMENTANEA DELLA CIRCOLAZIONE IN VARIE STRADE DEL CENTRO CITTÀ, PER LO SVOLGIMENTO DELLA MANIFESTAZIONE IN OCCASIONE DELLA \"GIORNATA INTERNAZIONALE PER L'ELIMINAZIONE DELLA VIOLENZA CONTRO LE DONNE\" PREVISTA PER IL 25 NOVEMBRE 2026.",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48922"
+        },
         {
           "titolo": "Procedura di interpello a seguito di accordo per la gestione associata della formazione di elenchi di idonei, di cui all'3 bis del D.L. n. 80/2021, convertito in Legge n.113/2021, per l'assunzione di n.4 Istruttori Amministrativi - Area degli Istruttori. Assunzione candidati vincitori.",
           "data": "2026-11-18",
@@ -660,6 +702,13 @@
           "tipo": "",
           "numero": "",
           "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48917"
+        },
+        {
+          "titolo": "Avviso Rilascio Permesso di Costruire n. 32 del 18/11/2026 - Pratica edilizia n. 53/2025",
+          "data": "2026-11-18",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48923"
         },
         {
           "titolo": "Allineamento consumi e integrazione impegno di spesa per il pagamento di consumi derivanti dalla fornitura di energia elettrica per il Pod IT001E60513480 - Centro Sportivo San Valentino attivato con ODA n. 9196613",
@@ -717,7 +766,7 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028",
-      "aggiornato": "2026-11-19T07:27:54+01:00",
+      "aggiornato": "2026-11-20T04:57:18+01:00",
       "atti": [
         {
           "titolo": "LAVORI DEMOLIZIONE- RICOSTRUZIONE CENTRO SOCIALE VIA PUGLIE- DIVIETO DI TRANSITO IL 20.11.2026",
@@ -727,11 +776,46 @@
           "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27005"
         },
         {
+          "titolo": "Valorizzazione e riqualificazione del Teatro Sacro Italiano di Sezze e delle aree circostanti - I lotto funzionale. CUP C17D26000030002. Finanziamento Regione Lazio - D.G.R. n. 792/2026. Decisione a contrarre ai sensi dell'art. 17, comma 1, del D.Lgs. n. 36/2023. Indizione di procedura negoziata senza bando ai sensi dell'art. 50, comma 1, lett. c), del medesimo decreto, mediante piattaforma telematica Net4Market, con criterio del minor prezzo. Prenotazione dell'intero quadro economico di  500.0",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27016"
+        },
+        {
+          "titolo": "PROCEDURA APERTA PER L'AFFIDAMENTO DEL SERVIZIO DI ASSISTENZA SPECIALISTICA SCOLASTICA PER GLI ALUNNI DIVERSAMENTE ABILI CHE FREQUENTANO LE SCUOLE DELL'INFANZIA, PRIMARIA E SECONDARIA DI PRIMO GRADO DEL COMUNE DI SEZZE . CIG: BCD24F1B82; CPV: 85311200-4: SERVIZI DI ASSISTENZA SOCIALE PER DISABILI. APPROVAZIONE RISULTANZE DI GARA ED AGGIUDICAZIONE DEL SERVIZIO.",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27015"
+        },
+        {
+          "titolo": "Interventi di valorizzazione e riqualificazione del Teatro Sacro Italiano di Sezze e delle aree circostanti - I° lotto funzionale. CUP C17D26000030002. D.G.R. Lazio n. 792 del 10 settembre 2026. Finanziamento regionale di  500.000,00. Accertamento dell'entrata sul capitolo 40501 del Bilancio di previsione finanziario 2026-2028, esercizio 2026, ai sensi dell'art. 179 del D.Lgs. n. 267/2000.",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27014"
+        },
+        {
           "titolo": "Rettifica ordinanza nrg 159/26",
           "data": "2026-11-18",
           "tipo": "",
           "numero": "",
           "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27010"
+        },
+        {
+          "titolo": "Progetto \"Lazio Digital Innovation Tourism\" (La.D.I.T.) - CUP: F89I25003260002. Accertamento delle somme in entrata.",
+          "data": "2026-11-18",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27012"
+        },
+        {
+          "titolo": "POSTA CERTIFICATA: RICHIESTA DI PUBBLICAZIONE - Eliminazione problematiche relative all’erosione del fosso con ripristino dello stato dei luoghi lungo la S.P. Melogrosso al km 3+200 circa nel Comune di Sezze- INDIZIONE ... (Prot.N. GE 2026/0060",
+          "data": "2026-11-18",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27011"
         },
         {
           "titolo": "LAVORI MESSA IN SICUREZZA CORNICIONE - PIAZZA MARGHERITA IL 20.11.26- DIVIETO SOSTA E RIMOZIONE FORZATA",
@@ -858,6 +942,13 @@
           "tipo": "",
           "numero": "",
           "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27004"
+        },
+        {
+          "titolo": "Affidamento del bene comune lago Mole Muti in applicazione del regolamento comunale di cui alla delibera di C.C. n. 16 del 06.05.2022 - Approvazione avviso pubblico e modulistica.",
+          "data": "2022-05-06",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27013"
         }
       ]
     },
@@ -866,8 +957,50 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "aggiornato": "2026-11-19T07:30:27+01:00",
+      "aggiornato": "2026-11-20T05:02:51+01:00",
       "atti": [
+        {
+          "titolo": "ORGANIZZAZIONE DELLA MANIFESTAZIONE \"BABBO'S RED RUNNING\" - VI EDIZIONE (06.12.2026) - INDIRIZZI.",
+          "data": "2026-12-06",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31555"
+        },
+        {
+          "titolo": "NOTA DI AGGIORNAMENTO AL DOCUMENTO UNICO DI PROGRAMMAZIONE (DUP) - PERIODO 2027 - 2029 (ART. 170, COMMA 1, DEL D.LGS. N. 267/2000). PRESENTAZIONE AL CONSIGLIO COMUNALE",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31559"
+        },
+        {
+          "titolo": "Assegnazione Premio Camilla Città di Priverno - Edizione Speciale 2026",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31561"
+        },
+        {
+          "titolo": "APPROVAZIONE DELLO SCHEMA DI BILANCIO DI PREVISIONE FINANZIARIO 2027-2029",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31560"
+        },
+        {
+          "titolo": "ADOZIONE SCHEMA PROGRAMMA TRIENNALE OO.PP. ANNI 2027-2028-2029 ED ELENCO ANNUALE 2027 E IL PROGRAMMA TRIENNALE DEGLI ACQUISTI DI FORNITURE E SERVIZI 2027-2028-2029",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31558"
+        },
+        {
+          "titolo": "ADEGUAMENTO DEI SERVIZI A DOMANDA INDIVIDUALE E INTRODUZIONE NUOVE TARIFFE - ANNO 2027 - PROPOSTA AL CONSIGLIO COMUNALE",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31557"
+        },
         {
           "titolo": "AVVISO DI DEPOSITO ATTI PRESSO LA CASA COMUNALE DI PRIVERNO",
           "data": "2026-11-18",
@@ -881,6 +1014,27 @@
           "tipo": "",
           "numero": "",
           "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31537"
+        },
+        {
+          "titolo": "Teatro comunale Gigi Proietti - organizzazione e la realizzazione della stagione di prosa e per la programmazione, la gestione e la valorizzazione delle attività teatrali, culturali, artistiche ed educative - Indirizzi",
+          "data": "2026-11-13",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31553"
+        },
+        {
+          "titolo": "Eventi meteorologici del 21 ottobre 2026 - Atto di indirizzo per la ricognizione dei danni, la verifica di misure di sostegno e l'istituzione di un tavolo tecnico permanente interistituzionale per la prevenzione e la mitigazione del rischio idrogeologico ed idraulico",
+          "data": "2026-11-13",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31552"
+        },
+        {
+          "titolo": "Approvazione del programma delle iniziative di sensibilizzazione per il contrasto alla violenza di genere e alle discriminazioni - novembre 2026.",
+          "data": "2026-11-13",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31554"
         },
         {
           "titolo": "LAVORI POSA E FORNITURE EXTRA TENUTA PER ALLESTIMENTO SPORTIVO DELL'AMBITO \"PARCO EUROPA SUMMER 2026\" LIQUIDAZIONE FATTURA SI.DA. SRL. CIG: BC9ABCDD8A",
@@ -916,6 +1070,13 @@
           "tipo": "",
           "numero": "",
           "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31534"
+        },
+        {
+          "titolo": "Acquisto MEPA Bandiera Italia, Europa e ONU, Ditta: Faggionato Roberto IMPEGNO DI SPESA CIG BD93C356C7",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31556"
         },
         {
           "titolo": "SERVIZIO DI SFALCIO ERBA SUI CIGLI STRADALI, POTATURA SIEPI, RACCOLTA FOGLIE E MANUTENZIONE PARCHI GIOCO ED AREE VERDI COMUNALI E CIMITERIALI - COOPERATIVA SOCIALE PROGETTO 2000 - LIQUIDAZIONE FATTURA N.18 DEL 12/10/2026 PERIODO SETTEMBRE 2026 - CIG:BBD890D81E",
