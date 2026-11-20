@@ -1,6 +1,6 @@
 /* Generato da scripts/sync_rassegna.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_RASSEGNA = {
-  "aggiornato": "2026-11-20T10:50:48+01:00",
+  "aggiornato": "2026-11-20T19:59:46+01:00",
   "giorni": 60,
   "fonti": [
     {
@@ -13,7 +13,7 @@ window.M5S_RASSEGNA = {
       "id": "latinacorriere",
       "nome": "Latina Corriere",
       "esito": "ok",
-      "nuove": 4
+      "nuove": 3
     },
     {
       "id": "ilcaffe",
@@ -25,16 +25,29 @@ window.M5S_RASSEGNA = {
       "id": "h24notizie",
       "nome": "H24 Notizie",
       "esito": "ok",
-      "nuove": 4
+      "nuove": 3
     },
     {
       "id": "frosinonetoday",
       "nome": "Frosinone Today",
-      "esito": "ok",
-      "nuove": 1
+      "esito": "errore",
+      "nuove": 0
     }
   ],
   "notizie": [
+    {
+      "url": "https://www.latinacorriere.it/terracina-estorsione-con-la-promessa-del-permesso-di-soggiorno-due-arresti",
+      "titolo": "Terracina, estorsione con la promessa del permesso di soggiorno: due arresti",
+      "anteprima": "Promettevano di velocizzare le pratiche per un permesso di soggiorno, ma dietro l’apparente aiuto si nascondeva una lunga spirale di raggiri e minacce. I carabinieri del Nucleo Operativo e Radiomobile di Terracina hanno arrestato in flagranza di…",
+      "data": "2026-11-20",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "fondi",
+        "terracina"
+      ]
+    },
     {
       "url": "https://www.latinacorriere.it/taxi-abusivi-a-latina-scalo-e-sermoneta-sequestrate-otto-vetture",
       "titolo": "Taxi abusivi a Latina Scalo e Sermoneta, sequestrate otto vetture",
@@ -45,6 +58,18 @@ window.M5S_RASSEGNA = {
       "logo": "img/testate/latinacorriere.png",
       "comuni": [
         "sermoneta"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/sezze-al-via-la-gara-per-il-recupero-dellanfiteatro-stanziati-500mila-euro",
+      "titolo": "Sezze, al via la gara per il recupero dell’Anfiteatro: stanziati 500mila euro",
+      "anteprima": "Prende forma il progetto per restituire alla città l’Anfiteatro, il Teatro Sacro Italiano, da anni chiuso e sottratto alla fruizione pubblica. Il Comune di Sezze ha avviato la gara per l’affidamento dei lavori del primo lotto di riqualificazione…",
+      "data": "2026-11-20",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "sezze"
       ]
     },
     {
@@ -60,6 +85,42 @@ window.M5S_RASSEGNA = {
       ]
     },
     {
+      "url": "https://www.latinatoday.it/cronaca/tassisti-abusivi-denunce-auto-sequestrate-latina-sermoneta.html",
+      "titolo": "Otto tassisti abusivi scoperti dalla finanza, tutti denunciati e multe per 60mila euro",
+      "anteprima": "Sequestrate anche altrettante vetture utilizzate per il “servizio taxi” non autorizzato. I controlli tra la stazione ferroviaria di Latina Scalo e Sermoneta",
+      "data": "2026-11-20",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "sermoneta"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/20/ordinanza-anti-bivacco-nel-centro-urbano-di-monte-san-biagio",
+      "titolo": "Ordinanza anti-bivacco nel centro urbano di Monte San Biagio",
+      "anteprima": "Giovedì 19 novembre a Monte San Biagio è stata emessa e pubblicata un’ordinanza comunale volta a contrastare fenomeni che comportano ripercussioni in termini di degrado urbano, ambientale e di viabilità e che limitano la libera fruizione di spazi…",
+      "data": "2026-11-20",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "monte-san-biagio"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/politica/lenola-guida-borghi-d-italia-la-repubblica.html",
+      "titolo": "Lenola nella guida “Borghi d'Italia. Paradisi da scoprire” di Repubblica",
+      "anteprima": "L’annuncio del sindaco Magnafico: “Un’importante occasione per far conoscere Lenola e raccontare il lavoro che stiamo portando avanti. Facciamo conoscere a tutti la bellezza della nostra terra”",
+      "data": "2026-11-20",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "lenola"
+      ]
+    },
+    {
       "url": "https://ilcaffe.tv/articolo/267677/latina-stazione-scoperti-8-tassisti-abusivi-giusto-punire-ma-chi-si-occupa-del-problema-collegamenti",
       "titolo": "Latina stazione, scoperti 8 tassisti abusivi: giusto punire, ma chi si occupa del problema collegamenti?",
       "anteprima": "Otto persone sorprese a svolgere il servizio taxi senza le necessarie autorizzazioni, otto automobili sequestrate e patenti di guida ritirate. È il bilancio dei controlli effettuati dalla Guardia di Finanza di Latina nelle zone vicine alle stazioni…",
@@ -69,6 +130,54 @@ window.M5S_RASSEGNA = {
       "logo": "img/testate/ilcaffe.png",
       "comuni": [
         "sermoneta"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/video/tassisti-abusivi-controlli-denunce-sequestri-latina-scalo-sermoneta.html",
+      "titolo": "IL VIDEO | Tassisti abusivi tra Latina Scalo e Sermoneta: controlli, denunce e sequestri",
+      "anteprima": "Otto quelli identificati dalla guardia di finanza durante mirati servizi; altrettante auto sequestrate",
+      "data": "2026-11-20",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "sermoneta"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/estorsione-permesso-soggiorno-arresti-terracina.html",
+      "titolo": "Estorsione e minacce per la pratica del permesso di soggiorno: la vittima consegna 7.500 euro ai malviventi",
+      "anteprima": "Nella rete di due estorsori è finito un anziano di Terracina. I due uomini fermati e arrestati dai militari, con l'ultima somma appena intascata",
+      "data": "2026-11-20",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/attualita/croce-rossa-comune-cisterna-concessione-sede.html",
+      "titolo": "Croce Rossa e Comune: a Cisterna rinnovata per tre anni la concessione gratuita della sede",
+      "anteprima": "La convenzione di tre anni consentirà all’associazione di continuare a svolgere le proprie attività sociali e di assistenza. Cri: “Grazie al sindaco rinnoviamo la nostra presenza sul territorio”",
+      "data": "2026-11-20",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/cisterna-la-croce-rossa-resta-in-via-aldo-moro-per-altri-tre-anni",
+      "titolo": "Cisterna, la Croce Rossa resta in via Aldo Moro per altri tre anni",
+      "anteprima": "La Croce Rossa Italiana potrà continuare a operare nei locali comunali di via Aldo Moro, nel quartiere San Valentino, per i prossimi tre anni. Questa mattina in Comune a Cisterna è stato infatti firmato il rinnovo della convenzione che assegna lo…",
+      "data": "2026-11-20",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "cisterna-di-latina"
       ]
     },
     {
