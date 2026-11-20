@@ -1,6 +1,7 @@
 ---
 titolo: "Pagine dei comuni e albo pretorio: come sono organizzate"
 data: 2026-11-12
+tipo: articolo
 comune: cisterna-di-latina
 esempio: true
 estratto: "Articolo di esempio. Ogni comune del Gruppo Territoriale ha una pagina dedicata, con gli articoli che lo riguardano e un collegamento all'albo pretorio (o al sito istituzionale) del Comune."

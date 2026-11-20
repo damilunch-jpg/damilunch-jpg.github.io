@@ -73,17 +73,22 @@ Si possono cancellare quando non servono più: apri l'articolo e usa **Elimina**
 2. Compila i campi:
    - **Titolo**
    - **Data** (giorno di pubblicazione)
-   - **Comune** (Sezze, Fondi, Cisterna di Latina, Priverno, Monte San Biagio, Roccasecca dei Volsci, Cori, Bassiano, Norma, Lenola, Sermoneta, Terracina, Rocca Massima, Roccagorga, Ceccano o Sonnino)
+   - **Tipo**: Articolo oppure Comunicato stampa
+   - **Gruppo Territoriale**: attivalo per un testo del gruppo nel suo insieme. Compare nella sezione [Gruppo Territoriale](https://damilunch-jpg.github.io/gruppo.html) e in homepage. Puoi attivarlo anche insieme a un comune.
+   - **Comune** (facoltativo se il Gruppo Territoriale è attivo): Sezze, Fondi, Cisterna di Latina, Priverno, Monte San Biagio, Roccasecca dei Volsci, Cori, Bassiano, Norma, Lenola, Sermoneta, Terracina, Rocca Massima, Roccagorga, Ceccano o Sonnino. Se lo indichi, il testo compare anche nella pagina di quel comune.
    - **Estratto** (poche righe, quelle che si vedono in homepage)
-   - **Articolo di esempio**: lascialo spento per un articolo vero
+   - **Articolo di esempio**: lascialo spento per un testo vero
    - **Immagine**: facoltativa
-   - **Testo**: il corpo dell'articolo. Si possono usare titoli, elenchi, grassetto e link
+   - **Testo**: il corpo. Si possono usare titoli, elenchi, grassetto e link
 3. Controlla il nome del file proposto (lo vedi solo alla creazione). Va bene quello suggerito.
 4. Salva.
 
+Serve almeno un comune oppure l'opzione Gruppo Territoriale. Senza nessuno dei due il sito non aggiorna l'elenco.
+
 Non c'è una coda di approvazione. Il salvataggio scrive il file in `content/articoli/` sul branch `main`.
-Entro un paio di minuti l'azione **Aggiorna indice articoli** rigenera l'elenco e l'articolo compare sul sito:
-in homepage e nella pagina del comune scelto.
+Entro un paio di minuti l'azione **Aggiorna indice articoli** rigenera l'elenco e il testo compare sul sito:
+in homepage, nella sezione Gruppo Territoriale se l'opzione è attiva, e nella pagina del comune se ne hai indicato uno.
+Nella pagina del testo c'è il pulsante **Condividi su Facebook**.
 
 L'indirizzo dell'articolo è `articolo.html?id=` seguito dal nome del file, senza `.md`.
 

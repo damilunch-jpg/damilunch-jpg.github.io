@@ -1,6 +1,7 @@
 ---
 titolo: "Newsletter e approfondimenti: uno spazio in costruzione"
 data: 2026-11-08
+tipo: articolo
 comune: sonnino
 esempio: true
 estratto: "Articolo di esempio. In calce al sito è previsto un box per iscriversi alla mailing list, con informativa sul consenso al trattamento dei dati (GDPR). Il modulo, in questa fase, non è ancora operativo."

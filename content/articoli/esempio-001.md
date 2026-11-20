@@ -1,6 +1,7 @@
 ---
 titolo: "Come appariranno gli aggiornamenti del Gruppo Territoriale"
 data: 2026-11-17
+tipo: articolo
 comune: cori
 esempio: true
 estratto: "Articolo di esempio. Questo spazio accoglierà i prossimi aggiornamenti del Gruppo Territoriale Lepini Ausoni: niente fatti di cronaca, dichiarazioni o notizie reali, solo una dimostrazione di come verrà presentato un articolo in homepage."

@@ -32,10 +32,10 @@ content:
       field: create
     exclude: ["README.md"]
     view:
-      fields: [titolo, data, comune, esempio]
+      fields: [titolo, data, tipo, comune, gruppo, esempio]
       primary: titolo
-      sort: [data, titolo, comune]
-      search: [titolo, estratto, comune]
+      sort: [data, titolo, tipo, comune]
+      search: [titolo, estratto, comune, tipo]
       default:
         sort: data
         order: desc
@@ -50,11 +50,26 @@ content:
         required: true
         options:
           format: yyyy-MM-dd
+      - name: tipo
+        label: Tipo
+        type: select
+        required: true
+        description: Articolo oppure comunicato stampa. L'etichetta compare negli elenchi.
+        options:
+          values:
+            - name: articolo
+              label: Articolo
+            - name: comunicato
+              label: Comunicato stampa
+      - name: gruppo
+        label: Gruppo Territoriale
+        type: boolean
+        description: Attivalo per i testi del gruppo nel suo insieme. Compare nella sezione Gruppo Territoriale e in homepage. Puoi attivarlo anche insieme a un comune: in quel caso il testo compare in entrambe le pagine. Se lo attivi senza comune, compare solo nella sezione del gruppo.
       - name: comune
         label: Comune
         type: select
-        required: true
-        description: Comune a cui si riferisce l'articolo. Compare nella pagina di quel comune e in homepage.
+        required: false
+        description: Comune a cui si riferisce il testo. Lascialo vuoto se riguarda solo il Gruppo Territoriale. Se lo indichi, il testo compare nella pagina di quel comune e in homepage.
         options:
           values:
             - name: sezze

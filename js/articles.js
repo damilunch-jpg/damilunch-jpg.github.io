@@ -127,27 +127,30 @@ window.M5S_DATA = {
       "id": "esempio-001",
       "titolo": "Come appariranno gli aggiornamenti del Gruppo Territoriale",
       "data": "2026-11-17",
-      "comune": "cori",
+      "tipo": "articolo",
       "estratto": "Articolo di esempio. Questo spazio accoglierà i prossimi aggiornamenti del Gruppo Territoriale Lepini Ausoni: niente fatti di cronaca, dichiarazioni o notizie reali, solo una dimostrazione di come verrà presentato un articolo in homepage.",
       "testo": "Questo è un articolo di esempio, pubblicato solo per mostrare il funzionamento del sito.\n\nQuando il Gruppo Territoriale Lepini Ausoni avrà un aggiornamento da condividere, il testo comparirà qui: titolo, data, comune di riferimento e un approfondimento collegato dalla homepage e dalla pagina del comune.\n\nNon contiene notizie, dichiarazioni o fatti reali. I contenuti veri sostituiranno questi testi di prova, senza modificare la struttura delle pagine.",
+      "comune": "cori",
       "esempio": true
     },
     {
       "id": "esempio-002",
       "titolo": "Pagine dei comuni e albo pretorio: come sono organizzate",
       "data": "2026-11-12",
-      "comune": "cisterna-di-latina",
+      "tipo": "articolo",
       "estratto": "Articolo di esempio. Ogni comune del Gruppo Territoriale ha una pagina dedicata, con gli articoli che lo riguardano e un collegamento all'albo pretorio (o al sito istituzionale) del Comune.",
       "testo": "Questo è un articolo di esempio, pensato per illustrare le pagine dei singoli comuni.\n\nPer ciascun comune del Gruppo Territoriale è prevista una pagina con gli aggiornamenti pubblicati dal gruppo e, quando l'indirizzo ufficiale è noto, il collegamento all'albo pretorio.\n\nIl testo non si riferisce ad atti, bandi o deliberazioni reali. Serve soltanto a mostrare come un aggiornamento verrà raggruppato sotto il comune di riferimento.",
+      "comune": "cisterna-di-latina",
       "esempio": true
     },
     {
       "id": "esempio-003",
       "titolo": "Newsletter e approfondimenti: uno spazio in costruzione",
       "data": "2026-11-08",
-      "comune": "sonnino",
+      "tipo": "articolo",
       "estratto": "Articolo di esempio. In calce al sito è previsto un box per iscriversi alla mailing list, con informativa sul consenso al trattamento dei dati (GDPR). Il modulo, in questa fase, non è ancora operativo.",
       "testo": "Questo è un articolo di esempio sul futuro spazio di approfondimento e sulla mailing list rivolta agli iscritti e a chi segue il Gruppo Territoriale.\n\nNel piè di pagina del sito trovate un riquadro per lasciare l'indirizzo e-mail e per esprimere il consenso al trattamento dei dati personali, come richiesto dal Regolamento (UE) 2016/679. In questo prototipo il modulo non invia ancora nulla: è solo un segnaposto.\n\nNessuna campagna, evento o iniziativa reale è descritta in queste righe. Quando la mailing list sarà attiva, gli approfondimenti veri prenderanno il posto di questo testo di prova.",
+      "comune": "sonnino",
       "esempio": true
     }
   ]

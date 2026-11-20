@@ -65,7 +65,10 @@ def image_path(value) -> str:
     return str(value).strip()
 
 
-def load_articles():
+TIPI = {"articolo": "Articolo", "comunicato": "Comunicato stampa"}
+
+
+def load_articles(slug_noti: set[str]):
     articles = []
     if not CONTENT.is_dir():
         return articles
@@ -77,9 +80,15 @@ def load_articles():
         data = str(meta.get("data") or "").strip()
         if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", data):
             raise SystemExit(f"{path.name}: data non valida ({data!r}), usare AAAA-MM-GG")
+        tipo = str(meta.get("tipo") or "articolo").strip()
+        if tipo not in TIPI:
+            raise SystemExit(f"{path.name}: tipo non valido ({tipo!r}), usare articolo o comunicato")
         comune = str(meta.get("comune") or "").strip()
-        if not comune:
-            raise SystemExit(f"{path.name}: manca il comune")
+        if comune and comune not in slug_noti:
+            raise SystemExit(f"{path.name}: comune sconosciuto ({comune!r})")
+        gruppo = meta.get("gruppo") is True
+        if not comune and not gruppo:
+            raise SystemExit(f"{path.name}: indica un comune oppure attiva Gruppo Territoriale")
         estratto = str(meta.get("estratto") or "").strip()
         testo = body.strip()
         if not estratto:
@@ -88,10 +97,14 @@ def load_articles():
             "id": path.stem,
             "titolo": titolo,
             "data": data,
-            "comune": comune,
+            "tipo": tipo,
             "estratto": estratto,
             "testo": testo,
         }
+        if comune:
+            article["comune"] = comune
+        if gruppo:
+            article["gruppo"] = True
         if meta.get("esempio") is True:
             article["esempio"] = True
         immagine = image_path(meta.get("immagine"))
@@ -115,7 +128,7 @@ def main():
         "gruppoBreve": "GT Lepini Ausoni",
         "territorio": "Provincia di Latina, Lazio",
         "comuni": comuni,
-        "articles": load_articles(),
+        "articles": load_articles({item["slug"] for item in comuni_raw}),
     }
     encoded = json.dumps(payload, ensure_ascii=False, indent=2)
     encoded = encoded.replace("<", "\\u003c")

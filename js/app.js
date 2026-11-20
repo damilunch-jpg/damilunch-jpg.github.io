@@ -143,6 +143,15 @@
     });
   }
 
+  function articlesGruppo(tipo) {
+    return sortedArticles().filter(function (a) {
+      if (!a.gruppo) return false;
+      if (!tipo || tipo === "tutti") return true;
+      var proprio = a.tipo === "comunicato" ? "comunicato" : "articolo";
+      return proprio === tipo;
+    });
+  }
+
   function findArticle(id) {
     for (var i = 0; i < DATA.articles.length; i++) {
       if (DATA.articles[i].id === id) return DATA.articles[i];
@@ -150,27 +159,43 @@
     return null;
   }
 
+  function tipoLabel(tipo) {
+    return tipo === "comunicato" ? "Comunicato stampa" : "Articolo";
+  }
+
   function metaHtml(article, base) {
-    var comune = findComune(article.comune);
-    var nome = comune ? comune.nome : article.comune;
     var badge = article.esempio
       ? '<span class="badge-esempio">Articolo di esempio</span>'
       : "";
+    var tipo = article.tipo === "comunicato" ? "comunicato" : "articolo";
+    var etichetta =
+      '<span class="badge-tipo badge-' + tipo + '">' + escapeHtml(tipoLabel(tipo)) + "</span>";
+    var tags = "";
+    if (article.comune) {
+      var comune = findComune(article.comune);
+      var nome = comune ? comune.nome : article.comune;
+      tags +=
+        '<a class="tag" href="' +
+        base +
+        "comuni/" +
+        escapeHtml(article.comune) +
+        '.html">' +
+        escapeHtml(nome) +
+        "</a>";
+    }
+    if (article.gruppo) {
+      tags += '<a class="tag" href="' + base + 'gruppo.html">Gruppo Territoriale</a>';
+    }
     return (
       '<div class="meta">' +
       badge +
+      etichetta +
       '<time datetime="' +
       escapeHtml(article.data) +
       '">' +
       escapeHtml(formatDate(article.data)) +
       "</time>" +
-      '<a class="tag" href="' +
-      base +
-      "comuni/" +
-      escapeHtml(article.comune) +
-      '.html">' +
-      escapeHtml(nome) +
-      "</a>" +
+      tags +
       "</div>"
     );
   }
@@ -211,7 +236,9 @@
       base +
       "articolo.html?id=" +
       encodeURIComponent(article.id) +
-      '">Leggi l\'articolo</a>' +
+      '">' +
+      (article.tipo === "comunicato" ? "Leggi il comunicato" : "Leggi l'articolo") +
+      "</a>" +
       "</article>"
     );
   }
@@ -315,6 +342,7 @@
     var path = window.location.pathname || "";
     var isHome = /index\.html$/.test(path) || (/\/$/.test(path) && path.indexOf("/comuni/") === -1);
     var isRassegna = /rassegna\.html$/.test(path);
+    var isGruppo = /gruppo\.html$/.test(path);
 
     var comuni = "";
     DATA.comuni.forEach(function (c) {
@@ -353,6 +381,11 @@
       'rassegna.html"' +
       (isRassegna ? ' aria-current="page"' : "") +
       ">Rassegna stampa</a></li>" +
+      '<li><a href="' +
+      base +
+      'gruppo.html"' +
+      (isGruppo ? ' aria-current="page"' : "") +
+      ">Gruppo Territoriale</a></li>" +
       '<li class="voce-comuni">' +
       '<button type="button" class="comuni-toggle" aria-expanded="false" aria-controls="elenco-comuni">Comuni</button>' +
       '<ul class="elenco-comuni" id="elenco-comuni" hidden>' +
@@ -554,6 +587,43 @@
     if (!mount.getAttribute("data-rassegna-hash")) {
       mount.setAttribute("data-rassegna-hash", "1");
       window.addEventListener("hashchange", renderRassegna);
+    }
+  }
+
+  function renderGruppo() {
+    var mount = $("#contenuto");
+    if (!mount) return;
+    var base = basePath();
+    document.title = "Gruppo Territoriale – Movimento 5 Stelle, GT Lepini Ausoni";
+    var tipo = (window.location.hash || "").replace(/^#/, "") || "tutti";
+    if (tipo !== "articolo" && tipo !== "comunicato") tipo = "tutti";
+    var tutti = articlesGruppo("tutti");
+    var lista = articlesGruppo(tipo);
+
+    var html =
+      '<p class="page-kicker">Movimento 5 Stelle</p>' +
+      "<h1>Gruppo Territoriale</h1>" +
+      '<p class="lead">Articoli e comunicati stampa del Gruppo Territoriale Lepini Ausoni nel suo insieme, non legati a un solo comune.</p>';
+
+    html += '<div class="filtri-comune" role="group" aria-label="Filtra per tipo">';
+    html += '<a class="filtro' + (tipo === "tutti" ? " is-active" : "") + '" href="' + base + 'gruppo.html#tutti">Tutti</a>';
+    html += '<a class="filtro' + (tipo === "articolo" ? " is-active" : "") + '" href="' + base + 'gruppo.html#articolo">Articoli</a>';
+    html += '<a class="filtro' + (tipo === "comunicato" ? " is-active" : "") + '" href="' + base + 'gruppo.html#comunicato">Comunicati stampa</a>';
+    html += "</div>";
+
+    if (!tutti.length) {
+      html += '<p class="vuoto">Presto i primi comunicati del gruppo.</p>';
+    } else if (!lista.length) {
+      html += '<p class="vuoto">Non ci sono ancora contenuti di questo tipo.</p>';
+    } else {
+      html += '<div class="lista-articoli">';
+      lista.forEach(function (a) { html += cardHtml(a, base); });
+      html += "</div>";
+    }
+    mount.innerHTML = html;
+    if (!mount.getAttribute("data-gruppo-hash")) {
+      mount.setAttribute("data-gruppo-hash", "1");
+      window.addEventListener("hashchange", renderGruppo);
     }
   }
 
@@ -787,9 +857,14 @@
       renderMarkdown(article.testo) +
       condividiFacebook() +
       "</article>" +
-      '<p><a class="back-link" href="' +
+      "<p>" +
+      '<a class="back-link" href="' +
       base +
-      'index.html">← Torna alla homepage</a></p>';
+      'index.html">← Torna alla homepage</a>' +
+      (article.gruppo
+        ? ' <a class="back-link" href="' + base + 'gruppo.html">← Gruppo Territoriale</a>'
+        : "") +
+      "</p>";
   }
 
 
@@ -835,6 +910,7 @@
     else if (page === "comune") renderComune(slug);
     else if (page === "articolo") renderArticolo();
     else if (page === "rassegna") renderRassegna();
+    else if (page === "gruppo") renderGruppo();
   }
 
   if (document.readyState === "loading") {

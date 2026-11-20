@@ -332,16 +332,31 @@ a:focus-visible {
   filter: brightness(0.95);
 }
 
-.badge-esempio {
+.badge-esempio,
+.badge-tipo {
   display: inline-block;
-  background: var(--grigio);
-  color: var(--bianco);
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   padding: 0.15rem 0.45rem;
   border-radius: 4px;
+}
+
+.badge-esempio {
+  background: var(--grigio);
+  color: var(--bianco);
+}
+
+.badge-articolo {
+  background: var(--bianco);
+  color: var(--grigio);
+  border: 1px solid var(--bordo);
+}
+
+.badge-comunicato {
+  background: var(--giallo);
+  color: var(--grigio-scuro);
 }
 
 .excerpt,
