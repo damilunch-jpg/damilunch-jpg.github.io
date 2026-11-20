@@ -938,6 +938,9 @@ def main(argv):
             continue
         nome = comune["nome"]
         prior = previous.get(slug) or {}
+        if not comune.get("scraper"):
+            print(f"RISULTATO {nome} | saltato | nessun albo automatico configurato", flush=True)
+            continue
         if plan == "retry" and succeeded_tonight(prior, now):
             print(
                 f"RISULTATO {nome} | saltato | già letto stanotte | atti={len(prior.get('atti') or [])}",

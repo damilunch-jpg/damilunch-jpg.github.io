@@ -6,11 +6,19 @@ window.M5S_DATA = {
   "territorio": "Provincia di Latina, Lazio",
   "comuni": [
     {
-      "slug": "cori",
-      "nome": "Cori",
-      "alboUrl": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
+      "slug": "sezze",
+      "nome": "Sezze",
+      "alboUrl": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi.php?x=&servizio=&bck=https%3A%2F%2Fwww.comune.sezze.lt.it%2Fc059028%2Fhh%2Findex.php",
       "alboVerificato": true,
-      "sitoIstituzionale": "https://www.comune.cori.lt.it/"
+      "sitoIstituzionale": "https://www.comune.sezze.lt.it/"
+    },
+    {
+      "slug": "fondi",
+      "nome": "Fondi",
+      "alboUrl": "",
+      "alboVerificato": false,
+      "sitoIstituzionale": "",
+      "alboAutomatico": false
     },
     {
       "slug": "cisterna-di-latina",
@@ -20,18 +28,34 @@ window.M5S_DATA = {
       "sitoIstituzionale": "https://comune.cisterna.latina.it/"
     },
     {
-      "slug": "norma",
-      "nome": "Norma",
-      "alboUrl": "https://comune.norma.lt.it/documenti-albo-pretorio",
+      "slug": "priverno",
+      "nome": "Priverno",
+      "alboUrl": "https://servizi.comune.priverno.latina.it/ServiziOnLine/Istanze/landingIstanza?Id=17",
       "alboVerificato": true,
-      "sitoIstituzionale": "https://comune.norma.lt.it/"
+      "sitoIstituzionale": "https://www.comune.priverno.latina.it/"
     },
     {
-      "slug": "sezze",
-      "nome": "Sezze",
-      "alboUrl": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi.php?x=&servizio=&bck=https%3A%2F%2Fwww.comune.sezze.lt.it%2Fc059028%2Fhh%2Findex.php",
+      "slug": "monte-san-biagio",
+      "nome": "Monte San Biagio",
+      "alboUrl": "",
+      "alboVerificato": false,
+      "sitoIstituzionale": "",
+      "alboAutomatico": false
+    },
+    {
+      "slug": "roccasecca-dei-volsci",
+      "nome": "Roccasecca dei Volsci",
+      "alboUrl": "",
+      "alboVerificato": false,
+      "sitoIstituzionale": "",
+      "alboAutomatico": false
+    },
+    {
+      "slug": "cori",
+      "nome": "Cori",
+      "alboUrl": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
       "alboVerificato": true,
-      "sitoIstituzionale": "https://www.comune.sezze.lt.it/"
+      "sitoIstituzionale": "https://www.comune.cori.lt.it/"
     },
     {
       "slug": "bassiano",
@@ -41,6 +65,45 @@ window.M5S_DATA = {
       "sitoIstituzionale": "https://comune.bassiano.lt.it/"
     },
     {
+      "slug": "norma",
+      "nome": "Norma",
+      "alboUrl": "https://comune.norma.lt.it/documenti-albo-pretorio",
+      "alboVerificato": true,
+      "sitoIstituzionale": "https://comune.norma.lt.it/"
+    },
+    {
+      "slug": "lenola",
+      "nome": "Lenola",
+      "alboUrl": "",
+      "alboVerificato": false,
+      "sitoIstituzionale": "",
+      "alboAutomatico": false
+    },
+    {
+      "slug": "sermoneta",
+      "nome": "Sermoneta",
+      "alboUrl": "",
+      "alboVerificato": false,
+      "sitoIstituzionale": "",
+      "alboAutomatico": false
+    },
+    {
+      "slug": "terracina",
+      "nome": "Terracina",
+      "alboUrl": "",
+      "alboVerificato": false,
+      "sitoIstituzionale": "",
+      "alboAutomatico": false
+    },
+    {
+      "slug": "rocca-massima",
+      "nome": "Rocca Massima",
+      "alboUrl": "",
+      "alboVerificato": false,
+      "sitoIstituzionale": "",
+      "alboAutomatico": false
+    },
+    {
       "slug": "roccagorga",
       "nome": "Roccagorga",
       "alboUrl": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/",
@@ -48,11 +111,12 @@ window.M5S_DATA = {
       "sitoIstituzionale": "https://www.comune.roccagorga.lt.it/"
     },
     {
-      "slug": "priverno",
-      "nome": "Priverno",
-      "alboUrl": "https://servizi.comune.priverno.latina.it/ServiziOnLine/Istanze/landingIstanza?Id=17",
-      "alboVerificato": true,
-      "sitoIstituzionale": "https://www.comune.priverno.latina.it/"
+      "slug": "ceccano",
+      "nome": "Ceccano",
+      "alboUrl": "",
+      "alboVerificato": false,
+      "sitoIstituzionale": "",
+      "alboAutomatico": false
     },
     {
       "slug": "sonnino",
@@ -78,7 +142,7 @@ window.M5S_DATA = {
       "data": "2026-11-12",
       "comune": "cisterna-di-latina",
       "estratto": "Articolo di esempio. Ogni comune del Gruppo Territoriale ha una pagina dedicata, con gli articoli che lo riguardano e un collegamento all'albo pretorio (o al sito istituzionale) del Comune.",
-      "testo": "Questo è un articolo di esempio, pensato per illustrare le pagine dei singoli comuni.\n\nPer ciascun comune del Gruppo Territoriale (Cori, Cisterna di Latina, Norma, Sezze, Bassiano, Roccagorga, Priverno e Sonnino) è prevista una pagina con due sezioni: gli aggiornamenti pubblicati dal gruppo e un collegamento all'albo pretorio online ufficiale, quando disponibile.\n\nIl testo non si riferisce ad atti, bandi o deliberazioni reali. Serve soltanto a mostrare come un aggiornamento verrà raggruppato sotto il comune di riferimento.",
+      "testo": "Questo è un articolo di esempio, pensato per illustrare le pagine dei singoli comuni.\n\nPer ciascun comune del Gruppo Territoriale è prevista una pagina con gli aggiornamenti pubblicati dal gruppo e, quando l'indirizzo ufficiale è noto, il collegamento all'albo pretorio.\n\nIl testo non si riferisce ad atti, bandi o deliberazioni reali. Serve soltanto a mostrare come un aggiornamento verrà raggruppato sotto il comune di riferimento.",
       "esempio": true
     },
     {

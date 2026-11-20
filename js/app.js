@@ -307,17 +307,11 @@
     var path = window.location.pathname || "";
     var isHome = /index\.html$/.test(path) || /\/$/.test(path) && path.indexOf("/comuni/") === -1;
 
-    var items =
-      '<li><a href="' +
-      base +
-      'index.html"' +
-      (isHome && !currentSlug ? ' aria-current="page"' : "") +
-      ">Home</a></li>";
-
+    var comuni = "";
     DATA.comuni.forEach(function (c) {
       var current = currentSlug === c.slug ? ' aria-current="page"' : "";
-      items +=
-        '<li><a href="' +
+      comuni +=
+        "<li><a href=\"" +
         base +
         "comuni/" +
         c.slug +
@@ -328,25 +322,63 @@
         "</a></li>";
     });
 
+    var extra = "";
     socialVisibili().forEach(function (item) {
-      items += '<li class="menu-social">' + linkSocial(item, "social-link") + "</li>";
+      extra += '<li class="menu-social">' + linkSocial(item, "social-link") + "</li>";
     });
-    items += '<li class="menu-iscriviti"><a href="https://portale.movimento5stelle.eu/iscrizioni" target="_blank" rel="noopener noreferrer">Iscriviti al M5S ↗</a></li>';
+    extra += '<li class="menu-iscriviti"><a href="https://portale.movimento5stelle.eu/iscrizioni" target="_blank" rel="noopener noreferrer">Iscriviti al M5S ↗</a></li>';
+
     mount.innerHTML =
       '<div class="nav-inner">' +
-      '<button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu-comuni">' +
-      '<span class="nav-toggle-bars" aria-hidden="true"></span> Menu dei comuni' +
+      '<button type="button" class="nav-toggle" aria-expanded="false" aria-controls="menu-principale">' +
+      '<span class="nav-toggle-bars" aria-hidden="true"></span> Menu' +
       "</button>" +
-      '<ul class="menu" id="menu-comuni">' +
-      items +
+      '<ul class="menu" id="menu-principale">' +
+      '<li><a href="' +
+      base +
+      'index.html"' +
+      (isHome && !currentSlug ? ' aria-current="page"' : "") +
+      ">Home</a></li>" +
+      '<li class="voce-comuni">' +
+      '<button type="button" class="comuni-toggle" aria-expanded="false" aria-controls="elenco-comuni">Comuni</button>' +
+      '<ul class="elenco-comuni" id="elenco-comuni" hidden>' +
+      comuni +
+      "</ul></li>" +
+      extra +
       "</ul></div>";
 
     var toggle = $(".nav-toggle", mount);
-    var menu = $("#menu-comuni", mount);
+    var menu = $("#menu-principale", mount);
     if (toggle && menu) {
       toggle.addEventListener("click", function () {
         var open = menu.classList.toggle("is-open");
         toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+    }
+    var comuniBtn = $(".comuni-toggle", mount);
+    var elenco = $("#elenco-comuni", mount);
+    if (comuniBtn && elenco) {
+      comuniBtn.addEventListener("click", function () {
+        var open = elenco.hasAttribute("hidden");
+        if (open) elenco.removeAttribute("hidden");
+        else elenco.setAttribute("hidden", "");
+        elenco.classList.toggle("is-open", open);
+        comuniBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      document.addEventListener("click", function (ev) {
+        if (!mount.contains(ev.target) && !elenco.hasAttribute("hidden")) {
+          elenco.setAttribute("hidden", "");
+          elenco.classList.remove("is-open");
+          comuniBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+      document.addEventListener("keydown", function (ev) {
+        if (ev.key === "Escape" && !elenco.hasAttribute("hidden")) {
+          elenco.setAttribute("hidden", "");
+          elenco.classList.remove("is-open");
+          comuniBtn.setAttribute("aria-expanded", "false");
+          comuniBtn.focus();
+        }
       });
     }
   }
@@ -476,6 +508,16 @@
 
     html += '<section class="albo-box" aria-labelledby="albo-title">';
     html += '<h2 id="albo-title">Albo pretorio</h2>';
+
+    if (comune.alboAutomatico === false && !comune.alboUrl) {
+      html +=
+        "<p>Qui saranno raccolti gli aggiornamenti che riguardano il Comune di " +
+        escapeHtml(comune.nome) +
+        ". Il collegamento all'albo pretorio online e l'elenco automatico degli atti saranno aggiunti quando l'indirizzo ufficiale sarà confermato.</p>";
+      html += "</section>";
+      mount.innerHTML = html;
+      return;
+    }
 
     if (comune.alboVerificato) {
       html +=

@@ -73,7 +73,7 @@ Si possono cancellare quando non servono più: apri l'articolo e usa **Elimina**
 2. Compila i campi:
    - **Titolo**
    - **Data** (giorno di pubblicazione)
-   - **Comune** (Cori, Cisterna di Latina, Norma, Sezze, Bassiano, Roccagorga, Priverno o Sonnino)
+   - **Comune** (Sezze, Fondi, Cisterna di Latina, Priverno, Monte San Biagio, Roccasecca dei Volsci, Cori, Bassiano, Norma, Lenola, Sermoneta, Terracina, Rocca Massima, Roccagorga, Ceccano o Sonnino)
    - **Estratto** (poche righe, quelle che si vedono in homepage)
    - **Articolo di esempio**: lascialo spento per un articolo vero
    - **Immagine**: facoltativa

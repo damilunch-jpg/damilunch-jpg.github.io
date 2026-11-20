@@ -15,7 +15,7 @@ CONTENT = ROOT / "content" / "articoli"
 COMUNI = ROOT / "data" / "comuni.json"
 OUT = ROOT / "js" / "articles.js"
 
-PUBLIC_KEYS = ("slug", "nome", "alboUrl", "alboVerificato", "sitoIstituzionale")
+PUBLIC_KEYS = ("slug", "nome", "alboUrl", "alboVerificato", "sitoIstituzionale", "alboAutomatico")
 
 
 def parse_scalar(raw: str):
@@ -104,7 +104,12 @@ def load_articles():
 
 def main():
     comuni_raw = json.loads(COMUNI.read_text(encoding="utf-8"))
-    comuni = [{key: item[key] for key in PUBLIC_KEYS} for item in comuni_raw]
+    comuni = []
+    for item in comuni_raw:
+        row = {key: item.get(key, "") for key in PUBLIC_KEYS if key != "alboAutomatico"}
+        if "alboAutomatico" in item:
+            row["alboAutomatico"] = bool(item["alboAutomatico"])
+        comuni.append(row)
     payload = {
         "gruppo": "Movimento 5 Stelle – Gruppo Territoriale Lepini Ausoni",
         "gruppoBreve": "GT Lepini Ausoni",

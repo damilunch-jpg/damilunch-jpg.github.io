@@ -57,20 +57,36 @@ content:
         description: Comune a cui si riferisce l'articolo. Compare nella pagina di quel comune e in homepage.
         options:
           values:
-            - name: cori
-              label: Cori
-            - name: cisterna-di-latina
-              label: Cisterna di Latina
-            - name: norma
-              label: Norma
             - name: sezze
               label: Sezze
-            - name: bassiano
-              label: Bassiano
-            - name: roccagorga
-              label: Roccagorga
+            - name: fondi
+              label: Fondi
+            - name: cisterna-di-latina
+              label: Cisterna di Latina
             - name: priverno
               label: Priverno
+            - name: monte-san-biagio
+              label: Monte San Biagio
+            - name: roccasecca-dei-volsci
+              label: Roccasecca dei Volsci
+            - name: cori
+              label: Cori
+            - name: bassiano
+              label: Bassiano
+            - name: norma
+              label: Norma
+            - name: lenola
+              label: Lenola
+            - name: sermoneta
+              label: Sermoneta
+            - name: terracina
+              label: Terracina
+            - name: rocca-massima
+              label: Rocca Massima
+            - name: roccagorga
+              label: Roccagorga
+            - name: ceccano
+              label: Ceccano
             - name: sonnino
               label: Sonnino
       - name: estratto

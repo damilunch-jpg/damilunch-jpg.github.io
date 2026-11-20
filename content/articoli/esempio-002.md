@@ -8,6 +8,6 @@ estratto: "Articolo di esempio. Ogni comune del Gruppo Territoriale ha una pagin
 
 Questo è un articolo di esempio, pensato per illustrare le pagine dei singoli comuni.
 
-Per ciascun comune del Gruppo Territoriale (Cori, Cisterna di Latina, Norma, Sezze, Bassiano, Roccagorga, Priverno e Sonnino) è prevista una pagina con due sezioni: gli aggiornamenti pubblicati dal gruppo e un collegamento all'albo pretorio online ufficiale, quando disponibile.
+Per ciascun comune del Gruppo Territoriale è prevista una pagina con gli aggiornamenti pubblicati dal gruppo e, quando l'indirizzo ufficiale è noto, il collegamento all'albo pretorio.
 
 Il testo non si riferisce ad atti, bandi o deliberazioni reali. Serve soltanto a mostrare come un aggiornamento verrà raggruppato sotto il comune di riferimento.

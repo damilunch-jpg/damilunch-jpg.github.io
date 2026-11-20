@@ -1,12 +1,23 @@
 [
   {
-    "slug": "cori",
-    "nome": "Cori",
-    "alboUrl": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
+    "slug": "sezze",
+    "nome": "Sezze",
+    "alboUrl": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi.php?x=&servizio=&bck=https%3A%2F%2Fwww.comune.sezze.lt.it%2Fc059028%2Fhh%2Findex.php",
     "alboVerificato": true,
-    "sitoIstituzionale": "https://www.comune.cori.lt.it/",
-    "scraper": "urbi",
-    "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954"
+    "sitoIstituzionale": "https://www.comune.sezze.lt.it/",
+    "scraper": "halley",
+    "fonte": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi.php?x=&servizio=&bck=https%3A%2F%2Fwww.comune.sezze.lt.it%2Fc059028%2Fhh%2Findex.php",
+    "fallback": [
+      "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028"
+    ]
+  },
+  {
+    "slug": "fondi",
+    "nome": "Fondi",
+    "alboUrl": "",
+    "alboVerificato": false,
+    "sitoIstituzionale": "",
+    "alboAutomatico": false
   },
   {
     "slug": "cisterna-di-latina",
@@ -22,6 +33,53 @@
     ]
   },
   {
+    "slug": "priverno",
+    "nome": "Priverno",
+    "alboUrl": "https://servizi.comune.priverno.latina.it/ServiziOnLine/Istanze/landingIstanza?Id=17",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://www.comune.priverno.latina.it/",
+    "scraper": "servizionline",
+    "fonte": "https://servizi.comune.priverno.latina.it/ServiziOnLine/Istanze/landingIstanza?Id=17",
+    "fallback": [
+      "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
+      "https://www.halleyweb.com/c059019/mc/mc_gridev_messi.php"
+    ]
+  },
+  {
+    "slug": "monte-san-biagio",
+    "nome": "Monte San Biagio",
+    "alboUrl": "",
+    "alboVerificato": false,
+    "sitoIstituzionale": "",
+    "alboAutomatico": false
+  },
+  {
+    "slug": "roccasecca-dei-volsci",
+    "nome": "Roccasecca dei Volsci",
+    "alboUrl": "",
+    "alboVerificato": false,
+    "sitoIstituzionale": "",
+    "alboAutomatico": false
+  },
+  {
+    "slug": "cori",
+    "nome": "Cori",
+    "alboUrl": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://www.comune.cori.lt.it/",
+    "scraper": "urbi",
+    "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954"
+  },
+  {
+    "slug": "bassiano",
+    "nome": "Bassiano",
+    "alboUrl": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145",
+    "alboVerificato": true,
+    "sitoIstituzionale": "https://comune.bassiano.lt.it/",
+    "scraper": "urbi",
+    "fonte": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145"
+  },
+  {
     "slug": "norma",
     "nome": "Norma",
     "alboUrl": "https://comune.norma.lt.it/documenti-albo-pretorio",
@@ -35,25 +93,36 @@
     ]
   },
   {
-    "slug": "sezze",
-    "nome": "Sezze",
-    "alboUrl": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi.php?x=&servizio=&bck=https%3A%2F%2Fwww.comune.sezze.lt.it%2Fc059028%2Fhh%2Findex.php",
-    "alboVerificato": true,
-    "sitoIstituzionale": "https://www.comune.sezze.lt.it/",
-    "scraper": "halley",
-    "fonte": "https://www.halleyweb.com/c059028/mc/mc_gridev_messi.php?x=&servizio=&bck=https%3A%2F%2Fwww.comune.sezze.lt.it%2Fc059028%2Fhh%2Findex.php",
-    "fallback": [
-      "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028"
-    ]
+    "slug": "lenola",
+    "nome": "Lenola",
+    "alboUrl": "",
+    "alboVerificato": false,
+    "sitoIstituzionale": "",
+    "alboAutomatico": false
   },
   {
-    "slug": "bassiano",
-    "nome": "Bassiano",
-    "alboUrl": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145",
-    "alboVerificato": true,
-    "sitoIstituzionale": "https://comune.bassiano.lt.it/",
-    "scraper": "urbi",
-    "fonte": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145"
+    "slug": "sermoneta",
+    "nome": "Sermoneta",
+    "alboUrl": "",
+    "alboVerificato": false,
+    "sitoIstituzionale": "",
+    "alboAutomatico": false
+  },
+  {
+    "slug": "terracina",
+    "nome": "Terracina",
+    "alboUrl": "",
+    "alboVerificato": false,
+    "sitoIstituzionale": "",
+    "alboAutomatico": false
+  },
+  {
+    "slug": "rocca-massima",
+    "nome": "Rocca Massima",
+    "alboUrl": "",
+    "alboVerificato": false,
+    "sitoIstituzionale": "",
+    "alboAutomatico": false
   },
   {
     "slug": "roccagorga",
@@ -65,17 +134,12 @@
     "fonte": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/"
   },
   {
-    "slug": "priverno",
-    "nome": "Priverno",
-    "alboUrl": "https://servizi.comune.priverno.latina.it/ServiziOnLine/Istanze/landingIstanza?Id=17",
-    "alboVerificato": true,
-    "sitoIstituzionale": "https://www.comune.priverno.latina.it/",
-    "scraper": "servizionline",
-    "fonte": "https://servizi.comune.priverno.latina.it/ServiziOnLine/Istanze/landingIstanza?Id=17",
-    "fallback": [
-      "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "https://www.halleyweb.com/c059019/mc/mc_gridev_messi.php"
-    ]
+    "slug": "ceccano",
+    "nome": "Ceccano",
+    "alboUrl": "",
+    "alboVerificato": false,
+    "sitoIstituzionale": "",
+    "alboAutomatico": false
   },
   {
     "slug": "sonnino",
