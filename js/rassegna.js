@@ -1,13 +1,13 @@
 /* Generato da scripts/sync_rassegna.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_RASSEGNA = {
-  "aggiornato": "2026-11-20T19:59:46+01:00",
+  "aggiornato": "2026-11-20T23:53:34+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "latinatoday",
       "nome": "Latina Today",
       "esito": "ok",
-      "nuove": 6
+      "nuove": 5
     },
     {
       "id": "latinacorriere",
@@ -30,8 +30,8 @@ window.M5S_RASSEGNA = {
     {
       "id": "frosinonetoday",
       "nome": "Frosinone Today",
-      "esito": "errore",
-      "nuove": 0
+      "esito": "ok",
+      "nuove": 1
     }
   ],
   "notizie": [
@@ -178,6 +178,18 @@ window.M5S_RASSEGNA = {
       "logo": "img/testate/latinacorriere.png",
       "comuni": [
         "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.frosinonetoday.it/attualita/ceccano-colpo-10elotto-vincita-20mila-euro-punto-vendita-via-per-frosinone.html",
+      "titolo": "Ceccano, colpo al 10eLotto: una vincita da 20mila euro in un punto vendita di via per Frosinone",
+      "anteprima": "Un “7” Oro centrato nel concorso di giovedì 19 novembre regala una bella somma a un giocatore",
+      "data": "2026-11-20",
+      "testata": "frosinonetoday",
+      "testataNome": "Frosinone Today",
+      "logo": "img/testate/frosinonetoday.png",
+      "comuni": [
+        "ceccano"
       ]
     },
     {
