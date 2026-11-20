@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-20T11:13:29+01:00",
+  "aggiornato": "2026-11-20T12:03:42+01:00",
   "comuni": {
     "cori": {
       "ok": true,
@@ -444,7 +444,7 @@
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-20T09:47:26+01:00",
+      "aggiornato": "2026-11-20T12:03:42+01:00",
       "atti": []
     },
     "roccagorga": {
@@ -1317,6 +1317,397 @@
           "tipo": "Determine",
           "numero": "489/2026",
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3460"
+        }
+      ]
+    },
+    "sermoneta": {
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
+      "fonte": "https://www.comunedisermoneta.it/c059027/mc/mc_p_ricerca.php",
+      "aggiornato": "2026-11-20T12:01:37+01:00",
+      "atti": [
+        {
+          "titolo": "P.d.C n.6/2026",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29572"
+        },
+        {
+          "titolo": "Det. IMPEGNO SPESA per conferimento incarico legale all'Avv. Dino Lucchetti in sede di Udienza del 15/12/26 e successive ed eventuali procedure in giudizio, come da Atto Citazione n° 3229/25 emesso dal Tribunale di Latina ( rif. Sinistro T.D. del 13/04/24)",
+          "data": "2026-11-17",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29559"
+        },
+        {
+          "titolo": "Det. IMPEGNO SPESA Rinnovo Polizza Infortuni Volontari - rif. 2026/27( n° 05 unità ) rif. UNIPOLSAI",
+          "data": "2026-11-12",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29558"
+        },
+        {
+          "titolo": "VARIAZIONE AL BILANCIO DI PREVISIONE FINANZIARIO 2026/2028 (ART. 175, COMMA 2, DEL D.LGS. N. 267/2000)",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29563"
+        },
+        {
+          "titolo": "Secondo aggiornamento del Programma Triennale dei Lavori Pubblici 2026-2028 e dell'Elenco Annuale 2026. Inserimento interventi ai sensi dell'art. 5, comma 9, dell'Allegato I.5 al D.Lgs. n. 36/2023 e conseguente aggiornamento del DUP 2026-2028.",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29564"
+        },
+        {
+          "titolo": "Proposta Riconoscimento Debito Fuori Bilancio ex art. 194 c. 1 lett.a) D.Lgs. n° 267/2000 ( TUEL) rif. Sent. n° 1104 del 25/05/26 RGN 2917/23 Tribunale di Latina -",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29565"
+        },
+        {
+          "titolo": "LETTURA E APPROVAZIONE VERBALE SEDUTA PRECEDENTE",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29560"
+        },
+        {
+          "titolo": "Integrazione al Regolamento di Polizia Urbana ai sensi dell'art. 9, comma 3, del D.L. n. 14/2017 convertito dalla Legge n. 48/2017 e ss.mm.ii. per individuazione aree urbane a particolare tutela (Daspo Urbano)",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29566"
+        },
+        {
+          "titolo": "Comunicazione prelevamenti dal fondo di riserva",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29571"
+        },
+        {
+          "titolo": "Approvazione Regolamento Comunale del Museo della Storia della Ceramica",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29570"
+        },
+        {
+          "titolo": "APPROVAZIONE DEL REGOLAMENTO DI ORGANIZZAZIONE DELLA BIBLIOTECA COMUNALE DI SERMONETA",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29568"
+        },
+        {
+          "titolo": "APPROVAZIONE DEL REGOLAMENTO DI ORGANIZZAZIONE DELL'ARCHIVIO STORICO DEL COMUNE DI SERMONETA",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29569"
+        },
+        {
+          "titolo": "APPROVAZIONE DEL BILANCIO CONSOLIDATO DELL'ESERCIZIO 2025 AI SENSI DELL'ART. 11-BIS, D.LGS. N. 118/2011",
+          "data": "2026-10-29",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29561"
+        },
+        {
+          "titolo": "VARIAZIONE AL BILANCIO DI PREVISIONE FINANZIARIO 2026/2028 - RATIFICA DELLA DELIBERAZIONE DI GIUNTA COMUNALE N. 106 IN DATA 17/09/2026 ADOTTATA AI SENSI DELL'ART. 175, COMMA 4, DEL D.LGS. N. 267/2000",
+          "data": "2026-09-17",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29562"
+        },
+        {
+          "titolo": "Approvazione delle modifiche e delle integrazioni al Regolamento Comunale di Polizia Mortuaria approvato con deliberazione del Consiglio Comunale n. 47 del 26.07.2021",
+          "data": "2021-07-26",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29567"
+        }
+      ]
+    },
+    "rocca-massima": {
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
+      "fonte": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_ricerca.php",
+      "aggiornato": "2026-11-20T12:02:50+01:00",
+      "atti": [
+        {
+          "titolo": "Istituzione del Divieto di Sosta e di Transito per il giorno Sabato 21 Novembre 2026 per svolgimento \"Raduno auto d'epoca\", organizzato dall'Associazione \"La Castagna di Rocca Massima A.P.S.\"",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_dettaglio.php?id_pubbl=8137"
+        },
+        {
+          "titolo": "Partecipazione Avviso pubblico del Ministero delle infrastrutture e dei trasporti del 3 novembre 2026, prot. n.26286, relativo a \"Fondo investimenti stradali nei piccoli Comuni\" - Annualità 2026. Ripresentazione intervento denominato \"Manutenzione straordinaria della viabilità all'interno del Comune di Rocca Massima (LT)\" - CUP:C47H25001750001. Richiamo deliberazione di Giunta comunale n. 62 del 15 dicembre 2025 - Conferma progetto esecutivo e quadro economico",
+          "data": "2026-11-11",
+          "tipo": "",
+          "numero": "",
+          "url": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_dettaglio.php?id_pubbl=8136"
+        },
+        {
+          "titolo": "Anticipazione di tesoreria, ai sensi dell'art. 222 del D.lgs. n. 267/2000 e s.m.i. - Annualità 2027",
+          "data": "2026-11-11",
+          "tipo": "",
+          "numero": "",
+          "url": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_dettaglio.php?id_pubbl=8135"
+        },
+        {
+          "titolo": "Anticipazione di tesoreria, ai sensi dell'art. 222 del D.lgs. n. 267/2000 e s.m.i. - Annualità 2026",
+          "data": "2026-11-11",
+          "tipo": "",
+          "numero": "",
+          "url": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_dettaglio.php?id_pubbl=8134"
+        },
+        {
+          "titolo": "ORDINANZA N. 1/2026 - \"DISCIPLINA DELLA CIECOLAZIONE STRADALE IN CASO DI EMERGENZE\".",
+          "data": "2026-11-10",
+          "tipo": "",
+          "numero": "",
+          "url": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_dettaglio.php?id_pubbl=8133"
+        },
+        {
+          "titolo": "Impegno di spesa per i lavori di smontaggio e successiva reinstallazione di un dosso stradale, nonché per la fornitura e posa in opera di un palo completo di segnaletica stradale.",
+          "data": "2026-11-02",
+          "tipo": "",
+          "numero": "",
+          "url": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_dettaglio.php?id_pubbl=8131"
+        },
+        {
+          "titolo": "Determina a contrarre per l'affidamento dei Lavori per interventi relativi al risanamento/potenziamento fognatura acque bianche in località Boschetto (Rocca Massima) - Primo lotto funzionale - , mediante procedura negoziata tramite RDO sul MEPA, ai sensi del Decreto Legislativo 36/2023 - CUP: C48B24000410002",
+          "data": "2026-11-02",
+          "tipo": "",
+          "numero": "",
+          "url": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_dettaglio.php?id_pubbl=8132"
+        }
+      ]
+    },
+    "ceccano": {
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
+      "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597",
+      "aggiornato": "2026-11-20T12:03:28+01:00",
+      "atti": [
+        {
+          "titolo": "RETTIFICA IN AUTOTUTELA DELLE DETERMINAZIONI NN. 933/2026 E 1268/2026 (APPROVAZIONE AVVISO DI SELEZIONE E APPROVAZIONE GRADUATORIA PEO 2026) CON RIPRISTINO DEL LIMITE DEL 50% DEGLI AVENTI DIRITTO. (DETERMINA/2026/1269/20-11-2026)",
+          "data": "2026-11-20",
+          "tipo": "Determine",
+          "numero": "1961/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21436"
+        },
+        {
+          "titolo": "APPROVAZIONE GRADUATORIA PER L'ASSEGNAZIONE DEGLI ALLOGGI ERP. I SEMESTRE 2026. (DETERMINA/2026/1270/20-11-2026)",
+          "data": "2026-11-20",
+          "tipo": "Determine",
+          "numero": "1962/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21437"
+        },
+        {
+          "titolo": "TRIBUNALE FROSINONE. R.G. N. 1491/2026. RICORSO EX ARTICOLO 281 DECIES C.P.C. RESISTENZA IN GIUDIZIO. PATROCINIO LEGALE. (GIUNTA/2026/284/18-11-2026)",
+          "data": "2026-11-19",
+          "tipo": "Delibere di Giunta",
+          "numero": "1959/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21433"
+        },
+        {
+          "titolo": "RISORSE QUOTA A GESTIONE STATALE OTTO PER MILLE DELL'IMPOSTA SUL REDDITO DELLE PERSONE FISICHE DI CUI ALL'ARTICOLO 48 DELLA LEGGE 20 MAGGIO 1985, N. 222 (EX ARTICOLO 46-BIS DEL DECRETO-LEGGE 26 OTTOBRE 2019, N. 124, CONVERTITO, CON MODIFICAZIONI, DALLA LEGGE 19 DICEMBRE 2019, N. 157). INTERVENTI DI MANUTENZIONE STRAORDINARIA CON EFFICIENTAMENTO ENERGETICO PRESSO LA SCUOLA \"L. MASTROGIACOMO\" SITA IN VIA GIACOMO MATTEOTTI. CODICE CUP B85E24000410001 - CODICE CIG BBE09095D4. LIQUIDAZIONE INCENTIVI ",
+          "data": "2026-11-19",
+          "tipo": "Determine",
+          "numero": "1952/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21425"
+        },
+        {
+          "titolo": "PROGRESSIONI ECONOMICHE ALL'INTERNO DELLE AREE - APPROVAZIONE GRADUATORIE PER L'ATTRIBUZIONE DEI DIFFERENZIALI STIPENDIALI ANNO 2026 CON DECORRENZA 01/01/2026. (DETERMINA/2026/1268/19-11-2026)",
+          "data": "2026-11-19",
+          "tipo": "Determine",
+          "numero": "1954/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21428"
+        },
+        {
+          "titolo": "PRIMA RATA NOVATIVA DI ONERI PRECEDENTI COME DA ATTO DI TRANSAZIONE STRAGIUDIZIALE DEL 02/11/2026. LIQUIDAZIONE FATTURA (DETERMINA/2026/1266/19-11-2026)",
+          "data": "2026-11-19",
+          "tipo": "Determine",
+          "numero": "1951/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21424"
+        },
+        {
+          "titolo": "MISURE STRAORDINARIE DI SICUREZZA E TUTELA DELL'ORDINE PUBBLICO IN OCCASIONE DELL'INCONTRO SPORTIVO DA TENERSI PRESSO LO STADIO COMUNALE \"DANTE POPOLLA\" NELLA GIORNATA DEL 22.11.2026 (CECCANO - POL. CANARINI RDP). (ORDINANZE/2026/125/19-11-2026)",
+          "data": "2026-11-19",
+          "tipo": "Ordinanze",
+          "numero": "1960/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21435"
+        },
+        {
+          "titolo": "COSTITUZIONE DELEGAZIONE TRATTANTE DI PARTE PUBBLICA (GIUNTA/2026/279/18-11-2026)",
+          "data": "2026-11-19",
+          "tipo": "Delibere di Giunta",
+          "numero": "1955/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21429"
+        },
+        {
+          "titolo": "CONCESSIONE PATROCINIO COMUNALE NON ONEROSO IN OCCASIONE DEL CONCERTO DI SANTA CECILIA IN PROGRAMMA NELLA GIORNATA DEL 22.11.2026 PRESSO LA CHIESA DI SAN GIOVANNI, DALLE 18 ALLE 20, NELL'AMBITO DELLE ATTIVITÀ PROGETTUALI MUSICALI \"LA VETUSCOLANA\", A CURA DELL'ASSOCIAZIONE \"AMICI DI ORESTE SINDICI APS\"; (GIUNTA/2026/280/18-11-2026)",
+          "data": "2026-11-19",
+          "tipo": "Delibere di Giunta",
+          "numero": "1956/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21430"
+        },
+        {
+          "titolo": "CHIUSURA TEMPORANEA PISTA ATLETICA COMUNALE \"A. VESPASIANI\" PER OPERAZIONI PREPARAZIONE CAMPO RUGBY COMUNALE PER SVOLGIMENTO CONCENTRAMENTO MINIRUGBY IN PROGRAMMA NELLA GIORNATA DEL 22.11.2026 A CURA DELL'\"A.S.D. FABRATERNUM RUGBY CLUB\". (ORDINANZE/2026/124/19-11-2026)",
+          "data": "2026-11-19",
+          "tipo": "Ordinanze",
+          "numero": "1953/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21427"
+        },
+        {
+          "titolo": "ATTO DI INDIRIZZO PER L'ORGANIZZAZIONE DI EVENTI IN OCCASIONE DELLA GIORNATA INTERNAZIONALE CONTRO LA VIOLENZA SULLE DONNE (GIUNTA/2026/283/18-11-2026)",
+          "data": "2026-11-19",
+          "tipo": "Delibere di Giunta",
+          "numero": "1958/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21432"
+        },
+        {
+          "titolo": "ADOZIONE DELLO SCHEMA DEL PROGRAMMA TRIENNALE DEI LAVORI PUBBLICI 2027–2029 E DELL'ELENCO ANNUALE 2027 E DELLO SCHEMA DEL PROGRAMMA TRIENNALE DEGLI ACQUISTI DI BENI E SERVIZI 2027–2029, AI SENSI DELL'ARTICOLO 37 DEL D.LGS. 31 MARZO 2023, N. 36 E DELL'ALLEGATO I.5 AL MEDESIMO DECRETO. (GIUNTA/2026/282/18-11-2026)",
+          "data": "2026-11-19",
+          "tipo": "Delibere di Giunta",
+          "numero": "1957/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21431"
+        },
+        {
+          "titolo": "REGOLAMENTAZIONE TRANSITO E SOSTA VEICOLI NEL PIAZZALE ANTISTANTE LA CHIESA SAN PAOLO DELLA CROCE - BADIA NEI GIORNI 21 E 22 NOVEMBRE 2026 IN OCCASIONE DELLA FESTA IN ONORE DEL BEATO GRIMOALDO SANTAMARIA. (ORDINANZE/2026/123/18-11-2026)",
+          "data": "2026-11-18",
+          "tipo": "Ordinanze",
+          "numero": "1949/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21422"
+        },
+        {
+          "titolo": "POTENZIAMENTO ED INNOVAZIONE RACCOLTA DIFFERENZIATA RIFIUTI URBANI. PROGETTO FINANZIATO NELL'AMBITO DEL PR LAZIO \"FESR 2021-2027\" - AZIONE 2.6.2.- POTENZIAMENTO E INNOVAZIONE DEL SERVIZIO DI RACCOLTA DIFFERENZIATA DEI RIFIUTI URBANI, NEL COMUNE DI CECCANO – FORNITURAE INSTALLAZIOONE DI DUE BOX MONOBLOCCO DA POSIZIONARE PRESSO IL CENTRO DEL RIUSO DI BENI ANCORA UTILIZZABILI. CODICE CUP: B81E24000120002 - CODICE CIG BB81DD4267. CODICE SIGEM PROGETTO: A0788B0071. APPROVAZIONE DEL CERTIFICATO DI REG",
+          "data": "2026-11-18",
+          "tipo": "Determine",
+          "numero": "1948/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21421"
+        },
+        {
+          "titolo": "ASSEGNAZIONE LOCULI CIMITERIALI IN BATTERIA LL A VARI RICHIEDENTI AVENTI IL REQUISITO DI TUMULAZIONI PROVVISORIE (DETERMINA/2026/1265/18-11-2026)",
+          "data": "2026-11-18",
+          "tipo": "Determine",
+          "numero": "1950/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21423"
+        },
+        {
+          "titolo": "SERVIZIO DI REFEZIONE E MENSA SCOLASTICA IN FAVORE DEGLI ALUNNI DELLA SEZIONE PRIMAVERA, SCUOLA DELL'INFANZIA E SCUOLA PRIMARIA PER LA DURATA TEMPORALE DI 5 (CINQUE) ANNUALITÀ SCOLASTICHE A DECORRERE DALL'ANNO SCOLASTICO \"2025/2026\". LIQUIDAZIONE FATTURA CANONE MENSILITÀ DI \"OTTOBRE 2026\" (DETERMINA/2026/1259/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1943/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21416"
+        },
+        {
+          "titolo": "RESTITUZIONE SOMME PAGATE AGLI AVENTI DIRITTO PER RINUNCIA AL LOCULO CIMITERIALE ASSEGNATO - DI COLA A. E V. (DETERMINA/2026/1250/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1934/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21407"
+        },
+        {
+          "titolo": "REALIZZAZIONE DELLO SPETTACOLO SVOLTO NELLA SERATA DEL 23 GIUGNO, IN OCCASIONE DEI FESTEGGIAMENTI IN ONORE DEL SANTO PATRONO – CUP B89I26000920002. LIQUIDAZIONE FATTURA DEL BROCCO DAVIDE (DETERMINA/2026/1255/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1939/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21412"
+        },
+        {
+          "titolo": "REALIZZAZIONE DELLO SPETTACOLO DI \"SHENG\" SVOLTO NELLA SERATA DEL 23 GIUGNO, IN OCCASIONE DEI FESTEGGIAMENTI IN ONORE DEL SANTO PATRONO – CUP B89I26000920002. LIQUIDAZIONE FATTURA DI BIASE BRJAN (DETERMINA/2026/1252/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1936/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21409"
+        },
+        {
+          "titolo": "REALIZZAZIONE DELLO SPETTACOLO DI \"NOCTURNA\" SVOLTO NELLA SERATA DEL 23 GIUGNO, IN OCCASIONE DEI FESTEGGIAMENTI IN ONORE DEL SANTO PATRONO – CUP B89I26000920002. LIQUIDAZIONE FATTURA CAPOCCETTA DANIELE (DETERMINA/2026/1257/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1941/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21414"
+        },
+        {
+          "titolo": "REALIZZAZIONE DELLO SPETTACOLO DI \"LE RHASH\" SVOLTO NELLA SERATA DEL 23 GIUGNO, IN OCCASIONE DEI FESTEGGIAMENTI IN ONORE DEL SANTO PATRONO - CUP B89I26000920002. LIQUIDAZIONE FATTURA. (DETERMINA/2026/1254/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1938/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21411"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA IL PAESE DIVENTA PRESEPE ODV A TITOLO DI RIMBORSO FORFETTARIO PER PARTECIPAZIONE ALL'EVENTO DENOMINATO \"39° CARNEVALE CECCANESE\"- CARRO ALLEGORICO \"BARBIE E KEN\" (DETERMINA/2026/1253/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1937/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21410"
+        },
+        {
+          "titolo": "IMPEGNO DI SPESA PER AFFIDAMENTO SERVIZI A SUPPORTO DELLE INIZIATIVE ISTITUZIONALI DELL'ENTE. CIG: BDCC495720. (DETERMINA/2026/1251/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1935/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21408"
+        },
+        {
+          "titolo": "FORNITURA DI PRESIDI SANITARI IN OCCASIONE DELL'EVENTO DENOMINATO \"CECCANO A CAVALLO\". LIQUIDAZIONE FATTURA (DETERMINA/2026/1256/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1940/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21413"
+        },
+        {
+          "titolo": "FORNITURA DI MATERIALE STAMPABILE RIFERITO AL PROGETTO DENOMINATO \"BIBLIODIGITALE CECCANO INNOVAZIONE, ACCESSIBILITÀ E NUOVE LETTURE NELLA BIBLIOTECA DE SANCTIS\" (DETERMINA/2026/1263/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1947/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21420"
+        },
+        {
+          "titolo": "FORNITURA DI CORONE DI ALLORO PER LA CERIMONIA DI COMMEMORAZIONE DEL 4 NOVEMBRE \"NEL RICORDO DEI CADUTI DI TUTTE LE GUERRE\" TENUTASI NELLA GIORNATA DEL 8 NOVEMBRE 2026. LIQUIDAZIONE FATTURA (DETERMINA/2026/1260/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1944/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21417"
+        },
+        {
+          "titolo": "CONCESSIONE CONTRIBUTO ECONOMICO IN FAVORE DELL'ASSOCIAZIONE \"PRO LOCO CECCANO\" PER L'ORGANIZZAZIONE ED AMPLIAMENTO DELLE ATTIVITÀ CULTURALI, TRADIZIONALI E MERCEOLOGICHE NELL'AMBITO DELLA \"FIERA DELLA MADONNA DELLA PACE\" IN PROGRAMMA NELLE GIORNATE DEL 3 E 4 OTTOBRE 2026. LIQUIDAZIONE DI SPESA. (DETERMINA/2026/1258/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1942/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21415"
+        },
+        {
+          "titolo": "AFFIDAMENTO DIRETTO AI SENSI DELL'ART. 50, COMMA 1, LETT. B), DEL D. LGS. 36/2023 PER LA REALIZZAZIONE DEL PODCAST \"BIBLIOLAB\" DA SVOLGERSI PRESSO GLI ISTITUTI SCOLASTICI DEGLI ENTI FACENTI PARTE DEL SISTEMA BIBLIOTECARIO \"VALLE DEL SACCO\" ADERENTI ALL'INIZIATIVA\", COME PREVISTO PER LA PROGETTUALITÀ \"BIBLIOCONNESSIONI – COMUNITA' CHE LEGGONO E CONDIVIDONO NELLA VALLE DEL SACCO\" (DETERMINA/2026/1262/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1946/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21419"
+        },
+        {
+          "titolo": "AFFIDAMENTO DIRETTO AI SENSI DELL'ART. 50, COMMA 1, LETT. B), DEL D. LGS. 36/2023 PER LA PROGETTAZIONE GRAFICA E PROMOZIONALE DEL PROGETTO DENOMINATO \"BIBLIODIGITALE CECCANO INNOVAZIONE, ACCESSIBILITÀ E NUOVE LETTURE NELLA BIBLIOTECA DE SANCTIS\" (DETERMINA/2026/1261/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1945/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21418"
+        },
+        {
+          "titolo": "\"PR LAZIO FESR 2021-2017\". AZIONE2.6.2 2 \"PROMUOVERE LA TRANSIZIONE VERSO UN'ECONOMIA CIRCOLARE ED EFFICIENTE SOTTO IL PROFILO DELLE RISORSE\", N. 35 COMUNI SELEZIONATI NELL'AMBITO DELL'AVVISO PUBBLICO \"POTENZIAMENTO E INNOVAZIONE DELLA RACCOLTA DIFFERENZIATA DEI RIFIUTI URBANI\". LIQUIDAZIONE INCENTIVO FUNZIONI TECNICHE EX ART. 45 D. LGS. 36/2023 SPETTANTI AL RESPONSABILE PROCEDIMENTO DI GARA. (DETERMINA/2026/1249/17-11-2026)",
+          "data": "2026-11-17",
+          "tipo": "Determine",
+          "numero": "1933/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21406"
         }
       ]
     }
