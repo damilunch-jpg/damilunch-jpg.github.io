@@ -312,7 +312,8 @@
     if (!mount) return;
     var base = basePath();
     var path = window.location.pathname || "";
-    var isHome = /index\.html$/.test(path) || /\/$/.test(path) && path.indexOf("/comuni/") === -1;
+    var isHome = /index\.html$/.test(path) || (/\/$/.test(path) && path.indexOf("/comuni/") === -1);
+    var isRassegna = /rassegna\.html$/.test(path);
 
     var comuni = "";
     DATA.comuni.forEach(function (c) {
@@ -346,6 +347,11 @@
       'index.html"' +
       (isHome && !currentSlug ? ' aria-current="page"' : "") +
       ">Home</a></li>" +
+      '<li><a href="' +
+      base +
+      'rassegna.html"' +
+      (isRassegna ? ' aria-current="page"' : "") +
+      ">Rassegna stampa</a></li>" +
       '<li class="voce-comuni">' +
       '<button type="button" class="comuni-toggle" aria-expanded="false" aria-controls="elenco-comuni">Comuni</button>' +
       '<ul class="elenco-comuni" id="elenco-comuni" hidden>' +
@@ -441,6 +447,115 @@
     }
   }
 
+  var MESI = ["gennaio", "febbraio", "marzo", "aprile", "maggio", "giugno", "luglio", "agosto", "settembre", "ottobre", "novembre", "dicembre"];
+
+  function datiRassegna() {
+    return window.M5S_RASSEGNA || { notizie: [], fonti: [] };
+  }
+
+  function dataItaliana(iso) {
+    var parti = String(iso || "").split("-");
+    if (parti.length < 3) return "";
+    return Number(parti[2]) + " " + (MESI[Number(parti[1]) - 1] || "") + " " + parti[0];
+  }
+
+  function nomeComune(slug) {
+    var trovato = (DATA.comuni || []).filter(function (c) { return c.slug === slug; })[0];
+    return trovato ? trovato.nome : slug;
+  }
+
+  function notizieOrdinate(slug) {
+    var lista = (datiRassegna().notizie || []).slice();
+    if (slug && slug !== "tutti") {
+      lista = lista.filter(function (n) {
+        return (n.comuni || []).indexOf(slug) !== -1;
+      });
+    }
+    lista.sort(function (a, b) {
+      return String(b.data || "").localeCompare(String(a.data || ""));
+    });
+    return lista;
+  }
+
+  function cardNotizia(n, base) {
+    var logo = n.logo ? '<img src="' + base + escapeHtml(n.logo) + '" alt="" width="28" height="28">' : "";
+    var quando = dataItaliana(n.data);
+    var anteprima = n.anteprima
+      ? '<p class="notizia-anteprima">' + escapeHtml(n.anteprima) + "</p>"
+      : "";
+    var comuni = (n.comuni || []).map(nomeComune).join(", ");
+    return (
+      '<article class="card notizia">' +
+      '<p class="notizia-testata">' +
+      logo +
+      "<span>" + escapeHtml(n.testataNome || "") + "</span>" +
+      (quando ? "<time datetime=\"" + escapeHtml(n.data) + "\">" + escapeHtml(quando) + "</time>" : "") +
+      "</p>" +
+      "<h3><a href=\"" + escapeHtml(n.url) + "\" target=\"_blank\" rel=\"noopener noreferrer\">" + escapeHtml(n.titolo) + "</a></h3>" +
+      anteprima +
+      '<p class="notizia-leggi"><a href="' + escapeHtml(n.url) + '" target="_blank" rel="noopener noreferrer">Leggi l\'articolo completo su ' + escapeHtml(n.testataNome || "la testata") + "</a></p>" +
+      (comuni ? '<p class="notizia-comuni">Cita: ' + escapeHtml(comuni) + "</p>" : "") +
+      "</article>"
+    );
+  }
+
+  function renderRassegnaComune(slug, base, nome) {
+    var lista = notizieOrdinate(slug).slice(0, 5);
+    var html = '<section class="rassegna-box" aria-labelledby="rassegna-comune-title">';
+    html += '<h2 id="rassegna-comune-title">Dalla stampa locale</h2>';
+    if (!lista.length) {
+      html += '<p class="vuoto">Nessuna notizia recente delle testate locali cita ' + escapeHtml(nome) + ".</p>";
+    } else {
+      html += '<div class="lista-articoli">';
+      lista.forEach(function (n) { html += cardNotizia(n, base); });
+      html += "</div>";
+      html += '<p class="rassegna-altre"><a href="' + base + "rassegna.html#" + encodeURIComponent(slug) + '">Tutte le notizie su ' + escapeHtml(nome) + "</a></p>";
+    }
+    html += "</section>";
+    return html;
+  }
+
+  function renderRassegna() {
+    var mount = $("#contenuto");
+    if (!mount) return;
+    var base = basePath();
+    var dati = datiRassegna();
+    var slug = (window.location.hash || "").replace(/^#/, "") || "tutti";
+    if (slug !== "tutti" && !(DATA.comuni || []).some(function (c) { return c.slug === slug; })) slug = "tutti";
+
+    var filtri = '<div class="filtri-comune" role="group" aria-label="Filtra per comune">';
+    filtri += '<a class="filtro' + (slug === "tutti" ? " is-active" : "") + '" href="' + base + 'rassegna.html#tutti">Tutti</a>';
+    (DATA.comuni || []).forEach(function (c) {
+      filtri += '<a class="filtro' + (slug === c.slug ? " is-active" : "") + '" href="' + base + "rassegna.html#" + encodeURIComponent(c.slug) + '">' + escapeHtml(c.nome) + "</a>";
+    });
+    filtri += "</div>";
+
+    var lista = notizieOrdinate(slug);
+    var html =
+      "<h1>Rassegna stampa</h1>" +
+      '<p class="lead">Notizie delle testate locali che citano i comuni del Gruppo Territoriale. Di ogni articolo si mostra il titolo originale e un breve riassunto già pubblicato dalla testata nel proprio feed RSS, al massimo tre righe. Il testo completo resta sul sito del giornale.</p>';
+    if (dati.aggiornato) {
+      html += '<p class="rassegna-aggiornata">Ultimo aggiornamento: ' + escapeHtml(dati.aggiornato.replace("T", " ").slice(0, 16)) + "</p>";
+    }
+    var fontiKo = (dati.fonti || []).filter(function (f) { return f.esito && f.esito !== "ok"; });
+    if (fontiKo.length) {
+      html += '<p class="rassegna-aggiornata">Fonte non raggiungibile: ' + escapeHtml(fontiKo.map(function (f) { return f.nome; }).join(", ")) + ".</p>";
+    }
+    html += filtri;
+    if (!lista.length) {
+      html += '<p class="vuoto">In questo momento non ci sono notizie da mostrare per questa selezione.</p>';
+    } else {
+      html += '<div class="lista-articoli">';
+      lista.forEach(function (n) { html += cardNotizia(n, base); });
+      html += "</div>";
+    }
+    mount.innerHTML = html;
+    if (!mount.getAttribute("data-rassegna-hash")) {
+      mount.setAttribute("data-rassegna-hash", "1");
+      window.addEventListener("hashchange", renderRassegna);
+    }
+  }
+
   function renderHome() {
     var mount = $("#contenuto");
     if (!mount) return;
@@ -513,6 +628,7 @@
         ". Qui verranno raccolti gli aggiornamenti che riguardano questo comune.</p>";
     }
 
+    html += renderRassegnaComune(slug, base, comune.nome);
     html += '<section class="albo-box" aria-labelledby="albo-title">';
     html += '<h2 id="albo-title">Albo pretorio</h2>';
 
@@ -717,6 +833,7 @@
     if (page === "home") renderHome();
     else if (page === "comune") renderComune(slug);
     else if (page === "articolo") renderArticolo();
+    else if (page === "rassegna") renderRassegna();
   }
 
   if (document.readyState === "loading") {

@@ -1,0 +1,244 @@
+{
+  "aggiornato": "2026-11-20T10:50:48+01:00",
+  "giorni": 60,
+  "fonti": [
+    {
+      "id": "latinatoday",
+      "nome": "Latina Today",
+      "esito": "ok",
+      "nuove": 6
+    },
+    {
+      "id": "latinacorriere",
+      "nome": "Latina Corriere",
+      "esito": "ok",
+      "nuove": 4
+    },
+    {
+      "id": "ilcaffe",
+      "nome": "Il Caffè",
+      "esito": "ok",
+      "nuove": 1
+    },
+    {
+      "id": "h24notizie",
+      "nome": "H24 Notizie",
+      "esito": "ok",
+      "nuove": 4
+    },
+    {
+      "id": "frosinonetoday",
+      "nome": "Frosinone Today",
+      "esito": "ok",
+      "nuove": 1
+    }
+  ],
+  "notizie": [
+    {
+      "url": "https://www.latinacorriere.it/taxi-abusivi-a-latina-scalo-e-sermoneta-sequestrate-otto-vetture",
+      "titolo": "Taxi abusivi a Latina Scalo e Sermoneta, sequestrate otto vetture",
+      "anteprima": "Controlli intensificati nelle aree delle stazioni e otto tassisti non autorizzati scoperti. I militari del Comando Provinciale della Guardia di Finanza di Latina, nell’ambito delle attività a tutela del mercato e del consumatore, promosse con il…",
+      "data": "2026-11-20",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "sermoneta"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/tassisti-abusivi-8-denunciati-tra-latina-scalo-e-sermoneta.html",
+      "titolo": "Otto tassisti abusivi scoperti dalla finanza, tutti denunciati e multe per 60mila euro",
+      "anteprima": "Sequestrate anche altrettante vetture utilizzate per il “servizio taxi” non autorizzato. I controlli tra la stazione ferroviaria di Latina Scalo e Sermoneta",
+      "data": "2026-11-20",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "sermoneta"
+      ]
+    },
+    {
+      "url": "https://ilcaffe.tv/articolo/267677/latina-stazione-scoperti-8-tassisti-abusivi-giusto-punire-ma-chi-si-occupa-del-problema-collegamenti",
+      "titolo": "Latina stazione, scoperti 8 tassisti abusivi: giusto punire, ma chi si occupa del problema collegamenti?",
+      "anteprima": "Otto persone sorprese a svolgere il servizio taxi senza le necessarie autorizzazioni, otto automobili sequestrate e patenti di guida ritirate. È il bilancio dei controlli effettuati dalla Guardia di Finanza di Latina nelle zone vicine alle stazioni…",
+      "data": "2026-11-20",
+      "testata": "ilcaffe",
+      "testataNome": "Il Caffè",
+      "logo": "img/testate/ilcaffe.png",
+      "comuni": [
+        "sermoneta"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/anche-i-giovani-di-latina-allincontro-del-sabato-con-papa-leone",
+      "titolo": "Anche i giovani di Latina all’incontro del sabato con Papa Leone",
+      "anteprima": "Domani, sabato 21 novembre, sarà una giornata speciale per i giovani del Lazio. Oltre 6.000 ragazzi provenienti da tutte le diocesi della regione, compresa quella di Latina-Terracina-Sezze-Priverno, parteciperanno in Aula Paolo VI in Vaticano alla…",
+      "data": "2026-11-20",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "sezze",
+        "priverno",
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/attualita/protocollo-comune-sonnino-guardie-eco-ambientali.html",
+      "titolo": "Tutela del verde e protezione degli animali: Sonnino firma l'intesa con le Guardie eco ambientali",
+      "anteprima": "La firma del protocollo con l'associazione darà il via a una serie di azioni e monitoraggi sul territorio in stretta collaborazione con la polizia locale e il servizio Ambiente dell'ente",
+      "data": "2026-11-19",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "sonnino"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/ricerca-tiziano-d-amore-cisterna.html",
+      "titolo": "Tiziano, ritrovato a Cisterna dopo ore di apprensione",
+      "anteprima": "Del caso si sta occupando anche l'associazione Penelope Lazio. L'uomo non ha dato più notizie di sé dal 18 novembre e si è allontanato senza documenti",
+      "data": "2026-11-19",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/sezze-droga-sotto-il-materasso-durante-i-domiciliari-due-arresti",
+      "titolo": "Sezze, droga sotto il materasso durante i domiciliari: due arresti",
+      "anteprima": "Un normale controllo sul rispetto dei domiciliari si è trasformato in un arresto per detenzione ai fini di spaccio in concorso. Nella mattinata di ieri, i carabinieri della locale stazione hanno fermato in flagranza di reato due residenti a Sezze…",
+      "data": "2026-11-19",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "sezze"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/sermoneta-suona-grande-torna-un-dia-de-noviembre",
+      "titolo": "Sermoneta suona grande: torna “Un dia de Noviembre”",
+      "anteprima": "La grande chitarra classica torna ad echeggiare tra le mura storiche di Sermoneta. Da diciassette anni punto di riferimento nel panorama culturale del territorio, la manifestazione “Un dia de Noviembre”, promossa dal maestro Massimiliano Romano con…",
+      "data": "2026-11-19",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "sermoneta"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/rapine-scippi-latina-scalo-cisterna-arresti.html",
+      "titolo": "Rapine, estorsioni e scippi tra Latina e Cisterna: due giovani arrestati in un b&b",
+      "anteprima": "I responsabili erano riusciti a sfuggire alla cattura e a un inseguimento nelle scorse settimane, quando erano stati arrestati altri loro complici. Sono indagati per quattro casi",
+      "data": "2026-11-19",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/19/rapine-tra-latina-e-cisterna-due-giovani-arrestati-in-campania",
+      "titolo": "Rapine tra Latina e Cisterna, due giovani arrestati in Campania",
+      "anteprima": "Al termine di una complessa e articolata attività investigativa condotta congiuntamente dagli investigatori del Commissariato di di Cisterna di Latina e dalla Squadra Mobile della Questura di Latina, la polizia ha eseguito un fermo di indiziato di…",
+      "data": "2026-11-19",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/19/marijuana-sotto-il-materasso-due-arresti-a-sezze",
+      "titolo": "Marijuana sotto il materasso, due arresti a Sezze",
+      "anteprima": "Mercoledì mattina, a Sezze, i carabinieri della Stazione locale hanno tratto in arresto in flagranza di reato un uomo di 43 anni ed un giovane di 18, entrambi del posto: sono gravemente indiziati del reato di detenzione ai fini di spaccio di…",
+      "data": "2026-11-19",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "sezze"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/19/divieto-di-avvicinamento-alla-ex-violato-arresti-domiciliari-per-un-60enne-di-terracina",
+      "titolo": "Divieto di avvicinamento alla ex violato, arresti domiciliari per un 60enne di Terracina",
+      "anteprima": "Martedì, a Terracina, i carabinieri della Stazione locale hanno dato esecuzione a un’ordinanza di applicazione della misura cautelare degli arresti domiciliari nei confronti di un uomo di 60 anni del posto, emessa dal Gip del Tribunale di Latina…",
+      "data": "2026-11-19",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.frosinonetoday.it/eventi/ceccano-libera-me-flash-mob-e-convegno-contro-la-violenza-sulle-donne.html",
+      "titolo": "Ceccano, “Libera Me”: flash mob e convegno contro la violenza sulle donne",
+      "anteprima": "L’Amministrazione Comunale di Ceccano, in vista della Giornata internazionale per…",
+      "data": "2026-11-19",
+      "testata": "frosinonetoday",
+      "testataNome": "Frosinone Today",
+      "logo": "img/testate/frosinonetoday.png",
+      "comuni": [
+        "ceccano"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/arresti-droga-sezze-19-novembre-2026.html",
+      "titolo": "Agli arresti domiciliari, nascondeva la droga sotto il materasso",
+      "anteprima": "Durante un controllo in casa i carabinieri hanno scoperto 27 bustine già confezionate. Due gli arresti a Sezze",
+      "data": "2026-11-19",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "sezze"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/arresto-atti-persecutori-terracina-18-novembre-2026.html",
+      "titolo": "Perseguita la ex nonostante il divieto di avvicinamento: ora finisce agli arresti",
+      "anteprima": "Un 60enne di Terracina è ai domiciliari, arrestato in esecuzione di un'ordinanza del gip di Latina",
+      "data": "2026-11-18",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/attualita/infiltrazioni-casa-comunita-cisterna-sopralluogo-ater.html",
+      "titolo": "Infiltrazioni alla Casa della comunità: gli scarichi erano ostruiti dai rifiuti",
+      "anteprima": "Le precisazioni dell'Ater dopo un nuovo sopralluogo e le recenti sollecitazioni del sindaco di Cisterna. \"Siamo intervenuti sette volte in due anni\", spiega il presidente Enrico Dellapietà",
+      "data": "2026-11-18",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/18/condanna-per-truffa-37enne-di-cori-finisce-in-carcere",
+      "titolo": "Condanna per truffa: 37enne di Cori finisce in carcere",
+      "anteprima": "Era residente a Cori, ma su di lui pendeva un provvedimento di carcerazione emesso dalla Procura di La Spezia. A far emergere la sua posizione sono stati i Carabinieri della stazione locale, che durante un controllo hanno identificato un cittadino…",
+      "data": "2026-11-18",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "cori"
+      ]
+    }
+  ]
+}
