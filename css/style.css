@@ -573,6 +573,23 @@ a:focus-visible {
 
 /* Iscriviti */
 .btn-iscriviti{display:inline-block;margin-left:auto;background:var(--giallo);color:var(--grigio-scuro)!important;font-weight:800;font-size:.85rem;text-decoration:none;padding:.5rem .8rem;border-radius:6px;white-space:nowrap}
+.header-tools{margin-left:auto;display:flex;align-items:center;gap:.45rem;flex:0 0 auto}
+.header-tools .btn-iscriviti{margin-left:0}
+.social-icon,.social-link{color:#fff}
+.social-icon{display:inline-flex;align-items:center;justify-content:center;width:2.15rem;height:2.15rem;border-radius:50%;background:#1877f2;text-decoration:none}
+.social-icon span{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.social-icon:hover,.social-icon:focus-visible{filter:brightness(1.08)}
+.icon-social{width:1.15rem;height:1.15rem;display:block;flex:0 0 auto}
+.social-link{display:inline-flex;align-items:center;gap:.45rem;font-weight:700;text-decoration:none}
+.social-link .icon-social{width:1.05rem;height:1.05rem}
+.menu-social a{color:#1877f2}
+@media (min-width:800px){.menu-social{display:none}}
+.btn-albo-ufficiale{display:inline-block;margin:.15rem 0 .85rem;background:var(--giallo);color:var(--grigio-scuro)!important;font-weight:800;font-size:1.05rem;text-decoration:none;padding:.75rem 1.15rem;border-radius:8px}
+.btn-albo-ufficiale:hover,.btn-albo-ufficiale:focus-visible{background:var(--giallo-scuro);color:var(--grigio-scuro)!important}
+.condividi{margin:1.1rem 0 0}
+.btn-condividi{display:inline-flex;align-items:center;gap:.45rem;background:#1877f2;color:#fff!important;font-weight:800;text-decoration:none;padding:.55rem .9rem;border-radius:6px}
+.btn-condividi:hover,.btn-condividi:focus-visible{filter:brightness(1.08);color:#fff!important}
+.btn-condividi .icon-social{width:1.05rem;height:1.05rem}
 .btn-iscriviti:hover,.btn-iscriviti:focus-visible{background:var(--giallo-scuro)}
 .header-inner .btn-iscriviti{display:none}
 .menu-iscriviti a{color:#000;background:var(--giallo-chiaro)}

@@ -216,10 +216,74 @@
     );
   }
 
+  /* Per mostrare un altro social basta compilare url e mettere visibile: true. */
+  var SOCIAL = [
+    {
+      id: "facebook",
+      nome: "Facebook",
+      url: "https://www.facebook.com/M5SSezze/",
+      visibile: true,
+      aria: "Pagina Facebook del gruppo"
+    },
+    { id: "instagram", nome: "Instagram", url: "", visibile: false, aria: "Profilo Instagram del gruppo" },
+    { id: "tiktok", nome: "TikTok", url: "", visibile: false, aria: "Profilo TikTok del gruppo" },
+    { id: "youtube", nome: "YouTube", url: "", visibile: false, aria: "Canale YouTube del gruppo" }
+  ];
+
+  var ALBO_PULSANTE_UFFICIALE = {
+    "cisterna-di-latina": true,
+    norma: true,
+    sezze: true,
+    priverno: true
+  };
+
+  function socialVisibili() {
+    return SOCIAL.filter(function (item) {
+      return item.visibile && item.url;
+    });
+  }
+
+  function iconaSocial(id) {
+    if (id === "facebook") {
+      return '<svg class="icon-social" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M14.2 8.5V6.9c0-.7.4-1 1.1-1H17V3.2h-2.2C12.1 3.2 11 4.6 11 6.7v1.8H9v2.7h2V21h3.4v-9.8h2.2l.4-2.7h-2.8z"/></svg>';
+    }
+    if (id === "instagram") {
+      return '<svg class="icon-social" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm8 2H8a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3zm-4 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.2 6.6a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>';
+    }
+    if (id === "tiktok") {
+      return '<svg class="icon-social" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M14 3h2.2a4.8 4.8 0 0 0 3.3 3.1V8.4a7 7 0 0 1-3.3-1v6.7a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v2.4a3.2 3.2 0 1 0 2.3 3.1V3z"/></svg>';
+    }
+    if (id === "youtube") {
+      return '<svg class="icon-social" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M22 12.2s0-3.2-.4-4.6a3 3 0 0 0-2.1-2.1C17.9 5 12 5 12 5s-5.9 0-7.5.5a3 3 0 0 0-2.1 2.1C2 9 2 12.2 2 12.2s0 3.2.4 4.6a3 3 0 0 0 2.1 2.1C6.1 19.4 12 19.4 12 19.4s5.9 0 7.5-.5a3 3 0 0 0 2.1-2.1c.4-1.4.4-4.6.4-4.6zM10 15.5v-6.6l5.2 3.3z"/></svg>';
+    }
+    return "";
+  }
+
+  function linkSocial(item, extraClass) {
+    return (
+      '<a class="' +
+      (extraClass || "social-link") +
+      '" href="' +
+      escapeHtml(item.url) +
+      '" target="_blank" rel="noopener noreferrer" aria-label="' +
+      escapeHtml(item.aria || item.nome) +
+      '">' +
+      iconaSocial(item.id) +
+      "<span>" +
+      escapeHtml(item.nome) +
+      "</span></a>"
+    );
+  }
+
   function renderHeader() {
     var mount = $("#site-header");
     if (!mount) return;
     var base = basePath();
+    var icone = socialVisibili()
+      .map(function (item) {
+        return linkSocial(item, "social-icon");
+      })
+      .join("");
     mount.innerHTML =
       '<a class="skip-link" href="#contenuto">Salta al contenuto</a>' +
       '<div class="header-inner">' +
@@ -230,8 +294,10 @@
       'index.html">GT Lepini Ausoni</a></p>' +
       '<p class="brand-sub">Movimento 5 Stelle</p>' +
       "</div>" +
+      '<div class="header-tools">' +
+      icone +
       '<a class="btn-iscriviti" href="https://portale.movimento5stelle.eu/iscrizioni" target="_blank" rel="noopener noreferrer">Iscriviti al Movimento 5 Stelle</a>' +
-      "</div>";
+      "</div></div>";
   }
 
   function renderNav(currentSlug) {
@@ -262,6 +328,9 @@
         "</a></li>";
     });
 
+    socialVisibili().forEach(function (item) {
+      items += '<li class="menu-social">' + linkSocial(item, "social-link") + "</li>";
+    });
     items += '<li class="menu-iscriviti"><a href="https://portale.movimento5stelle.eu/iscrizioni" target="_blank" rel="noopener noreferrer">Iscriviti al M5S ↗</a></li>';
     mount.innerHTML =
       '<div class="nav-inner">' +
@@ -299,10 +368,11 @@
       "<div>" +
       "<h2>Social</h2>" +
       '<ul class="social-list">' +
-      '<li><a href="#" aria-disabled="true">Facebook</a> <span class="badge-esempio">segnaposto</span></li>' +
-      '<li><a href="#" aria-disabled="true">Instagram</a> <span class="badge-esempio">segnaposto</span></li>' +
-      '<li><a href="#" aria-disabled="true">TikTok</a> <span class="badge-esempio">segnaposto</span></li>' +
-      '<li><a href="#" aria-disabled="true">YouTube</a> <span class="badge-esempio">segnaposto</span></li>' +
+      socialVisibili()
+        .map(function (item) {
+          return "<li>" + linkSocial(item, "social-link") + "</li>";
+        })
+        .join("") +
       "</ul></div>" +
       '<div class="newsletter">' +
       "<h2>Iscriviti alla newsletter</h2>" +
@@ -412,6 +482,14 @@
         "<p>Consulta l'albo pretorio online ufficiale del Comune di " +
         escapeHtml(comune.nome) +
         ". Il collegamento apre il sito istituzionale in una nuova scheda.</p>";
+      if (ALBO_PULSANTE_UFFICIALE[slug] && comune.alboUrl) {
+        html +=
+          '<a class="btn-albo-ufficiale" href="' +
+          escapeHtml(comune.alboUrl) +
+          '" target="_blank" rel="noopener noreferrer">Vai all\'albo ufficiale</a>';
+        html +=
+          '<p class="nota-albo">L\'elenco automatico qui sotto può non essere completo. L\'albo ufficiale del Comune resta sempre raggiungibile dal pulsante.</p>';
+      }
       html +=
         '<a class="btn-esterno" href="' +
         escapeHtml(comune.alboUrl) +
@@ -488,6 +566,24 @@
     return html;
   }
 
+  function condividiFacebook() {
+    var facebook = null;
+    for (var i = 0; i < SOCIAL.length; i++) {
+      if (SOCIAL[i].id === "facebook" && SOCIAL[i].visibile) facebook = SOCIAL[i];
+    }
+    if (!facebook) return "";
+    var pagina = window.location.href.split("#")[0];
+    var href =
+      "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(pagina);
+    return (
+      '<p class="condividi"><a class="btn-condividi" href="' +
+      escapeHtml(href) +
+      '" target="_blank" rel="noopener noreferrer">' +
+      iconaSocial("facebook") +
+      "<span>Condividi su Facebook</span></a></p>"
+    );
+  }
+
   function renderArticolo() {
     var mount = $("#contenuto");
     if (!mount) return;
@@ -518,6 +614,7 @@
       "</h1>" +
       imageHtml(article) +
       renderMarkdown(article.testo) +
+      condividiFacebook() +
       "</article>" +
       '<p><a class="back-link" href="' +
       base +
