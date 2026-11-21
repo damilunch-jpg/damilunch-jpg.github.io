@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-21T10:42:23+01:00",
+  "aggiornato": "2026-11-21T12:56:45+01:00",
   "comuni": {
     "cori": {
       "ok": true,
@@ -444,7 +444,7 @@
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-21T10:42:23+01:00",
+      "aggiornato": "2026-11-21T12:56:45+01:00",
       "atti": []
     },
     "roccagorga": {
@@ -601,7 +601,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059016/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059016",
-      "aggiornato": "2026-11-21T10:37:11+01:00",
+      "aggiornato": "2026-11-21T12:51:31+01:00",
       "atti": [
         {
           "titolo": "Servizio di Mensa Sociale - Approvazione dell'avviso pubblico per indagine esplorativa sull'interesse della cittadinanza e del modello di manifestazione di interesse. Indirizzi attuativi",
@@ -666,7 +666,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
-      "aggiornato": "2026-11-21T09:58:20+01:00",
+      "aggiornato": "2026-11-21T12:12:47+01:00",
       "atti": [
         {
           "titolo": "REGOLAMENTAZIONE PROVVISORIA DELLA CIRCOLAZIONE VEICOLARE, DAL GIORNO 30 NOVEMBRE AL GIORNO 04 DICEMBRE 2026, IN VIA SAN BERNARDO DA CHIARAVALLE E VIA SAN TOMMASO D'AQUINO E TRAVERSE, PER RIPRISTINO DEGLI SCAVI DELLA FIBRA OTTICA.",
@@ -773,7 +773,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028",
-      "aggiornato": "2026-11-21T09:41:02+01:00",
+      "aggiornato": "2026-11-21T11:55:58+01:00",
       "atti": [
         {
           "titolo": "LAVORI DEMOLIZIONE- RICOSTRUZIONE CENTRO SOCIALE VIA PUGLIE- DIVIETO DI TRANSITO IL 20.11.2026",
@@ -964,7 +964,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile: il sito non ha risposto in tempo",
       "fonte": "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "aggiornato": "2026-11-21T10:17:45+01:00",
+      "aggiornato": "2026-11-21T12:32:20+01:00",
       "atti": [
         {
           "titolo": "ORGANIZZAZIONE DELLA MANIFESTAZIONE \"BABBO'S RED RUNNING\" - VI EDIZIONE (06.12.2026) - INDIRIZZI.",
@@ -1332,7 +1332,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.comunedisermoneta.it/c059027/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-21T10:42:01+01:00",
+      "aggiornato": "2026-11-21T12:56:20+01:00",
       "atti": [
         {
           "titolo": "P.d.C n.6/2026",
@@ -1446,7 +1446,7 @@
       "esito": "errore",
       "errore": "Errore imprevisto: [Errno 104] Connection reset by peer",
       "fonte": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-21T10:42:16+01:00",
+      "aggiornato": "2026-11-21T12:56:35+01:00",
       "atti": [
         {
           "titolo": "Istituzione del Divieto di Sosta e di Transito per il giorno Sabato 21 Novembre 2026 per svolgimento \"Raduno auto d'epoca\", organizzato dall'Associazione \"La Castagna di Rocca Massima A.P.S.\"",
