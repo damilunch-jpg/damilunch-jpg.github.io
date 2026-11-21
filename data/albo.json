@@ -1,13 +1,69 @@
 {
-  "aggiornato": "2026-11-20T12:03:42+01:00",
+  "aggiornato": "2026-11-21T05:57:44+01:00",
   "comuni": {
     "cori": {
       "ok": true,
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
-      "aggiornato": "2026-11-20T04:49:10+01:00",
+      "aggiornato": "2026-11-21T05:29:16+01:00",
       "atti": [
+        {
+          "titolo": "SALDO FATTURE N.12/PA3, 13/PA3, 14/PA3 A FAVORE DI GIOMI CARE SPA (DETERMINA/2026/941/20-11-2026)(AREA 2 - WELFARE - 239)",
+          "data": "2026-11-20",
+          "tipo": "Determinazioni",
+          "numero": "1306/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8536"
+        },
+        {
+          "titolo": "ORDINANZA PER DIVIETO DI SOSTA E LIMITAZIONE ALLA CIRCOLAZIONE IN OCCASIONE DELLA PROCESIONE SAN TOMMASO DA CORI. (ORDIRESP/2026/101/17-11-2026)",
+          "data": "2026-11-20",
+          "tipo": "Ordinanze dei responsabili",
+          "numero": "1307/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8537"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURE - GIOMI CARE S.R.L. 03-07-2025/000050/PA3 (2025.01.702) - GIOMI CARE S.R.L. 03-07-2025/000054/PA3 (2025.01.703) (DETERMINA/2026/942/20-11-2026)(AREA 2 - WELFARE - 240)",
+          "data": "2026-11-20",
+          "tipo": "Determinazioni",
+          "numero": "1305/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8535"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - MANAGEMENT AND CONSULTING SRL 06-11-2026/44/FORM (2026.01.848) (DETERMINA/2026/915/12-11-2026)(AREA 5 - AFFARI GENERALI - 130)",
+          "data": "2026-11-20",
+          "tipo": "Determinazioni",
+          "numero": "1310/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8540"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - AUTOMOBIL CLUB ITALIA 16-09-2026/0000026995 (2026.01.804) (DETERMINA/2026/914/12-11-2026)(AREA 3- POLIZIA MUNICIPALE - 120)",
+          "data": "2026-11-20",
+          "tipo": "Determinazioni",
+          "numero": "1309/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8539"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - ALFEI MICHAEL - ENI 31-10-2026/2026/FE54021/1998 (2026.01.833) (DETERMINA/2026/916/12-11-2026)(AREA 3- POLIZIA MUNICIPALE - 121)",
+          "data": "2026-11-20",
+          "tipo": "Determinazioni",
+          "numero": "1311/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8541"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - ABACO S.P.A. 06-11-2026/2026140007385 (2026.01.846) (DETERMINA/2026/917/12-11-2026)(AREA 3- POLIZIA MUNICIPALE - 122)",
+          "data": "2026-11-20",
+          "tipo": "Determinazioni",
+          "numero": "1312/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8542"
+        },
+        {
+          "titolo": "AUTORIZZAZIONE AI SENSI DELL'ART. 146 DEL D.LGS. 42/2004 E SS.MM.II CON PROCEDURA SEMPLIFICATA AI SENSI DELL'ART. 16 DEL D.P.R. 31/2007 ALLEGATO B, PUNTI B3 DITTA SIG.RI OMISSIS (DETERMINA/2026/943/20-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 216)",
+          "data": "2026-11-20",
+          "tipo": "Determinazioni",
+          "numero": "1308/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8538"
+        },
         {
           "titolo": "UFFICIO DI CONTROLLO AI SENSI DEL D.LGS 36/2023 ANNUALITÀ 2026 CONNESSO AL \"SERVIZIO DI IGIENE URBANA CON IMPLEMENTAZIONE DELLA TARIFFA PUNTUALE ED ALTRI SERVIZI CONNESSI PER LA DURATA DI 5 ANNI (2022-2026)\". LIQUIDAZIONE II ACCONTO COMPENSI INCENTIVANTI A FAVORE DEL COMUNE DI CORI ANNO 2026 (DETERMINA/2026/938/19-11-2026)(AREA 4- GRANDI OPERE E LAVORI PUBBLICI - 82)",
           "data": "2026-11-19",
@@ -161,62 +217,6 @@
           "tipo": "Determinazioni",
           "numero": "1279/2026",
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8509"
-        },
-        {
-          "titolo": "ASSEGNAZIONE ALLOGGIO ERP N.17_2026 SIG.RA OMISSIS (ORDIRESP/2026/100/13-11-2026)",
-          "data": "2026-11-13",
-          "tipo": "Ordinanze dei responsabili",
-          "numero": "1278/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8508"
-        },
-        {
-          "titolo": "APPROVAZIONE PROGETTO DI FATTIBILITÀ TECNICO ECONOMICO (PFTE) DEI LAVORI ANTINCENDIO DELLA SCUOLA MATERNA RODARI IN GIULIANELLO DI CORI - CUP: J68H25002250001 - DECRETO MINISTERIALE DEL 30 GENNAIO 2026, N. 14. AVVISO PUBBLICO DEL 26/11/2025 E DEL SUCCESSIVO AVVISO DI RIAPERTURA DEI TERMINI DEL 16/03/2026. PRIMO LOTTO DELL'IMPORTO O.P. PARI A € 50.000,00. RIF: FINANZIAMENTO MINISTERO DELL'ISTRUZIONE RIGUARDO L'INTERVENTO DENOMINATO \"MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO ",
-          "data": "2026-11-13",
-          "tipo": "Delibere di giunta",
-          "numero": "1285/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8515"
-        },
-        {
-          "titolo": "APPROVAZIONE PROGETTO DI FATTIBILITÀ TECNICO ECONOMICO (PFTE) DEI LAVORI ANTINCENDIO DELLA SCUOLA ELEMENTARE RADICCHI IN GIULIANELLO DI CORI - CUP: J68H25002240001 - DECRETO MINISTERIALE DEL 30 GENNAIO 2026, N. 14. AVVISO PUBBLICO DEL 26/11/2025 E SUCCESSIVO AVVISO DI RIAPERTURA TERMINI DEL 16/03/2026. PRIMO LOTTO DELL'IMPORTO O.P. PARI A € 130.000. RIF: LAVORI DI MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO IMPIANTO NORMATIVA VIGENTE E REALIZZAZIONE RISERVA IDRICA DA COLLEGAR",
-          "data": "2026-11-13",
-          "tipo": "Delibere di giunta",
-          "numero": "1282/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8512"
-        },
-        {
-          "titolo": "\"LAVORI DI MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO IMPIANTO ALLA NORMATIVA VIGENTE VIA GIANNI RODARI MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO IMPIANTO ALLA NORMATIVA VIGENTE CUP J68H25002250001 IN CORI\" – I LOTTO. AFFIDAMENTO DEL SERVIZIO DI PROGETTAZIONE ESECUTIVA, C.S.P., D.LL. E C.S.E.. IMPEGNO DI SPESA ED ACCERTAMENTO (DETERMINA/2026/921/13-11-2026)(AREA 4- GRANDI OPERE E LAVORI PUBBLICI - 77)",
-          "data": "2026-11-13",
-          "tipo": "Determinazioni",
-          "numero": "1280/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8510"
-        },
-        {
-          "titolo": "\"LAVORI DI MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO IMPIANTO ALLA NORMATIVA ESISTENTE ED REALIZZAZIONE RISERVA IDRICA DA COLLEGARE AL GRUPPO POMPE GI REALIZZATO VIA DON SILVESTRO RADICCHI MANUTENZIONE STRAORDINARIA IMPIANTO ANTINCENDIO CON ADEGUAMENTO IMPIANTO ALLA NORMATIVA ESISTENTE ED REALIZZAZIONE RISERVA IDRICA DA COLLEGARE AL GRUPPO POMPE GIÀ REALIZZATO. L'INTERVENTO SARÀ IN GRADO DI GARANTIRE L'ADEGUAMENTO ALL'ATTUALE IMPIANTO ANTINCENDIO IN QUANTO DAL 2009 NON SONO",
-          "data": "2026-11-13",
-          "tipo": "Determinazioni",
-          "numero": "1281/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8511"
-        },
-        {
-          "titolo": "ORDINANZA DIVIETO DI SOSTA PER LAVORI DI MESSA IN SICUREZZA E RECUPERO PIAZZA MATTEI E PIAZZA DON OTTAVIANO MAURIZI - LAVORI MURO PERIMETRALE , PAVIMENTAZIONE E OPERE ACCESSORIE . (ORDIRESP/2026/99/11-11-2026)",
-          "data": "2026-11-12",
-          "tipo": "Ordinanze dei responsabili",
-          "numero": "1270/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8500"
-        },
-        {
-          "titolo": "LIQUIDAZIONE FATTURA - GIORGI FABIO 26-10-2026/63/E (2026.01.852) (DETERMINA/2026/918/12-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 209)",
-          "data": "2026-11-12",
-          "tipo": "Determinazioni",
-          "numero": "1274/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8504"
-        },
-        {
-          "titolo": "LIQUIDAZIONE FATTURA - COOPERATIVA BENESSERE 28-04-2026/FPA 570/26 (2026.01.365) (DETERMINA/2026/919/12-11-2026)(AREA 2 - WELFARE - 235)",
-          "data": "2026-11-12",
-          "tipo": "Determinazioni",
-          "numero": "1276/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8506"
         }
       ]
     },
@@ -225,8 +225,15 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145",
-      "aggiornato": "2026-11-20T04:57:48+01:00",
+      "aggiornato": "2026-11-21T05:29:52+01:00",
       "atti": [
+        {
+          "titolo": "CONVOCAZIONE CONSIGLIO COMUNALE",
+          "data": "2026-11-20",
+          "tipo": "Avviso pubblico",
+          "numero": "487/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11097"
+        },
         {
           "titolo": "\"RISANAMENTO CONSERVATIVO TENSOSTRUTTURA CAMPO POLIFUNZIONALE COMPLESSO SPORTIVO \"LORENZO PICOZZI\" VIA NINFINA LOCALITÀ MADONNA DEGLI ANGELI\" ART. 4, COMMA 1, LETT. I) E DELL'ART. 5, COMMA 1, LETT. F) DELL'AVVISO PUBBLICO \"SPAZIO SPORT 2026\" (L.R. LAZIO 11 AGOSTO 2021, N. 14, ART.) (GIUNTA/2026/48/18-11-2026)",
           "data": "2026-11-19",
@@ -429,13 +436,6 @@
           "tipo": "Avviso pubblico",
           "numero": "464/2026",
           "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11074"
-        },
-        {
-          "titolo": "SOSPENSIONE DELLA RACCOLTA DELLA PLASTICA E DEL MULTIMATERIALE",
-          "data": "2026-11-04",
-          "tipo": "Avviso pubblico",
-          "numero": "457/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11067"
         }
       ]
     },
@@ -444,7 +444,7 @@
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-20T12:03:42+01:00",
+      "aggiornato": "2026-11-21T05:57:44+01:00",
       "atti": []
     },
     "roccagorga": {
@@ -452,8 +452,15 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/",
-      "aggiornato": "2026-11-20T05:00:16+01:00",
+      "aggiornato": "2026-11-21T05:56:48+01:00",
       "atti": [
+        {
+          "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.87 DEL 17-11-2026 AVENTE AD OGGETTO VARIAZIONE D’URGENZA AL BILANCIO DI PREVISIONE FINANZIARIO 2026/2028 (ART. 175, COMMA 4, DEL D.LGS. N. 267/2000).",
+          "data": "2026-11-20",
+          "tipo": "Delibere",
+          "numero": "87",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1795169707423/"
+        },
         {
           "titolo": "DETERMINAZIONE DEL DIPARTIMENTO 1 N. 535 DEL 13-11-2026 AVENTE AD OGGETTO IMPEGNO DI SPESA IN FAVORE DELL'AVV. MATTEO DI PUMPO DEL FORO DI ROMA PER CONFERIMENTO INCARICO DI PATROCINIO LEGALE PER LA COSTITUZIONE IN GIUDIZIO DEL COMUNE DI ROCCAGORGA.",
           "data": "2026-11-19",
@@ -590,11 +597,11 @@
       ]
     },
     "norma": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059016/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059016",
-      "aggiornato": "2026-11-20T04:52:26+01:00",
+      "aggiornato": "2026-11-21T05:49:17+01:00",
       "atti": [
         {
           "titolo": "Servizio di Mensa Sociale - Approvazione dell'avviso pubblico per indagine esplorativa sull'interesse della cittadinanza e del modello di manifestazione di interesse. Indirizzi attuativi",
@@ -655,11 +662,11 @@
       ]
     },
     "cisterna-di-latina": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile",
       "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
-      "aggiornato": "2026-11-20T04:50:44+01:00",
+      "aggiornato": "2026-11-21T05:08:37+01:00",
       "atti": [
         {
           "titolo": "REGOLAMENTAZIONE PROVVISORIA DELLA CIRCOLAZIONE VEICOLARE, DAL GIORNO 30 NOVEMBRE AL GIORNO 04 DICEMBRE 2026, IN VIA SAN BERNARDO DA CHIARAVALLE E VIA SAN TOMMASO D'AQUINO E TRAVERSE, PER RIPRISTINO DEGLI SCAVI DELLA FIBRA OTTICA.",
@@ -762,11 +769,11 @@
       ]
     },
     "sezze": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028",
-      "aggiornato": "2026-11-20T04:57:18+01:00",
+      "aggiornato": "2026-11-21T04:51:20+01:00",
       "atti": [
         {
           "titolo": "LAVORI DEMOLIZIONE- RICOSTRUZIONE CENTRO SOCIALE VIA PUGLIE- DIVIETO DI TRANSITO IL 20.11.2026",
@@ -953,11 +960,11 @@
       ]
     },
     "priverno": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile: il sito non ha risposto in tempo",
       "fonte": "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "aggiornato": "2026-11-20T05:02:51+01:00",
+      "aggiornato": "2026-11-21T05:28:13+01:00",
       "atti": [
         {
           "titolo": "ORGANIZZAZIONE DELLA MANIFESTAZIONE \"BABBO'S RED RUNNING\" - VI EDIZIONE (06.12.2026) - INDIRIZZI.",
@@ -1106,7 +1113,7 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611",
-      "aggiornato": "2026-11-20T11:13:29+01:00",
+      "aggiornato": "2026-11-21T05:28:48+01:00",
       "atti": [
         {
           "titolo": "APPROVAZIONE E PRESENTAZIONE AL CONSIGLIO COMUNALE DEL DOCUMENTO UNICO DI PROGRAMMAZIONE DUP SEMPLIFICATO 2027 -2029 (GIUNTA/2026/57/20-11-2026)",
@@ -1321,11 +1328,11 @@
       ]
     },
     "sermoneta": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile",
       "fonte": "https://www.comunedisermoneta.it/c059027/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-20T12:01:37+01:00",
+      "aggiornato": "2026-11-21T05:54:18+01:00",
       "atti": [
         {
           "titolo": "P.d.C n.6/2026",
@@ -1435,11 +1442,11 @@
       ]
     },
     "rocca-massima": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Errore imprevisto: [Errno 104] Connection reset by peer",
       "fonte": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-20T12:02:50+01:00",
+      "aggiornato": "2026-11-21T05:54:30+01:00",
       "atti": [
         {
           "titolo": "Istituzione del Divieto di Sosta e di Transito per il giorno Sabato 21 Novembre 2026 per svolgimento \"Raduno auto d'epoca\", organizzato dall'Associazione \"La Castagna di Rocca Massima A.P.S.\"",
@@ -1497,7 +1504,7 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597",
-      "aggiornato": "2026-11-20T12:03:28+01:00",
+      "aggiornato": "2026-11-21T05:57:30+01:00",
       "atti": [
         {
           "titolo": "RETTIFICA IN AUTOTUTELA DELLE DETERMINAZIONI NN. 933/2026 E 1268/2026 (APPROVAZIONE AVVISO DI SELEZIONE E APPROVAZIONE GRADUATORIA PEO 2026) CON RIPRISTINO DEL LIMITE DEL 50% DEGLI AVENTI DIRITTO. (DETERMINA/2026/1269/20-11-2026)",
@@ -1505,6 +1512,20 @@
           "tipo": "Determine",
           "numero": "1961/2026",
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21436"
+        },
+        {
+          "titolo": "DEPOSITO PROVVEDIMENTI DI CANCELLAZIONE PER IRREPERIBILITA' ACCERTATA",
+          "data": "2026-11-20",
+          "tipo": "Avvisi",
+          "numero": "1964/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21439"
+        },
+        {
+          "titolo": "AVVISO RILASCIO PERMESSO DI COSTRUIRE - PRATICA EDILIZIA N. 398/2023 PERMESSO DI COSTRUIRE N. 2 - LATERANI GIANNI",
+          "data": "2026-11-20",
+          "tipo": "Avvisi",
+          "numero": "1963/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21438"
         },
         {
           "titolo": "APPROVAZIONE GRADUATORIA PER L'ASSEGNAZIONE DEGLI ALLOGGI ERP. I SEMESTRE 2026. (DETERMINA/2026/1270/20-11-2026)",
@@ -1694,20 +1715,6 @@
           "tipo": "Determine",
           "numero": "1946/2026",
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21419"
-        },
-        {
-          "titolo": "AFFIDAMENTO DIRETTO AI SENSI DELL'ART. 50, COMMA 1, LETT. B), DEL D. LGS. 36/2023 PER LA PROGETTAZIONE GRAFICA E PROMOZIONALE DEL PROGETTO DENOMINATO \"BIBLIODIGITALE CECCANO INNOVAZIONE, ACCESSIBILITÀ E NUOVE LETTURE NELLA BIBLIOTECA DE SANCTIS\" (DETERMINA/2026/1261/17-11-2026)",
-          "data": "2026-11-17",
-          "tipo": "Determine",
-          "numero": "1945/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21418"
-        },
-        {
-          "titolo": "\"PR LAZIO FESR 2021-2017\". AZIONE2.6.2 2 \"PROMUOVERE LA TRANSIZIONE VERSO UN'ECONOMIA CIRCOLARE ED EFFICIENTE SOTTO IL PROFILO DELLE RISORSE\", N. 35 COMUNI SELEZIONATI NELL'AMBITO DELL'AVVISO PUBBLICO \"POTENZIAMENTO E INNOVAZIONE DELLA RACCOLTA DIFFERENZIATA DEI RIFIUTI URBANI\". LIQUIDAZIONE INCENTIVO FUNZIONI TECNICHE EX ART. 45 D. LGS. 36/2023 SPETTANTI AL RESPONSABILE PROCEDIMENTO DI GARA. (DETERMINA/2026/1249/17-11-2026)",
-          "data": "2026-11-17",
-          "tipo": "Determine",
-          "numero": "1933/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21406"
         }
       ]
     }
