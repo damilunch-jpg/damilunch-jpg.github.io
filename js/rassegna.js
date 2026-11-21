@@ -1,19 +1,19 @@
 /* Generato da scripts/sync_rassegna.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_RASSEGNA = {
-  "aggiornato": "2026-11-21T16:13:22+01:00",
+  "aggiornato": "2026-11-21T18:54:18+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "latinatoday",
       "nome": "Latina Today",
       "esito": "ok",
-      "nuove": 6
+      "nuove": 4
     },
     {
       "id": "latinacorriere",
       "nome": "Latina Corriere",
       "esito": "ok",
-      "nuove": 4
+      "nuove": 3
     },
     {
       "id": "ilcaffe",
@@ -69,6 +69,18 @@ window.M5S_RASSEGNA = {
       "logo": "img/testate/h24notizie.ico",
       "comuni": [
         "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/cisterna-morato-voglia-di-reagire-dopo-padova",
+      "titolo": "Cisterna, Morato: “Voglia di reagire dopo Padova”",
+      "anteprima": "Due settimane di lavoro intenso per smaltire le scorie di Padova e per preparare la trasferta più impegnativa. Domani, domenica, alle ore 19 al PalaPanini, la Cisterna Volley chiuderà il sesto turno di andata della Superlega contro la Valsa Group…",
+      "data": "2026-11-21",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "cisterna-di-latina"
       ]
     },
     {
