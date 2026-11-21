@@ -1,6 +1,6 @@
 /* Generato da scripts/sync_m5s.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_UFFICIALE = {
-  "aggiornato": "2026-11-20T23:24:44+01:00",
+  "aggiornato": "2026-11-21T16:58:53+01:00",
   "giorni": 60,
   "fonti": [
     {
@@ -17,6 +17,16 @@ window.M5S_UFFICIALE = {
     }
   ],
   "voci": [
+    {
+      "url": "https://www.movimento5stelle.eu/il-capogruppo-del-movimento-cinque-stelle-lombardia-rinuncia-allindennita-e-restituisce-65-000-euro",
+      "titolo": "Il Capogruppo del Movimento Cinque Stelle Lombardia rinuncia all’indennità e restituisce 65.000 euro",
+      "anteprima": "Si può fare politica, anche senza perdere il contatto con la realtà che ci circonda Il capogruppo del Movimento Cinque Stelle Lombardia, Nicola Di Marco, ha comunicato nella giornata di martedì 17 novembre la decisione di rinunciare all’indennità…",
+      "data": "2026-11-21",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
     {
       "url": "https://www.movimento5stelle.eu/sanita-umbra-dopo-17-anni-torna-la-programmazione-la-sfida-e-mettere-in-sicurezza-il-servizio-pubblico",
       "titolo": "Sanità umbra, dopo 17 anni torna la programmazione. La sfida è mettere in sicurezza il servizio pubblico",
@@ -72,6 +82,26 @@ window.M5S_UFFICIALE = {
       "titolo": "La guerra la paghi tu! Come ci tolgono i soldi per spenderli in armi",
       "anteprima": "📍 Teatro del Pavone, Piazza della Repubblica, Perugia📅 Venerdì 13 novembre, ore 18.00 Con la partecipazione del Presidente Giuseppe Conte 🎙 ModeraDavid Fantauzzi, coordinatore regionale M5S Umbria 🏛 Saluti istituzionaliStefania Proietti, Presidente…",
       "data": "2026-11-10",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
+    {
+      "url": "https://www.movimento5stelle.eu/ad-alcamo-la-cura-del-territorio-diventa-strumento-di-prevenzione-dei-rischi-idrogeologici",
+      "titolo": "Ad Alcamo la cura del territorio diventa strumento di prevenzione dei rischi idrogeologici",
+      "anteprima": "Il cambiamento climatico mette sempre più alla prova le fragilità dei nostri territori. Dalle coste ai versanti, dai corsi d’acqua ai centri abitati, un evento meteorologico estremo può trasformare una criticità in emergenza in pochi minuti. Per…",
+      "data": "2026-11-09",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
+    {
+      "url": "https://www.movimento5stelle.eu/elezioni-rappresentante-del-network-giovani-nel-consiglio-nazionale-risultati",
+      "titolo": "Elezioni rappresentante del Network Giovani nel Consiglio Nazionale – RISULTATI",
+      "anteprima": "Alle ore 22.00 di oggi 6 novembre 2026 si sono concluse le votazioni per l’elezione del rappresentante del Network giovani nel Consiglio nazionale. Hanno votato 1.977 iscritti.Giacomo Bartoleschi ha ricevuto 823 preferenzeSilvia Fraccalvieri ha…",
+      "data": "2026-11-06",
       "fonte": "nazionale",
       "fonteNome": "Movimento 5 Stelle",
       "etichetta": "Dal Nazionale",
