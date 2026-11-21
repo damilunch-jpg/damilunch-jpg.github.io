@@ -1,13 +1,13 @@
 /* Generato da scripts/sync_m5s.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_UFFICIALE = {
-  "aggiornato": "2026-11-21T16:58:53+01:00",
+  "aggiornato": "2026-11-21T22:14:50+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "nazionale",
       "nome": "Movimento 5 Stelle",
       "esito": "ok",
-      "nuove": 3
+      "nuove": 1
     },
     {
       "id": "regionale",
@@ -102,6 +102,16 @@ window.M5S_UFFICIALE = {
       "titolo": "Elezioni rappresentante del Network Giovani nel Consiglio Nazionale – RISULTATI",
       "anteprima": "Alle ore 22.00 di oggi 6 novembre 2026 si sono concluse le votazioni per l’elezione del rappresentante del Network giovani nel Consiglio nazionale. Hanno votato 1.977 iscritti.Giacomo Bartoleschi ha ricevuto 823 preferenzeSilvia Fraccalvieri ha…",
       "data": "2026-11-06",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
+    {
+      "url": "https://www.movimento5stelle.eu/la-guerra-la-paghi-tu-e-a-perugia-ti-spieghiamo-quanto",
+      "titolo": "La guerra la paghi tu. E a Perugia ti spieghiamo quanto",
+      "anteprima": "Quattro anni di Governo Meloni e, all’ultimo Consiglio dei ministri, nessun decreto bollette. Al suo posto, una novità: la targa personalizzata a pagamento. Mentre le famiglie fanno i conti con il carrello della spesa e il pieno di benzina, il…",
+      "data": "2026-11-04",
       "fonte": "nazionale",
       "fonteNome": "Movimento 5 Stelle",
       "etichetta": "Dal Nazionale",
