@@ -1,18 +1,18 @@
 {
-  "aggiornato": "2026-11-20T23:53:34+01:00",
+  "aggiornato": "2026-11-21T16:13:22+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "latinatoday",
       "nome": "Latina Today",
       "esito": "ok",
-      "nuove": 5
+      "nuove": 6
     },
     {
       "id": "latinacorriere",
       "nome": "Latina Corriere",
       "esito": "ok",
-      "nuove": 3
+      "nuove": 4
     },
     {
       "id": "ilcaffe",
@@ -24,16 +24,88 @@
       "id": "h24notizie",
       "nome": "H24 Notizie",
       "esito": "ok",
-      "nuove": 3
+      "nuove": 2
     },
     {
       "id": "frosinonetoday",
       "nome": "Frosinone Today",
       "esito": "ok",
-      "nuove": 1
+      "nuove": 2
     }
   ],
   "notizie": [
+    {
+      "url": "https://www.latinatoday.it/sport/volley/volley-cisterna-sfida-modena.html",
+      "titolo": "Volley, Cisterna sfida Modena al PalaPanini",
+      "anteprima": "Morato: \"Lavorato tanto su ciò che non ha funzionato. Tensione giusta e voglia di reagire\"",
+      "data": "2026-11-21",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/terracina-i-carabinieri-incontrano-gli-studenti-del-fiorini-una-lezione-di-legalita-e-rispetto",
+      "titolo": "Terracina, lezione di legalità e rispetto al Fiorini",
+      "anteprima": "Circa 80 ragazzi del plesso di Borgo Hermada hanno partecipato all’iniziativa promossa in collaborazione con la scuola. Al centro dell’incontro il cyberbullismo, il rispetto delle regole e la responsabilità individuale. La cultura della legalità…",
+      "data": "2026-11-21",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/21/terracina-i-carabinieri-tra-i-banchi-di-scuola-a-borgo-hermada-una-lezione-di-legalita",
+      "titolo": "Terracina, i Carabinieri tra i banchi di scuola: a Borgo Hermada una lezione di legalità",
+      "anteprima": "Le regole non sono soltanto divieti da rispettare, ma strumenti per vivere insieme e costruire una comunità più consapevole. È questo il messaggio portato dai Carabinieri tra i banchi dell’Istituto comprensivo “A. Fiorini” di Terracina, nel plesso…",
+      "data": "2026-11-21",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/cisterna-fratelli-ditalia-pronti-alle-prossime-sfide-elettorali",
+      "titolo": "Cisterna, Fratelli d’Italia: “Pronti alle prossime sfide elettorali”",
+      "anteprima": "Fare il punto sull’attività politica, rispondere alle recenti polemiche e soprattutto prepararsi alle prossime sfide elettorali, sia a livello locale che nazionale. Sono stati questi i principali obiettivi dell’incontro pubblico promosso da…",
+      "data": "2026-11-21",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.frosinonetoday.it/politica/ceccano-lavori-fermi-abbazia-padri-passionisti.html",
+      "titolo": "Ceccano, lavori fermi all'Abbazia dei Padri Passionisti: cresce la preoccupazione dei cittadini, interviene il sindaco Querqui",
+      "anteprima": "Il primo cittadino ha chiesto chiarimenti sulla prolungata sospensione degli interventi alla Badia, uno dei luoghi simbolo della città",
+      "data": "2026-11-21",
+      "testata": "frosinonetoday",
+      "testataNome": "Frosinone Today",
+      "logo": "img/testate/frosinonetoday.png",
+      "comuni": [
+        "ceccano"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/benacquista-domani-alle-18-sfida-contro-verodol-livorno",
+      "titolo": "Benacquista, domani alle 18 sfida contro Verodol Livorno",
+      "anteprima": "Dopo la sconfitta sul campo dell’Avellino, la Benacquista Latina Basket è pronta a tornare in campo domani alle ore 18:00. I nerazzurri ospiteranno la Verodol CBD Pielle di Livorno, al Palasport di Cisterna, in occasione della decima giornata del…",
+      "data": "2026-11-21",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
     {
       "url": "https://www.latinacorriere.it/terracina-estorsione-con-la-promessa-del-permesso-di-soggiorno-due-arresti",
       "titolo": "Terracina, estorsione con la promessa del permesso di soggiorno: due arresti",
