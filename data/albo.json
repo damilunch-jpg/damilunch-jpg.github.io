@@ -1,12 +1,12 @@
 {
-  "aggiornato": "2026-11-21T12:56:45+01:00",
+  "aggiornato": "2026-11-22T05:03:49+01:00",
   "comuni": {
     "cori": {
       "ok": true,
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
-      "aggiornato": "2026-11-21T05:29:16+01:00",
+      "aggiornato": "2026-11-22T04:35:01+01:00",
       "atti": [
         {
           "titolo": "SALDO FATTURE N.12/PA3, 13/PA3, 14/PA3 A FAVORE DI GIOMI CARE SPA (DETERMINA/2026/941/20-11-2026)(AREA 2 - WELFARE - 239)",
@@ -225,7 +225,7 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145",
-      "aggiornato": "2026-11-21T05:29:52+01:00",
+      "aggiornato": "2026-11-22T04:35:33+01:00",
       "atti": [
         {
           "titolo": "CONVOCAZIONE CONSIGLIO COMUNALE",
@@ -444,7 +444,7 @@
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-21T12:56:45+01:00",
+      "aggiornato": "2026-11-22T05:03:49+01:00",
       "atti": []
     },
     "roccagorga": {
@@ -452,8 +452,15 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/",
-      "aggiornato": "2026-11-21T05:56:48+01:00",
+      "aggiornato": "2026-11-22T05:03:03+01:00",
       "atti": [
+        {
+          "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.91 DEL 17-11-2026 AVENTE AD OGETTO ADOZIONE DEL PROGRAMMA TRIENNALE DEI LAVORI PUBBLICI 2027/2029 E DELL'ELENCO ANNUALE DEI LAVORI PER L'ANNO 2027, E DEL PROGRAMMA TRIENNALE DI BENI E SERVIZI 2027/2029 (ART. 37, COMMI 1, 2, 3, DEL D.LGS. N. 36/2023).",
+          "data": "2026-11-21",
+          "tipo": "Delibere",
+          "numero": "91",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1795256515547/"
+        },
         {
           "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.87 DEL 17-11-2026 AVENTE AD OGGETTO VARIAZIONE D’URGENZA AL BILANCIO DI PREVISIONE FINANZIARIO 2026/2028 (ART. 175, COMMA 4, DEL D.LGS. N. 267/2000).",
           "data": "2026-11-20",
@@ -601,7 +608,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059016/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059016",
-      "aggiornato": "2026-11-21T12:51:31+01:00",
+      "aggiornato": "2026-11-22T04:55:38+01:00",
       "atti": [
         {
           "titolo": "Servizio di Mensa Sociale - Approvazione dell'avviso pubblico per indagine esplorativa sull'interesse della cittadinanza e del modello di manifestazione di interesse. Indirizzi attuativi",
@@ -666,7 +673,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
-      "aggiornato": "2026-11-21T12:12:47+01:00",
+      "aggiornato": "2026-11-22T04:14:29+01:00",
       "atti": [
         {
           "titolo": "REGOLAMENTAZIONE PROVVISORIA DELLA CIRCOLAZIONE VEICOLARE, DAL GIORNO 30 NOVEMBRE AL GIORNO 04 DICEMBRE 2026, IN VIA SAN BERNARDO DA CHIARAVALLE E VIA SAN TOMMASO D'AQUINO E TRAVERSE, PER RIPRISTINO DEGLI SCAVI DELLA FIBRA OTTICA.",
@@ -773,7 +780,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028",
-      "aggiornato": "2026-11-21T11:55:58+01:00",
+      "aggiornato": "2026-11-22T03:57:25+01:00",
       "atti": [
         {
           "titolo": "LAVORI DEMOLIZIONE- RICOSTRUZIONE CENTRO SOCIALE VIA PUGLIE- DIVIETO DI TRANSITO IL 20.11.2026",
@@ -964,7 +971,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile: il sito non ha risposto in tempo",
       "fonte": "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "aggiornato": "2026-11-21T12:32:20+01:00",
+      "aggiornato": "2026-11-22T04:34:01+01:00",
       "atti": [
         {
           "titolo": "ORGANIZZAZIONE DELLA MANIFESTAZIONE \"BABBO'S RED RUNNING\" - VI EDIZIONE (06.12.2026) - INDIRIZZI.",
@@ -1113,7 +1120,7 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611",
-      "aggiornato": "2026-11-21T05:28:48+01:00",
+      "aggiornato": "2026-11-22T04:34:27+01:00",
       "atti": [
         {
           "titolo": "APPROVAZIONE E PRESENTAZIONE AL CONSIGLIO COMUNALE DEL DOCUMENTO UNICO DI PROGRAMMAZIONE DUP SEMPLIFICATO 2027 -2029 (GIUNTA/2026/57/20-11-2026)",
@@ -1332,7 +1339,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.comunedisermoneta.it/c059027/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-21T12:56:20+01:00",
+      "aggiornato": "2026-11-22T05:00:36+01:00",
       "atti": [
         {
           "titolo": "P.d.C n.6/2026",
@@ -1446,7 +1453,7 @@
       "esito": "errore",
       "errore": "Errore imprevisto: [Errno 104] Connection reset by peer",
       "fonte": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-21T12:56:35+01:00",
+      "aggiornato": "2026-11-22T05:00:52+01:00",
       "atti": [
         {
           "titolo": "Istituzione del Divieto di Sosta e di Transito per il giorno Sabato 21 Novembre 2026 per svolgimento \"Raduno auto d'epoca\", organizzato dall'Associazione \"La Castagna di Rocca Massima A.P.S.\"",
@@ -1504,7 +1511,7 @@
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597",
-      "aggiornato": "2026-11-21T05:57:30+01:00",
+      "aggiornato": "2026-11-22T05:03:40+01:00",
       "atti": [
         {
           "titolo": "RETTIFICA IN AUTOTUTELA DELLE DETERMINAZIONI NN. 933/2026 E 1268/2026 (APPROVAZIONE AVVISO DI SELEZIONE E APPROVAZIONE GRADUATORIA PEO 2026) CON RIPRISTINO DEL LIMITE DEL 50% DEGLI AVENTI DIRITTO. (DETERMINA/2026/1269/20-11-2026)",
