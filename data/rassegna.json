@@ -1,24 +1,24 @@
 {
-  "aggiornato": "2026-11-21T18:54:18+01:00",
+  "aggiornato": "2026-11-22T16:10:29+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "latinatoday",
       "nome": "Latina Today",
       "esito": "ok",
-      "nuove": 4
+      "nuove": 2
     },
     {
       "id": "latinacorriere",
       "nome": "Latina Corriere",
       "esito": "ok",
-      "nuove": 3
+      "nuove": 4
     },
     {
       "id": "ilcaffe",
       "nome": "Il Caffè",
       "esito": "ok",
-      "nuove": 1
+      "nuove": 0
     },
     {
       "id": "h24notizie",
@@ -30,10 +30,58 @@
       "id": "frosinonetoday",
       "nome": "Frosinone Today",
       "esito": "ok",
-      "nuove": 2
+      "nuove": 1
     }
   ],
   "notizie": [
+    {
+      "url": "https://www.latinacorriere.it/terracina-dal-codice-rosso-alla-rinascita-convegno-contro-la-violenza-sulle-donne",
+      "titolo": "Terracina, “Dal codice rosso alla rinascita” convegno contro la violenza sulle donne",
+      "anteprima": "In occasione della Giornata Internazionale per l’eliminazione della violenza contro le donne, mercoledì 25 novembre il Comune di Terracina, Assessorato alle Politiche Sociali, ha organizzato una giornata con il tema “Dal Codice Rosso alla…",
+      "data": "2026-11-22",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/priverno-torna-il-premio-camilla-sei-donne-premiate-e-un-riconoscimento-speciale-a-erminio-frasca",
+      "titolo": "Priverno, torna il Premio Camilla: sei donne premiate e un riconoscimento speciale a Erminio Frasca",
+      "anteprima": "Priverno si prepara a celebrare il talento, la determinazione e il valore delle donne con una nuova edizione del “Premio Camilla – Città di Priverno”, il riconoscimento nato per valorizzare le personalità che si distinguono nei diversi ambiti della…",
+      "data": "2026-11-22",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "priverno"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/carabinieri-incontro-studenti-scuole-terracina.html",
+      "titolo": "La cultura della legalità. Gli studenti incontrano i carabinieri",
+      "anteprima": "L'incontro all'istituto Fiorini di Terracina",
+      "data": "2026-11-22",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/cisterna-il-25-novembre-il-no-alla-violenza-contro-le-donne",
+      "titolo": "Cisterna, il 25 novembre il no alla violenza contro le donne",
+      "anteprima": "Tre iniziative tra partecipazione, cultura, musica e approfondimento per promuovere il rispetto, la parità di genere e la sensibilizzazione contro ogni forma di violenza. Protagonisti anche gli studenti delle scuole cittadine. Cisterna si prepara a…",
+      "data": "2026-11-22",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
     {
       "url": "https://www.latinatoday.it/sport/volley/volley-cisterna-sfida-modena.html",
       "titolo": "Volley, Cisterna sfida Modena al PalaPanini",
