@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-22T16:10:29+01:00",
+  "aggiornato": "2026-11-22T23:15:39+01:00",
   "giorni": 60,
   "fonti": [
     {
@@ -12,7 +12,7 @@
       "id": "latinacorriere",
       "nome": "Latina Corriere",
       "esito": "ok",
-      "nuove": 4
+      "nuove": 5
     },
     {
       "id": "ilcaffe",
@@ -71,9 +71,33 @@
       ]
     },
     {
+      "url": "https://www.latinacorriere.it/la-benacquista-torna-a-vincere-bella-prova-contro-la-pielle-livorno",
+      "titolo": "La Benacquista torna a vincere, bella prova contro la Pielle Livorno",
+      "anteprima": "Torna a vincere, dopo il ko con Anagni, la Benacquista Assicurazioni Latina Basket che al Palasport di Cisterna, supera con autorità la Pielle Livorno per 95-78. Dopo la battuta d’arresto subita nella trasferta sul campo della Fortitudo Anagni, i…",
+      "data": "2026-11-22",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
       "url": "https://www.latinacorriere.it/cisterna-il-25-novembre-il-no-alla-violenza-contro-le-donne",
       "titolo": "Cisterna, il 25 novembre il no alla violenza contro le donne",
       "anteprima": "Tre iniziative tra partecipazione, cultura, musica e approfondimento per promuovere il rispetto, la parità di genere e la sensibilizzazione contro ogni forma di violenza. Protagonisti anche gli studenti delle scuole cittadine. Cisterna si prepara a…",
+      "data": "2026-11-22",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/cisterna-volley-con-modena-arriva-il-quinto-ko-di-fila",
+      "titolo": "Cisterna Volley, con Modena arriva il quinto ko di fila",
+      "anteprima": "Trasferta amara per il Cisterna Volley, che nel posticipo della sesta giornata di andata di Superlega cede 3-0 sul campo della Valsa Group Modena (25-23, 25-20, 25-12) e incassa così il quinto ko consecutivo in campionato. Al PalaPanini i pontini…",
       "data": "2026-11-22",
       "testata": "latinacorriere",
       "testataNome": "Latina Corriere",
