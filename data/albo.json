@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-22T05:03:49+01:00",
+  "aggiornato": "2026-11-22T06:51:57+01:00",
   "comuni": {
     "cori": {
       "ok": true,
@@ -444,7 +444,7 @@
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-22T05:03:49+01:00",
+      "aggiornato": "2026-11-22T06:51:57+01:00",
       "atti": []
     },
     "roccagorga": {
@@ -604,12 +604,61 @@
       ]
     },
     "norma": {
-      "ok": false,
-      "esito": "errore",
-      "errore": "Fonte non raggiungibile",
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
       "fonte": "https://www.halleyweb.com/c059016/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059016",
-      "aggiornato": "2026-11-22T04:55:38+01:00",
+      "aggiornato": "2026-11-22T06:48:21+01:00",
       "atti": [
+        {
+          "titolo": "Impegno di spesa per la fornitura di uno striscione in pvc. Ditta seri.col",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4835"
+        },
+        {
+          "titolo": "Impegno di spesa e contestuale liquidazione del contributo economico una tantum a favorfe del Sig. V.. I.",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4836"
+        },
+        {
+          "titolo": "FESTIVAL RADURE VIII EDIZIONE 2026-APPROVAZIONE RENDICONTO SPESE SOSTENUTE",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4837"
+        },
+        {
+          "titolo": "SERVIZIO NOLEGGIO SERVICE AUDIO E LUCI- MAXIMILIEN BUGIA LIQUIDAZIONI-",
+          "data": "2026-11-17",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4833"
+        },
+        {
+          "titolo": "SERVIZIO ISTALLAZIONE E NOLEGGIO SERVICE AUDIO E LUCI A VALERE PROPOSTA PROGETTUALE CITTA' DEI BAMBINI E DELLE BAMBINE",
+          "data": "2026-11-16",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4832"
+        },
+        {
+          "titolo": "Liquidazione fattura n° 89 del 16/11/2026 a favore della Cartoleria Libreria \"Gubbioli di Marchioni Franca\".",
+          "data": "2026-11-16",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4831"
+        },
+        {
+          "titolo": "Accoglimento cumulativo di istanze di sgravio/discarico di carichi affidati alla riscossione per sanzioni al Codice della Strada - Approvazione elenco delle posizioni.",
+          "data": "2026-11-12",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059016/mc/mc_p_dettaglio.php?id_pubbl=4834"
+        },
         {
           "titolo": "Servizio di Mensa Sociale - Approvazione dell'avviso pubblico per indagine esplorativa sull'interesse della cittadinanza e del modello di manifestazione di interesse. Indirizzi attuativi",
           "data": "2026-10-28",
@@ -669,12 +718,61 @@
       ]
     },
     "cisterna-di-latina": {
-      "ok": false,
-      "esito": "errore",
-      "errore": "Fonte non raggiungibile",
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
       "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
-      "aggiornato": "2026-11-22T04:14:29+01:00",
+      "aggiornato": "2026-11-22T06:36:33+01:00",
       "atti": [
+        {
+          "titolo": "Rilascio Concessione Edilizia in sanatoria n.11 del 20/11/2026 - rif. pratica 2282 L.47/85",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48933"
+        },
+        {
+          "titolo": "REGOLAMENTAZIONE PROVVISORIA DELLA CIRCOLAZIONE VEICOLARE, DAL 23 AL 27 NOVEMBRE 2026 IN VIA NETTUNO, VIA SICILIA, VIA DELLE PROVINCE, VIA DELLE REGIONI, VIA RIMINI E VIA LIVORNO, PER RIPRISTINO SCAVI DELLA FIBRA OTTICA.",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48936"
+        },
+        {
+          "titolo": "REGOLAMENTAZIONE PROVVISORIA DELLA CIRCOLAZIONE VEICOLARE, DAL 23 AL 27 NOVEMBRE 2026 (E COMUNQUE FINO AL TERMINE DEI LAVORI), IN VIA LOMBARDIA NEL TRATTO DALL'ENTRATA DELLA STAZIONE FFS FINO ALL'INTERSEZIONE CON VIA LAZIO, AMBO I LATI, PER SCAVI CONTO ENEL.",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48937"
+        },
+        {
+          "titolo": "REGOLAMENTAZIONE PROVVISORIA DELLA CIRCOLAZIONE VEICOLARE IN VIA GIARABUB, NEL TRATTO COMPRESO TRA IL CIVICO 7 E L'INTERSEZIONE CON CORSO DELLA REPUBBLICA SU AMBO I LATI, NEL PERIODO DAL 23 AL 30 NOVEMBRE 2026 PER CONSENTIRE LAVORI EDILI.",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48935"
+        },
+        {
+          "titolo": "Natale Cisternese 2026/2027. Attivazione del tavolo operativo di co-progettazione per la partecipazione della comunità e l'accessibilità delle iniziative, con il coinvolgimento del Consorzio Parsifal.",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48932"
+        },
+        {
+          "titolo": "Affidamento servizio noleggio, posa in opera e successivo smontaggio delle luminarie natalizie per le festività 2026.",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48938"
+        },
+        {
+          "titolo": "AUTORIZZAZIONE PER LA REGOLARIZZAZIONE DI N.1 ACCESSO CARRABILE SU VIA ROSOLINO PILO N. 29 - PRATICA 158/SCIA/2026",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_dettaglio.php?id_pubbl=48934"
+        },
         {
           "titolo": "REGOLAMENTAZIONE PROVVISORIA DELLA CIRCOLAZIONE VEICOLARE, DAL GIORNO 30 NOVEMBRE AL GIORNO 04 DICEMBRE 2026, IN VIA SAN BERNARDO DA CHIARAVALLE E VIA SAN TOMMASO D'AQUINO E TRAVERSE, PER RIPRISTINO DEGLI SCAVI DELLA FIBRA OTTICA.",
           "data": "2026-11-19",
@@ -776,11 +874,11 @@
       ]
     },
     "sezze": {
-      "ok": false,
-      "esito": "errore",
-      "errore": "Fonte non raggiungibile",
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
       "fonte": "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028",
-      "aggiornato": "2026-11-22T03:57:25+01:00",
+      "aggiornato": "2026-11-22T06:35:03+01:00",
       "atti": [
         {
           "titolo": "LAVORI DEMOLIZIONE- RICOSTRUZIONE CENTRO SOCIALE VIA PUGLIE- DIVIETO DI TRANSITO IL 20.11.2026",
@@ -790,11 +888,32 @@
           "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27005"
         },
         {
+          "titolo": "Determinazione a contrarre - Affidamento diretto del servizio di assistenza vigilanza sugli alunni con disabilità durante il trasporto scolastico che frequentano gli istituti superiori di Latina Impegno di spesa a favore Spazio Comune Soc. Coop. Soc. - Anno Scolastico 2026 - 2027.",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27020"
+        },
+        {
+          "titolo": "CONGEDO PARENTALE AI SENSI DELL' ART. 32 DEL D.LGS 151/2001",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27017"
+        },
+        {
           "titolo": "Valorizzazione e riqualificazione del Teatro Sacro Italiano di Sezze e delle aree circostanti - I lotto funzionale. CUP C17D26000030002. Finanziamento Regione Lazio - D.G.R. n. 792/2026. Decisione a contrarre ai sensi dell'art. 17, comma 1, del D.Lgs. n. 36/2023. Indizione di procedura negoziata senza bando ai sensi dell'art. 50, comma 1, lett. c), del medesimo decreto, mediante piattaforma telematica Net4Market, con criterio del minor prezzo. Prenotazione dell'intero quadro economico di  500.0",
           "data": "2026-11-19",
           "tipo": "",
           "numero": "",
           "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27016"
+        },
+        {
+          "titolo": "Ricorso innanzi al Consiglio di Stato avverso ordinanza del Presidente della I Sezione del TAR Lazio Roma,n.05567/2026, RG 7982/2026 . Conferimento incarico legale.",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27019"
         },
         {
           "titolo": "PROCEDURA APERTA PER L'AFFIDAMENTO DEL SERVIZIO DI ASSISTENZA SPECIALISTICA SCOLASTICA PER GLI ALUNNI DIVERSAMENTE ABILI CHE FREQUENTANO LE SCUOLE DELL'INFANZIA, PRIMARIA E SECONDARIA DI PRIMO GRADO DEL COMUNE DI SEZZE . CIG: BCD24F1B82; CPV: 85311200-4: SERVIZI DI ASSISTENZA SOCIALE PER DISABILI. APPROVAZIONE RISULTANZE DI GARA ED AGGIUDICAZIONE DEL SERVIZIO.",
@@ -809,6 +928,13 @@
           "tipo": "",
           "numero": "",
           "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27014"
+        },
+        {
+          "titolo": "Approvazione del bilancio consolidato del Gruppo Amministrazione Pubblica \"Comune di Sezze\" per l'esercizio 2025 (art. 11-bis D. Lgs. 118/2011 e art. 233-bis D. Lgs. 267/2000).",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27018"
         },
         {
           "titolo": "Rettifica ordinanza nrg 159/26",
@@ -967,11 +1093,11 @@
       ]
     },
     "priverno": {
-      "ok": false,
-      "esito": "errore",
-      "errore": "Fonte non raggiungibile: il sito non ha risposto in tempo",
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
       "fonte": "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "aggiornato": "2026-11-22T04:34:01+01:00",
+      "aggiornato": "2026-11-22T06:46:32+01:00",
       "atti": [
         {
           "titolo": "ORGANIZZAZIONE DELLA MANIFESTAZIONE \"BABBO'S RED RUNNING\" - VI EDIZIONE (06.12.2026) - INDIRIZZI.",
@@ -979,6 +1105,27 @@
           "tipo": "",
           "numero": "",
           "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31555"
+        },
+        {
+          "titolo": "Convocazione Consiglio Comunale - 26.11.2026",
+          "data": "2026-11-26",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31564"
+        },
+        {
+          "titolo": "Concessione Patrocinio Evento A Love Supreme - 22.11.2026",
+          "data": "2026-11-22",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31566"
+        },
+        {
+          "titolo": "Concessione Patrocinio Mostra Associazione Arte Libera - 20/29 novembre",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31565"
         },
         {
           "titolo": "NOTA DI AGGIORNAMENTO AL DOCUMENTO UNICO DI PROGRAMMAZIONE (DUP) - PERIODO 2027 - 2029 (ART. 170, COMMA 1, DEL D.LGS. N. 267/2000). PRESENTAZIONE AL CONSIGLIO COMUNALE",
@@ -1112,6 +1259,20 @@
           "tipo": "",
           "numero": "",
           "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31536"
+        },
+        {
+          "titolo": "PIANO NAZIONALE DI RIPRESA E RESILIENZA (PNRR)- AVVISO PUBBLICO 1/2022 - DECRETO N. 5 DEL 15/02/2022. MISSIONE 5 \"INCLUSIONE E COESIONE\" COMPONENTE INFRASTRUTTURE SOCIALI, FAMIGLIA, COMUNITA' E TERZO SETTORE. SOTTOCOMPONENTE 1 SERVIZI SOCIALI, DISABILITA E MARGINALITA SOCIALE. INVESTIMENTO 1.2 PERCORSI DI AUTONOMIA PER PERSONE CON DISABILITA INTERVENTO DI RISTRUTTURAZIONE E COMPLETAMENTO DI UN EDIFICIO IN VIA VOLPE CUP I24H22000160006 LIQUIDAZIONE FT. INCARICO DI COLLAUDO STATICO. CIG. BDD6BD298",
+          "data": "2022-02-15",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31562"
+        },
+        {
+          "titolo": "PIANO NAZIONALE DI RIPRESA E RESILIENZA (PNRR) - AVVISO PUBBLICO 1/2022 - DECRETO N. 5 DEL 15/02/2022. MISSIONE 5 \"INCLUSIONE E COESIONE\" COMPONENTE INFRASTRUTTURE SOCIALI, FAMIGLIA, COMUNITA' E TERZO SETTORE. SOTTOCOMPONENTE 1 SERVIZI SOCIALI, DISABILITA E MARGINALITA SOCIALE. INVESTIMENTO 1.2 PERCORSI DI AUTONOMIA PER PERSONE CON DISABILITA INTERVENTO DI RISTRUTTURAZIONE E COMPLETAMENTO DI UN EDIFICIO IN VIA VOLPE CUP I24H22000160006 LIQUIDAZIONE INCARICO PROFESSIONALE PER LA REDAZIONE DELLA R",
+          "data": "2022-02-15",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.halleyweb.com/c059019/mc/mc_p_dettaglio.php?id_pubbl=31563"
         }
       ]
     },
@@ -1335,18 +1496,60 @@
       ]
     },
     "sermoneta": {
-      "ok": false,
-      "esito": "errore",
-      "errore": "Fonte non raggiungibile",
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
       "fonte": "https://www.comunedisermoneta.it/c059027/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-22T05:00:36+01:00",
+      "aggiornato": "2026-11-22T06:50:35+01:00",
       "atti": [
+        {
+          "titolo": "Lavori di manutenzione straordinaria della rete stradale comunale mediante rifacimento dei marciapiedi in Via O. Caetani, Via A. Colonna e Via Papa Pio V in località Pontenuovo - CUP G97H25000520006. Prenotazione della spesa relativa all'intero quadro economico dell'intervento e ricognizione degli impegni già assunti.",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29579"
+        },
+        {
+          "titolo": "Lavori di manutenzione straordinaria della rete stradale comunale - Intervento su Via del Sambuco Loc. Monticchio - CUP G97H26000800004. Prenotazione della spesa relativa all'intero quadro economico dell'intervento e ricognizione degli impegni già assunti.",
+          "data": "2026-11-20",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29580"
+        },
         {
           "titolo": "P.d.C n.6/2026",
           "data": "2026-11-19",
           "tipo": "",
           "numero": "",
           "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29572"
+        },
+        {
+          "titolo": "Disposizioni in termini di viabilità su Via Anime Sante in occasione di lavori afferenti l'abbattimento di alcune alberature in programma per mercoledì 25 novembre 2026 ore 8,00/12,00",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29576"
+        },
+        {
+          "titolo": "Disposizioni in termini di viabilità su Corso Garibaldi in occasione di lavori afferenti l'allestimento delle luminarie natalizie zona centro storico in programma per lunedì 23 e martedì 24 novembre 2026 ore 8,30/17,00",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29577"
+        },
+        {
+          "titolo": "Det. Presa Atto esito Procedura Mobilità per n° 01 posto Ag. Polizia Locale - Comune di Priverno ( Det. Dip. 2 n° 218/26) e Nulla Osta per trasferimento dip. Miccinilli Domenico",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29574"
+        },
+        {
+          "titolo": "Det. IMPEGNO SPESA - LIQUIDAZIONE Oneri Amm.vi ( BOLLI AUTO rif. 2025) afferenti Veicoli Comunali - rif. Avvisi Pagamento Regione Lazio del 17/11/26 Prot. 19975/26",
+          "data": "2026-11-19",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29573"
         },
         {
           "titolo": "Det. IMPEGNO SPESA per conferimento incarico legale all'Avv. Dino Lucchetti in sede di Udienza del 15/12/26 e successive ed eventuali procedure in giudizio, come da Atto Citazione n° 3229/25 emesso dal Tribunale di Latina ( rif. Sinistro T.D. del 13/04/24)",
@@ -1356,11 +1559,25 @@
           "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29559"
         },
         {
+          "titolo": "Istituzione temporanea del divieto di sosta su area Parcheggio Stazione F.F.S. e parcheggio adiacente Via Pio La Torre per i giorni 20,21 e 23 novembre 2026 dalle ore 07:00 sino al termine lavori - Taglio erba aree pubbliche",
+          "data": "2026-11-16",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29575"
+        },
+        {
           "titolo": "Det. IMPEGNO SPESA Rinnovo Polizza Infortuni Volontari - rif. 2026/27( n° 05 unità ) rif. UNIPOLSAI",
           "data": "2026-11-12",
           "tipo": "",
           "numero": "",
           "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29558"
+        },
+        {
+          "titolo": "Liquidazione fatture nn. 1054 e 1056 del 30/10/2026 emesse per il \" SERVIZIO DI PROGETTAZIONE, DIREZIONE DEI LAVORI, COMPRESI ADEMPIMENTI PER COORDINAMENTO DELLA SICUREZZA (D.LGS.81/2008 E SS.MM.II.) APE POST-INTERVENTO E PRATICA CONTO TERMICO A CONSUNTIVO per Intervento di efficientamento energetico del plesso scolastico di Sermoneta Scalo (CUP: G94D25002560005)\" - Beneficiario: SINPRO S.R.L. (CIG: B7D052196C) - Rif. impegno di spesa Dt. Area 3^ n. 256/2025 - n. 330/2026)",
+          "data": "2026-10-30",
+          "tipo": "",
+          "numero": "",
+          "url": "https://www.comunedisermoneta.it/c059027/mc/mc_p_dettaglio.php?id_pubbl=29578"
         },
         {
           "titolo": "VARIAZIONE AL BILANCIO DI PREVISIONE FINANZIARIO 2026/2028 (ART. 175, COMMA 2, DEL D.LGS. N. 267/2000)",
@@ -1449,11 +1666,11 @@
       ]
     },
     "rocca-massima": {
-      "ok": false,
-      "esito": "errore",
-      "errore": "Errore imprevisto: [Errno 104] Connection reset by peer",
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
       "fonte": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-22T05:00:52+01:00",
+      "aggiornato": "2026-11-22T06:51:44+01:00",
       "atti": [
         {
           "titolo": "Istituzione del Divieto di Sosta e di Transito per il giorno Sabato 21 Novembre 2026 per svolgimento \"Raduno auto d'epoca\", organizzato dall'Associazione \"La Castagna di Rocca Massima A.P.S.\"",
