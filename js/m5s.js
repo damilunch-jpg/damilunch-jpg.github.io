@@ -1,13 +1,13 @@
 /* Generato da scripts/sync_m5s.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_UFFICIALE = {
-  "aggiornato": "2026-11-21T22:14:50+01:00",
+  "aggiornato": "2026-11-22T17:04:15+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "nazionale",
       "nome": "Movimento 5 Stelle",
       "esito": "ok",
-      "nuove": 1
+      "nuove": 0
     },
     {
       "id": "regionale",
@@ -122,16 +122,6 @@ window.M5S_UFFICIALE = {
       "titolo": "Gli alberi di Roma non si toccano: no alle deroghe al Regolamento del Verde, sì a una città che guarda al futuro #Alberiperilfuturo",
       "anteprima": "Non possiamo chiedere agli alberi di salvarci dal caldo e, allo stesso tempo, sacrificare le loro radici per fare spazio a tavolini e dehors. Roma ha bisogno di più verde, più suolo libero e regole rispettate, non di nuove deroghe. Gli alberi non…",
       "data": "2026-10-29",
-      "fonte": "regionale",
-      "fonteNome": "Movimento 5 Stelle Lazio",
-      "etichetta": "Dal Regionale",
-      "logo": "img/m5s/movimento5stelle.png"
-    },
-    {
-      "url": "https://www.movimento5stelle.eu/roma-cantieri-metro-c-e-vivibilita-a-rischio-nel-quartiere-prati-al-via-la-petizione-dei-residenti",
-      "titolo": "Roma: cantieri Metro C e vivibilità a rischio nel quartiere Prati. Al via la petizione dei residenti",
-      "anteprima": "Al via la raccolta firme per la petizione voluta dai residenti del I Municipio Prati/Delle Vittorie, e sostenuta dalla nostra consigliera municipale del Movimento 5 stelle Federica Festa, per richiedere compensazioni per i disagi subiti durante il…",
-      "data": "2026-09-22",
       "fonte": "regionale",
       "fonteNome": "Movimento 5 Stelle Lazio",
       "etichetta": "Dal Regionale",
