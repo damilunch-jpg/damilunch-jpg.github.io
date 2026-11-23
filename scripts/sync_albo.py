@@ -265,6 +265,8 @@ class Client:
             raise SourceError("Tempo scaduto in attesa della fonte") from exc
         except ssl.SSLError as exc:
             raise SourceError(f"Errore TLS: {exc}") from exc
+        except OSError as exc:
+            raise SourceError(f"Connessione non riuscita: {exc}") from exc
 
     def _call(self, url: str, data=None, headers=None):
         host = urllib.parse.urlsplit(url).hostname or url
@@ -406,6 +408,8 @@ class Client:
             raise SourceError(f"Connessione non riuscita: {message}") from exc
         except TimeoutError as exc:
             raise SourceError("Tempo scaduto in attesa della fonte") from exc
+        except OSError as exc:
+            raise SourceError(f"Connessione non riuscita: {exc}") from exc
 
 
 def act(titolo, data, tipo, numero, url):

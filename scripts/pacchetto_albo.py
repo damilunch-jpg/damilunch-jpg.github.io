@@ -61,7 +61,7 @@ def links_documenti(client: Client, url: str) -> list[str]:
         return [url]
     try:
         html, final, _status = client.get(url)
-    except SourceError:
+    except (SourceError, OSError):
         return []
     low = html.lower()
     if any(token in low for token in ("type=\"password\"", "name=\"password\"", "effettua il login", "autenticarsi")):
@@ -89,7 +89,7 @@ def scarica(client: Client, url: str):
         if is_halley(url):
             client._pause(url, 1)
         raw, ctype, nome, finale = client.get_bytes(url)
-    except SourceError as exc:
+    except (SourceError, OSError) as exc:
         print(f"  documento non scaricato: {exc}", flush=True)
         return None
     if "html" in ctype or raw[:20].lstrip().lower().startswith(b"<!doctype") or raw[:6].lower().startswith(b"<html"):
