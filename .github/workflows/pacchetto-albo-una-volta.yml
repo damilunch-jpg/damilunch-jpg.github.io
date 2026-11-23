@@ -1,12 +1,8 @@
 name: Primo zip degli albi
 
-# Parte una sola volta, al push di questo file. Prepara lo zip dagli atti
-# già salvati, senza rileggere gli albi. Il trigger di push va poi tolto.
+# Il push iniziale ha già generato il primo zip. Si può rilanciare a mano.
 on:
-  push:
-    paths:
-      - .github/workflows/pacchetto-albo-una-volta.yml
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
