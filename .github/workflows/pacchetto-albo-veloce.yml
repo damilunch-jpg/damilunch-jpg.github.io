@@ -1,11 +1,7 @@
 name: Zip albi veloce
 
-# Parte al push di questo file, dopo la correzione delle connessioni interrotte.
+# Il push iniziale ha già avviato il giro. Si può rilanciare a mano.
 on:
-  push:
-    paths:
-      - .github/workflows/pacchetto-albo-veloce.yml
-    branches: [main]
   workflow_dispatch:
 
 permissions:
