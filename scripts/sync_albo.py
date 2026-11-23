@@ -175,6 +175,8 @@ class Client:
         self.request_count = 0
         self.last_status = "-"
         self._started = False
+        self.fast = False
+        self.max_attempts = MAX_ATTEMPTS
 
     def start_comune(self, nome: str):
         self.label = nome
@@ -194,7 +196,10 @@ class Client:
             if not self._started:
                 self._started = True
                 return
-            low, high = (8.0, 15.0) if is_halley(url) else (5.0, 12.0)
+            if self.fast:
+                low, high = (1.5, 3.0) if is_halley(url) else (0.4, 1.0)
+            else:
+                low, high = (8.0, 15.0) if is_halley(url) else (5.0, 12.0)
             delay = random.uniform(low, high)
         else:
             delay = min(120.0, 15.0 * (2 ** (attempt - 2))) + random.uniform(0, 8)
@@ -264,7 +269,7 @@ class Client:
         host = urllib.parse.urlsplit(url).hostname or url
         method = "POST" if data is not None else "GET"
         last = None
-        for attempt in range(1, MAX_ATTEMPTS + 1):
+        for attempt in range(1, self.max_attempts + 1):
             self._pause(url, attempt)
             self.request_count += 1
             try:
@@ -273,15 +278,15 @@ class Client:
                 last = exc
                 self.last_status = str(exc).split(" (")[0][:80]
                 print(
-                    f"  {self.label}: {method} {host} tentativo {attempt}/{MAX_ATTEMPTS} -> {self.last_status}",
+                    f"  {self.label}: {method} {host} tentativo {attempt}/{self.max_attempts} -> {self.last_status}",
                     flush=True,
                 )
-                if attempt == MAX_ATTEMPTS or not self._retryable(exc):
+                if attempt == self.max_attempts or not self._retryable(exc):
                     raise
                 continue
             self.last_status = f"HTTP {status}"
             print(
-                f"  {self.label}: {method} {host} tentativo {attempt}/{MAX_ATTEMPTS} -> HTTP {status}",
+                f"  {self.label}: {method} {host} tentativo {attempt}/{self.max_attempts} -> HTTP {status}",
                 flush=True,
             )
             return text, final, status
@@ -365,6 +370,41 @@ class Client:
 
     def post(self, url: str, fields: dict):
         return self._request(url, data=fields)
+
+    def get_bytes(self, url: str, limit: int = 12_000_000, _cert_retry: bool = False):
+        """Scarica un file pubblico. Ritorna byte, content-type, filename, url finale."""
+        hdrs = {
+            "User-Agent": UA,
+            "Accept": "*/*",
+            "Accept-Language": "it-IT,it;q=0.9",
+        }
+        req = urllib.request.Request(url, headers=hdrs)
+        try:
+            with self._opener().open(req, timeout=TIMEOUT) as res:
+                raw = res.read(limit + 1)
+                ctype = (res.headers.get("Content-Type") or "").split(";")[0].strip().lower()
+                disp = res.headers.get("Content-Disposition") or ""
+                name = ""
+                match = re.search(r"filename\*=UTF-8''([^;]+)", disp, flags=re.I)
+                if match:
+                    name = urllib.parse.unquote(match.group(1)).strip().strip('"')
+                else:
+                    match = re.search(r'filename="?([^";]+)"?', disp, flags=re.I)
+                    if match:
+                        name = match.group(1).strip()
+                if len(raw) > limit:
+                    raise SourceError("Documento troppo grande")
+                return raw, ctype, name, res.geturl()
+        except urllib.error.HTTPError as exc:
+            raise SourceError(f"HTTP {exc.code}") from exc
+        except urllib.error.URLError as exc:
+            message = str(getattr(exc, "reason", exc))
+            if not _cert_retry and ("CERTIFICATE_VERIFY_FAILED" in message or "certificate verify failed" in message):
+                self._trust_peer(url)
+                return self.get_bytes(url, limit=limit, _cert_retry=True)
+            raise SourceError(f"Connessione non riuscita: {message}") from exc
+        except TimeoutError as exc:
+            raise SourceError("Tempo scaduto in attesa della fonte") from exc
 
 
 def act(titolo, data, tipo, numero, url):
@@ -875,6 +915,299 @@ def friendly_error(message: str) -> str:
     return message[:280]
 
 
+def numero_normale(value: str) -> str:
+    return re.sub(r"\s+", "", value or "").lower()
+
+
+def chiave_atto(item: dict) -> str:
+    numero = numero_normale(item.get("numero"))
+    data = item.get("data") or ""
+    if numero and data:
+        return numero + "|" + data
+    return "url|" + (item.get("url") or "")
+
+
+def stesso_atto(atteso: dict, trovato: dict) -> bool:
+    numero = numero_normale(atteso.get("numero"))
+    if not numero or numero != numero_normale(trovato.get("numero")):
+        return False
+    data = atteso.get("data") or ""
+    altra = trovato.get("data") or ""
+    if data and altra:
+        return data == altra
+    return False
+
+
+def _campi_halley(html: str) -> dict:
+    """Nomi dei campi del modulo di ricerca, se c'è uno storico senza login."""
+    campi = {}
+    for match in re.finditer(r"<(input|select)\b([^>]*)>", html, flags=re.I):
+        attrs = match.group(2)
+        name = re.search(r'name="([^"]+)"', attrs, flags=re.I)
+        if not name:
+            continue
+        nome = name.group(1)
+        value = re.search(r'value="([^"]*)"', attrs, flags=re.I)
+        campi.setdefault(nome, value.group(1) if value else "")
+    archivio = None
+    for nome in campi:
+        low = nome.lower()
+        if any(token in low for token in ("archivio", "storico", "flg_arch", "vis")):
+            archivio = nome
+            break
+    if archivio is None and not re.search(r"storico|archivio", html, flags=re.I):
+        return {}
+    return campi
+
+
+def cerca_storico_urbi(client: Client, fonte: str, old: dict):
+    numero = numero_normale(old.get("numero"))
+    data = old.get("data") or ""
+    if not numero or not data:
+        return None
+    if "urbi" not in fonte.lower() and "ur1ME" not in fonte:
+        return None
+    parte = numero.split("/")[0]
+    anno = data[:4]
+    if "/" in numero and numero.split("/")[-1].isdigit():
+        anno = numero.split("/")[-1]
+    html, final, _status = client.get(fonte)
+    if "in manutenzione" in html.lower():
+        return None
+    db_match = re.search(r'__DB_NAME__\s*=\s*"([^"]+)"', html)
+    query = urllib.parse.parse_qs(urllib.parse.urlsplit(fonte).query)
+    db_name = (db_match.group(1) if db_match else "") or (query.get("DB_NAME") or [""])[0]
+    if not db_name:
+        return None
+    base = final.split("?")[0]
+    search = {
+        "OpenTree": "",
+        "OpenTreeText": "",
+        "Archivio": "S",
+        "Tipologia": "",
+        "EnteMittente": "",
+        "DaData": "",
+        "AData": "",
+        "OggettoType": "",
+        "Oggetto": "",
+        "RifAttoAnno": anno,
+        "RifAttoNumero": parte,
+        "Stepper_StepAttivo": "1",
+        "Stepper_StepAttivoNome": "",
+        "Stepper_NextStep": "2",
+        "Stepper_NextStepNome": "",
+        "DB_NAME": db_name,
+        "w3cbt": "S",
+        "BootstrapItalia_Home": "/urbi/bootstrap-italia/2.3.8",
+        "Stepper_Idx": "1",
+        "Form_Idx": "1",
+        "TreeView_Idx": "1",
+        "Collapse_Idx": "1",
+        "Contenitore_Idx": "1",
+    }
+    listed, listed_url, _status = client.post(
+        f"{base}?DB_NAME={urllib.parse.quote(db_name)}&StwEvent=910001&w3cbt=S",
+        search,
+    )
+    page_url = (
+        f"{base}?DB_NAME={urllib.parse.quote(db_name)}&w3cbt=S&StwEvent=9100030"
+        "&ElencoPubblicazioni_DimensionePagina=30&ElencoPubblicazioni_PaginaCorrente=1"
+    )
+    try:
+        wider, _wider_url, _status = client.post(page_url, {"Form_Id": "idForm2", "DB_NAME": db_name, "w3cbt": "S"})
+    except SourceError:
+        wider = ""
+    chosen = wider if wider.count("IdMePubblica=") > listed.count("IdMePubblica=") else listed
+    for item in parse_urbi(chosen, listed_url or final, db_name):
+        if stesso_atto(old, item):
+            return {"url": item["url"], "numero": item.get("numero") or old.get("numero") or "", "data": item.get("data") or data}
+    return None
+
+
+def cerca_storico_halley(client: Client, fonte: str, old: dict):
+    numero = numero_normale(old.get("numero"))
+    data = old.get("data") or ""
+    if not numero or not data:
+        return None
+    mc = halley_mc(fonte)
+    page, final, _status = client.get(abs_url(mc, "mc_p_ricerca.php"))
+    campi = _campi_halley(page)
+    if not campi:
+        return None
+    payload = dict(campi)
+    anno = data[:4]
+    giorno = ""
+    match = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", data)
+    if match:
+        giorno = f"{match.group(3)}/{match.group(2)}/{match.group(1)}"
+    for nome in list(payload):
+        low = nome.lower()
+        if "numer" in low:
+            payload[nome] = numero.split("/")[0]
+        elif "anno" in low:
+            payload[nome] = anno
+        elif any(token in low for token in ("archivio", "storico")):
+            payload[nome] = "1"
+        elif low in {"vis", "stato"}:
+            payload[nome] = "1"
+        elif giorno and any(token in low for token in ("data", "dal", "al")):
+            payload[nome] = giorno
+    if "cerca" not in {n.lower() for n in payload}:
+        payload["cerca"] = "Cerca"
+    posted, post_url, _status = client.post(final.split("?")[0], payload)
+    trovati = acts_from_html(posted, post_url)
+    grid = re.search(r'(mc_gridev_messi_datigrid\.php[^"\']*)', posted)
+    if grid:
+        body, grid_final, _status = client.get(abs_url(post_url, grid.group(1)))
+        parsed = parse_grid(body, grid_final) or []
+        trovati.extend(parsed)
+    for item in trovati:
+        if stesso_atto(old, item) and item.get("url"):
+            return {"url": item["url"], "numero": item.get("numero") or old.get("numero") or "", "data": item.get("data") or data}
+    return None
+
+
+def cerca_storico_gazzetta(client: Client, fonte: str, old: dict):
+    numero = numero_normale(old.get("numero"))
+    data = old.get("data") or ""
+    if not numero or not data:
+        return None
+    html, final, _status = client.get(fonte)
+    path = urllib.parse.urlsplit(final).path
+    if not path.endswith("/"):
+        path += "/"
+    pagine = [final]
+    for href in re.findall(r'href="([^"]+)"', html):
+        full = abs_url(origin_of(final), href)
+        cpath = urllib.parse.urlsplit(full).path
+        if cpath.startswith(path) and cpath != path and "/" not in cpath[len(path):].strip("/"):
+            pagine.append(full if full.endswith("/") else full + "/")
+    visti = set()
+    for pagina in pagine:
+        if pagina in visti:
+            continue
+        visti.add(pagina)
+        try:
+            body, page_url, _status = client.get(pagina) if pagina != final else (html, final, 200)
+        except SourceError:
+            continue
+        if pagina == final:
+            body, page_url = html, final
+        for item in []:
+            pass
+        blocks = re.findall(
+            r'<h4[^>]*>\s*(?:&nbsp;|\s)*<a[^>]*href="([^"]+)"[^>]*>(.*?)</a>',
+            body,
+            flags=re.I | re.S,
+        )
+        for href, title in blocks:
+            text = clean(title)
+            num = re.search(r"\bN\.?\s*(\d+)\b", text, flags=re.I)
+            if not num or numero_normale(num.group(1)) != numero.split("/")[0]:
+                continue
+            window = body[max(0, body.find(href) - 200) : body.find(href) + 400]
+            if data and first_date(clean(window)) not in {data, ""}:
+                trovata = first_date(clean(window))
+                if trovata and trovata != data:
+                    continue
+            return {"url": abs_url(page_url, href), "numero": old.get("numero") or "", "data": data}
+    return None
+
+
+def cerca_storico_mycity(client: Client, fonte: str, old: dict):
+    numero = numero_normale(old.get("numero"))
+    data = old.get("data") or ""
+    if not numero or not data:
+        return None
+    html, final, _status = client.get(fonte)
+    load = re.search(r'load-url="([^"]+)"', html)
+    if not load:
+        return None
+    api = load.group(1)
+    params = urllib.parse.urlencode({"page": "1", "search": numero.split("/")[0], "sort": "personalizzato", "type": "0"})
+    body, _api, _status = client.get(api + ("&" if "?" in api else "?") + params, headers={"Accept": "application/json"})
+    try:
+        payload = json.loads(body)
+    except json.JSONDecodeError:
+        return None
+    rows = payload.get("data") if isinstance(payload, dict) else None
+    if not isinstance(rows, list):
+        return None
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        titolo = str(row.get("title") or row.get("titolo") or "")
+        numero_riga = str(row.get("number") or row.get("numero") or "")
+        data_riga = first_date(str(row.get("published_at") or row.get("date") or row.get("data") or ""))
+        link = str(row.get("url") or row.get("link") or row.get("href") or "")
+        candidato = {"numero": numero_riga or (numero if numero.split("/")[0] in titolo else ""), "data": data_riga, "url": link}
+        if link and stesso_atto(old, candidato):
+            return {"url": link, "numero": old.get("numero") or "", "data": data}
+    return None
+
+
+def cerca_storico(client: Client, comune: dict, old: dict):
+    """Cerca un atto uscito dall'elenco nello storico pubblico. None se non c'è."""
+    kind = comune.get("scraper")
+    fonte = comune.get("fonte") or comune.get("alboUrl") or ""
+    if not fonte or not numero_normale(old.get("numero")) or not old.get("data"):
+        return None
+    try:
+        if kind == "urbi":
+            return cerca_storico_urbi(client, fonte, old)
+        if kind in {"halley", "servizionline"}:
+            return cerca_storico_halley(client, fonte, old)
+        if kind == "gazzetta":
+            return cerca_storico_gazzetta(client, fonte, old)
+        if kind == "mycity":
+            return cerca_storico_mycity(client, fonte, old)
+    except SourceError as exc:
+        print(f"  storico non verificato: {exc}", flush=True)
+        return None
+    return None
+
+
+def unisci_con_storico(client: Client, comune: dict, previous, fresh):
+    """Tiene gli atti appena letti e, se spariscono, solo quelli ritrovati nello storico."""
+    attuali = []
+    chiavi = set()
+    urls = set()
+    for item in fresh or []:
+        row = {
+            "titolo": item.get("titolo") or "",
+            "data": item.get("data") or "",
+            "tipo": item.get("tipo") or "",
+            "numero": item.get("numero") or "",
+            "url": item.get("url") or "",
+        }
+        if not row["url"]:
+            continue
+        attuali.append(row)
+        chiavi.add(chiave_atto(row))
+        urls.add(row["url"])
+    attuali.sort(key=lambda item: (item.get("data") or "", item.get("titolo") or ""), reverse=True)
+    attuali = attuali[:LIMIT]
+    storico = []
+    for old in previous or []:
+        if not old.get("url") or old.get("url") in urls or chiave_atto(old) in chiavi:
+            continue
+        trovato = cerca_storico(client, comune, old)
+        if not trovato:
+            print(f"  uscito dall'elenco, non nello storico: {old.get('numero') or old.get('titolo','')[:60]}", flush=True)
+            continue
+        row = {
+            "titolo": old.get("titolo") or "",
+            "data": trovato.get("data") or old.get("data") or "",
+            "tipo": old.get("tipo") or "",
+            "numero": trovato.get("numero") or old.get("numero") or "",
+            "url": trovato.get("url") or old.get("url"),
+            "storico": True,
+        }
+        storico.append(row)
+        print(f"  STORICO {row['numero']} {row['data']}", flush=True)
+    return attuali + storico
+
+
 def merge_atti(previous, fresh):
     by_url = {}
     for item in list(previous or []) + list(fresh or []):
@@ -951,7 +1284,7 @@ def main(argv):
         try:
             acts, used = scrape_comune(client, comune)
             if acts:
-                merged = merge_atti(prior.get("atti"), acts)
+                merged = unisci_con_storico(client, comune, prior.get("atti"), acts)
                 state[slug] = {
                     "ok": True,
                     "esito": "atti",

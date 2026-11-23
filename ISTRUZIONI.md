@@ -213,7 +213,23 @@ Una lettura veloce del 18 novembre 2026 ha raccolto atti per Cori (30), Bassiano
 
 ---
 
-## 9. Dove stanno i file, se serve guardarli
+## 9. Zip notturno e email
+
+Dopo la lettura degli albi, l'azione prepara uno zip `albo-AAAA-MM-GG` con i documenti degli atti nuovi, un `indice.csv` e un `PROMPT.txt` da incollare in ChatGPT. Lo zip è pubblicato come Release di GitHub. Restano solo gli ultimi 30 giorni.
+
+Per riceverlo via email, nel repository vanno creati questi tre secrets, con questi nomi esatti:
+
+- `SMTP_USER` — indirizzo Gmail che invia
+- `SMTP_PASSWORD` — password per le app di Gmail
+- `MAIL_TO` — destinatari, separati da virgola
+
+Se mancano, l'invio viene saltato e il resto del lavoro non si ferma. Sotto i 20 MB lo zip è allegato; sopra, l'email contiene il link alla Release.
+
+Gli albi con il solo pulsante (Fondi, Terracina, Lenola, Monte San Biagio) non entrano nello zip. Un atto uscito dall'elenco resta sul sito solo se lo storico pubblico del Comune, consultabile senza login, lo ritrova per numero e data: in quel caso ha l'etichetta **Storico**.
+
+---
+
+## 10. Dove stanno i file, se serve guardarli
 
 - `content/articoli/` — un file Markdown per articolo
 - `js/articles.js` — indice generato, quello che legge il sito

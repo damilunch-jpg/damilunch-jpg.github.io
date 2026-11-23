@@ -13,6 +13,11 @@ on:
     - cron: "0 2 * * *"    # 04:00 ora legale
     - cron: "0 3 * * *"    # 04:00 ora solare
   workflow_dispatch:
+    inputs:
+      solo_zip:
+        description: "Prepara solo lo zip dagli atti già salvati, senza rileggere gli albi"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -28,15 +33,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Leggi gli albi e aggiorna l'elenco
+        if: github.event_name != 'workflow_dispatch' || github.event.inputs.solo_zip != 'true'
         env:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
           ALBO_SCHEDULE: ${{ github.event.schedule }}
         run: python3 scripts/sync_albo.py
+      - name: Prepara lo zip degli atti nuovi
+        run: python3 scripts/pacchetto_albo.py
+      - name: Pubblica la Release
+        id: release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/pubblica_release_albo.py
+      - name: Invia lo zip per email
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          RELEASE_URL: ${{ steps.release.outputs.release_url }}
+          ZIP_URL: ${{ steps.release.outputs.zip_url }}
+        run: python3 scripts/invia_albo.py
       - name: Pubblica l'elenco
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/albo.json js/albo.js
+          git add data/albo.json js/albo.js data/albo-pacchetto.json
           if git diff --cached --quiet; then
             echo "Nessun cambiamento"
           else

@@ -883,6 +883,7 @@
         html += '<time datetime="' + escapeHtml(item.data) + '">' + escapeHtml(formatDate(item.data)) + "</time>";
       }
       if (item.tipo) html += '<span class="tag">' + escapeHtml(item.tipo) + "</span>";
+      if (item.storico) html += '<span class="badge-storico">Storico</span>';
       if (item.numero) html += "<span>n. " + escapeHtml(item.numero) + "</span>";
       html += "</div><h3>";
       if (item.url) {
