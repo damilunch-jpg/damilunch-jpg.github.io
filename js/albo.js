@@ -1,13 +1,13 @@
 /* Generato da scripts/sync_albo.py. Elenco degli atti letti dagli albi pretori. */
 window.M5S_ALBO = {
-  "aggiornato": "2026-11-22T11:49:01+01:00",
+  "aggiornato": "2026-11-23T04:50:44+01:00",
   "comuni": {
     "cori": {
       "ok": true,
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
-      "aggiornato": "2026-11-22T04:35:01+01:00",
+      "aggiornato": "2026-11-23T04:41:40+01:00",
       "atti": [
         {
           "titolo": "SALDO FATTURE N.12/PA3, 13/PA3, 14/PA3 A FAVORE DI GIOMI CARE SPA (DETERMINA/2026/941/20-11-2026)(AREA 2 - WELFARE - 239)",
@@ -226,8 +226,64 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145",
-      "aggiornato": "2026-11-22T04:35:33+01:00",
+      "aggiornato": "2026-11-23T04:42:16+01:00",
       "atti": [
+        {
+          "titolo": "LIQUIDAZIONE FATTURA PER INTERVENTI DI RIPARAZIONE E MANUTENZIONE DEL VEICOLO COMUNALE TARGATO CP 919 HT – OFFICINA MECCANICA CAR CENTER SNC DI FAVALE F. & C SNC . (DETERMINA/2026/300/22-11-2026)(TECNICO - 135)",
+          "data": "2026-11-22",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "491/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11101"
+        },
+        {
+          "titolo": "AVVISO PUBBLICO PR FSE+ 2021-2027 \"SPAZIO SVILUPPO\". CUP: G24H25000450006. SIGEM: 25009DP000000045. PROGETTO \"LEPINI LAB - LABORATORIO DI FUTURO\". LIQUIDAZIONE DI SPESA A FAVORE DI \"PRO LOCO DI BASSIANO APS \". (DETERMINA/2026/303/22-11-2026)(TECNICO - 138)",
+          "data": "2026-11-22",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "494/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11104"
+        },
+        {
+          "titolo": "AVVISO PUBBLICO PR FSE+ 2021-2027 \"SPAZIO SVILUPPO\". CUP: G24H25000450006. SIGEM: 25009DP000000045. PROGETTO \"LEPINI LAB - LABORATORIO DI FUTURO\". LIQUIDAZIONE DI SPESA A FAVORE DI \"IL CUORE IMMENSO DI MATTEO ASSOCIAZIONE DI PROMOZIONE SOCIALE\" . (DETERMINA/2026/302/22-11-2026)(TECNICO - 137)",
+          "data": "2026-11-22",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "493/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11103"
+        },
+        {
+          "titolo": "AVVISO PUBBLICO PR FSE+ 2021-2027 \"SPAZIO SVILUPPO\". CUP: G24H25000450006. SIGEM: 25009DP000000045. PROGETTO \"LEPINI LAB - LABORATORIO DI FUTURO\". LIQUIDAZIONE DI SPESA A FAVORE DI \"CENTRO SOCIALE ANZIANI BASSIANO APS\" . (DETERMINA/2026/301/22-11-2026)(TECNICO - 136)",
+          "data": "2026-11-22",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "492/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11102"
+        },
+        {
+          "titolo": "AVVISO PUBBLICO PR FSE+ 2021-2027 \"SPAZIO SVILUPPO\". CUP: G24H25000450006. SIGEM: 25009DP000000045. PROGETTO \"LEPINI LAB - LABORATORIO DI FUTURO\". LIQUIDAZIONE DI SPESA A FAVORE DI \"ASSOCIAZIONE NAZIONALE ISTRUTTORI E OPERATORI FORESTALI APS\". (DETERMINA/2026/304/22-11-2026)(TECNICO - 139)",
+          "data": "2026-11-22",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "495/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11105"
+        },
+        {
+          "titolo": "\"PROGRAMMA REGIONALE DI INTERVENTI PER LA MESSA IN SICUREZZA DELLE INFRASTRUTTURE VIARIE E PER LA RIGENERAZIONE URBANA\", AI SENSI DELL'ARTICOLO 1, COMMA 134 E SS., DELLA LEGGE 30 DICEMBRE 2018, N. 145, E S.M.I. - ATTUAZIONE DELLA DGR N. 131 DEL 12/03/2026. - PROCEDURA CON AFFIDAMENTO DIRETTO. (ART. 50 COMMA 1 LETT. B) DEL D.LGS. N. 36/2023) PER STUDI, RILEVI, ACCERTAMENTI, INDAGINI, REDAZIONE DEI PIANI DI SICUREZZA E COORDINAMENTO IN FASE DI PROGETTO E DI CANTIERE, DIREZIONE LAVORI, SICUREZZA E ",
+          "data": "2026-11-22",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "488/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11098"
+        },
+        {
+          "titolo": "\"PROGETTO DI ALLESTIMENTO DI UN AREA COPERTA IN SPAZIO LUDICO – SPORTIVO MULTIFUNZIONALE PER L'AGGREGAZIONE GIOVANILE - RIQUALIFICAZIONE DEL PIANO 1 SOTTOSTRADA DEL PARCHEGGIO MULTIPIANO SITO A BASSIANO \" - PROCEDURA CON AFFIDAMENTO DIRETTO. (ART. 50 COMMA 1 LETT. B) DEL D.LGS. N. 36/2023) PER SERVIZIO DI PROGETTAZIONE PRELIMINARE, ESECUTIVA, CSP, CSE, DIREZIONE LAVORI E CONTABILITA' SEMLIFICATA. C.I.G.: BDB472B666CUP: G23I26000080001 (DETERMINA/2026/299/22-11-2026)(TECNICO - 134)",
+          "data": "2026-11-22",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "490/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11100"
+        },
+        {
+          "titolo": "\"MESSA IN SICUREZZA DEL TERRITORIO A RISCHIO IDROGEOLOGICO\" - PROCEDURA CON AFFIDAMENTO DIRETTO. (ART. 50 COMMA 1 LETT. B) DEL D.LGS. N. 36/2023) PER SERVIZIO DI PROGETTAZIONE PRELIMINARE, ESECUTIVA, CSP E DIREZIONE LAVORI – C.I.G.: BDB958C490CUP: G28E25000170005 (DETERMINA/2026/298/22-11-2026)(TECNICO - 133)",
+          "data": "2026-11-22",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "489/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11099"
+        },
         {
           "titolo": "CONVOCAZIONE CONSIGLIO COMUNALE",
           "data": "2026-11-20",
@@ -381,62 +437,6 @@ window.M5S_ALBO = {
           "tipo": "Avviso pubblico",
           "numero": "472/2026",
           "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11082"
-        },
-        {
-          "titolo": "REGIONE LAZIO – PIANO TRIENNALE PER LA RIQUALIFICAZIONE DEI PICCOLI COMUNI – L.R. N. 9/2020, ART. 13 – ANNUALITÀ 2025–2027 – MISURA 2 «SMART MAP» – AMBITO A: DIGITALIZZAZIONE GEOREFERENZIATA DELLO STRUMENTO URBANISTICO GENERALE COMUNALE – APPROVAZIONE DELLA CANDIDATURA, DELLA RELAZIONE TECNICO-ILLUSTRATIVA E DEL QUADRO ECONOMICO DI € 15.000,00. (GIUNTA/2026/44/03-11-2026)",
-          "data": "2026-11-06",
-          "tipo": "Deliberazione di giunta comunale",
-          "numero": "465/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11075"
-        },
-        {
-          "titolo": "LIQUIDAZIONE DI SPESA SERVIZIO MENSA SCOLASTICA PER L'A.S. 2026/2027 - CIG BD5B17C678 FATTURA N° 6/PA (DETERMINA/2026/281/05-11-2026)(AFFARI GENERALI - 85)",
-          "data": "2026-11-05",
-          "tipo": "Determinazione dirigenziale",
-          "numero": "458/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11068"
-        },
-        {
-          "titolo": "LIQUIDAZIONE DI SPESA - POSTE ITALIANE – FATTURA 2026 N° 1026221185 (DETERMINA/2026/282/05-11-2026)(AFFARI GENERALI - 86)",
-          "data": "2026-11-05",
-          "tipo": "Determinazione dirigenziale",
-          "numero": "459/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11069"
-        },
-        {
-          "titolo": "IMPEGNO DI SPESA PER INTERVENTO DI SOSTITUZIONE POMPA CALDAIA SCUOLA MATERNA VIALE DELLA CROCE, PROCEDURA CON AFFIDAMENTO DIRETTO. (ART. 50 COMMA 1 LETT. A) DEL D.LGS. N. 36/2023) – C.I.G.: BD9C8F1A05. (DETERMINA/2026/285/05-11-2026)(TECNICO - 127)",
-          "data": "2026-11-05",
-          "tipo": "Determinazione dirigenziale",
-          "numero": "462/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11072"
-        },
-        {
-          "titolo": "IMPEGNO DI SPESA CEDOLE LIBRARIE ANNO AS 2026/2027 (DETERMINA/2026/284/05-11-2026)(AFFARI GENERALI - 88)",
-          "data": "2026-11-05",
-          "tipo": "Determinazione dirigenziale",
-          "numero": "461/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11071"
-        },
-        {
-          "titolo": "FORNITURE DI MATERIALE VARIO DI FERRAMENTA ALLA DITTA EDILIZIA VENDITTI. PROCEDURA CON AFFIDAMENTO DIRETTO. (ART. 50 COMMA 1 LETT. B) DEL D.LGS. N. 36/2023) – C.I.G.: BD9C7A68DF (DETERMINA/2026/286/05-11-2026)(TECNICO - 128)",
-          "data": "2026-11-05",
-          "tipo": "Determinazione dirigenziale",
-          "numero": "463/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11073"
-        },
-        {
-          "titolo": "FATTURA N° 1875/2026 - F&G SISTEMI SRL SERVIZIO DI NOLEGGIO DI MACCHINE FOTOCOPIATRICI. - CIG B9D0F2805E (DETERMINA/2026/283/05-11-2026)(AFFARI GENERALI - 87)",
-          "data": "2026-11-05",
-          "tipo": "Determinazione dirigenziale",
-          "numero": "460/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11070"
-        },
-        {
-          "titolo": "COMUNE DI BASSIANO",
-          "data": "2026-11-05",
-          "tipo": "Avviso pubblico",
-          "numero": "464/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11074"
         }
       ]
     },
@@ -445,7 +445,7 @@ window.M5S_ALBO = {
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-22T11:49:01+01:00",
+      "aggiornato": "2026-11-23T04:50:44+01:00",
       "atti": []
     },
     "roccagorga": {
@@ -453,7 +453,7 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/",
-      "aggiornato": "2026-11-22T05:03:03+01:00",
+      "aggiornato": "2026-11-23T04:50:04+01:00",
       "atti": [
         {
           "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.91 DEL 17-11-2026 AVENTE AD OGETTO ADOZIONE DEL PROGRAMMA TRIENNALE DEI LAVORI PUBBLICI 2027/2029 E DELL'ELENCO ANNUALE DEI LAVORI PER L'ANNO 2027, E DEL PROGRAMMA TRIENNALE DI BENI E SERVIZI 2027/2029 (ART. 37, COMMI 1, 2, 3, DEL D.LGS. N. 36/2023).",
@@ -609,7 +609,7 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://www.halleyweb.com/c059016/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059016",
-      "aggiornato": "2026-11-22T06:48:21+01:00",
+      "aggiornato": "2026-11-23T04:44:11+01:00",
       "atti": [
         {
           "titolo": "Impegno di spesa per la fornitura di uno striscione in pvc. Ditta seri.col",
@@ -723,7 +723,7 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
-      "aggiornato": "2026-11-22T06:36:33+01:00",
+      "aggiornato": "2026-11-23T04:30:38+01:00",
       "atti": [
         {
           "titolo": "Rilascio Concessione Edilizia in sanatoria n.11 del 20/11/2026 - rif. pratica 2282 L.47/85",
@@ -879,7 +879,7 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028",
-      "aggiornato": "2026-11-22T06:35:03+01:00",
+      "aggiornato": "2026-11-23T04:28:58+01:00",
       "atti": [
         {
           "titolo": "LAVORI DEMOLIZIONE- RICOSTRUZIONE CENTRO SOCIALE VIA PUGLIE- DIVIETO DI TRANSITO IL 20.11.2026",
@@ -1098,7 +1098,7 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "aggiornato": "2026-11-22T06:46:32+01:00",
+      "aggiornato": "2026-11-23T04:40:32+01:00",
       "atti": [
         {
           "titolo": "ORGANIZZAZIONE DELLA MANIFESTAZIONE \"BABBO'S RED RUNNING\" - VI EDIZIONE (06.12.2026) - INDIRIZZI.",
@@ -1282,7 +1282,7 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611",
-      "aggiornato": "2026-11-22T04:34:27+01:00",
+      "aggiornato": "2026-11-23T04:41:00+01:00",
       "atti": [
         {
           "titolo": "APPROVAZIONE E PRESENTAZIONE AL CONSIGLIO COMUNALE DEL DOCUMENTO UNICO DI PROGRAMMAZIONE DUP SEMPLIFICATO 2027 -2029 (GIUNTA/2026/57/20-11-2026)",
@@ -1501,7 +1501,7 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://www.comunedisermoneta.it/c059027/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-22T06:50:35+01:00",
+      "aggiornato": "2026-11-23T04:46:44+01:00",
       "atti": [
         {
           "titolo": "Lavori di manutenzione straordinaria della rete stradale comunale mediante rifacimento dei marciapiedi in Via O. Caetani, Via A. Colonna e Via Papa Pio V in località Pontenuovo - CUP G97H25000520006. Prenotazione della spesa relativa all'intero quadro economico dell'intervento e ricognizione degli impegni già assunti.",
@@ -1671,7 +1671,7 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-22T06:51:44+01:00",
+      "aggiornato": "2026-11-23T04:48:00+01:00",
       "atti": [
         {
           "titolo": "Istituzione del Divieto di Sosta e di Transito per il giorno Sabato 21 Novembre 2026 per svolgimento \"Raduno auto d'epoca\", organizzato dall'Associazione \"La Castagna di Rocca Massima A.P.S.\"",
@@ -1729,7 +1729,7 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597",
-      "aggiornato": "2026-11-22T05:03:40+01:00",
+      "aggiornato": "2026-11-23T04:50:34+01:00",
       "atti": [
         {
           "titolo": "RETTIFICA IN AUTOTUTELA DELLE DETERMINAZIONI NN. 933/2026 E 1268/2026 (APPROVAZIONE AVVISO DI SELEZIONE E APPROVAZIONE GRADUATORIA PEO 2026) CON RIPRISTINO DEL LIMITE DEL 50% DEGLI AVENTI DIRITTO. (DETERMINA/2026/1269/20-11-2026)",
