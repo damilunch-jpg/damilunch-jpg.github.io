@@ -1,12 +1,8 @@
 name: Zip albi veloce
 
-# Parte al push di questo file. Scarica i documenti con un tempo breve
-# e pubblica la Release. Il trigger di push va tolto subito dopo.
+# Il push iniziale ha già avviato il giro. Si può rilanciare a mano.
 on:
-  push:
-    paths:
-      - .github/workflows/pacchetto-albo-veloce.yml
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
