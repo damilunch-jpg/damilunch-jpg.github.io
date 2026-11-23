@@ -1,0 +1,50 @@
+name: Zip albi veloce
+
+# Parte al push di questo file. Scarica i documenti con un tempo breve
+# e pubblica la Release. Il trigger di push va tolto subito dopo.
+on:
+  push:
+    paths:
+      - .github/workflows/pacchetto-albo-veloce.yml
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pacchetto-albo-veloce
+  cancel-in-progress: false
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepara lo zip degli atti nuovi
+        run: python3 scripts/pacchetto_albo.py
+      - name: Pubblica la Release
+        id: release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/pubblica_release_albo.py
+      - name: Invia lo zip per email
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          RELEASE_URL: ${{ steps.release.outputs.release_url }}
+          ZIP_URL: ${{ steps.release.outputs.zip_url }}
+        run: python3 scripts/invia_albo.py
+      - name: Salva l'elenco degli atti già impacchettati
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
+          git add data/albo-pacchetto.json
+          if git diff --cached --quiet; then
+            echo "Nessun cambiamento"
+          else
+            git commit -m "Segna gli atti già inclusi nello zip dell'albo"
+            git push
+          fi

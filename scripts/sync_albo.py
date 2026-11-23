@@ -177,6 +177,7 @@ class Client:
         self._started = False
         self.fast = False
         self.max_attempts = MAX_ATTEMPTS
+        self.timeout = TIMEOUT
 
     def start_comune(self, nome: str):
         self.label = nome
@@ -245,7 +246,7 @@ class Client:
             hdrs.setdefault("Content-Type", "application/x-www-form-urlencoded")
         req = urllib.request.Request(url, data=body, headers=hdrs)
         try:
-            with self._opener().open(req, timeout=TIMEOUT) as res:
+            with self._opener().open(req, timeout=self.timeout) as res:
                 raw = res.read(2_000_000)
                 charset = res.headers.get_content_charset() or "utf-8"
                 text = raw.decode(charset, "replace")
@@ -380,7 +381,7 @@ class Client:
         }
         req = urllib.request.Request(url, headers=hdrs)
         try:
-            with self._opener().open(req, timeout=TIMEOUT) as res:
+            with self._opener().open(req, timeout=self.timeout) as res:
                 raw = res.read(limit + 1)
                 ctype = (res.headers.get("Content-Type") or "").split(";")[0].strip().lower()
                 disp = res.headers.get("Content-Disposition") or ""
