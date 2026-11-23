@@ -1,13 +1,13 @@
 /* Generato da scripts/sync_rassegna.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_RASSEGNA = {
-  "aggiornato": "2026-11-23T20:07:42+01:00",
+  "aggiornato": "2026-11-23T23:28:41+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "latinatoday",
       "nome": "Latina Today",
       "esito": "ok",
-      "nuove": 7
+      "nuove": 6
     },
     {
       "id": "latinacorriere",
@@ -98,7 +98,7 @@ window.M5S_RASSEGNA = {
     {
       "url": "https://www.latinatoday.it/cronaca/investimento-treno-morto-cisterna-campoleone.html",
       "titolo": "Investimento sui binari, un morto. Treni fermi tra Campoleone e Cisterna",
-      "anteprima": "La circolazione è attualmente sospesa per consentire gli accertamenti delle forze dell'ordine",
+      "anteprima": "La circolazione è ripresa intorno alle 18, dopo gli accertamenti delle forze dell'ordine. I treni hanno registrato rallentamenti e ritardi fino a 90 minuti",
       "data": "2026-11-23",
       "testata": "latinatoday",
       "testataNome": "Latina Today",
