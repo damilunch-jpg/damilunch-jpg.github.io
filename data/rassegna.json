@@ -1,18 +1,18 @@
 {
-  "aggiornato": "2026-11-22T23:15:39+01:00",
+  "aggiornato": "2026-11-23T20:07:42+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "latinatoday",
       "nome": "Latina Today",
       "esito": "ok",
-      "nuove": 2
+      "nuove": 7
     },
     {
       "id": "latinacorriere",
       "nome": "Latina Corriere",
       "esito": "ok",
-      "nuove": 5
+      "nuove": 2
     },
     {
       "id": "ilcaffe",
@@ -24,16 +24,148 @@
       "id": "h24notizie",
       "nome": "H24 Notizie",
       "esito": "ok",
-      "nuove": 2
+      "nuove": 4
     },
     {
       "id": "frosinonetoday",
       "nome": "Frosinone Today",
       "esito": "ok",
-      "nuove": 1
+      "nuove": 0
     }
   ],
   "notizie": [
+    {
+      "url": "https://www.latinatoday.it/attualita/carlo-calenda-tempio-giove-terracina.html",
+      "titolo": "“Duemila anni di storia in un posto solo”: la visita di Carlo Calenda al Tempio di Giove a Terracina",
+      "anteprima": "Il senatore e segretario di Azione ha raccontato sui social la tappa pontina mentre da Fiuggi raggiungeva Milano: “Andateci assolutamente”",
+      "data": "2026-11-23",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/sport/volley/modena-cisterna3-0-tabellini-22-novembre-2026.html",
+      "titolo": "Superlega, quinto ko consecutivo in sei gare: ora il Cisterna Volley è ultimo",
+      "anteprima": "Niente da fare per i pontini che si arrendono anche contro Modena e restano fermi a tre punti in classifica",
+      "data": "2026-11-23",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/eventi/sagra-della-polenta-2026-rocca-massima.html",
+      "titolo": "Sagra della Polenta: tipicità e divertimento a Rocca Massima",
+      "anteprima": "Con l’autunno inoltrato tornano gli appuntamenti storici del periodo, quelli che promettono…",
+      "data": "2026-11-23",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "rocca-massima"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/sezze-il-musical-io-francesco-dedicato-al-santo-di-assisi-debutto-il-29-novembre",
+      "titolo": "SEZZE, IL MUSICAL “IO FRANCESCO” DEDICATO AL SANTO DI ASSISI. DEBUTTO IL 29 NOVEMBRE",
+      "anteprima": "E’ in programma il 29 novembre, nella Concattedrale di Santa Maria a Sezze, la prima assoluta dell’opera scritta e diretta da Piero Formicuccia. Un viaggio tra musica, emozioni e fraternità, con un cast intergenerazionale che dà voce…",
+      "data": "2026-11-23",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "sezze"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/attualita/prezzi-case-litorale-latina-2026.html",
+      "titolo": "Prezzi delle case, quanto si spende sul litorale pontino: ecco le città più care e quelle più economiche",
+      "anteprima": "Le ultime analisi dell’Ufficio Studi Gruppo Tecnocasa; un viaggio tra Sabaudia San Felice Circeo e Terracina, passando per Gaeta e Formia arrivando fino alle isole",
+      "data": "2026-11-23",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/investimento-treno-morto-cisterna-campoleone.html",
+      "titolo": "Investimento sui binari, un morto. Treni fermi tra Campoleone e Cisterna",
+      "anteprima": "La circolazione è attualmente sospesa per consentire gli accertamenti delle forze dell'ordine",
+      "data": "2026-11-23",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/23/giornata-contro-la-violenza-sulle-donne-doppio-appuntamento-a-monte-san-biagio",
+      "titolo": "Giornata contro la violenza sulle donne, doppio appuntamento a Monte San Biagio",
+      "anteprima": "Per il 25 novembre, in occasione della Giornata internazionale per l’eliminazione della violenza contro le donne, l’assessorato ai Servizi Sociali del Comune di Monte San Biagio, con il patrocinio della Provincia di Latina, promuove un articolato…",
+      "data": "2026-11-23",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "monte-san-biagio"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/23/fondi-fino-al-25-novembre-al-castello-la-mostra-immersiva-nellanimo-femminile",
+      "titolo": "Fondi, fino al 25 novembre al castello la mostra immersiva nell’animo femminile",
+      "anteprima": "A Fondi stata inaugurata, tra l’emozione e l’entusiasmo di un numerosissimo pubblico, la mostra immersiva ‘Dentro il Silenzio’, frutto di un’idea dell’assessore Roberta Muccitelli. La narratrice ha preso per mano i visitatori e li ha accompagnati a…",
+      "data": "2026-11-23",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "fondi"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/attualita/erasmus-studenti-accolti-cisterna-scuola-sibilla-aleramo.html",
+      "titolo": "Erasmus, studenti greci, estoni e cechi accolti dall'istituto Caetani",
+      "anteprima": "A Cisterna è partito il progetto europeo “EcoHarmony: Schools for Climate Resilience”",
+      "data": "2026-11-23",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/cisterna-al-via-la-settimana-erasmus-con-il-progetto-ecoarmony",
+      "titolo": "Erasmus, al via alla Caetani di Cisterna il progetto “Ecoarmony”",
+      "anteprima": "Questa mattina il sindaco Valentino Mantini e l’assessora alla Scuola Stefania Krilic hanno partecipato all’avvio della settimana Erasmus+ presso la scuola ” Sibila Aleramo” dell’ Istituto Caetani di Cisterna. Il tema del giorno è stato il progetto…",
+      "data": "2026-11-23",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/23/dramma-alla-stazione-di-cisterna-uomo-investito-da-un-treno",
+      "titolo": "Dramma alla stazione di Cisterna, uomo investito da un treno",
+      "anteprima": "Dramma, nella tarda mattinata di lunedì, all’altezza della stazione di Cisterna di Latina: un uomo è deceduto, investito da un treno. La tragedia si è registrata intorno a mezzogiorno, nel tratto tra il Comune pontino e Campoleone, lungo la linea…",
+      "data": "2026-11-23",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
     {
       "url": "https://www.latinacorriere.it/terracina-dal-codice-rosso-alla-rinascita-convegno-contro-la-violenza-sulle-donne",
       "titolo": "Terracina, “Dal codice rosso alla rinascita” convegno contro la violenza sulle donne",
