@@ -1,11 +1,7 @@
 name: Ricostruisce lo zip di oggi
 
-# Secondo giro, con più pazienza verso Halley. Poi il trigger di push si toglie.
+# I giri di ricostruzione sono già partiti.
 on:
-  push:
-    paths:
-      - .github/workflows/ricostruisci-zip-oggi.yml
-    branches: [main]
   workflow_dispatch:
 
 permissions:
