@@ -688,6 +688,7 @@
     html += '<a class="filtro' + (tipo === "nazionale" ? " is-active" : "") + '" href="' + base + 'gruppo.html#nazionale">Dal Nazionale</a>';
     html += '<a class="filtro' + (tipo === "regionale" ? " is-active" : "") + '" href="' + base + 'gruppo.html#regionale">Dal Regionale</a>';
     html += "</div>";
+    html += riquadriFacebook(tipo);
 
     if (!articoliTutti.length && !vociTutte.length) {
       html += '<p class="vuoto">Presto i primi comunicati del gruppo.</p>';
@@ -703,6 +704,58 @@
       mount.setAttribute("data-gruppo-hash", "1");
       window.addEventListener("hashchange", renderGruppo);
     }
+    attivaRiquadriFacebook();
+  }
+
+  var PAGINE_FB = [
+    {
+      id: "nazionale",
+      nome: "MoVimento 5 Stelle",
+      url: "https://www.facebook.com/movimento5stelle/"
+    },
+    {
+      id: "regionale",
+      nome: "MoVimento 5 Stelle Lazio",
+      url: "https://www.facebook.com/lazio5stelle/"
+    }
+  ];
+
+  function riquadroFacebook(pagina) {
+    return (
+      '<section class="fb-riquadro">' +
+      "<h2>" + escapeHtml(pagina.nome) + "</h2>" +
+      '<div class="fb-page" data-href="' + escapeHtml(pagina.url) + '" data-tabs="timeline" data-width="500" data-height="520" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false" data-lazy="true">' +
+      '<blockquote class="fb-fallback" cite="' + escapeHtml(pagina.url) + '">' +
+      '<a href="' + escapeHtml(pagina.url) + '" target="_blank" rel="noopener noreferrer">Apri la pagina Facebook di ' + escapeHtml(pagina.nome) + "</a>" +
+      "</blockquote></div></section>"
+    );
+  }
+
+  function riquadriFacebook(tipo) {
+    var pagine = PAGINE_FB.filter(function (p) {
+      return tipo === "tutti" || tipo === p.id;
+    });
+    if (!pagine.length) return "";
+    var html = '<div class="fb-riquadri' + (pagine.length > 1 ? " due" : "") + '">';
+    pagine.forEach(function (p) { html += riquadroFacebook(p); });
+    html += "</div>";
+    return html;
+  }
+
+  function attivaRiquadriFacebook() {
+    if (!document.querySelector(".fb-page")) return;
+    if (window.FB && window.FB.XFBML) {
+      window.FB.XFBML.parse();
+      return;
+    }
+    if (document.getElementById("facebook-jssdk")) return;
+    var js = document.createElement("script");
+    js.id = "facebook-jssdk";
+    js.async = true;
+    js.defer = true;
+    js.crossOrigin = "anonymous";
+    js.src = "https://connect.facebook.net/it_IT/sdk.js#xfbml=1&version=v21.0";
+    document.body.appendChild(js);
   }
 
   function renderHome() {

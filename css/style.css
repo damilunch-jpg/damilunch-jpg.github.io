@@ -443,6 +443,49 @@ a:focus-visible {
   color: var(--testo-soft);
 }
 
+.fb-riquadri {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.85rem;
+  margin: 0 0 1.2rem;
+}
+
+.fb-riquadri.due {
+  grid-template-columns: 1fr;
+}
+
+.fb-riquadro {
+  background: var(--bianco);
+  border: 1px solid var(--bordo);
+  border-radius: var(--raggio);
+  box-shadow: var(--ombra);
+  padding: 0.85rem 0.9rem 1rem;
+  min-width: 0;
+}
+
+.fb-riquadro h2 {
+  margin: 0 0 0.55rem;
+  font-size: 1.05rem;
+}
+
+.fb-riquadro .fb-page,
+.fb-riquadro .fb-page span,
+.fb-riquadro .fb-page iframe {
+  max-width: 100%;
+}
+
+.fb-fallback {
+  margin: 0;
+  padding: 0.35rem 0 0;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 800px) {
+  .fb-riquadri.due {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 .rassegna-box {
   margin-top: 2rem;
 }
