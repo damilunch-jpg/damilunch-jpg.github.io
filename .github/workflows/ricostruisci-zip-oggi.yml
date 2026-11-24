@@ -1,11 +1,8 @@
 name: Ricostruisce lo zip di oggi
 
-# Un solo giro: ricrea albo-2026-11-24 con tutti gli atti e gli allegati pubblici.
+# Il giro di ricostruzione è già partito.
 on:
-  push:
-    paths:
-      - .github/workflows/ricostruisci-zip-oggi.yml
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
