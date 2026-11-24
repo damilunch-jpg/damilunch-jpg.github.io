@@ -1,18 +1,18 @@
 {
-  "aggiornato": "2026-11-23T23:28:41+01:00",
+  "aggiornato": "2026-11-24T19:45:55+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "latinatoday",
       "nome": "Latina Today",
       "esito": "ok",
-      "nuove": 6
+      "nuove": 2
     },
     {
       "id": "latinacorriere",
       "nome": "Latina Corriere",
       "esito": "ok",
-      "nuove": 2
+      "nuove": 3
     },
     {
       "id": "ilcaffe",
@@ -24,7 +24,7 @@
       "id": "h24notizie",
       "nome": "H24 Notizie",
       "esito": "ok",
-      "nuove": 4
+      "nuove": 5
     },
     {
       "id": "frosinonetoday",
@@ -34,6 +34,105 @@
     }
   ],
   "notizie": [
+    {
+      "url": "https://www.h24notizie.com/2026/11/24/tragedia-a-cisterna-la-vittima-e-roberto-tribuzio-era-originario-di-fondi",
+      "titolo": "Tragedia a Cisterna, la vittima è Roberto Tribuzio: era originario di Fondi",
+      "anteprima": "Si chiamava Roberto Tribuzio, aveva 40 anni ed era originario di Fondi l’uomo morto ieri dopo essere stato travolto da un treno Intercity nei pressi della stazione ferroviaria di Cisterna di Latina. Una tragedia che ha lasciato sotto choc i…",
+      "data": "2026-11-24",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "fondi",
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/sezze-non-si-fermano-allalt-il-motorino-era-rubato",
+      "titolo": "Sezze, non si fermano all’alt: il motorino era rubato",
+      "anteprima": "Non si fermano all’alt dei Carabinieri, scappano in motorino e poi a piedi, e finiscono in manette. È successo ieri sera nel centro di Sezze. I Carabinieri della locale Stazione hanno intimato l’alt a un ciclomotore con a bordo due cittadini…",
+      "data": "2026-11-24",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "sezze"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/24/sezze-fuga-allalt-e-aggressione-ai-carabinieri-due-arresti",
+      "titolo": "Sezze, fuga all’alt e aggressione ai Carabinieri: due arresti",
+      "anteprima": "Hanno ignorato l’alt dei Carabinieri, abbandonato il ciclomotore e tentato di scappare a piedi. Una volta raggiunti, avrebbero aggredito i militari con calci e pugni. È finita con due arresti la serata di un 37enne e di un 28enne, entrambi…",
+      "data": "2026-11-24",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "sezze"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/sermoneta-la-scuola-di-pontenuovo-festeggia-trentanni-celebrati-i-protagonisti-della-sua-storia",
+      "titolo": "Sermoneta, la scuola di Pontenuovo festeggia trent’anni: celebrati i protagonisti della sua storia",
+      "anteprima": "Trent’anni di formazione, crescita e impegno per la comunità di Sermoneta. Il 16 novembre 1996 Bristol Myers Squibb realizzava e donava alla città la scuola di Pontenuovo, esempio significativo di collaborazione tra pubblico e privato…",
+      "data": "2026-11-24",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "sermoneta"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/24/lenola-le-lettere-di-andreotti-e-degli-altri-big-della-politica-riemerge-larchivio-di-michele-iudicone",
+      "titolo": "Lenola, le lettere di Andreotti e degli altri big della politica: riemerge l’archivio di Michele Iudicone",
+      "anteprima": "Dai rapporti con Giulio Andreotti e Franco Evangelisti alle battaglie per il campo sportivo, l’elettrificazione di Cardusa e l’ufficio postale. Documenti inediti, conservati nell’archivio di famiglia, ricostruiscono l’impegno pubblico di un…",
+      "data": "2026-11-24",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "lenola"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/24/itri-il-cantico-in-uno-scatto-ultimi-giorni-per-partecipare-al-concorso-fotografico-della-civita",
+      "titolo": "Itri, “Il Cantico in uno scatto”: ultimi giorni per partecipare al concorso fotografico della Civita",
+      "anteprima": "C’è ancora tempo per raccontare attraverso l’obiettivo la bellezza dei Monti Aurunci e il legame tra natura e spiritualità. Si avvicina infatti la scadenza di “Il Cantico in uno scatto”, il concorso fotografico promosso dal Santuario Maria…",
+      "data": "2026-11-24",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "fondi"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/fuga-motorino-rubato-aggressione-carabinieri-arresti-sezze.html",
+      "titolo": "In fuga sul motorino rubato: bloccati, aggrediscono con calci e pugni i carabinieri",
+      "anteprima": "Arrestati a Sezze due uomini bloccati dopo una breve colluttazione. Devono rispondere di violenza e resistenza a pubblico ufficiale, riciclaggio e ricettazione",
+      "data": "2026-11-24",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "sezze"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/25-novembre-a-latina-la-campagna-questo-non-e-amore",
+      "titolo": "25 novembre, a Latina la campagna “questo NON è AMORE”",
+      "anteprima": "Domani, mercoledì 25 novembre, in occasione della Giornata internazionale per l’eliminazione della violenza contro le donne, la Polizia di Stato di Latina incontrerà i cittadini nell’ambito della campagna «…questo NON è AMORE». Poliziotte e…",
+      "data": "2026-11-24",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "fondi",
+        "cisterna-di-latina",
+        "terracina"
+      ]
+    },
     {
       "url": "https://www.latinatoday.it/attualita/carlo-calenda-tempio-giove-terracina.html",
       "titolo": "“Duemila anni di storia in un posto solo”: la visita di Carlo Calenda al Tempio di Giove a Terracina",
