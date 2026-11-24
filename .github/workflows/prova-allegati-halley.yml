@@ -1,11 +1,7 @@
 name: Prova allegati Halley
 
-# Secondo giro: stampa come è fatta la scheda. Poi il trigger di push si toglie.
+# I giri di verifica sono già partiti. Non si rilancia da solo.
 on:
-  push:
-    paths:
-      - .github/workflows/prova-allegati-halley.yml
-    branches: [main]
   workflow_dispatch:
 
 permissions:
