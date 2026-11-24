@@ -223,7 +223,7 @@ Per riceverlo via email, nel repository vanno creati questi tre secrets, con que
 - `SMTP_PASSWORD` — password per le app di Gmail
 - `MAIL_TO` — destinatari, separati da virgola
 
-Se mancano, l'invio viene saltato e il resto del lavoro non si ferma. L'email contiene solo i link alla Release e allo zip, senza allegato.
+Vanno creati come secrets di Actions del repository (non di Dependabot o Codespaces). Se manca uno dei tre, o se Gmail rifiuta l'invio, lo step fallisce. L'email contiene solo i link alla Release e allo zip, senza allegato.
 
 Gli albi con il solo pulsante (Fondi, Terracina, Lenola, Monte San Biagio) non entrano nello zip. Un atto uscito dall'elenco resta sul sito solo se lo storico pubblico del Comune, consultabile senza login, lo ritrova per numero e data: in quel caso ha l'etichetta **Storico**.
 

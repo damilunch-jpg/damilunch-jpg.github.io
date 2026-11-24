@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Invia i link della Release via Gmail. Se i secrets mancano, esce senza errore.
+"""Invia i link della Release via Gmail.
 
 L'email non ha mai un allegato: contiene solo i link alla pagina e allo zip.
+Se manca SMTP_USER, SMTP_PASSWORD o MAIL_TO, oppure l'invio non riesce, esce con errore.
 """
 
 from __future__ import annotations
@@ -17,13 +18,19 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main() -> int:
-    user = (os.environ.get("SMTP_USER") or "").strip()
-    password = (os.environ.get("SMTP_PASSWORD") or "").strip()
-    destinatari = [parte.strip() for parte in (os.environ.get("MAIL_TO") or "").split(",") if parte.strip()]
-    if not user or not password or not destinatari:
-        print("Secrets SMTP assenti (SMTP_USER, SMTP_PASSWORD, MAIL_TO): invio saltato")
-        return 0
+    presenti = {
+        "SMTP_USER": bool((os.environ.get("SMTP_USER") or "").strip()),
+        "SMTP_PASSWORD": bool((os.environ.get("SMTP_PASSWORD") or "").strip()),
+        "MAIL_TO": bool((os.environ.get("MAIL_TO") or "").strip()),
+    }
+    mancanti = [nome for nome, ok in presenti.items() if not ok]
+    if mancanti:
+        print("Invio non eseguito: mancano le variabili " + ", ".join(mancanti) + ". Vanno create come secrets di Actions del repository, con questi nomi esatti.")
+        return 1
 
+    user = os.environ["SMTP_USER"].strip()
+    password = os.environ["SMTP_PASSWORD"].strip()
+    destinatari = [parte.strip() for parte in os.environ["MAIL_TO"].split(",") if parte.strip()]
     prova = (os.environ.get("EMAIL_PROVA") or "").strip() == "1"
     release = (os.environ.get("RELEASE_URL") or "").strip()
     zip_url = (os.environ.get("ZIP_URL") or "").strip()
@@ -33,15 +40,10 @@ def main() -> int:
     msg["To"] = ", ".join(destinatari)
 
     if prova:
-        if not release and not zip_url:
-            print("Email di prova senza link della Release: invio saltato")
-            return 0
         msg["Subject"] = "Prova invio albo"
         testo = "Prova di invio. Questa email non contiene allegati.\n\n"
-        if release:
-            testo += f"Release: {release}\n"
-        if zip_url:
-            testo += f"Zip: {zip_url}\n"
+        testo += f"Release: {release or '(link non disponibile)'}\n"
+        testo += f"Zip: {zip_url or '(link non disponibile)'}\n"
         msg.set_content(testo)
     else:
         riepilogo_path = ROOT / "dist" / "riepilogo.json"
@@ -73,9 +75,13 @@ def main() -> int:
         msg.set_content(testo)
 
     context = ssl.create_default_context()
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context, timeout=60) as smtp:
-        smtp.login(user, password)
-        smtp.send_message(msg)
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context, timeout=60) as smtp:
+            smtp.login(user, password)
+            smtp.send_message(msg)
+    except Exception as exc:
+        print(f"Invio non riuscito: {exc.__class__.__name__}: {exc}")
+        return 1
     print("Email di prova inviata" if prova else "Email inviata")
     return 0
 
