@@ -1,11 +1,8 @@
 name: Prova allegati Halley
 
-# Un solo giro, per verificare il download pubblico. Poi il trigger di push si toglie.
+# Il giro di verifica è già partito. Non si rilancia da solo.
 on:
-  push:
-    paths:
-      - .github/workflows/prova-allegati-halley.yml
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
