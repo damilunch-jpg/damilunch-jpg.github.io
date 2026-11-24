@@ -287,10 +287,31 @@ def prova_halley() -> int:
             continue
         atto = atti[0]
         client.label = slug
+        url = atto.get("url") or ""
         try:
-            links = links_documenti(client, atto.get("url") or "", fonti.get(slug, ""))
+            html, final, status = client.get(url)
         except (SourceError, OSError) as exc:
             print(f"PROVA {slug} | errore scheda | {exc}")
+            continue
+        low = html.lower()
+        print(
+            f"PROVA {slug} | HTTP {status} | byte {len(html)} | login={'password' in low or 'login' in low} | final {final[:120]}"
+        )
+        indizio = low.find("allegat")
+        if indizio < 0:
+            indizio = low.find("attachment")
+        if indizio < 0:
+            indizio = low.find(".pdf")
+        if indizio >= 0:
+            print("  HTML", " ".join(html[max(0, indizio - 80) : indizio + 180].split())[:240])
+        else:
+            hrefs = re.findall(r'href="([^"]+)"', html, flags=re.I)
+            utili = [h for h in hrefs if not re.search(r"\.(css|js|png|gif|jpg)(\?|$)", h, re.I)][:8]
+            print("  href", " | ".join(utili)[:300] or "(nessuno)")
+        try:
+            links = links_documenti(client, url, fonti.get(slug, ""))
+        except (SourceError, OSError) as exc:
+            print(f"PROVA {slug} | errore link | {exc}")
             continue
         if not links:
             print(f"PROVA {slug} | nessun link pubblico nella scheda")
