@@ -198,7 +198,7 @@ class Client:
                 self._started = True
                 return
             if self.fast:
-                low, high = (1.5, 3.0) if is_halley(url) else (0.4, 1.0)
+                low, high = (8.0, 12.0) if is_halley(url) else (0.4, 1.0)
             else:
                 low, high = (8.0, 15.0) if is_halley(url) else (5.0, 12.0)
             delay = random.uniform(low, high)

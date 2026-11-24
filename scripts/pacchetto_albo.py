@@ -196,8 +196,8 @@ def main() -> int:
 
     client = Client()
     client.fast = True
-    client.max_attempts = 1
-    client.timeout = 15
+    client.max_attempts = 2
+    client.timeout = 25
     client.label = "documenti"
     cartelle = {}
     comuni = json.loads((ROOT / "data" / "comuni.json").read_text(encoding="utf-8"))
