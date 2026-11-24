@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-24T08:24:44+01:00",
+  "aggiornato": "2026-11-24T09:48:10+01:00",
   "comuni": {
     "cori": {
       "ok": true,
@@ -444,7 +444,7 @@
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-24T08:24:44+01:00",
+      "aggiornato": "2026-11-24T09:48:10+01:00",
       "atti": []
     },
     "roccagorga": {
