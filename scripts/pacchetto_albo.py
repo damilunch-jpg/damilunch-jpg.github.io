@@ -11,6 +11,7 @@ import csv
 import io
 import json
 import re
+import urllib.parse
 import zipfile
 from datetime import datetime
 import sys
@@ -56,32 +57,85 @@ def nome_file(testo: str) -> str:
     return testo[:80] or "documento"
 
 
-def links_documenti(client: Client, url: str) -> list[str]:
-    if re.search(r"\.(pdf|p7m)(\?|$)", url, flags=re.I):
-        return [url]
-    try:
-        html, final, _status = client.get(url)
-    except (SourceError, OSError):
-        return []
-    low = html.lower()
-    if any(token in low for token in ("type=\"password\"", "name=\"password\"", "effettua il login", "autenticarsi")):
-        if "fecore02.sto" not in low and ".pdf" not in low:
-            return []
+def _candidati_documento(html: str) -> list[str]:
+    """Link pubblici agli allegati. Halley usa mc_attachment.php, non un href .pdf."""
+    pezzi = []
+    for raw in re.findall(r'(?:href|onclick|action)\s*=\s*"([^"]+)"', html, flags=re.I):
+        testo = raw.replace("&amp;", "&")
+        pezzi.append(testo)
+        pezzi.extend(re.findall(r"(?:mc_attachment|allegat\w*|download\w*)\.php\?[^'\"\s>]+", testo, flags=re.I))
+    pezzi.extend(re.findall(r"(?:mc_attachment|allegat\w*)\.php\?mc=\d+", html, flags=re.I))
+    return pezzi
+
+
+def _link_documento(url: str) -> bool:
+    low = url.lower().strip()
+    if "p7m=s" in low or low.startswith("javascript:") or "window.open" in low or "(" in low:
+        return False
+    return "fecore02.sto" in low or "mc_attachment.php" in low or "allegat" in low or bool(
+        re.search(r"\.(pdf|p7m)(\?|$)", low)
+    )
+
+
+def specchi_halley(url: str, fonte: str = "") -> list[str]:
+    """Se l'host comunale non risponde, riprova la stessa scheda su halleyweb.com."""
+    visti = []
+    for candidato in (url, fonte or ""):
+        if not candidato:
+            continue
+        parts = urllib.parse.urlsplit(candidato)
+        codice = ""
+        match = re.search(r"/c(\d{6})/", parts.path, flags=re.I)
+        if match:
+            codice = match.group(1)
+        else:
+            query = urllib.parse.parse_qs(parts.query)
+            multi = (query.get("multiente") or [""])[0]
+            if re.fullmatch(r"c\d{6}", multi, flags=re.I):
+                codice = multi[1:]
+        if not codice:
+            continue
+        originale = urllib.parse.urlsplit(url)
+        coda = originale.path.split("/mc/")[-1]
+        if not coda or coda == originale.path:
+            continue
+        specchio = f"https://www.halleyweb.com/c{codice}/mc/{coda}"
+        if originale.query:
+            specchio += "?" + originale.query
+        if specchio not in visti and specchio != url:
+            visti.append(specchio)
+    return visti
+
+
+def links_da_html(html: str, base: str) -> list[str]:
     trovati = []
     visti = set()
-    for href in re.findall(r'href="([^"]+)"', html, flags=re.I):
-        href_low = href.lower()
-        if "p7m=s" in href_low:
+    for pezzo in _candidati_documento(html):
+        if not _link_documento(pezzo):
             continue
-        interessante = "fecore02.sto" in href_low or bool(re.search(r"\.(pdf|p7m)(\?|$)", href_low))
-        if not interessante:
+        pieno = abs_url(base, pezzo)
+        chiave = re.search(r"[?&]mc=(\d+)", pieno)
+        firma = chiave.group(1) if chiave else pieno
+        if firma in visti:
             continue
-        pieno = abs_url(final, href.replace("&amp;", "&"))
-        if pieno in visti:
-            continue
-        visti.add(pieno)
+        visti.add(firma)
         trovati.append(pieno)
     return trovati
+
+
+def links_documenti(client: Client, url: str, fonte: str = "") -> list[str]:
+    if re.search(r"\.(pdf|p7m)(\?|$)", url, flags=re.I) or "mc_attachment.php" in url.lower():
+        return [url]
+    pagine = [url] + specchi_halley(url, fonte)
+    for pagina in pagine:
+        try:
+            html, final, _status = client.get(pagina)
+        except (SourceError, OSError):
+            continue
+        trovati = links_da_html(html, final)
+        if trovati:
+            return trovati
+    return []
 
 
 def scarica(client: Client, url: str):
@@ -148,6 +202,7 @@ def main() -> int:
     cartelle = {}
     comuni = json.loads((ROOT / "data" / "comuni.json").read_text(encoding="utf-8"))
     nomi = {item["slug"]: item["nome"] for item in comuni}
+    fonti = {item["slug"]: item.get("fonte") or item.get("alboUrl") or "" for item in comuni}
     righe = []
     documenti = 0
     senza_file = 0
@@ -161,7 +216,7 @@ def main() -> int:
             base = nome_file((item.get("numero") or "atto") + "_" + (item.get("data") or "senza-data"))
             scaricati = 0
             client.label = nome
-            for link in links_documenti(client, item.get("url") or ""):
+            for link in links_documenti(client, item.get("url") or "", fonti.get(slug, "")):
                 preso = scarica(client, link)
                 if not preso:
                     continue
@@ -208,5 +263,49 @@ def main() -> int:
     return 0
 
 
+def prova_halley() -> int:
+    """Scarica un allegato di prova per ciascun albo Halley, senza creare lo zip."""
+    albo = json.loads(ALBO_PATH.read_text(encoding="utf-8"))
+    comuni = json.loads((ROOT / "data" / "comuni.json").read_text(encoding="utf-8"))
+    fonti = {item["slug"]: item.get("fonte") or "" for item in comuni}
+    slugs = [
+        "sezze",
+        "cisterna-di-latina",
+        "norma",
+        "sermoneta",
+        "priverno",
+        "rocca-massima",
+    ]
+    client = Client()
+    client.fast = True
+    client.max_attempts = 1
+    client.timeout = 20
+    for slug in slugs:
+        atti = (albo.get("comuni") or {}).get(slug, {}).get("atti") or []
+        if not atti:
+            print(f"PROVA {slug} | nessun atto")
+            continue
+        atto = atti[0]
+        client.label = slug
+        try:
+            links = links_documenti(client, atto.get("url") or "", fonti.get(slug, ""))
+        except (SourceError, OSError) as exc:
+            print(f"PROVA {slug} | errore scheda | {exc}")
+            continue
+        if not links:
+            print(f"PROVA {slug} | nessun link pubblico nella scheda")
+            continue
+        preso = scarica(client, links[0])
+        if not preso:
+            print(f"PROVA {slug} | link {links[0][:140]} | file non pubblico")
+            continue
+        raw, nome = preso
+        tipo = "pdf" if raw.startswith(b"%PDF") else "altro"
+        print(f"PROVA {slug} | {tipo} | {len(raw)} byte | {nome} | {links[0][:140]}")
+    return 0
+
+
 if __name__ == "__main__":
+    if "--prova-halley" in sys.argv:
+        raise SystemExit(prova_halley())
     raise SystemExit(main())

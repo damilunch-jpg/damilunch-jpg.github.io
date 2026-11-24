@@ -1,0 +1,20 @@
+name: Prova allegati Halley
+
+# Un solo giro, per verificare il download pubblico. Poi il trigger di push si toglie.
+on:
+  push:
+    paths:
+      - .github/workflows/prova-allegati-halley.yml
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scarica un allegato di prova per comune
+        run: python3 scripts/pacchetto_albo.py --prova-halley
