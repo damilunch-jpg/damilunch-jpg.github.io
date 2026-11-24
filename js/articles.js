@@ -39,8 +39,7 @@ window.M5S_DATA = {
       "nome": "Monte San Biagio",
       "alboUrl": "https://www.comune.montesanbiagio.lt.it/EG0/EGHOMEPAGE.HBL?ss=1&F=MC09&en=eg255&freeze=1",
       "alboVerificato": true,
-      "sitoIstituzionale": "https://www.comune.montesanbiagio.lt.it/",
-      "alboAutomatico": false
+      "sitoIstituzionale": "https://www.comune.montesanbiagio.lt.it/"
     },
     {
       "slug": "roccasecca-dei-volsci",
@@ -75,8 +74,7 @@ window.M5S_DATA = {
       "nome": "Lenola",
       "alboUrl": "https://comune.lenola.lt.it/albo-pretorio",
       "alboVerificato": true,
-      "sitoIstituzionale": "https://comune.lenola.lt.it/",
-      "alboAutomatico": false
+      "sitoIstituzionale": "https://comune.lenola.lt.it/"
     },
     {
       "slug": "sermoneta",

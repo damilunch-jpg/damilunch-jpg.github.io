@@ -1,0 +1,37 @@
+name: Ricostruisce lo zip di oggi
+
+# Un solo giro: ricrea albo-2026-11-24 con tutti gli atti e gli allegati pubblici.
+on:
+  push:
+    paths:
+      - .github/workflows/ricostruisci-zip-oggi.yml
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  zip:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepara di nuovo lo zip completo di oggi
+        run: |
+          rm -f data/albo-pacchetto.json
+          python3 scripts/pacchetto_albo.py
+      - name: Sostituisce la Release di oggi
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/pubblica_release_albo.py
+      - name: Salva lo snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/albo-pacchetto.json
+          if git diff --cached --quiet; then
+            echo "Nessun cambiamento"
+          else
+            git commit -m "Segna gli atti inclusi nello zip dell'albo del 24 novembre"
+            git push
+          fi

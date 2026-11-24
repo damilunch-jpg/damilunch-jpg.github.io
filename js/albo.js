@@ -1,6 +1,6 @@
 /* Generato da scripts/sync_albo.py. Elenco degli atti letti dagli albi pretori. */
 window.M5S_ALBO = {
-  "aggiornato": "2026-11-24T12:16:36+01:00",
+  "aggiornato": "2026-11-24T13:41:29+01:00",
   "comuni": {
     "cori": {
       "ok": true,
@@ -1534,6 +1534,304 @@ window.M5S_ALBO = {
           "tipo": "Determine",
           "numero": "1945/2026",
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21418"
+        }
+      ]
+    },
+    "lenola": {
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
+      "fonte": "https://comune.lenola.lt.it/albo-pretorio",
+      "aggiornato": "2026-11-24T13:33:29+01:00",
+      "atti": [
+        {
+          "titolo": "Liquidazione n. 27 Del 13/11/2026",
+          "data": "2026-11-24",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001273",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3688139-liquidazione-n-27-13-11-2026"
+        },
+        {
+          "titolo": "Determinazione n 238 del 02.11.2026- Affidamento incarico del servizio di assistenza degli impianti termici e di climatizzazione degli stabili comunali. Annualità 2026-2027 alla ditta Ecosid Impianti di Peppe Simone p.i. 03100520596 CIG BD9D2E0C91",
+          "data": "2026-11-23",
+          "tipo": "Determinazioni",
+          "numero": "2026001272",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3687777-determinazione-n-238-02-11-2026-affidamento"
+        },
+        {
+          "titolo": "Ordinanza n. 48 del 20.11.2026- Divieto di sosta in Piazza Cavour per il giorno 22 Novembre 2026 dalle ore 11:00 alle ore 17:00 per la manifestazione \"Una Mattinata al frantoio\"",
+          "data": "2026-11-20",
+          "tipo": "Ordinanze",
+          "numero": "2026001271",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977860/pubblicazioni/3685919-ordinanza-n-48-20-11-2026-divieto-sosta-piazza"
+        },
+        {
+          "titolo": "Determinazione n 49 del 10.11.2026- Assunzone a tempo pieno ed indeterminato di n. 2 unità dell'area Istruttori del CCNL 16.11.2022-profilo professionale di Istruttore amministrativo. Affidamento fornitura noleggio sedie a ribaltino per lo svolgimento prova scritta a ditta specializzata Mediaeventi srl Cig BDBBF42055",
+          "data": "2026-11-20",
+          "tipo": "Determinazioni",
+          "numero": "2026001269",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3685911-determinazione-n-49-10-11-2026-assunzone-tempo"
+        },
+        {
+          "titolo": "Determinazione n 162 del 12.11.2026-Approvazione Avviso Pubblico ed allegati per il censimento delle botteghe e attività storiche sul territorio comunale, finalizzato all'iscrizione nell' \"Elenco regionale delle botteghe ed attività storiche\" ai sensi dell'art. 2 e dei commi 1 e 2 dell'art.3 della L.R. Lazio n. 1 del 10.02.2022 e del Provvedimento attuativo R.R. n. 11 del 11.08.2022. Aggiornamento dell'albo comunale.",
+          "data": "2026-11-20",
+          "tipo": "Determinazioni",
+          "numero": "2026001270",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3685917-determinazione-n-162-12-11-2026-approvazione"
+        },
+        {
+          "titolo": "Determinazione n. 223 del 30.10.2026-Fornitura e posa in opera pali di illuminazione completi di pannello fotovoltaico. Affidamento alla Tecno Service Impianti p.i. 02253050591 CIG BD90A71566",
+          "data": "2026-11-19",
+          "tipo": "Determinazioni",
+          "numero": "2026001266",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3685340-determinazione-n-223-30-10-2026-fornitura-posa"
+        },
+        {
+          "titolo": "Determinazione n 50 del 11.11.2026- Affidamento diretto e impegno d spesa per il servizio di noleggio di una fotocopiatrice multifunzione ad uso degli uffici comunali . CIG BDC0F8E3AD",
+          "data": "2026-11-19",
+          "tipo": "Determinazioni",
+          "numero": "2026001268",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3685362-determinazione-n-50-11-2026-affidamento-diretto"
+        },
+        {
+          "titolo": "Determinazione n 241 del 11.11.2026- Affidamento e impegno spesa per lavori e fornitura materiali per rifunzionalizzazione punto cucina dell'immobile adibito a caserma dei Carabinieri sito in P.za Pandozj Ditta EGS Costruzioni srl CIG BDC7F33576",
+          "data": "2026-11-19",
+          "tipo": "Determinazioni",
+          "numero": "2026001267",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3685351-determinazione-n-241-11-2026-affidamento-impegno"
+        },
+        {
+          "titolo": "Determinazione n. 46 del 04.11.2026-Fondo salario accessorio anno 2025. Impegni di spesa",
+          "data": "2026-11-18",
+          "tipo": "Determinazioni",
+          "numero": "2026001265",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3684771-determinazione-n-46-04-11-2026-fondo-salario"
+        },
+        {
+          "titolo": "Atto di liquidazione n 233 del 16.11.2026- Di Manno Luca",
+          "data": "2026-11-18",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001258",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3684591-atto-liquidazione-n-233-16-11-2026-manno-luca"
+        },
+        {
+          "titolo": "Atto di Liquidazione n. 237 del 16.11.2026- Forcina Michael",
+          "data": "2026-11-18",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001262",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3684607-atto-liquidazione-n-237-16-11-2026-forcina-michael"
+        },
+        {
+          "titolo": "Atto di Liquidazione n 238 del 16.11.2026- Vittorio Corazza & C.",
+          "data": "2026-11-18",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001261",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3684600-atto-liquidazione-n-238-16-11-2026-vittorio"
+        },
+        {
+          "titolo": "Atto di Liquidazione n 236 del 16.11.2026- Rida Ambiente",
+          "data": "2026-11-18",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001259",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3684596-atto-liquidazione-n-236-16-11-2026-rida-ambiente"
+        },
+        {
+          "titolo": "Atto di Liquidazione n 235 del 16.11.2026- Trani Giuseppina",
+          "data": "2026-11-18",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001260",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3684598-atto-liquidazione-n-235-16-11-2026-trani"
+        },
+        {
+          "titolo": "Atto di Liquidazione n 234 del 16.11.2026 -Petrol Gamma",
+          "data": "2026-11-18",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001263",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3684615-atto-liquidazione-n-234-16-11-2026-petrol-gamma"
+        },
+        {
+          "titolo": "Atto di Liquidazione n 19 del 16.11.2026- Liquidazione indennità di rischio",
+          "data": "2026-11-18",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001264",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3684617-atto-liquidazione-n-19-16-11-2026-indennita"
+        },
+        {
+          "titolo": "Ordinanza n 47 del 16.11.2026-C.O.C.-Chiusura Centro Operativo Comunale di Protezione Civile aperto con Ordinanza n. 46/2026 del 12.11.2026.",
+          "data": "2026-11-17",
+          "tipo": "Ordinanze",
+          "numero": "2026001247",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977860/pubblicazioni/3683272-ordinanza-n-47-16-11-2026-c-centro-operativo"
+        },
+        {
+          "titolo": "LIQUIDAZIONE N. 232 DEL 16/11/2026",
+          "data": "2026-11-17",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001252",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683820-liquidazione-n-232-16-11-2026"
+        },
+        {
+          "titolo": "LIQUIDAZIONE N. 231 DEL 16/11/2026",
+          "data": "2026-11-17",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001251",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683816-liquidazione-n-231-16-11-2026"
+        },
+        {
+          "titolo": "LIQUIDAZIONE N. 230 DEL 16/11/2026",
+          "data": "2026-11-17",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001250",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683813-liquidazione-n-230-16-11-2026"
+        },
+        {
+          "titolo": "LIQUIDAZIONE AFFARI GENERAKI N. 228 DEL 17.11.2026 GENERI ALIMENTARI SCUOLA DELL'INFANZIA_OTTOBRE 2026",
+          "data": "2026-11-17",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001253",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683829-liquidazione-affari-generaki-n-228-17-11-2026"
+        },
+        {
+          "titolo": "LIQUIDAZIONE AFFARI GENERAKI N. 227 DEL 13.11.2026 GENERI ALIMENTARI SCUOLA DELL'INFANZIA_NOVEMBRE 2026",
+          "data": "2026-11-17",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001254",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683834-liquidazione-affari-generaki-n-227-13-11-2026"
+        },
+        {
+          "titolo": "LIQUIDAZIONE AFFARI GENERAKI N. 226 DEL 13.11.2026 GENERI ALIMENTARI SCUOLA DELL'INFANZIA_OTTOBRE 2026",
+          "data": "2026-11-17",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001255",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683836-liquidazione-affari-generaki-n-226-13-11-2026"
+        },
+        {
+          "titolo": "LIQUIDAZIONE AFFARI GENERAKI N. 225 DEL 13.11.2026 MATERIALI PER SCUOLA DELL'INFANZIA",
+          "data": "2026-11-17",
+          "tipo": "Atti di Liquidazione",
+          "numero": "2026001256",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683838-liquidazione-affari-generaki-n-225-13-11-2026"
+        },
+        {
+          "titolo": "Determinazione n 165 del 12.11.2026- progetto SAI CAT. MSNA 1281-Liquidazione IX^ mensilità Settembre 2026 CUP D34F24002110001- CIG B2FAC16302",
+          "data": "2026-11-17",
+          "tipo": "Determinazioni",
+          "numero": "2026001249",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3683313-determinazione-n-165-12-11-2026-progetto-sai-cat"
+        },
+        {
+          "titolo": "Determinazione n 147 del 12.10.2026- Progetto SAI Cat. MSNA 1281-Liquidazione VIII^ Mensilità-Agosto 2026. CUP D34F24002110001 CIG B2FAC16302",
+          "data": "2026-11-17",
+          "tipo": "Determinazioni",
+          "numero": "2026001248",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3683294-determinazione-n-147-12-10-2026-progetto-sai-cat"
+        },
+        {
+          "titolo": "Deliberazione G.C. 87 del 04.09.2026- Intitolazione dello spazio pubblico \"Passeggiata del Colle\" alla memoria del maestro Angelo De Filippis (1920-2005). Approvazione della relazione illustrativa e richiesta di autorizzazione al Prefetto della Provincia di Latina.",
+          "data": "2026-11-17",
+          "tipo": "Deliberazioni",
+          "numero": "2026001257",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977858/pubblicazioni/3683924-deliberazione-g-c-87-04-09-2026-intitolazione"
+        },
+        {
+          "titolo": "Determinazione n. 194 del 14.08.2026- Progetto di Potenziamento della raccolta differenziata dei rifiuti urbani-Ampliamento ed adeguamento dell'Ecocentro comunale. CUP D31E24000210006-Liquidazione saldo incentivo RUP",
+          "data": "2026-11-13",
+          "tipo": "Determinazioni",
+          "numero": "2026001244",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3681675-determinazione-n-194-14-08-2026-progetto"
+        },
+        {
+          "titolo": "Determinazione n 240 del 11.11.2026- Progetto di potenziamento della raccolta differenziata dei rifiuti urbani-Ampliamento ed adeguamento dell'Ecocentro comunale. CUP D31E24000210006-Approvazione Quadro Economico Riepilogativo Finale Rimodulato",
+          "data": "2026-11-13",
+          "tipo": "Determinazioni",
+          "numero": "2026001245",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3681688-determinazione-n-240-11-2026-progetto"
+        },
+        {
+          "titolo": "Convocazione del Consiglio Comunale del 20.11.2026 ore 18:00- Integrazione di un punto all'O.d.G.",
+          "data": "2026-11-13",
+          "tipo": "Convocazioni Consiglio Comunale",
+          "numero": "2026001246",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2263412/pubblicazioni/3681701-convocazione-consiglio-comunale-20-11-2026-ore-18"
+        }
+      ]
+    },
+    "monte-san-biagio": {
+      "ok": true,
+      "esito": "atti",
+      "errore": "",
+      "fonte": "https://www.comune.montesanbiagio.lt.it/EG0/EGHOMEPAGE.HBL?ss=1&F=MC09&en=eg255&freeze=1",
+      "aggiornato": "2026-11-24T13:41:29+01:00",
+      "atti": [
+        {
+          "titolo": "LAVORI DI MESSA IN SICUREZZA PER RISCHIO SISMICO CIMITERO COMUNALE - LOTTO 1 - AFFIDAMENTO DIRETTO, AI SENSI DELL'ART. 50, COMMA 1, LETT. B), DEL D.LGS. N. 36/2023, MEDIANTE TRATTATIVA DIRETTA SUL MERCATO ELETTRONICO DELLA PUBBLICA AMMINISTRAZIONE (MEPA), DEL SERVIZIO DI INDAGINI GEOLOGICHE, PROVE E RELAZIONI GEOMORFOLOGICHE - APPROVAZIONE OFFERTA ECONOMICA, AGGIUDICAZIONE DEFINITIVA E IMPEGNO DI SPESA - CUP G68H22000710001 - CIG BDCE4263C8.",
+          "data": "2026-11-24",
+          "tipo": "DETERMINE",
+          "numero": "394/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM841228.pdf"
+        },
+        {
+          "titolo": "Decisione a contrarre e presa d'atto dell'avvenuta pubblicazione della Richiesta di Offerta (RDO) sul Mercato Elettronico della Pubblica Amministrazione (MEPA) per l'affidamento dell'incarico professionale relativo all'aggiornamento del progetto esecutivo, rilievi di accertamento, acquisizione dei pareri e coordinamento della sicurezza in fase di progettazione (CSP) per l'intervento denominato \"Lavori di messa in sicurezza per rischio sismico Cimitero Comunale - Lotto 1\". CUP G68H22000710001",
+          "data": "2026-11-24",
+          "tipo": "DETERMINE",
+          "numero": "387/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM841309.pdf"
+        },
+        {
+          "titolo": "Aggiudicazione definitiva e affidamento dell'incarico professionale per aggiornamento del progetto esecutivo, rilievi di accertamento, acquisizione dei pareri e coordinamento della sicurezza in fase di progettazione (CSP) per l'intervento denominato \"Lavori di messa in sicurezza per rischio sismico Cimitero Comunale - Lotto 1\". RDO MEPA n. 6705985 - CUP G68H22000710001 - CIG BDCD9B237A.",
+          "data": "2026-11-24",
+          "tipo": "DETERMINE",
+          "numero": "389/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM841278.pdf"
+        },
+        {
+          "titolo": "AGGIUDICAZIONE DEFINITIVA DEL SERVIZIO PROFESSIONALE DI SUPPORTO AL RUP PER GLI ADEMPIMENTI AMMINISTRATIVI E CONTABILI RELATIVI ALL'INTERVENTO DI MANUTENZIONE STRAORDINARIA PER IL RISANAMENTO E LA MESSA IN SICUREZZA DEL PALAZZO COMUNALE, A SEGUITO DI DANNI DA ALLAGAMENTO PER ROTTURA ACCIDENTALE DOVUTA ALLA VETUSTÀ DEGLI IMPIANTI DI ADDUZIONE IDRICA - IMPIANTO ELETTRICO. CIG: BDCE382C6F",
+          "data": "2026-11-24",
+          "tipo": "DETERMINE",
+          "numero": "393/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM841253.pdf"
+        },
+        {
+          "titolo": "Verbale di Contestazione di illecito amministrativo n.152/2026 del 14.07.2026 redatto dalla Questura di Latina - Commissariato Distaccato di P.S. \"Fondi\". Ordinanza di Ingiunzione.",
+          "data": "2026-11-23",
+          "tipo": "ORDINANZA",
+          "numero": "20/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM841525.pdf.p7m"
+        },
+        {
+          "titolo": "Verbale di Contestazione di illecito amministrativo n.151/2026 del 14.07.2026 redatto dalla Questura di Latina - Commissariato Distaccato di P.S. \"Fondi\". Ordinanza di Ingiunzione.",
+          "data": "2026-11-23",
+          "tipo": "ORDINANZA",
+          "numero": "19/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM841551.pdf.p7m"
+        },
+        {
+          "titolo": "UTILIZZO IMPIANTO SPORTIVO COMUNALE PER LO SVOLGIMENTO DELLA GARA CALCISTICA CAMPIONATO PROMOZIONE GIRONE C, FCD MONTE SAN BIAGIO - ASD OSTIANTICA CALCIO 1926 PER IL GIORNO 29 NOVEMBRE 2026, ORE 11,00",
+          "data": "2026-11-23",
+          "tipo": "ORDINANZA",
+          "numero": "38/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM841651.pdf"
+        },
+        {
+          "titolo": "Giornata Nazionale \"Camminata tra gli Olivi del 25 ottobre 2026 - X edizione\". Impegno di spesa e liquidazione quota di adesione all'Associazione Nazionale Città dell'Olio. Liquidazione a favore della ASD Chinesio Starlight di Monte San Biagio.",
+          "data": "2026-11-23",
+          "tipo": "DETERMINE",
+          "numero": "404/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM841626.pdf"
+        },
+        {
+          "titolo": "DISCIPLINA TRAFFICO NEL CENTRO URBANO PER IL GIORN0 25.11.2026 - GIORNATA INTERNAZIONALE CONTRO LA VIOLENZA SULLE DONNE \"IL RISPETTO È UNA SCELTA. LA TUA\".",
+          "data": "2026-11-23",
+          "tipo": "ORDINANZA",
+          "numero": "42/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM841601.pdf"
+        },
+        {
+          "titolo": "Autorizzazione Paesaggistica ai sensi del D.lgs. 42/2004 e ss.mm. ed ii. - Realizzazione parcheggio a raso sito nel Comune di Monte San Biagio (LT) in Via Carro - in Catasto al Foglio 25 part. 1447 - Sig.ri Magnifico Lorenzo e Magnifico Carlo",
+          "data": "2026-11-23",
+          "tipo": "DETERMINE",
+          "numero": "407/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM841576.pdf"
         }
       ]
     }

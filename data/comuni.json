@@ -51,7 +51,8 @@
     "alboUrl": "https://www.comune.montesanbiagio.lt.it/EG0/EGHOMEPAGE.HBL?ss=1&F=MC09&en=eg255&freeze=1",
     "alboVerificato": true,
     "sitoIstituzionale": "https://www.comune.montesanbiagio.lt.it/",
-    "alboAutomatico": false
+    "scraper": "halleyeg",
+    "fonte": "https://www.comune.montesanbiagio.lt.it/EG0/EGHOMEPAGE.HBL?ss=1&F=MC09&en=eg255&freeze=1"
   },
   {
     "slug": "roccasecca-dei-volsci",
@@ -99,7 +100,8 @@
     "alboUrl": "https://comune.lenola.lt.it/albo-pretorio",
     "alboVerificato": true,
     "sitoIstituzionale": "https://comune.lenola.lt.it/",
-    "alboAutomatico": false
+    "scraper": "lenola",
+    "fonte": "https://comune.lenola.lt.it/albo-pretorio"
   },
   {
     "slug": "sermoneta",

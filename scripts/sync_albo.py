@@ -241,7 +241,10 @@ class Client:
         if headers:
             hdrs.update(headers)
         body = None
-        if data is not None:
+        if isinstance(data, str):
+            body = data.encode("utf-8")
+            hdrs.setdefault("Content-Type", "text/plain;charset=UTF-8")
+        elif data is not None:
             body = urllib.parse.urlencode(data).encode("utf-8")
             hdrs.setdefault("Content-Type", "application/x-www-form-urlencoded")
         req = urllib.request.Request(url, data=body, headers=hdrs)
@@ -373,6 +376,9 @@ class Client:
 
     def post(self, url: str, fields: dict):
         return self._request(url, data=fields)
+
+    def post_text(self, url: str, text: str):
+        return self._request(url, data=text)
 
     def get_bytes(self, url: str, limit: int = 12_000_000, _cert_retry: bool = False):
         """Scarica un file pubblico. Ritorna byte, content-type, filename, url finale."""
@@ -862,6 +868,115 @@ def scrape_gazzetta(client: Client, url: str):
     return acts, final
 
 
+def scrape_lenola(client: Client, url: str):
+    """Albo MyCity pubblicato in HTML, senza login."""
+    acts = []
+    seen = set()
+    page = url
+    for _ in range(4):
+        html, final, _status = client.get(page)
+        for row in re.findall(r"<tr\b[^>]*>(.*?)</tr>", html, flags=re.I | re.S):
+            cells = re.findall(r"<td\b[^>]*>(.*?)</td>", row, flags=re.I | re.S)
+            if len(cells) < 5:
+                continue
+            link = re.search(r'href="([^"]+)"', cells[1], flags=re.I)
+            if not link:
+                continue
+            titolo = clean(cells[1])
+            numero = clean(cells[0])
+            tipo = clean(cells[2]) if len(cells) > 2 else ""
+            data = first_date(clean(cells[4])) if len(cells) > 4 else ""
+            atto_url = abs_url(final, link.group(1))
+            if atto_url in seen or not titolo:
+                continue
+            seen.add(atto_url)
+            item = act(titolo, data, tipo, numero, atto_url)
+            if item:
+                acts.append(item)
+            if len(acts) >= LIMIT:
+                return acts, url
+        nxt = re.search(r'href="([^"]*[?&]page=\d+[^"]*)"', html, flags=re.I)
+        if not nxt:
+            break
+        seguente = abs_url(final, nxt.group(1))
+        if seguente == page:
+            break
+        page = seguente
+    if not acts:
+        raise SourceError("La pagina dell'albo di Lenola non contiene atti riconoscibili")
+    return acts, url
+
+
+def _halley_eg_endpoint(client: Client, url: str) -> str:
+    html, final, _status = client.get(url)
+    match = re.search(r'<meta[^>]+name="jb"[^>]+content="([^"]+)"', html, flags=re.I)
+    if not match:
+        match = re.search(r'<meta[^>]+content="([^"]+)"[^>]+name="jb"', html, flags=re.I)
+    if not match:
+        raise SourceError("Pagina Halley EG senza canale di lettura")
+    return origin_of(final) + match.group(1)
+
+
+def _halley_eg_pdf(client: Client, endpoint: str, row: str, ente: str) -> str:
+    try:
+        detail, _final, _status = client.post_text(endpoint, f"&F=MC02&NUMRIGA={row}&en={ente}")
+    except SourceError:
+        return ""
+    funzione = "MC98"
+    if re.search(r"MC99\s*\(", detail or ""):
+        funzione = "MC99"
+    try:
+        body, _final, _status = client.post_text(endpoint, f"&F={funzione}&NUMRIG=1&en={ente}")
+    except SourceError:
+        return ""
+    match = re.search(r'"PATH"\s*:\s*"([^"]+)"', body or "")
+    path = (match.group(1) if match else "").replace("\\/", "/")
+    if path.startswith("http") and re.search(r"\.(pdf|p7m)(\?|$)", path, flags=re.I):
+        return path
+    return ""
+
+
+def scrape_halley_eg(client: Client, url: str):
+    """Albo Halley EG (Monte San Biagio): elenco MC01 e allegato pubblico."""
+    endpoint = _halley_eg_endpoint(client, url)
+    query = urllib.parse.parse_qs(urllib.parse.urlsplit(url).query)
+    ente = (query.get("en") or ["eg255"])[0]
+    html, _final, _status = client.post_text(endpoint, f"&F=MC01&en={ente}")
+    if "Atto n." not in html and "Pubblicazione n." not in html:
+        raise SourceError("L'elenco Halley EG non contiene atti")
+    acts = []
+    cards = re.split(r'<div class="cmp-card mb-3">', html)
+    for card in cards[1:]:
+        row_match = re.search(r"""onclick="MC02\('(\d+)'\)\"""", card)
+        title_match = re.search(r'<h5[^>]*>(.*?)</h5>', card, flags=re.I | re.S)
+        if not row_match or not title_match:
+            continue
+        titolo = clean(title_match.group(1))
+        tipo_match = re.search(r"Tipo:\s*</strong>\s*([^<]+)", card, flags=re.I)
+        tipo = clean(tipo_match.group(1)) if tipo_match else ""
+        num_match = re.search(
+            r"Atto n\.\s*</strong>\s*(\d+)\s*<strong>\s*del\s*</strong>\s*(\d{2}-\d{2}-\d{4})",
+            card,
+            flags=re.I,
+        )
+        numero = ""
+        if num_match:
+            numero = f"{num_match.group(1)}/{num_match.group(2)[-4:]}"
+        pub_match = re.search(r"Pubblicazione dal\s*</strong>\s*(\d{2}-\d{2}-\d{4})", card, flags=re.I)
+        data = first_date(pub_match.group(1)) if pub_match else ""
+        if not data and num_match:
+            data = first_date(num_match.group(2))
+        doc = _halley_eg_pdf(client, endpoint, row_match.group(1), ente)
+        item = act(titolo, data, tipo, numero, doc or url)
+        if item:
+            acts.append(item)
+        if len(acts) >= LIMIT:
+            break
+    if not acts:
+        raise SourceError("L'elenco Halley EG non contiene atti riconoscibili")
+    return acts, url
+
+
 def scrape_comune(client: Client, comune: dict):
     kind = comune.get("scraper")
     fonte = comune.get("fonte") or comune.get("alboUrl")
@@ -903,6 +1018,10 @@ def scrape_comune(client: Client, comune: dict):
         return scrape_servizionline(client, fonte, fallbacks)
     if kind == "gazzetta":
         return scrape_gazzetta(client, fonte)
+    if kind == "lenola":
+        return scrape_lenola(client, fonte)
+    if kind == "halleyeg":
+        return scrape_halley_eg(client, fonte)
     raise SourceError(f"Tipo di fonte sconosciuto: {kind}")
 
 
