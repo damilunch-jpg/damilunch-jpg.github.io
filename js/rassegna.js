@@ -1,19 +1,19 @@
 /* Generato da scripts/sync_rassegna.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_RASSEGNA = {
-  "aggiornato": "2026-11-25T14:52:26+01:00",
+  "aggiornato": "2026-11-26T00:08:00+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "latinatoday",
       "nome": "Latina Today",
       "esito": "ok",
-      "nuove": 2
+      "nuove": 3
     },
     {
       "id": "latinacorriere",
       "nome": "Latina Corriere",
       "esito": "ok",
-      "nuove": 2
+      "nuove": 3
     },
     {
       "id": "ilcaffe",
@@ -31,7 +31,7 @@ window.M5S_RASSEGNA = {
       "id": "frosinonetoday",
       "nome": "Frosinone Today",
       "esito": "ok",
-      "nuove": 0
+      "nuove": 3
     }
   ],
   "notizie": [
@@ -60,6 +60,31 @@ window.M5S_RASSEGNA = {
       ]
     },
     {
+      "url": "https://www.frosinonetoday.it/attualita/smog-ciociaria-2026-cambia-tutto-frosinone-scalo-passa-70-sforamenti-a-14-ecco-mappa.html",
+      "titolo": "Smog in Ciociaria, nel 2026 cambia tutto: Frosinone Scalo passa da 70 sforamenti a 14, ecco la mappa",
+      "anteprima": "Le rilevazioni ARPA Lazio aggiornate al 22 novembre fotografano un netto calo dei superamenti del PM10 rispetto agli anni precedenti. Frosinone Scalo scende a 14, Ceccano è a 28 e Cassino a 16: il bilancio del 2026, però, non è ancora definitivo",
+      "data": "2026-11-25",
+      "testata": "frosinonetoday",
+      "testataNome": "Frosinone Today",
+      "logo": "img/testate/frosinonetoday.png",
+      "comuni": [
+        "ceccano"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/polizia-di-stato-e-fondazione-conad-ets-insieme-contro-la-violenza-di-genere",
+      "titolo": "Polizia di Stato e Fondazione Conad ETS insieme contro la violenza di genere",
+      "anteprima": "Si sono svolte questa mattina, in occasione della Giornata internazionale per l’eliminazione della violenza contro le donne, le iniziative di sensibilizzazione promosse dalla Questura di Latina e dalla Fondazione Conad ETS nell’ambito di…",
+      "data": "2026-11-25",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "fondi",
+        "cisterna-di-latina"
+      ]
+    },
+    {
       "url": "https://www.latinacorriere.it/italia-u-15-il-pontino-gabriele-bove-torna-a-vestire-azzurro",
       "titolo": "Italia U-15, il pontino Gabriele Bove torna a vestire azzurro",
       "anteprima": "Di Francesco Marigliani. Uno splendido inizio di stagione con i Nazionali della Roma Under 15 Èlite, con cui ha già messo a referto 5 goal e 6 assist. Ora, la convocazione per il tradizionale Torneo di Natale di Novarello. La crescita di Gabriele…",
@@ -72,6 +97,44 @@ window.M5S_RASSEGNA = {
       ]
     },
     {
+      "url": "https://www.latinatoday.it/politica/mercato-copertoapertura-pomeriggio-fondi.html",
+      "titolo": "Il mercato coperto aperto anche di pomeriggio: al via la sperimentazione a Fondi",
+      "anteprima": "L’ordinanza firmata dal sindaco Vincenzo Carnevale; il martedì e venerdì orario di chiusura fissato alle 18.30",
+      "data": "2026-11-25",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "fondi"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/attualita/violenza-donne-progetto-questura-fondazione-conad-latina.html",
+      "titolo": "I poliziotti nei supermercati Conad: l'iniziativa di sensibilizzazione contro la violenza sulle donne",
+      "anteprima": "L'iniziativa in occasione del 25 novembre, negli esercizi di Latina, Aprilia, Cisterna di Latina, Fondi, Formia, Gaeta e Terracina",
+      "data": "2026-11-25",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "fondi",
+        "cisterna-di-latina",
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/fondi-novita-per-il-mercato-coperto-aprira-anche-nel-pomeriggio",
+      "titolo": "Fondi, novità per il mercato coperto: aprirà anche nel pomeriggio",
+      "anteprima": "Nuovi orari in via sperimentale per il mercato coperto di via Gioberti a Fondi. Il sindaco Vincenzo Carnevale ha firmato un’ordinanza che autorizza l’apertura pomeridiana della struttura nelle giornate di martedì e venerdì, con orario prolungato…",
+      "data": "2026-11-25",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "fondi"
+      ]
+    },
+    {
       "url": "https://www.latinatoday.it/cronaca/anziano-scomparso-ritrovato-fondi.html",
       "titolo": "Esce per una passeggiata e si perde: una giornata di paura per le sorti di un 85enne",
       "anteprima": "Dopo ore ricerche senza sosta l’anziano è stato ritrovato in serata in una zona di campagna a Fondi. Di lui si erano perse le tracce dalla mattina",
@@ -81,6 +144,30 @@ window.M5S_RASSEGNA = {
       "logo": "img/testate/latinatoday.png",
       "comuni": [
         "fondi"
+      ]
+    },
+    {
+      "url": "https://www.frosinonetoday.it/cronaca/controlli-carabinieri-provincia-frosinone-un-arresto-per-mafia-armi-denunce-segnalazioni-droga.html",
+      "titolo": "Controlli dei carabinieri in provincia di Frosinone, un arresto per mafia e armi, sei denunce e tre segnalazioni per droga",
+      "anteprima": "Operazione straordinaria tra Frosinone, Ceccano, Ripi e Patrica: un 35enne trasferito in carcere per una condanna con aggravante del metodo mafioso. Nel corso dei controlli contestati anche furti, droga, guida in stato di ebbrezza e altri reati",
+      "data": "2026-11-25",
+      "testata": "frosinonetoday",
+      "testataNome": "Frosinone Today",
+      "logo": "img/testate/frosinonetoday.png",
+      "comuni": [
+        "ceccano"
+      ]
+    },
+    {
+      "url": "https://www.frosinonetoday.it/eventi/cultura/ceccano-libera-me-violenza-donne.html",
+      "titolo": "Ceccano, “Libera Me”: emozioni e riflessioni con chi lotta contro la violenza sulle donne",
+      "anteprima": "Per la seconda edizione, organizzata dall’Amministrazione Querqui, flash mob e convegno con il vice questore Genovesi, l’attivista Melis e la psicologa Bruni. Presente anche il sostituto procuratore Ricca",
+      "data": "2026-11-25",
+      "testata": "frosinonetoday",
+      "testataNome": "Frosinone Today",
+      "logo": "img/testate/frosinonetoday.png",
+      "comuni": [
+        "ceccano"
       ]
     },
     {
