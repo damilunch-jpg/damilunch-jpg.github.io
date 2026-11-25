@@ -139,10 +139,16 @@ class BrowserHalley:
     def apri_lista(self, fonte: str):
         if not fonte or fonte in self.liste:
             return
-        print(f"  elenco {fonte[:110]}", flush=True)
-        self._goto(fonte, timeout=60000)
         self.liste.add(fonte)
-        self._pausa(1.5, 2.5)
+        low = fonte.lower()
+        if "halley" not in low and "/mc/" not in low:
+            return
+        print(f"  elenco {fonte[:110]}", flush=True)
+        try:
+            self._goto(fonte, timeout=40000)
+            self._pausa(1.2, 2.0)
+        except Exception as exc:
+            print(f"  elenco non aperto, continuo dalle schede: {type(exc).__name__}", flush=True)
 
     def _file(self, url: str):
         """Naviga col browser: se parte un download, ne legge i byte."""

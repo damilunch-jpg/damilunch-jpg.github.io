@@ -24,7 +24,11 @@ def output(name: str, value: str) -> None:
 
 
 def gh(*args, check=True):
-    return subprocess.run(["gh", *args], check=check, capture_output=True, text=True)
+    result = subprocess.run(["gh", *args], check=False, capture_output=True, text=True)
+    if check and result.returncode != 0:
+        print(result.stderr.strip() or result.stdout.strip() or "gh ha restituito un errore")
+        raise SystemExit(result.returncode)
+    return result
 
 
 def main() -> int:
