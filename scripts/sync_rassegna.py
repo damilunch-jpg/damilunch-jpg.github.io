@@ -10,7 +10,6 @@ from __future__ import annotations
 
 import html
 import json
-import os
 import re
 import ssl
 import time
@@ -29,7 +28,6 @@ JS_PATH = ROOT / "js" / "rassegna.js"
 COMUNI_PATH = ROOT / "data" / "comuni.json"
 
 ROME = ZoneInfo("Europe/Rome")
-ROME_HOURS = {8, 12, 18}
 GIORNI = 60
 ANTEPRIMA_MAX = 250
 TIMEOUT = 25
@@ -92,29 +90,6 @@ NOMI_SICURI = [
 
 def now_rome() -> datetime:
     return datetime.now(ROME)
-
-
-def scheduled_should_run(schedule: str, offset_hours: float) -> bool:
-    parts = (schedule or "").split()
-    if len(parts) < 2:
-        return False
-    try:
-        minute = int(parts[0])
-        hour = int(parts[1])
-    except ValueError:
-        return False
-    total = hour * 60 + minute + int(round(offset_hours * 60))
-    total %= 24 * 60
-    rome_hour, rome_minute = divmod(total, 60)
-    return rome_minute == 0 and rome_hour in ROME_HOURS
-
-
-def should_run() -> bool:
-    event = os.environ.get("GITHUB_EVENT_NAME", "")
-    if event != "schedule":
-        return True
-    offset = now_rome().utcoffset().total_seconds() / 3600
-    return scheduled_should_run(os.environ.get("RASSEGNA_SCHEDULE", ""), offset)
 
 
 def local_name(tag: str) -> str:
@@ -393,10 +368,6 @@ def controlla_filtri() -> None:
 
 def main() -> int:
     controlla_filtri()
-    if not should_run():
-        print("FUORI ORARIO | questo cron non è le 08:00, le 12:00 o le 18:00 a Roma")
-        return 0
-
     precedente = carica()
     by_url = {}
     for item in precedente.get("notizie") or []:

@@ -2,14 +2,8 @@ name: Rassegna stampa locale
 
 on:
   schedule:
-    # Ogni riga è un orario UTC. Lo script la traduce in ora di Roma (CET o CEST)
-    # e parte solo alle 08:00, alle 12:00 e alle 18:00.
-    - cron: "0 6 * * *"    # 08:00 ora legale
-    - cron: "0 7 * * *"    # 08:00 ora solare
-    - cron: "0 10 * * *"   # 12:00 ora legale
-    - cron: "0 11 * * *"   # 12:00 ora solare
-    - cron: "0 16 * * *"   # 18:00 ora legale
-    - cron: "0 17 * * *"   # 18:00 ora solare
+    # Ogni ora al minuto 17, così non parte insieme agli altri cron allo scoccare dell'ora.
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -26,9 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Leggi i feed RSS locali
-        env:
-          GITHUB_EVENT_NAME: ${{ github.event_name }}
-          RASSEGNA_SCHEDULE: ${{ github.event.schedule }}
         run: python3 scripts/sync_rassegna.py
       - name: Pubblica solo se ci sono notizie nuove
         run: |
@@ -39,5 +30,13 @@ jobs:
             echo "Nessuna novità: non pubblico."
           else
             git commit -m "Aggiorna la rassegna stampa locale"
-            git push
+            n=0
+            while [ "$n" -lt 4 ]; do
+              n=$((n + 1))
+              git pull --rebase origin main && git push && exit 0
+              echo "Push non riuscito, tentativo $n"
+              sleep $((n * 4))
+            done
+            echo "Pubblicazione non riuscita dopo i tentativi"
+            exit 1
           fi
