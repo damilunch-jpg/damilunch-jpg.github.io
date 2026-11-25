@@ -144,8 +144,13 @@ def origin_of(url: str) -> str:
 
 
 def is_halley(url: str) -> bool:
-    host = (urllib.parse.urlsplit(url).hostname or "").lower()
-    return "halleyweb" in host or host.endswith("halley.it")
+    """Halley, anche quando il comune lo pubblica sul proprio dominio."""
+    parts = urllib.parse.urlsplit(url)
+    host = (parts.hostname or "").lower()
+    if "halleyweb" in host or host.endswith("halley.it"):
+        return True
+    path = (parts.path or "").lower()
+    return "/mc/mc_" in path or "/mc/mc_attachment" in path
 
 
 def halley_mc(url: str) -> str:
@@ -204,7 +209,7 @@ class Client:
             delay = random.uniform(low, high)
         else:
             delay = min(120.0, 15.0 * (2 ** (attempt - 2))) + random.uniform(0, 8)
-        print(f"  {self.label}: attesa {delay:.0f}s prima di {host} (tentativo {attempt}/{MAX_ATTEMPTS})", flush=True)
+        print(f"  {self.label}: attesa {delay:.0f}s prima di {host} (tentativo {attempt}/{self.max_attempts})", flush=True)
         time.sleep(delay)
 
     def _retryable(self, exc: SourceError) -> bool:
@@ -381,11 +386,29 @@ class Client:
         return self._request(url, data=text)
 
     def get_bytes(self, url: str, limit: int = 12_000_000, _cert_retry: bool = False):
-        """Scarica un file pubblico. Ritorna byte, content-type, filename, url finale."""
+        """Scarica un file pubblico. Ritenta se la connessione viene chiusa."""
+        last = None
+        for attempt in range(1, self.max_attempts + 1):
+            self._pause(url, attempt)
+            try:
+                return self._read_bytes(url, limit, _cert_retry=_cert_retry)
+            except SourceError as exc:
+                last = exc
+                self.last_status = str(exc).split(" (")[0][:80]
+                print(
+                    f"  {self.label}: GET {urllib.parse.urlsplit(url).hostname or url} tentativo {attempt}/{self.max_attempts} -> {self.last_status}",
+                    flush=True,
+                )
+                if attempt == self.max_attempts or not self._retryable(exc):
+                    raise
+        raise last or SourceError("Documento non scaricato")
+
+    def _read_bytes(self, url: str, limit: int, _cert_retry: bool = False):
         hdrs = {
             "User-Agent": UA,
             "Accept": "*/*",
             "Accept-Language": "it-IT,it;q=0.9",
+            "Connection": "close",
         }
         req = urllib.request.Request(url, headers=hdrs)
         try:
@@ -410,7 +433,7 @@ class Client:
             message = str(getattr(exc, "reason", exc))
             if not _cert_retry and ("CERTIFICATE_VERIFY_FAILED" in message or "certificate verify failed" in message):
                 self._trust_peer(url)
-                return self.get_bytes(url, limit=limit, _cert_retry=True)
+                return self._read_bytes(url, limit, _cert_retry=True)
             raise SourceError(f"Connessione non riuscita: {message}") from exc
         except TimeoutError as exc:
             raise SourceError("Tempo scaduto in attesa della fonte") from exc

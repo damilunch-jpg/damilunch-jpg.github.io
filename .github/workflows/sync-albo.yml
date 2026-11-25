@@ -12,6 +12,11 @@ on:
     - cron: "30 1 * * *"   # 02:30 ora solare
     - cron: "0 2 * * *"    # 04:00 ora legale
     - cron: "0 3 * * *"    # 04:00 ora solare
+  # Un solo giro immediato dello zip: il trigger di push si toglie nel commit successivo.
+  push:
+    paths:
+      - .github/workflows/sync-albo.yml
+    branches: [main]
   workflow_dispatch:
     inputs:
       solo_zip:
@@ -32,31 +37,35 @@ concurrency:
 
 jobs:
   sync:
-    runs-on: ubuntu-latest
+    # I runner Linux ricevono un reset TLS da Halley (195.78.210.236). Windows no.
+    runs-on: windows-latest
     timeout-minutes: 360
+    defaults:
+      run:
+        shell: bash
     steps:
       - uses: actions/checkout@v4
       - name: Leggi gli albi e aggiorna l'elenco
-        if: github.event_name != 'workflow_dispatch' || (github.event.inputs.solo_zip != 'true' && github.event.inputs.solo_email != 'true')
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.solo_zip != 'true' && github.event.inputs.solo_email != 'true')
         env:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
           ALBO_SCHEDULE: ${{ github.event.schedule }}
-        run: python3 scripts/sync_albo.py
+        run: python scripts/sync_albo.py
       - name: Prepara lo zip degli atti nuovi
         if: github.event.inputs.solo_email != 'true'
-        run: python3 scripts/pacchetto_albo.py
+        run: python scripts/pacchetto_albo.py
       - name: Pubblica la Release
         if: github.event.inputs.solo_email != 'true'
         id: release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/pubblica_release_albo.py
+        run: python scripts/pubblica_release_albo.py
       - name: Link dell'ultima Release
         if: github.event.inputs.solo_email == 'true'
         id: ultima
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/ultima_release_albo.py
+        run: python scripts/ultima_release_albo.py
       - name: Invia lo zip per email
         env:
           SMTP_USER: ${{ secrets.SMTP_USER }}
@@ -65,9 +74,9 @@ jobs:
           EMAIL_PROVA: ${{ github.event.inputs.solo_email == 'true' && '1' || '0' }}
           RELEASE_URL: ${{ github.event.inputs.solo_email == 'true' && steps.ultima.outputs.release_url || steps.release.outputs.release_url }}
           ZIP_URL: ${{ github.event.inputs.solo_email == 'true' && steps.ultima.outputs.zip_url || steps.release.outputs.zip_url }}
-        run: python3 scripts/invia_albo.py
+        run: python scripts/invia_albo.py
       - name: Pubblica l'elenco
-        if: github.event.inputs.solo_email != 'true'
+        if: always() && github.event.inputs.solo_email != 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -76,5 +85,13 @@ jobs:
             echo "Nessun cambiamento"
           else
             git commit -m "Aggiorna gli atti degli albi pretori"
-            git push
+            n=0
+            while [ "$n" -lt 4 ]; do
+              n=$((n + 1))
+              git pull --rebase origin main && git push && exit 0
+              echo "Push non riuscito, tentativo $n"
+              sleep $((n * 4))
+            done
+            echo "Pubblicazione non riuscita dopo i tentativi"
+            exit 1
           fi

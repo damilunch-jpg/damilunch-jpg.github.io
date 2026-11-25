@@ -123,32 +123,45 @@ def links_da_html(html: str, base: str) -> list[str]:
     return trovati
 
 
-def links_documenti(client: Client, url: str, fonte: str = "") -> list[str]:
+def links_documenti(client: Client, url: str, fonte: str = "") -> tuple[list[str], bool]:
+    """Ritorna i link e se almeno una scheda ha risposto.
+
+    Se la scheda non risponde, l'atto resta in coda: non è un documento assente.
+    """
     if re.search(r"\.(pdf|p7m)(\?|$)", url, flags=re.I) or "mc_attachment.php" in url.lower():
-        return [url]
+        return [url], True
     pagine = [url] + specchi_halley(url, fonte)
+    pagina_letta = False
     for pagina in pagine:
         try:
             html, final, _status = client.get(pagina)
         except (SourceError, OSError):
             continue
+        pagina_letta = True
         trovati = links_da_html(html, final)
         if trovati:
-            return trovati
-    return []
+            return trovati, True
+    return [], pagina_letta
+
+
+def segna_fatto(pagina_letta: bool, link_trovati: bool, scaricati: int, errore_rete: bool) -> bool:
+    """True solo se non ha senso riprovare al giro successivo."""
+    if not pagina_letta:
+        return False
+    if link_trovati and scaricati == 0 and errore_rete:
+        return False
+    return True
 
 
 def scarica(client: Client, url: str):
     try:
-        if is_halley(url):
-            client._pause(url, 1)
         raw, ctype, nome, finale = client.get_bytes(url)
     except (SourceError, OSError) as exc:
         print(f"  documento non scaricato: {exc}", flush=True)
         return None
     if "html" in ctype or raw[:20].lstrip().lower().startswith(b"<!doctype") or raw[:6].lower().startswith(b"<html"):
         print("  pagina HTML, non un documento", flush=True)
-        return None
+        return False
     if not nome:
         path = finale.split("?")[0].rstrip("/").split("/")[-1]
         nome = urllib_unquote(path) if "." in path else "documento.pdf"
@@ -196,8 +209,8 @@ def main() -> int:
 
     client = Client()
     client.fast = True
-    client.max_attempts = 2
-    client.timeout = 25
+    client.max_attempts = 4
+    client.timeout = 40
     client.label = "documenti"
     cartelle = {}
     comuni = json.loads((ROOT / "data" / "comuni.json").read_text(encoding="utf-8"))
@@ -206,6 +219,10 @@ def main() -> int:
     righe = []
     documenti = 0
     senza_file = 0
+    da_riprovare = set()
+    per_comune = {}
+    fallimenti_halley = 0
+    halley_spento = False
     buffer = io.BytesIO()
     with zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED) as archivio:
         archivio.writestr("PROMPT.txt", PROMPT)
@@ -215,23 +232,48 @@ def main() -> int:
             usati = cartelle.setdefault(cartella, set())
             base = nome_file((item.get("numero") or "atto") + "_" + (item.get("data") or "senza-data"))
             scaricati = 0
+            errore_rete = False
             client.label = nome
-            for link in links_documenti(client, item.get("url") or "", fonti.get(slug, "")):
+            url_atto = item.get("url") or ""
+            if halley_spento and is_halley(url_atto):
+                pagina_letta, links = False, []
+            else:
+                links, pagina_letta = links_documenti(client, url_atto, fonti.get(slug, ""))
+            if is_halley(url_atto) and not pagina_letta:
+                fallimenti_halley += 1
+                if fallimenti_halley >= 3:
+                    halley_spento = True
+                    print("Halley chiude la connessione: gli atti Halley rimasti restano in coda", flush=True)
+            elif pagina_letta:
+                fallimenti_halley = 0
+            for link in links:
                 preso = scarica(client, link)
+                if preso is None:
+                    errore_rete = True
+                    continue
                 if not preso:
                     continue
                 raw, fname = preso
-                destinazione = f"{cartella}/{base}_{fname}" if scaricati else f"{cartella}/{base}_{fname}"
+                destinazione = f"{cartella}/{base}_{fname}"
                 if destinazione in usati:
                     destinazione = f"{cartella}/{base}_{scaricati + 1}_{fname}"
                 usati.add(destinazione)
                 archivio.writestr(destinazione, raw)
                 scaricati += 1
                 documenti += 1
-            righe.append([nome, item.get("numero") or "", item.get("data") or "", item.get("titolo") or "", item.get("tipo") or "", item.get("url") or ""])
+            fatto = segna_fatto(pagina_letta, bool(links), scaricati, errore_rete)
+            if not fatto:
+                da_riprovare.add(key)
+            righe.append([nome, item.get("numero") or "", item.get("data") or "", item.get("titolo") or "", item.get("tipo") or "", url_atto])
             if scaricati == 0:
                 senza_file += 1
-            print(f"{nome} | {item.get('numero') or '-'} | file {scaricati}", flush=True)
+            stato = per_comune.setdefault(nome, {"atti": 0, "con_file": 0, "documenti": 0})
+            stato["atti"] += 1
+            stato["documenti"] += scaricati
+            if scaricati:
+                stato["con_file"] += 1
+            coda = "" if fatto else " | in coda"
+            print(f"{nome} | {item.get('numero') or '-'} | file {scaricati}{coda}", flush=True)
         csv_buf = io.StringIO()
         writer = csv.writer(csv_buf)
         writer.writerow(["Comune", "numero", "data", "oggetto", "tipo", "link originale"])
@@ -242,15 +284,26 @@ def main() -> int:
     zip_path = DIST / zip_name
     zip_path.write_bytes(buffer.getvalue())
     chiavi = set(gia)
-    chiavi.update(key for _slug, _item, key in nuovi)
-    # Lo snapshot tiene tutte le chiavi viste, così il giorno dopo si scaricano solo i nuovi.
-    for slug, info in (albo.get("comuni") or {}).items():
-        for item in info.get("atti") or []:
-            chiavi.add(chiave(slug, item))
+    # Un atto la cui scheda non ha risposto, o i cui file non si sono scaricati,
+    # resta fuori dallo snapshot e viene riprovato al giro successivo.
+    for _slug, _item, key in nuovi:
+        if key not in da_riprovare:
+            chiavi.add(key)
     SNAPSHOT_PATH.write_text(
         json.dumps({"giorno": oggi, "chiavi": sorted(chiavi)}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
+    interessati = {
+        "Sezze",
+        "Cisterna di Latina",
+        "Priverno",
+        "Norma",
+        "Sermoneta",
+        "Rocca Massima",
+    }
+    attesi = sum(stato["atti"] for nome, stato in per_comune.items() if nome in interessati)
+    scaricati_halley = sum(stato["con_file"] for nome, stato in per_comune.items() if nome in interessati)
+    pubblica = not (attesi and scaricati_halley == 0)
     riepilogo.write_text(json.dumps({
         "zip": str(zip_path.relative_to(ROOT)),
         "tag": f"albo-{oggi}",
@@ -258,8 +311,18 @@ def main() -> int:
         "atti": len(righe),
         "documenti": documenti,
         "senza_file": senza_file,
+        "in_coda": len(da_riprovare),
+        "comuni": per_comune,
+        "pubblica": pubblica,
     }, indent=2) + "\n", encoding="utf-8")
+    if not pubblica:
+        print("Zip locale pronto ma non da pubblicare: Halley non ha consegnato nessun documento", flush=True)
     print(f"ZIP {zip_name} | atti={len(righe)} | documenti={documenti} | byte={zip_path.stat().st_size}", flush=True)
+    for nome, stato in per_comune.items():
+        print(
+            f"COMUNE {nome} | atti={stato['atti']} | con_file={stato['con_file']} | documenti={stato['documenti']}",
+            flush=True,
+        )
     return 0
 
 
@@ -309,7 +372,7 @@ def prova_halley() -> int:
             utili = [h for h in hrefs if not re.search(r"\.(css|js|png|gif|jpg)(\?|$)", h, re.I)][:8]
             print("  href", " | ".join(utili)[:300] or "(nessuno)")
         try:
-            links = links_documenti(client, url, fonti.get(slug, ""))
+            links, _letta = links_documenti(client, url, fonti.get(slug, ""))
         except (SourceError, OSError) as exc:
             print(f"PROVA {slug} | errore link | {exc}")
             continue

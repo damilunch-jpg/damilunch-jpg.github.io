@@ -35,7 +35,7 @@ def main() -> int:
         print("Nessun riepilogo")
         return 0
     info = json.loads(riepilogo_path.read_text(encoding="utf-8"))
-    if not info.get("zip"):
+    if not info.get("zip") or info.get("pubblica") is False:
         output("release_url", "")
         output("zip_url", "")
         print("Nessuno zip da pubblicare")
