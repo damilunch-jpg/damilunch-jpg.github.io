@@ -181,6 +181,13 @@ def urllib_unquote(value: str) -> str:
     return unquote(value)
 
 
+def salva_pdf(destinazione: str, raw: bytes) -> None:
+    """Copia il file su disco, così resta anche se la Release non parte."""
+    path = DIST / "documenti" / destinazione
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(raw)
+
+
 def main() -> int:
     if not ALBO_PATH.exists():
         print("Nessun albo salvato")
@@ -261,6 +268,7 @@ def main() -> int:
                         destinazione = f"{cartella}/{base}_{scaricati + 1}_{fname}"
                     usati.add(destinazione)
                     archivio.writestr(destinazione, raw)
+                    salva_pdf(destinazione, raw)
                     scaricati += 1
                     documenti += 1
             else:
@@ -288,6 +296,7 @@ def main() -> int:
                         destinazione = f"{cartella}/{base}_{scaricati + 1}_{fname}"
                     usati.add(destinazione)
                     archivio.writestr(destinazione, raw)
+                    salva_pdf(destinazione, raw)
                     scaricati += 1
                     documenti += 1
             fatto = segna_fatto(pagina_letta, bool(links), scaricati, errore_rete)

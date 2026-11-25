@@ -19,11 +19,21 @@ jobs:
       - uses: actions/checkout@v4
       - name: Prepara lo zip degli atti nuovi
         run: python3 scripts/pacchetto_albo.py
+      - name: Conserva zip e PDF
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: albo-zip-${{ github.run_id }}
+          path: |
+            dist/*.zip
+            dist/documenti/
+          retention-days: 7
+          if-no-files-found: warn
       - name: Pubblica la Release
         id: release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python3 scripts/pubblica_release_albo.py
+        run: python3 scripts/pubblica_release_albo.py || python3 scripts/pubblica_release_albo.py
       - name: Invia lo zip per email
         env:
           SMTP_USER: ${{ secrets.SMTP_USER }}
