@@ -1,10 +1,7 @@
 name: Zip Halley su Windows
 
 on:
-  push:
-    paths:
-      - .github/workflows/zip-halley-windows.yml
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
