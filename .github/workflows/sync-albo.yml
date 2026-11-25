@@ -12,11 +12,6 @@ on:
     - cron: "30 1 * * *"   # 02:30 ora solare
     - cron: "0 2 * * *"    # 04:00 ora legale
     - cron: "0 3 * * *"    # 04:00 ora solare
-  # Un solo giro immediato dello zip: il trigger di push si toglie nel commit successivo.
-  push:
-    paths:
-      - .github/workflows/sync-albo.yml
-    branches: [main]
   workflow_dispatch:
     inputs:
       solo_zip:
