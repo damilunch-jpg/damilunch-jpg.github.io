@@ -663,18 +663,6 @@
     if (tipo !== "articolo" && tipo !== "comunicato" && tipo !== "nazionale" && tipo !== "regionale") tipo = "tutti";
     var articoliTutti = articlesGruppo("tutti");
     var vociTutte = vociUfficiali("tutti");
-    var pezzi = [];
-    if (tipo === "tutti" || tipo === "articolo" || tipo === "comunicato") {
-      articlesGruppo(tipo).forEach(function (a) {
-        pezzi.push({ data: a.data || "", html: cardHtml(a, base) });
-      });
-    }
-    if (tipo === "tutti" || tipo === "nazionale" || tipo === "regionale") {
-      vociUfficiali(tipo === "tutti" ? "tutti" : tipo).forEach(function (v) {
-        pezzi.push({ data: v.data || "", html: cardVoce(v, base) });
-      });
-    }
-    pezzi.sort(function (a, b) { return String(b.data).localeCompare(String(a.data)); });
 
     var html =
       '<p class="page-kicker">Movimento 5 Stelle</p>' +
@@ -688,16 +676,28 @@
     html += '<a class="filtro' + (tipo === "nazionale" ? " is-active" : "") + '" href="' + base + 'gruppo.html#nazionale">Dal Nazionale</a>';
     html += '<a class="filtro' + (tipo === "regionale" ? " is-active" : "") + '" href="' + base + 'gruppo.html#regionale">Dal Regionale</a>';
     html += "</div>";
-    html += riquadriFacebook(tipo);
 
-    if (!articoliTutti.length && !vociTutte.length) {
-      html += '<p class="vuoto">Presto i primi comunicati del gruppo.</p>';
-    } else if (!pezzi.length) {
-      html += '<p class="vuoto">Non ci sono ancora contenuti di questo tipo.</p>';
-    } else {
-      html += '<div class="lista-articoli">';
-      pezzi.forEach(function (p) { html += p.html; });
-      html += "</div>";
+    if (tipo === "tutti" || tipo === "nazionale") {
+      html += sezioneFonte("nazionale", vociUfficiali("nazionale"), base);
+    }
+    if (tipo === "tutti" || tipo === "regionale") {
+      html += sezioneFonte("regionale", vociUfficiali("regionale"), base);
+    }
+
+    if (tipo === "tutti" || tipo === "articolo" || tipo === "comunicato") {
+      var articoli = [];
+      articlesGruppo(tipo === "tutti" ? "tutti" : tipo).forEach(function (a) {
+        articoli.push(cardHtml(a, base));
+      });
+      if (articoli.length) {
+        html += '<h2 class="section-title">Articoli e comunicati del gruppo</h2><div class="lista-articoli">';
+        articoli.forEach(function (card) { html += card; });
+        html += "</div>";
+      } else if (tipo !== "tutti" && !vociTutte.length) {
+        html += '<p class="vuoto">Non ci sono ancora contenuti di questo tipo.</p>';
+      } else if (!articoliTutti.length && !vociTutte.length) {
+        html += '<p class="vuoto">Presto i primi comunicati del gruppo.</p>';
+      }
     }
     mount.innerHTML = html;
     if (!mount.getAttribute("data-gruppo-hash")) {
@@ -729,6 +729,38 @@
       '<a href="' + escapeHtml(pagina.url) + '" target="_blank" rel="noopener noreferrer">Apri la pagina Facebook di ' + escapeHtml(pagina.nome) + "</a>" +
       "</blockquote></div></section>"
     );
+  }
+
+  function iconaFonte(id) {
+    if (id === "regionale") {
+      return '<svg class="fascia-icona" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 14.5 9 2.5 2.5 0 0 1 12 11.5z"/></svg>';
+    }
+    return '<svg class="fascia-icona" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.2l2.6 5.7 6.2.7-4.6 4.2 1.3 6.1L12 15.8 6.5 18.9l1.3-6.1L3.2 8.6l6.2-.7L12 2.2z"/></svg>';
+  }
+
+  function sezioneFonte(id, voci, base) {
+    var titolo = tipoLabel(id);
+    var pagina = null;
+    for (var i = 0; i < PAGINE_FB.length; i++) {
+      if (PAGINE_FB[i].id === id) pagina = PAGINE_FB[i];
+    }
+    var html = '<section class="blocco-fonte ' + id + '" aria-labelledby="fonte-' + id + '">';
+    html += '<header class="fascia-fonte">';
+    html += iconaFonte(id);
+    html += '<div class="fascia-testi"><h2 id="fonte-' + id + '">' + escapeHtml(titolo) + "</h2>";
+    html += '<p>' + escapeHtml(pagina ? pagina.nome : titolo) + "</p></div>";
+    html += '<span class="fascia-badge">Ufficiale</span></header>';
+    html += '<div class="blocco-fonte-corpo">';
+    if (pagina) html += riquadroFacebook(pagina);
+    if (voci.length) {
+      html += '<div class="lista-articoli">';
+      voci.forEach(function (v) { html += cardVoce(v, base); });
+      html += "</div>";
+    } else {
+      html += '<p class="vuoto">Nessuna notizia recente in questa sezione.</p>';
+    }
+    html += "</div></section>";
+    return html;
   }
 
   function riquadriFacebook(tipo) {
@@ -768,38 +800,29 @@
     vociUfficiali("tutti").forEach(function (v) {
       all.push({ data: v.data || "", id: "v-" + v.url, voce: v });
     });
-    all.sort(function (a, b) {
-      if (a.data === b.data) return a.id < b.id ? 1 : -1;
-      return a.data < b.data ? 1 : -1;
-    });
-    var latest = all[0];
-    var recent = all.slice(1);
-
     var html =
       '<p class="page-kicker">Provincia di Latina, Lazio</p>' +
       '<h1 class="page-title">Gruppo Territoriale Lepini Ausoni</h1>' +
       '<p class="lead">Aggiornamenti dal territorio e, per ciascun comune, gli articoli e gli atti recenti dell\'albo pretorio. Gli articoli contrassegnati come esempio sono testi di prova.</p>';
 
-    if (latest && latest.voce) {
-      html += featuredVoce(latest.voce, base);
-    } else if (latest && latest.article) {
-      html += featuredHtml(latest.article, base);
-    } else {
+    html += sezioneFonte("nazionale", vociUfficiali("nazionale"), base);
+    html += sezioneFonte("regionale", vociUfficiali("regionale"), base);
+
+    var articoli = all.filter(function (item) { return item.article; });
+    if (articoli.length) {
+      html += featuredHtml(articoli[0].article, base);
+      if (articoli.length > 1) {
+        html += "<h2 class=\"section-title\">Ultime notizie dal territorio</h2>";
+        html += '<div class="lista-articoli">';
+        articoli.slice(1).forEach(function (item) { html += cardHtml(item.article, base); });
+        html += "</div>";
+      }
+    } else if (!vociUfficiali("tutti").length) {
       html += '<p class="vuoto">Non ci sono ancora articoli pubblicati.</p>';
     }
 
-    html += "<h2 class=\"section-title\">Ultime notizie</h2>";
-    if (recent.length) {
-      html += '<div class="lista-articoli">';
-      recent.forEach(function (item) {
-        html += item.voce ? cardVoce(item.voce, base) : cardHtml(item.article, base);
-      });
-      html += "</div>";
-    } else {
-      html += '<p class="vuoto">Non ci sono altre notizie al momento.</p>';
-    }
-
     mount.innerHTML = html;
+    attivaRiquadriFacebook();
   }
 
   function renderComune(slug) {
