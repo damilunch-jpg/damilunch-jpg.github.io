@@ -27,6 +27,7 @@ def main() -> int:
     if mancanti:
         print("Invio non eseguito: mancano le variabili " + ", ".join(mancanti) + ". Vanno create come secrets di Actions del repository, con questi nomi esatti.")
         return 1
+    print("Variabili presenti: " + ", ".join(presenti))
 
     user = os.environ["SMTP_USER"].strip()
     password = os.environ["SMTP_PASSWORD"].strip()
@@ -51,6 +52,9 @@ def main() -> int:
             print("Nessun riepilogo: invio saltato")
             return 0
         info = json.loads(riepilogo_path.read_text(encoding="utf-8"))
+        if info.get("pubblica") is False:
+            print("Zip non pubblicato: email non inviata")
+            return 0
         if not info.get("zip"):
             print("Nessun atto nuovo: email non inviata")
             return 0

@@ -1,0 +1,31 @@
+name: Prova email albo
+
+on:
+  push:
+    paths:
+      - .github/workflows/prova-email-albo.yml
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  prova:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Link dell'ultima Release
+        id: ultima
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 scripts/ultima_release_albo.py
+      - name: Invia email di prova
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          EMAIL_PROVA: "1"
+          RELEASE_URL: ${{ steps.ultima.outputs.release_url }}
+          ZIP_URL: ${{ steps.ultima.outputs.zip_url }}
+        run: python3 scripts/invia_albo.py
