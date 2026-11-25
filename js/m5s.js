@@ -1,13 +1,13 @@
 /* Generato da scripts/sync_m5s.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_UFFICIALE = {
-  "aggiornato": "2026-11-22T17:04:15+01:00",
+  "aggiornato": "2026-11-25T19:32:10+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "nazionale",
       "nome": "Movimento 5 Stelle",
       "esito": "ok",
-      "nuove": 0
+      "nuove": 2
     },
     {
       "id": "regionale",
@@ -17,6 +17,26 @@ window.M5S_UFFICIALE = {
     }
   ],
   "voci": [
+    {
+      "url": "https://www.movimento5stelle.eu/under-40-la-sardegna-scommette-sui-giovani-che-scelgono-di-viverci",
+      "titolo": "Under 40: la Sardegna scommette sui giovani che scelgono di viverci",
+      "anteprima": "Fino a 30.000 euro per chi ha meno di 40 anni e decide di costruire il proprio futuro sulla nostra isola. Domande entro il 29 novembre. Per anni ci siamo sentiti ripetere che lo spopolamento era un destino inevitabile. Paesi che si svuotano, scuole…",
+      "data": "2026-11-25",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
+    {
+      "url": "https://www.movimento5stelle.eu/umbria-non-brucia-il-suo-futuro-lo-rigenera-approvata-la-legge-regionale-sulleconomia-circolare",
+      "titolo": "L’Umbria non brucia il suo futuro, lo rigenera: approvata la legge regionale sull’Economia Circolare",
+      "anteprima": "La transizione ecologica non è un’ideologia né un lusso per pochi: riguarda la nostra vita, la nostra salute, una società più equa e giusta. L’Umbria sceglie con coraggio di non bruciare il proprio futuro, ma di rigenerarlo. Con il voto…",
+      "data": "2026-11-25",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
     {
       "url": "https://www.movimento5stelle.eu/il-capogruppo-del-movimento-cinque-stelle-lombardia-rinuncia-allindennita-e-restituisce-65-000-euro",
       "titolo": "Il Capogruppo del Movimento Cinque Stelle Lombardia rinuncia all’indennità e restituisce 65.000 euro",
