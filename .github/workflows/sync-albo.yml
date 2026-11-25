@@ -80,7 +80,7 @@ jobs:
         run: |
           python3 -m pip install --user --disable-pip-version-check playwright
           google-chrome --version
-          python3 -c "import playwright; print('playwright', playwright.__version__)"
+          python3 -c "import playwright; print('playwright ok')"
       - name: Riprendi l'elenco letto
         uses: actions/download-artifact@v4
         with:

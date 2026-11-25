@@ -1,6 +1,10 @@
 name: Zip Halley con Chrome
 
 on:
+  push:
+    paths:
+      - .github/workflows/zip-halley-browser.yml
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -20,7 +24,7 @@ jobs:
         run: |
           python3 -m pip install --user --disable-pip-version-check playwright
           google-chrome --version
-          python3 -c "import playwright; print('playwright', playwright.__version__)"
+          python3 -c "import playwright; print('playwright ok')"
       - name: Prepara lo zip degli atti nuovi
         run: python3 scripts/pacchetto_albo.py
       - name: Pubblica la Release
