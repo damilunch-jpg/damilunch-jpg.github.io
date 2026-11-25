@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-24T19:45:55+01:00",
+  "aggiornato": "2026-11-25T14:52:26+01:00",
   "giorni": 60,
   "fonti": [
     {
@@ -12,7 +12,7 @@
       "id": "latinacorriere",
       "nome": "Latina Corriere",
       "esito": "ok",
-      "nuove": 3
+      "nuove": 2
     },
     {
       "id": "ilcaffe",
@@ -34,6 +34,54 @@
     }
   ],
   "notizie": [
+    {
+      "url": "https://www.h24notizie.com/2026/11/25/vannacci-punta-al-sud-pontino-parisella-nellesecutivo-provinciale-cipolla-alla-guida-di-fondi",
+      "titolo": "Vannacci punta al Sud pontino: Parisella nell’esecutivo provinciale, Cipolla alla guida di Fondi",
+      "anteprima": "Futuro Nazionale prova a mettere radici nel territorio pontino e sceglie Fondi come uno dei punti di riferimento per la propria riorganizzazione. Il movimento legato al generale Roberto Vannacci ridisegna la propria struttura locale affidando nuovi…",
+      "data": "2026-11-25",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "fondi"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/taekwondo-la-fenice-di-terracina-brilla-tra-assoluti-italiani-e-malta-open",
+      "titolo": "Taekwondo, la Fenice di Terracina brilla tra Assoluti Italiani e Malta Open",
+      "anteprima": "Fine settimana da incorniciare per l’A.S.D. Taekwondo Fenice di Terracina, guidata dal maestro Simone Longarini. Il bilancio è di cinque medaglie tra Campionati Italiani Assoluti e Malta Open E2. A brillare a Roma è stata Giulia Senesi, che ha…",
+      "data": "2026-11-25",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/italia-u-15-il-pontino-gabriele-bove-torna-a-vestire-azzurro",
+      "titolo": "Italia U-15, il pontino Gabriele Bove torna a vestire azzurro",
+      "anteprima": "Di Francesco Marigliani. Uno splendido inizio di stagione con i Nazionali della Roma Under 15 Èlite, con cui ha già messo a referto 5 goal e 6 assist. Ora, la convocazione per il tradizionale Torneo di Natale di Novarello. La crescita di Gabriele…",
+      "data": "2026-11-25",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/anziano-scomparso-ritrovato-fondi.html",
+      "titolo": "Esce per una passeggiata e si perde: una giornata di paura per le sorti di un 85enne",
+      "anteprima": "Dopo ore ricerche senza sosta l’anziano è stato ritrovato in serata in una zona di campagna a Fondi. Di lui si erano perse le tracce dalla mattina",
+      "data": "2026-11-25",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "fondi"
+      ]
+    },
     {
       "url": "https://www.h24notizie.com/2026/11/24/tragedia-a-cisterna-la-vittima-e-roberto-tribuzio-era-originario-di-fondi",
       "titolo": "Tragedia a Cisterna, la vittima è Roberto Tribuzio: era originario di Fondi",
