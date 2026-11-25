@@ -1,0 +1,49 @@
+name: Prova collegamento Halley
+
+on:
+  push:
+    paths:
+      - .github/workflows/prova-halley.yml
+    branches: [main]
+
+jobs:
+  prova:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-22.04, ubuntu-24.04, ubuntu-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 8
+    steps:
+      - name: Prova una scheda e un allegato
+        run: |
+          python3 - << 'PY'
+          import re, ssl, urllib.request
+          url = "https://www.halleyweb.com/c059028/mc/mc_p_dettaglio.php?id_pubbl=27021"
+          print("runner", "${{ matrix.os }}")
+          ctx = ssl.create_default_context()
+          try:
+              ctx.set_ciphers("DEFAULT@SECLEVEL=1")
+          except ssl.SSLError:
+              pass
+          req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+          try:
+              with urllib.request.urlopen(req, timeout=25, context=ctx) as res:
+                  html = res.read(400000).decode("utf-8", "replace")
+                  print("SCHEDA", res.status, len(html))
+          except Exception as exc:
+              print("SCHEDA_ERRORE", type(exc).__name__, exc)
+              raise SystemExit(0)
+          links = re.findall(r"mc_attachment\.php\?mc=\d+", html, flags=re.I)
+          print("LINK", len(links), links[:4])
+          if not links:
+              raise SystemExit(0)
+          file_url = "https://www.halleyweb.com/c059028/mc/" + links[0]
+          req = urllib.request.Request(file_url, headers={"User-Agent": "Mozilla/5.0"})
+          try:
+              with urllib.request.urlopen(req, timeout=40, context=ctx) as res:
+                  raw = res.read(200000)
+                  print("FILE", res.status, len(raw), raw[:8], res.headers.get("Content-Type"))
+          except Exception as exc:
+              print("FILE_ERRORE", type(exc).__name__, exc)
+          PY
