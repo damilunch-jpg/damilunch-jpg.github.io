@@ -31,13 +31,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  sync:
-    # I runner Linux ricevono un reset TLS da Halley (195.78.210.236). Windows no.
-    runs-on: windows-latest
-    timeout-minutes: 360
-    defaults:
-      run:
-        shell: bash
+  leggi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - name: Leggi gli albi e aggiorna l'elenco
@@ -45,33 +41,66 @@ jobs:
         env:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
           ALBO_SCHEDULE: ${{ github.event.schedule }}
-        run: python scripts/sync_albo.py
-      - name: Prepara lo zip degli atti nuovi
+        run: python3 scripts/sync_albo.py
+      - name: Passa l'elenco al download
         if: github.event.inputs.solo_email != 'true'
-        run: python scripts/pacchetto_albo.py
-      - name: Pubblica la Release
-        if: github.event.inputs.solo_email != 'true'
-        id: release
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/pubblica_release_albo.py
+        uses: actions/upload-artifact@v4
+        with:
+          name: albo-lettura
+          path: |
+            data/albo.json
+            js/albo.js
+          if-no-files-found: error
       - name: Link dell'ultima Release
         if: github.event.inputs.solo_email == 'true'
         id: ultima
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/ultima_release_albo.py
+        run: python3 scripts/ultima_release_albo.py
+      - name: Invia email di prova
+        if: github.event.inputs.solo_email == 'true'
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          EMAIL_PROVA: "1"
+          RELEASE_URL: ${{ steps.ultima.outputs.release_url }}
+          ZIP_URL: ${{ steps.ultima.outputs.zip_url }}
+        run: python3 scripts/invia_albo.py
+
+  documenti:
+    needs: leggi
+    if: github.event.inputs.solo_email != 'true'
+    # I PDF Halley si scaricano da Windows: dai runner Linux il TLS viene chiuso.
+    runs-on: windows-latest
+    timeout-minutes: 180
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Riprendi l'elenco letto
+        uses: actions/download-artifact@v4
+        with:
+          name: albo-lettura
+      - name: Prepara lo zip degli atti nuovi
+        run: python scripts/pacchetto_albo.py
+      - name: Pubblica la Release
+        id: release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/pubblica_release_albo.py
       - name: Invia lo zip per email
         env:
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           MAIL_TO: ${{ secrets.MAIL_TO }}
-          EMAIL_PROVA: ${{ github.event.inputs.solo_email == 'true' && '1' || '0' }}
-          RELEASE_URL: ${{ github.event.inputs.solo_email == 'true' && steps.ultima.outputs.release_url || steps.release.outputs.release_url }}
-          ZIP_URL: ${{ github.event.inputs.solo_email == 'true' && steps.ultima.outputs.zip_url || steps.release.outputs.zip_url }}
+          EMAIL_PROVA: "0"
+          RELEASE_URL: ${{ steps.release.outputs.release_url }}
+          ZIP_URL: ${{ steps.release.outputs.zip_url }}
         run: python scripts/invia_albo.py
       - name: Pubblica l'elenco
-        if: always() && github.event.inputs.solo_email != 'true'
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

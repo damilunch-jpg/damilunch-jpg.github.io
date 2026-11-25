@@ -1,0 +1,40 @@
+name: Zip Halley su Windows
+
+on:
+  push:
+    paths:
+      - .github/workflows/zip-halley-windows.yml
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: zip-halley-windows
+  cancel-in-progress: false
+
+jobs:
+  documenti:
+    runs-on: windows-latest
+    timeout-minutes: 180
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepara lo zip degli atti nuovi
+        run: python scripts/pacchetto_albo.py
+      - name: Pubblica la Release
+        id: release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/pubblica_release_albo.py
+      - name: Invia lo zip per email
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          EMAIL_PROVA: "0"
+          RELEASE_URL: ${{ steps.release.outputs.release_url }}
+          ZIP_URL: ${{ steps.release.outputs.zip_url }}
+        run: python scripts/invia_albo.py

@@ -183,6 +183,33 @@ class Client:
         self.fast = False
         self.max_attempts = MAX_ATTEMPTS
         self.timeout = TIMEOUT
+        # Durante la lettura dell'elenco: se Halley resetta, non insistere per ore.
+        self.ferma_halley = False
+        self.halley_fail = 0
+        self.halley_bloccato = False
+
+    def _halley_chiuso(self, url: str):
+        if self.halley_bloccato and is_halley(url):
+            raise SourceError("Halley chiude la connessione: lettura interrotta")
+
+    def _segna_halley(self, url: str, exc: SourceError):
+        if not self.ferma_halley or not is_halley(url):
+            return
+        message = str(exc).lower()
+        if not any(token in message for token in ("reset", "eof", "ssl", "tls", "connessione", "chius")):
+            return
+        self.halley_fail += 1
+        if self.halley_fail >= 2:
+            self.halley_bloccato = True
+            print(
+                f"  {self.label}: Halley chiude la connessione, le altre letture Halley si saltano",
+                flush=True,
+            )
+
+    def _tentativi(self, url: str) -> int:
+        if self.ferma_halley and is_halley(url):
+            return min(self.max_attempts, 2)
+        return self.max_attempts
 
     def start_comune(self, nome: str):
         self.label = nome
@@ -202,11 +229,15 @@ class Client:
             if not self._started:
                 self._started = True
                 return
-            if self.fast:
+            if self.ferma_halley and is_halley(url):
+                low, high = (2.0, 4.0)
+            elif self.fast:
                 low, high = (8.0, 12.0) if is_halley(url) else (0.4, 1.0)
             else:
                 low, high = (8.0, 15.0) if is_halley(url) else (5.0, 12.0)
             delay = random.uniform(low, high)
+        elif self.ferma_halley and is_halley(url):
+            delay = 5
         else:
             delay = min(120.0, 15.0 * (2 ** (attempt - 2))) + random.uniform(0, 8)
         print(f"  {self.label}: attesa {delay:.0f}s prima di {host} (tentativo {attempt}/{self.max_attempts})", flush=True)
@@ -279,8 +310,10 @@ class Client:
     def _call(self, url: str, data=None, headers=None):
         host = urllib.parse.urlsplit(url).hostname or url
         method = "POST" if data is not None else "GET"
+        self._halley_chiuso(url)
         last = None
-        for attempt in range(1, self.max_attempts + 1):
+        tentativi = self._tentativi(url)
+        for attempt in range(1, tentativi + 1):
             self._pause(url, attempt)
             self.request_count += 1
             try:
@@ -289,15 +322,16 @@ class Client:
                 last = exc
                 self.last_status = str(exc).split(" (")[0][:80]
                 print(
-                    f"  {self.label}: {method} {host} tentativo {attempt}/{self.max_attempts} -> {self.last_status}",
+                    f"  {self.label}: {method} {host} tentativo {attempt}/{tentativi} -> {self.last_status}",
                     flush=True,
                 )
-                if attempt == self.max_attempts or not self._retryable(exc):
+                self._segna_halley(url, exc)
+                if self.halley_bloccato or attempt == tentativi or not self._retryable(exc):
                     raise
                 continue
             self.last_status = f"HTTP {status}"
             print(
-                f"  {self.label}: {method} {host} tentativo {attempt}/{self.max_attempts} -> HTTP {status}",
+                f"  {self.label}: {method} {host} tentativo {attempt}/{tentativi} -> HTTP {status}",
                 flush=True,
             )
             return text, final, status
@@ -387,8 +421,10 @@ class Client:
 
     def get_bytes(self, url: str, limit: int = 12_000_000, _cert_retry: bool = False):
         """Scarica un file pubblico. Ritenta se la connessione viene chiusa."""
+        self._halley_chiuso(url)
         last = None
-        for attempt in range(1, self.max_attempts + 1):
+        tentativi = self._tentativi(url)
+        for attempt in range(1, tentativi + 1):
             self._pause(url, attempt)
             try:
                 return self._read_bytes(url, limit, _cert_retry=_cert_retry)
@@ -396,10 +432,11 @@ class Client:
                 last = exc
                 self.last_status = str(exc).split(" (")[0][:80]
                 print(
-                    f"  {self.label}: GET {urllib.parse.urlsplit(url).hostname or url} tentativo {attempt}/{self.max_attempts} -> {self.last_status}",
+                    f"  {self.label}: GET {urllib.parse.urlsplit(url).hostname or url} tentativo {attempt}/{tentativi} -> {self.last_status}",
                     flush=True,
                 )
-                if attempt == self.max_attempts or not self._retryable(exc):
+                self._segna_halley(url, exc)
+                if self.halley_bloccato or attempt == tentativi or not self._retryable(exc):
                     raise
         raise last or SourceError("Documento non scaricato")
 
@@ -1410,6 +1447,7 @@ def main(argv):
     previous = load_previous()
     state = dict(previous)
     client = Client()
+    client.ferma_halley = True
     now = datetime.now(ROME)
     print(f"Sincronizzazione albi, ora di Roma: {now.isoformat(timespec='seconds')} modalità={plan}", flush=True)
     for comune in comuni:
