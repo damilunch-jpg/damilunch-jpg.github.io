@@ -1,10 +1,7 @@
 name: Prova email albo
 
 on:
-  push:
-    paths:
-      - .github/workflows/prova-email-albo.yml
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
