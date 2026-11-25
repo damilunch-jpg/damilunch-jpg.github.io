@@ -1,0 +1,31 @@
+name: Prova Sezze con Chrome
+
+on:
+  push:
+    paths:
+      - .github/workflows/prova-sezze.yml
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prova-sezze
+  cancel-in-progress: false
+
+jobs:
+  sezze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Chrome
+        run: |
+          python3 -m pip install --user --disable-pip-version-check playwright
+          google-chrome --version
+          python3 -c "import playwright; print('playwright ok')"
+      - name: Scarica Sezze e pubblica la prova
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python3 scripts/prova_sezze.py
