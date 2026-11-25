@@ -1,10 +1,6 @@
 name: Zip Halley con Chrome
 
 on:
-  push:
-    paths:
-      - .github/workflows/zip-halley-browser.yml
-    branches: [main]
   workflow_dispatch:
 
 permissions:
