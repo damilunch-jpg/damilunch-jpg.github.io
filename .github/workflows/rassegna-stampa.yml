@@ -5,11 +5,6 @@ on:
     # Ogni ora al minuto 17, così non parte insieme agli altri cron allo scoccare dell'ora.
     - cron: "17 * * * *"
   workflow_dispatch:
-  # Un solo giro immediato: il trigger di push si toglie nel commit successivo.
-  push:
-    paths:
-      - .github/workflows/rassegna-stampa.yml
-    branches: [main]
 
 permissions:
   contents: write
