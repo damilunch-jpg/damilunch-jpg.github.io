@@ -71,27 +71,27 @@ jobs:
   documenti:
     needs: leggi
     if: github.event.inputs.solo_email != 'true'
-    # I PDF Halley si scaricano da Windows: dai runner Linux il TLS viene chiuso.
-    runs-on: windows-latest
+    # Chrome, non Python: Halley chiude il TLS in base all'impronta del client.
+    runs-on: ubuntu-latest
     timeout-minutes: 180
-    defaults:
-      run:
-        shell: bash
     steps:
       - uses: actions/checkout@v4
-      - name: Fuso orario di Roma
-        run: python -m pip install --disable-pip-version-check tzdata
+      - name: Chrome per i PDF Halley
+        run: |
+          python3 -m pip install --disable-pip-version-check playwright
+          sudo python3 -m playwright install-deps chromium
+          google-chrome --version
       - name: Riprendi l'elenco letto
         uses: actions/download-artifact@v4
         with:
           name: albo-lettura
       - name: Prepara lo zip degli atti nuovi
-        run: python scripts/pacchetto_albo.py
+        run: python3 scripts/pacchetto_albo.py
       - name: Pubblica la Release
         id: release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: python scripts/pubblica_release_albo.py
+        run: python3 scripts/pubblica_release_albo.py
       - name: Invia lo zip per email
         env:
           SMTP_USER: ${{ secrets.SMTP_USER }}
@@ -100,7 +100,7 @@ jobs:
           EMAIL_PROVA: "0"
           RELEASE_URL: ${{ steps.release.outputs.release_url }}
           ZIP_URL: ${{ steps.release.outputs.zip_url }}
-        run: python scripts/invia_albo.py
+        run: python3 scripts/invia_albo.py
       - name: Pubblica l'elenco
         if: always()
         run: |

@@ -20,6 +20,7 @@ from zoneinfo import ZoneInfo
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from sync_albo import Client, SourceError, abs_url, is_halley
+from halley_browser import SLUG as HALLEY_BROWSER, BrowserHalley
 
 ROOT = Path(__file__).resolve().parents[1]
 ALBO_PATH = ROOT / "data" / "albo.json"
@@ -223,8 +224,17 @@ def main() -> int:
     per_comune = {}
     fallimenti_halley = 0
     halley_spento = False
+    browser = None
+    if any(slug in HALLEY_BROWSER for slug, _item, _key in nuovi):
+        try:
+            browser = BrowserHalley()
+            print("PDF Halley: Chrome headless, un solo contesto", flush=True)
+        except Exception as exc:
+            print(f"Browser non avviato: {exc}", flush=True)
+            browser = None
     buffer = io.BytesIO()
-    with zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED) as archivio:
+    archivio = zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED)
+    try:
         archivio.writestr("PROMPT.txt", PROMPT)
         for slug, item, key in nuovi:
             nome = nomi.get(slug, slug)
@@ -235,32 +245,51 @@ def main() -> int:
             errore_rete = False
             client.label = nome
             url_atto = item.get("url") or ""
-            if halley_spento and is_halley(url_atto):
-                pagina_letta, links = False, []
-            else:
-                links, pagina_letta = links_documenti(client, url_atto, fonti.get(slug, ""))
-            if is_halley(url_atto) and not pagina_letta:
-                fallimenti_halley += 1
-                if fallimenti_halley >= 3:
-                    halley_spento = True
-                    print("Halley chiude la connessione: gli atti Halley rimasti restano in coda", flush=True)
-            elif pagina_letta:
-                fallimenti_halley = 0
-            for link in links:
-                preso = scarica(client, link)
-                if preso is None:
+            usa_browser = browser is not None and slug in HALLEY_BROWSER and is_halley(url_atto)
+            if usa_browser:
+                if browser.spento:
+                    pagina_letta, links = False, []
                     errore_rete = True
-                    continue
-                if not preso:
-                    continue
-                raw, fname = preso
-                destinazione = f"{cartella}/{base}_{fname}"
-                if destinazione in usati:
-                    destinazione = f"{cartella}/{base}_{scaricati + 1}_{fname}"
-                usati.add(destinazione)
-                archivio.writestr(destinazione, raw)
-                scaricati += 1
-                documenti += 1
+                    presi = []
+                else:
+                    presi, pagina_letta, errore_rete = browser.scarica_atto(item, fonti.get(slug, ""))
+                    links = ["browser"] if presi or errore_rete else []
+                for raw, fname in presi:
+                    fname = nome_file(fname)
+                    destinazione = f"{cartella}/{base}_{fname}"
+                    if destinazione in usati:
+                        destinazione = f"{cartella}/{base}_{scaricati + 1}_{fname}"
+                    usati.add(destinazione)
+                    archivio.writestr(destinazione, raw)
+                    scaricati += 1
+                    documenti += 1
+            else:
+                if halley_spento and is_halley(url_atto):
+                    pagina_letta, links = False, []
+                else:
+                    links, pagina_letta = links_documenti(client, url_atto, fonti.get(slug, ""))
+                if is_halley(url_atto) and not pagina_letta:
+                    fallimenti_halley += 1
+                    if fallimenti_halley >= 3 and not halley_spento:
+                        halley_spento = True
+                        print("Halley chiude la connessione: gli atti Halley rimasti restano in coda", flush=True)
+                elif pagina_letta:
+                    fallimenti_halley = 0
+                for link in links:
+                    preso = scarica(client, link)
+                    if preso is None:
+                        errore_rete = True
+                        continue
+                    if not preso:
+                        continue
+                    raw, fname = preso
+                    destinazione = f"{cartella}/{base}_{fname}"
+                    if destinazione in usati:
+                        destinazione = f"{cartella}/{base}_{scaricati + 1}_{fname}"
+                    usati.add(destinazione)
+                    archivio.writestr(destinazione, raw)
+                    scaricati += 1
+                    documenti += 1
             fatto = segna_fatto(pagina_letta, bool(links), scaricati, errore_rete)
             if not fatto:
                 da_riprovare.add(key)
@@ -279,6 +308,10 @@ def main() -> int:
         writer.writerow(["Comune", "numero", "data", "oggetto", "tipo", "link originale"])
         writer.writerows(righe)
         archivio.writestr("indice.csv", csv_buf.getvalue())
+    finally:
+        archivio.close()
+        if browser:
+            browser.close()
 
     zip_name = f"albo-{oggi}.zip"
     zip_path = DIST / zip_name
