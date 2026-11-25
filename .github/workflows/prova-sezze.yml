@@ -1,10 +1,7 @@
 name: Prova Sezze con Chrome
 
 on:
-  push:
-    paths:
-      - .github/workflows/prova-sezze.yml
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: write
