@@ -660,29 +660,19 @@
     var base = basePath();
     document.title = "Gruppo Territoriale – Movimento 5 Stelle, GT Lepini Ausoni";
     var tipo = (window.location.hash || "").replace(/^#/, "") || "tutti";
-    if (tipo !== "articolo" && tipo !== "comunicato" && tipo !== "nazionale" && tipo !== "regionale") tipo = "tutti";
+    if (tipo !== "articolo" && tipo !== "comunicato") tipo = "tutti";
     var articoliTutti = articlesGruppo("tutti");
-    var vociTutte = vociUfficiali("tutti");
 
     var html =
       '<p class="page-kicker">Movimento 5 Stelle</p>' +
       "<h1>Gruppo Territoriale</h1>" +
-      '<p class="lead">Articoli e comunicati del Gruppo Territoriale Lepini Ausoni, insieme alle notizie ufficiali del Movimento nazionale e del Movimento in Lazio. Di quelle si mostra solo il riassunto già pubblicato nel feed, con il link alla fonte.</p>';
+      '<p class="lead">Articoli e comunicati del Gruppo Territoriale Lepini Ausoni.</p>';
 
     html += '<div class="filtri-comune" role="group" aria-label="Filtra per tipo">';
     html += '<a class="filtro' + (tipo === "tutti" ? " is-active" : "") + '" href="' + base + 'gruppo.html#tutti">Tutti</a>';
     html += '<a class="filtro' + (tipo === "articolo" ? " is-active" : "") + '" href="' + base + 'gruppo.html#articolo">Articoli</a>';
     html += '<a class="filtro' + (tipo === "comunicato" ? " is-active" : "") + '" href="' + base + 'gruppo.html#comunicato">Comunicati stampa</a>';
-    html += '<a class="filtro' + (tipo === "nazionale" ? " is-active" : "") + '" href="' + base + 'gruppo.html#nazionale">Dal Nazionale</a>';
-    html += '<a class="filtro' + (tipo === "regionale" ? " is-active" : "") + '" href="' + base + 'gruppo.html#regionale">Dal Regionale</a>';
     html += "</div>";
-
-    if (tipo === "tutti" || tipo === "nazionale") {
-      html += sezioneFonte("nazionale", vociUfficiali("nazionale"), base);
-    }
-    if (tipo === "tutti" || tipo === "regionale") {
-      html += sezioneFonte("regionale", vociUfficiali("regionale"), base);
-    }
 
     if (tipo === "tutti" || tipo === "articolo" || tipo === "comunicato") {
       var articoli = [];
@@ -693,9 +683,9 @@
         html += '<h2 class="section-title">Articoli e comunicati del gruppo</h2><div class="lista-articoli">';
         articoli.forEach(function (card) { html += card; });
         html += "</div>";
-      } else if (tipo !== "tutti" && !vociTutte.length) {
+      } else if (tipo !== "tutti") {
         html += '<p class="vuoto">Non ci sono ancora contenuti di questo tipo.</p>';
-      } else if (!articoliTutti.length && !vociTutte.length) {
+      } else if (!articoliTutti.length) {
         html += '<p class="vuoto">Presto i primi comunicati del gruppo.</p>';
       }
     }
@@ -704,7 +694,6 @@
       mount.setAttribute("data-gruppo-hash", "1");
       window.addEventListener("hashchange", renderGruppo);
     }
-    attivaRiquadriFacebook();
   }
 
   var PAGINE_FB = [
@@ -738,27 +727,46 @@
     return '<svg class="fascia-icona" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2.2l2.6 5.7 6.2.7-4.6 4.2 1.3 6.1L12 15.8 6.5 18.9l1.3-6.1L3.2 8.6l6.2-.7L12 2.2z"/></svg>';
   }
 
-  function sezioneFonte(id, voci, base) {
+  var PAGINE_FONTE = {
+    nazionale: {
+      sito: "https://www.movimento5stelle.eu/",
+      sitoNome: "movimento5stelle.eu"
+    },
+    regionale: {
+      sito: "https://www.movimento5stelle.eu/tag/lazio/",
+      sitoNome: "Movimento 5 Stelle Lazio"
+    }
+  };
+
+  function linkElenco(href, testo) {
+    return '<p class="sezione-tutte"><a href="' + href + '">' + escapeHtml(testo) + "</a></p>";
+  }
+
+  function sezioneFonte(id, voci, base, opzioni) {
+    opzioni = opzioni || {};
     var titolo = tipoLabel(id);
     var pagina = null;
     for (var i = 0; i < PAGINE_FB.length; i++) {
       if (PAGINE_FB[i].id === id) pagina = PAGINE_FB[i];
     }
+    var mostrate = typeof opzioni.limite === "number" ? voci.slice(0, opzioni.limite) : voci;
+    var tagTitolo = opzioni.titoloPagina ? "h1" : "h2";
     var html = '<section class="blocco-fonte ' + id + '" aria-labelledby="fonte-' + id + '">';
     html += '<header class="fascia-fonte">';
     html += iconaFonte(id);
-    html += '<div class="fascia-testi"><h2 id="fonte-' + id + '">' + escapeHtml(titolo) + "</h2>";
+    html += '<div class="fascia-testi"><' + tagTitolo + ' id="fonte-' + id + '">' + escapeHtml(titolo) + "</" + tagTitolo + ">";
     html += '<p>' + escapeHtml(pagina ? pagina.nome : titolo) + "</p></div>";
     html += '<span class="fascia-badge">Ufficiale</span></header>';
     html += '<div class="blocco-fonte-corpo">';
-    if (pagina) html += riquadroFacebook(pagina);
-    if (voci.length) {
+    if (pagina && opzioni.facebook !== false) html += riquadroFacebook(pagina);
+    if (mostrate.length) {
       html += '<div class="lista-articoli">';
-      voci.forEach(function (v) { html += cardVoce(v, base); });
+      mostrate.forEach(function (v) { html += cardVoce(v, base); });
       html += "</div>";
     } else {
       html += '<p class="vuoto">Nessuna notizia recente in questa sezione.</p>';
     }
+    if (opzioni.elenco) html += linkElenco(opzioni.elenco, opzioni.elencoTesto || "Elenco completo");
     html += "</div></section>";
     return html;
   }
@@ -794,35 +802,80 @@
     var mount = $("#contenuto");
     if (!mount) return;
     var base = basePath();
-    var all = sortedArticles().map(function (a) {
-      return { data: a.data || "", id: "a-" + a.id, article: a };
-    });
-    vociUfficiali("tutti").forEach(function (v) {
-      all.push({ data: v.data || "", id: "v-" + v.url, voce: v });
-    });
     var html =
       '<p class="page-kicker">Provincia di Latina, Lazio</p>' +
       '<h1 class="page-title">Gruppo Territoriale Lepini Ausoni</h1>' +
-      '<p class="lead">Aggiornamenti dal territorio e, per ciascun comune, gli articoli e gli atti recenti dell\'albo pretorio. Gli articoli contrassegnati come esempio sono testi di prova.</p>';
+      '<p class="lead">Prima gli aggiornamenti del gruppo, poi le notizie ufficiali del Movimento e, in fondo, la stampa locale. Gli articoli contrassegnati come esempio sono testi di prova.</p>';
 
-    html += sezioneFonte("nazionale", vociUfficiali("nazionale"), base);
-    html += sezioneFonte("regionale", vociUfficiali("regionale"), base);
-
-    var articoli = all.filter(function (item) { return item.article; });
-    if (articoli.length) {
-      html += featuredHtml(articoli[0].article, base);
-      if (articoli.length > 1) {
-        html += "<h2 class=\"section-title\">Ultime notizie dal territorio</h2>";
-        html += '<div class="lista-articoli">';
-        articoli.slice(1).forEach(function (item) { html += cardHtml(item.article, base); });
-        html += "</div>";
-      }
-    } else if (!vociUfficiali("tutti").length) {
-      html += '<p class="vuoto">Non ci sono ancora articoli pubblicati.</p>';
+    var gruppo = sortedArticles();
+    html += '<section class="home-gruppo" aria-labelledby="home-gruppo">';
+    html += '<h2 id="home-gruppo" class="section-title">Gruppo Territoriale</h2>';
+    if (gruppo.length) {
+      html += '<div class="lista-articoli">';
+      gruppo.forEach(function (a) { html += cardHtml(a, base); });
+      html += "</div>";
+    } else {
+      html += '<p class="vuoto">Presto i primi comunicati del gruppo.</p>';
     }
+    html += linkElenco(base + "gruppo.html", "Tutti gli articoli e i comunicati del gruppo");
+    html += "</section>";
+
+    html += sezioneFonte("nazionale", vociUfficiali("nazionale"), base, {
+      limite: 3,
+      elenco: base + "nazionale.html",
+      elencoTesto: "Elenco completo dal Nazionale"
+    });
+    html += sezioneFonte("regionale", vociUfficiali("regionale"), base, {
+      limite: 3,
+      elenco: base + "regionale.html",
+      elencoTesto: "Elenco completo dal Regionale"
+    });
+
+    var stampa = notizieOrdinate("tutti").slice(0, 3);
+    html += '<section class="rassegna-box" aria-labelledby="home-stampa">';
+    html += '<h2 id="home-stampa" class="section-title">Dalla stampa locale</h2>';
+    if (stampa.length) {
+      html += '<div class="lista-articoli">';
+      stampa.forEach(function (n) { html += cardNotizia(n, base); });
+      html += "</div>";
+    } else {
+      html += '<p class="vuoto">Nessuna notizia recente delle testate locali.</p>';
+    }
+    html += linkElenco(base + "rassegna.html", "Tutte le notizie della rassegna stampa");
+    html += "</section>";
 
     mount.innerHTML = html;
     attivaRiquadriFacebook();
+  }
+
+  function renderPaginaFonte(id) {
+    var mount = $("#contenuto");
+    if (!mount) return;
+    var base = basePath();
+    var titolo = tipoLabel(id);
+    var info = PAGINE_PAGINA(id);
+    document.title = titolo + " – Movimento 5 Stelle, GT Lepini Ausoni";
+    var html = '<p class="page-kicker"><a href="' + base + 'index.html">Home</a></p>';
+    html += sezioneFonte(id, vociUfficiali(id), base, { facebook: true, titoloPagina: true });
+    html += '<p class="sezione-sorgenti">';
+    if (info.facebook) {
+      html += '<a href="' + escapeHtml(info.facebook) + '" target="_blank" rel="noopener noreferrer">Pagina Facebook</a>';
+    }
+    if (info.sito) {
+      html += '<a href="' + escapeHtml(info.sito) + '" target="_blank" rel="noopener noreferrer">Sito ufficiale: ' + escapeHtml(info.sitoNome || info.sito) + "</a>";
+    }
+    html += "</p>";
+    mount.innerHTML = html;
+    attivaRiquadriFacebook();
+  }
+
+  function PAGINE_PAGINA(id) {
+    var facebook = "";
+    for (var i = 0; i < PAGINE_FB.length; i++) {
+      if (PAGINE_FB[i].id === id) facebook = PAGINE_FB[i].url;
+    }
+    var sito = PAGINE_FONTE[id] || {};
+    return { facebook: facebook, sito: sito.sito || "", sitoNome: sito.sitoNome || "" };
   }
 
   function renderComune(slug) {
@@ -1077,6 +1130,7 @@
     else if (page === "articolo") renderArticolo();
     else if (page === "rassegna") renderRassegna();
     else if (page === "gruppo") renderGruppo();
+    else if (page === "nazionale" || page === "regionale") renderPaginaFonte(page);
   }
 
   if (document.readyState === "loading") {

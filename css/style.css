@@ -593,6 +593,49 @@ a:focus-visible {
   margin: 0.85rem 0 0;
 }
 
+.sezione-tutte {
+  margin: 0.95rem 0 0;
+}
+
+.sezione-tutte a {
+  display: block;
+  background: var(--giallo);
+  color: #111111;
+  font-weight: 800;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.75rem 0.9rem;
+  border: 2px solid #111111;
+  border-radius: var(--raggio);
+}
+
+.sezione-tutte a:hover,
+.sezione-tutte a:focus-visible {
+  background: var(--giallo-scuro, #e6c200);
+}
+
+.sezione-sorgenti {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0.4rem 0 1.2rem;
+}
+
+.sezione-sorgenti a {
+  font-weight: 700;
+}
+
+.home-gruppo {
+  margin: 0 0 1.4rem;
+}
+
+@media (min-width: 700px) {
+  .sezione-tutte a {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
 .rassegna-aggiornata {
   margin: 0 0 0.8rem;
   color: var(--testo-soft);
