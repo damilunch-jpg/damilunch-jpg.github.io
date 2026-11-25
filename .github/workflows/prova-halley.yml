@@ -24,8 +24,11 @@ jobs:
                       print(nome, "OK", res.status, len(html), b"mc_attachment" in html)
               except Exception as exc:
                   print(nome, "ERRORE", type(exc).__name__, exc)
+          import time
           base = ssl.create_default_context()
-          prova("default", base)
+          for i in range(1, 4):
+              prova("default-" + str(i), base)
+              time.sleep(15)
           sec = ssl.create_default_context()
           try:
               sec.set_ciphers("DEFAULT@SECLEVEL=1")
