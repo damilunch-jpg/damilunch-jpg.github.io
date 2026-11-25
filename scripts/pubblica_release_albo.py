@@ -47,24 +47,23 @@ def main() -> int:
     tag = info["tag"]
     zip_path = ROOT / info["zip"]
     repo = os.environ.get("GITHUB_REPOSITORY") or ""
-    gh("release", "delete", tag, "--yes", "--cleanup-tag", check=False)
     notes = (
         f"Atti nuovi: {info.get('atti', 0)}. "
         f"Documenti scaricati: {info.get('documenti', 0)}. "
         f"Atti senza file perché il documento non è pubblico senza login: {info.get('senza_file', 0)}."
     )
-    creato = gh(
-        "release",
-        "create",
-        tag,
-        str(zip_path),
-        "--title",
-        f"Albo pretorio {tag.removeprefix('albo-')}",
-        "--notes",
-        notes,
-    )
+    titolo = f"Albo pretorio {tag.removeprefix('albo-')}"
+    esiste = gh("release", "view", tag, check=False)
+    if esiste.returncode == 0:
+        creato = gh("release", "upload", tag, str(zip_path), "--clobber", check=False)
+        if creato.returncode != 0:
+            print((creato.stderr or creato.stdout).strip())
+            gh("release", "delete", tag, "--yes", "--cleanup-tag", check=False)
+            creato = gh("release", "create", tag, str(zip_path), "--title", titolo, "--notes", notes, check=False)
+    else:
+        creato = gh("release", "create", tag, str(zip_path), "--title", titolo, "--notes", notes, check=False)
     if creato.returncode != 0:
-        print(creato.stderr)
+        print((creato.stderr or creato.stdout).strip())
         return creato.returncode
     release_url = f"https://github.com/{repo}/releases/tag/{tag}" if repo else ""
     zip_url = f"https://github.com/{repo}/releases/download/{tag}/{zip_path.name}" if repo else ""
