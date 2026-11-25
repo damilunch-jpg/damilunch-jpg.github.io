@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Scarica i PDF Halley con Chrome, perché il sito chiude il TLS di Python e curl.
 
-Un solo browser e un solo contesto. Si apre l'elenco del comune, poi la scheda
-di ogni atto, e si prendono il documento principale (versione non firmata, se
-c'è) e gli allegati.
+Un solo browser e un solo contesto, un atto alla volta. Tra un atto e l'altro
+si aspetta 8-20 secondi, tra un allegato e l'altro 3-8 secondi, e tra un comune
+e l'altro 1-3 minuti. Se Halley chiude la connessione non si riprova subito:
+si attendono alcuni minuti e si ritenta una sola volta.
 """
 
 from __future__ import annotations
@@ -109,6 +110,7 @@ class BrowserHalley:
         self.liste = set()
         self.fallimenti = 0
         self.spento = False
+        self._fonte = None
 
     def _avvia(self):
         argomenti = ["--no-sandbox", "--disable-dev-shm-usage"]
@@ -129,12 +131,55 @@ class BrowserHalley:
             pass
         self._pw.stop()
 
-    def _pausa(self, minimo: float = 2.0, massimo: float = 4.0):
-        time.sleep(random.uniform(minimo, massimo))
+    def _pausa(self, minimo: float, massimo: float, motivo: str):
+        secondi = random.uniform(minimo, massimo)
+        print(f"  pausa {motivo}: {secondi:.0f}s", flush=True)
+        time.sleep(secondi)
+
+    def _e_reset(self, exc: BaseException) -> bool:
+        messaggio = str(exc).lower()
+        return any(
+            token in messaggio
+            for token in (
+                "err_connection_reset",
+                "err_connection_closed",
+                "connection reset",
+                "econnreset",
+                "winerror 10054",
+                "forcibly closed",
+            )
+        )
+
+    def _attesa_dopo_reset(self):
+        """Niente ritentativi immediati: alcuni minuti, poi al massimo un altro tentativo."""
+        self._pausa(180, 300, "dopo la chiusura della connessione")
+
+    def _gesto_umano(self):
+        """Scorrimento e clic, come chi legge l'elenco prima di aprire un atto."""
+        try:
+            self.page.mouse.wheel(0, random.randint(160, 720))
+            self.page.wait_for_timeout(random.randint(400, 1100))
+            self.page.mouse.move(random.randint(80, 520), random.randint(90, 420), steps=random.randint(6, 14))
+            self.page.mouse.wheel(0, random.randint(-180, 220))
+            self.page.mouse.click(24, 18)
+        except Exception:
+            pass
 
     def _goto(self, url: str, timeout: int = 50000):
-        self.page.goto(url, wait_until="domcontentloaded", timeout=timeout)
-        self.page.wait_for_timeout(900)
+        try:
+            self.page.goto(url, wait_until="domcontentloaded", timeout=timeout)
+        except Exception as exc:
+            if not self._e_reset(exc):
+                raise
+            print(f"  connessione chiusa su {url[:90]}", flush=True)
+            self._attesa_dopo_reset()
+            try:
+                self.page.goto(url, wait_until="domcontentloaded", timeout=timeout)
+            except Exception as secondo:
+                if self._e_reset(secondo):
+                    self.spento = True
+                raise
+        self.page.wait_for_timeout(random.randint(700, 1400))
 
     def apri_lista(self, fonte: str):
         if not fonte or fonte in self.liste:
@@ -145,16 +190,17 @@ class BrowserHalley:
             return
         print(f"  elenco {fonte[:110]}", flush=True)
         try:
+            self._gesto_umano()
             self._goto(fonte, timeout=40000)
-            self._pausa(1.2, 2.0)
         except Exception as exc:
             print(f"  elenco non aperto, continuo dalle schede: {type(exc).__name__}", flush=True)
+            if self.spento:
+                raise
 
-    def _file(self, url: str):
-        """Naviga col browser: se parte un download, ne legge i byte."""
+    def _file_una_volta(self, url: str):
+        """Un solo tentativo. Ritorna (file oppure None, chiusura di connessione)."""
         from playwright.sync_api import TimeoutError as PWTimeout
 
-        self._pausa(0.8, 1.6)
         try:
             with self.page.expect_download(timeout=35000) as atteso:
                 try:
@@ -170,31 +216,51 @@ class BrowserHalley:
             nome = download.suggested_filename or destinazione.name
         except PWTimeout as exc:
             print(f"  file non scaricato: {exc}", flush=True)
-            return None
+            return None, False
         except Exception as exc:
             print(f"  file non scaricato: {exc}", flush=True)
-            return None
+            return None, self._e_reset(exc)
         if not raw or raw[:20].lstrip().lower().startswith(b"<!doctype") or raw[:6].lower().startswith(b"<html"):
             print("  pagina HTML, non un documento", flush=True)
-            return None
-        return raw, nome
+            return None, False
+        return (raw, nome), False
+
+    def _file(self, url: str):
+        """Naviga col browser: se parte un download, ne legge i byte."""
+        preso, chiusa = self._file_una_volta(url)
+        if preso is None and chiusa:
+            self._attesa_dopo_reset()
+            preso, chiusa = self._file_una_volta(url)
+            if preso is None and chiusa:
+                self.spento = True
+                print("Halley chiude ancora la connessione: gli atti rimasti restano in coda", flush=True)
+        return preso
 
     def scarica_atto(self, item: dict, fonte: str):
         """Ritorna (file, pagina_letta, errore_rete)."""
         if self.spento:
             return [], False, True
         url = item.get("url") or ""
+        if fonte and fonte != self._fonte:
+            if self._fonte is not None:
+                self._pausa(60, 180, "tra un comune e l'altro")
+            self._fonte = fonte
         try:
             self.apri_lista(fonte)
-            self._pausa()
+            self._pausa(8, 20, "prima dell'atto")
+            self._gesto_umano()
             self._goto(url)
             html = self.page.content()
         except Exception as exc:
             print(f"  scheda non aperta: {type(exc).__name__}: {exc}", flush=True)
-            self.fallimenti += 1
-            if self.fallimenti >= 3:
+            if self._e_reset(exc):
                 self.spento = True
-                print("Halley chiude la connessione al browser: gli atti rimasti restano in coda", flush=True)
+                print("Halley chiude ancora la connessione: gli atti rimasti restano in coda", flush=True)
+            else:
+                self.fallimenti += 1
+                if self.fallimenti >= 3:
+                    self.spento = True
+                    print("Halley chiude la connessione al browser: gli atti rimasti restano in coda", flush=True)
             return [], False, True
         if not _scheda_valida(html):
             print("  scheda senza dettaglio", flush=True)
@@ -207,8 +273,16 @@ class BrowserHalley:
         base = self.page.url
         ordinati = _dedup(html, base)
         files = []
-        for link in ordinati:
+        for indice, link in enumerate(ordinati):
+            if self.spento:
+                break
+            if indice:
+                self._pausa(3, 8, "tra un allegato e l'altro")
+            else:
+                self._pausa(3, 8, "prima del documento")
             preso = self._file(link)
+            if self.spento:
+                break
             if not preso:
                 continue
             files.append(preso)

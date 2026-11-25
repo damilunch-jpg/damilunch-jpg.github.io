@@ -71,7 +71,7 @@ jobs:
   documenti:
     needs: leggi
     if: github.event.inputs.solo_email != 'true'
-    # Chrome, non Python: Halley chiude il TLS in base all'impronta del client.
+    # Chrome, un atto alla volta, con le pause di scripts/halley_browser.py.
     runs-on: ubuntu-latest
     timeout-minutes: 180
     steps:
