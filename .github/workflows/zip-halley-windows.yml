@@ -1,7 +1,10 @@
 name: Zip Halley su Windows
 
 on:
-  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/zip-halley-windows.yml
+    branches: [main]
 
 permissions:
   contents: write
@@ -19,6 +22,8 @@ jobs:
         shell: bash
     steps:
       - uses: actions/checkout@v4
+      - name: Fuso orario di Roma
+        run: python -m pip install --disable-pip-version-check tzdata
       - name: Prepara lo zip degli atti nuovi
         run: python scripts/pacchetto_albo.py
       - name: Pubblica la Release
