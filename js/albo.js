@@ -1,6 +1,6 @@
 /* Generato da scripts/sync_albo.py. Elenco degli atti letti dagli albi pretori. */
 window.M5S_ALBO = {
-  "aggiornato": "2026-11-26T08:12:19+01:00",
+  "aggiornato": "2026-11-26T10:45:44+01:00",
   "comuni": {
     "cori": {
       "ok": true,
@@ -445,7 +445,7 @@ window.M5S_ALBO = {
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-26T08:12:19+01:00",
+      "aggiornato": "2026-11-26T10:45:44+01:00",
       "atti": []
     },
     "roccagorga": {
