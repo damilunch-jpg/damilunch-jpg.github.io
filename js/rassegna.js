@@ -1,19 +1,19 @@
 /* Generato da scripts/sync_rassegna.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_RASSEGNA = {
-  "aggiornato": "2026-11-26T00:08:00+01:00",
+  "aggiornato": "2026-11-26T16:22:05+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "latinatoday",
       "nome": "Latina Today",
       "esito": "ok",
-      "nuove": 3
+      "nuove": 4
     },
     {
       "id": "latinacorriere",
       "nome": "Latina Corriere",
       "esito": "ok",
-      "nuove": 3
+      "nuove": 1
     },
     {
       "id": "ilcaffe",
@@ -25,16 +25,89 @@ window.M5S_RASSEGNA = {
       "id": "h24notizie",
       "nome": "H24 Notizie",
       "esito": "ok",
-      "nuove": 5
+      "nuove": 4
     },
     {
       "id": "frosinonetoday",
       "nome": "Frosinone Today",
       "esito": "ok",
-      "nuove": 3
+      "nuove": 2
     }
   ],
   "notizie": [
+    {
+      "url": "https://www.frosinonetoday.it/politica/valle-del-sacco-controlli-inquinamento-verifiche-depuratori.html",
+      "titolo": "Valle del Sacco, più controlli contro l'inquinamento e verifiche sui depuratori. Avviati in Prefettura i lavori del Tavolo dei sindaci",
+      "anteprima": "Coinvolti 15 Comuni del territorio. Il sindaco di Ceccano esprime soddisfazione per la decisione di intensificare i controlli ambientali",
+      "data": "2026-11-26",
+      "testata": "frosinonetoday",
+      "testataNome": "Frosinone Today",
+      "logo": "img/testate/frosinonetoday.png",
+      "comuni": [
+        "ceccano"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/26/trasporti-in-difficolta-disagi-per-treni-e-collegamenti-marittimi-con-ponza",
+      "titolo": "Trasporti in difficoltà, disagi per treni e collegamenti marittimi con Ponza",
+      "anteprima": "Doppia criticità per i collegamenti nel territorio pontino, dove problemi sulla rete ferroviaria e condizioni meteorologiche avverse stanno condizionando gli spostamenti di pendolari e viaggiatori. Sul fronte ferroviario, la circolazione dei treni…",
+      "data": "2026-11-26",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "priverno"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/ordigno-bellico-sui-binari-stop-ai-treni-sulla-linea-roma-napoli-via-formia",
+      "titolo": "Ordigno bellico sui binari, stop ai treni sulla linea Roma-Napoli via Formia",
+      "anteprima": "Pomeriggio di forti disagi per i pendolari e i viaggiatori della linea ferroviaria Roma-Napoli via Formia. Dalle 13:40 il traffico dei convogli è stato sospeso a causa dell’individuazione di un ordigno risalente alla guerra nei pressi della…",
+      "data": "2026-11-26",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "monte-san-biagio"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/maltempo-tromba-aria-minturno-frana-castelforte-disagi-sud-pontino.html",
+      "titolo": "Maltempo: danni e disagi per pioggia e vento. Tromba d'aria a Minturno, doppia frana a Castelforte",
+      "anteprima": "Chiusa via delle Terme per la presenza di fango e materiale franoso sulla carreggiata; sul posto anche il sindaco Pompeo. Richieste di intervento ai vigili del fuoco tra Fondi, Terracina, Formia e Minturno",
+      "data": "2026-11-26",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "fondi",
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/26/lenola-quattro-giorni-intrappolata-in-una-cavita-salvata-la-cagnolina-sissi",
+      "titolo": "Lenola, quattro giorni intrappolata in una cavità: salvata la cagnolina Sissi",
+      "anteprima": "Quattro giorni senza riuscire a tornare in superficie, bloccata in una cavità nelle campagne di Lenola. Poi, quando la preoccupazione per la sua sorte stava diventando sempre più forte, è arrivato il lieto fine: Sissi è stata recuperata e riportata…",
+      "data": "2026-11-26",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "lenola"
+      ]
+    },
+    {
+      "url": "https://www.frosinonetoday.it/cronaca/frosinone-albero-cade-villa-comunale-distrutta-recinzione.html",
+      "titolo": "Frosinone, albero cade nella villa comunale: distrutta parte della recinzione",
+      "anteprima": "È il secondo episodio in poche ore dopo quanto accaduto al viadotto Biondi. Un altro crollo si era verificato in via Ceccano",
+      "data": "2026-11-26",
+      "testata": "frosinonetoday",
+      "testataNome": "Frosinone Today",
+      "logo": "img/testate/frosinonetoday.png",
+      "comuni": [
+        "ceccano"
+      ]
+    },
     {
       "url": "https://www.h24notizie.com/2026/11/25/vannacci-punta-al-sud-pontino-parisella-nellesecutivo-provinciale-cipolla-alla-guida-di-fondi",
       "titolo": "Vannacci punta al Sud pontino: Parisella nell’esecutivo provinciale, Cipolla alla guida di Fondi",
