@@ -1,13 +1,13 @@
 /* Generato da scripts/sync_m5s.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_UFFICIALE = {
-  "aggiornato": "2026-11-25T19:32:10+01:00",
+  "aggiornato": "2026-11-26T19:14:50+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "nazionale",
       "nome": "Movimento 5 Stelle",
       "esito": "ok",
-      "nuove": 2
+      "nuove": 1
     },
     {
       "id": "regionale",
@@ -17,6 +17,16 @@ window.M5S_UFFICIALE = {
     }
   ],
   "voci": [
+    {
+      "url": "https://www.movimento5stelle.eu/caccia-su-terreni-privati-42mila-firme-al-presidente-della-toscana-per-fermarla",
+      "titolo": "Caccia su terreni privati: 42mila firme al Presidente della Toscana per fermarla",
+      "anteprima": "Quarantaduemila firme per chiedere alla Regione Toscana di modificare il regolamento che disciplina l’esclusione dei terreni privati dall’attività venatoria: sono quelle che, insieme alla Lega per l’abolizione della caccia, i consiglieri Luca Rossi…",
+      "data": "2026-11-26",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
     {
       "url": "https://www.movimento5stelle.eu/under-40-la-sardegna-scommette-sui-giovani-che-scelgono-di-viverci",
       "titolo": "Under 40: la Sardegna scommette sui giovani che scelgono di viverci",
