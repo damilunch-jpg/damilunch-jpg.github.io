@@ -39,7 +39,12 @@
     Object.keys(parametri).forEach(function (chiave) {
       if (parametri[chiave]) pezzi.push(encodeURIComponent(chiave) + "=" + encodeURIComponent(parametri[chiave]));
     });
-    window.location.hash = pezzi.join("&");
+    var nuovo = pezzi.join("&");
+    if ((window.location.hash || "").replace(/^#/, "") === nuovo) {
+      disegna();
+      return;
+    }
+    window.location.hash = nuovo;
   }
 
   function monta(html) {
@@ -153,6 +158,8 @@
     $("#forum-login").addEventListener("submit", function (ev) {
       ev.preventDefault();
       var msg = $("#login-msg");
+      msg.hidden = false;
+      msg.textContent = "Accesso in corso…";
       client.auth.signInWithPassword({
         email: $("#login-email").value.trim(),
         password: $("#login-password").value
@@ -162,7 +169,10 @@
           msg.textContent = "Accesso non riuscito. Controlla email e password, oppure conferma l'indirizzo dalla posta.";
           return;
         }
-        vai({});
+        disegna();
+      }).catch(function () {
+        msg.hidden = false;
+        msg.textContent = "Accesso non riuscito. Controlla la connessione e riprova.";
       });
     });
     $("#forum-registra").addEventListener("submit", function (ev) {
