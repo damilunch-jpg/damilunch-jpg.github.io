@@ -61,7 +61,12 @@ stable
 security definer
 set search_path = public
 as $$
-  select case when role = 'admin' then 'Admin' else '' end
+  select case role
+    when 'admin' then 'Admin'
+    when 'staff' then 'Staff'
+    when 'iscritto' then 'Iscritto'
+    else 'Registrato'
+  end
   from public.profiles
   where id = utente;
 $$;
