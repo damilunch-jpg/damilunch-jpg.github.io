@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Disiscrizione newsletter – Gruppo Territoriale Lepini Ausoni</title>
+  <meta name="description" content="Disiscrizione dalla newsletter del Gruppo Territoriale Lepini Ausoni.">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="disiscrizione">
+  <header class="site-header" id="site-header"></header>
+  <nav class="site-nav" id="site-nav" aria-label="Comuni del Gruppo Territoriale"></nav>
+  <main class="site-main" id="contenuto">
+    <noscript>
+      <h1>Disiscrizione newsletter</h1>
+      <p>Per completare la disiscrizione è necessario abilitare JavaScript.</p>
+    </noscript>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="js/articles.js"></script>
+  <script src="js/albo.js"></script>
+  <script src="js/rassegna.js"></script>
+  <script src="js/m5s.js"></script>
+  <script src="js/app.js?v=20261127-6"></script>
+  <script>
+    (function () {
+      var main = document.getElementById("contenuto");
+      function mostra(titolo, testo) {
+        document.title = titolo + " – Gruppo Territoriale Lepini Ausoni";
+        main.innerHTML =
+          '<p class="page-kicker">Gruppo Territoriale Lepini Ausoni</p>' +
+          "<h1>" + titolo + "</h1>" +
+          '<p class="lead">' + testo + "</p>";
+      }
+      function carica(src) {
+        return new Promise(function (resolve, reject) {
+          if (src.indexOf("forum-config.js") !== -1 && window.FORUM_CONFIG) {
+            resolve();
+            return;
+          }
+          if (src.indexOf("supabase-js") !== -1 && window.supabase) {
+            resolve();
+            return;
+          }
+          var script = document.createElement("script");
+          script.src = src;
+          script.onload = function () { resolve(); };
+          script.onerror = function () { reject(); };
+          document.head.appendChild(script);
+        });
+      }
+      var parametri = new URLSearchParams(window.location.search);
+      var token = (parametri.get("t") || "").trim();
+      if (!token) {
+        mostra("Disiscrizione newsletter", "Questo link non è completo. Usa il collegamento in fondo al messaggio della newsletter.");
+        return;
+      }
+      mostra("Disiscrizione newsletter", "Disiscrizione in corso…");
+      carica("js/forum-config.js").then(function () {
+        return carica("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2");
+      }).then(function () {
+        var cfg = window.FORUM_CONFIG || {};
+        if (!cfg.url || !cfg.anonKey || !window.supabase) throw new Error("config");
+        var client = window.supabase.createClient(cfg.url, cfg.anonKey);
+        return client.rpc("newsletter_disiscrivi", { token: token });
+      }).then(function () {
+        mostra("Disiscrizione registrata", "Se l'indirizzo era iscritto, non riceverai più la newsletter settimanale.");
+      }).catch(function () {
+        mostra("Disiscrizione newsletter", "Non riesco a completare la disiscrizione. Riprova tra poco.");
+      });
+    })();
+  </script>
+</body>
+</html>

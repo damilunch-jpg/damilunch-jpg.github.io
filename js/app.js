@@ -500,6 +500,61 @@
     }
   }
 
+  function caricaScript(src) {
+    return new Promise(function (resolve, reject) {
+      if (src.indexOf("supabase-js") !== -1 && window.supabase) {
+        resolve();
+        return;
+      }
+      if (src.indexOf("forum-config.js") !== -1 && window.FORUM_CONFIG) {
+        resolve();
+        return;
+      }
+      var gia = document.querySelector('script[src="' + src + '"]');
+      if (gia) {
+        if (gia.getAttribute("data-pronto") === "1") {
+          resolve();
+          return;
+        }
+        gia.addEventListener("load", function () { resolve(); }, { once: true });
+        gia.addEventListener("error", function () { reject(); }, { once: true });
+        return;
+      }
+      var script = document.createElement("script");
+      script.src = src;
+      script.onload = function () {
+        script.setAttribute("data-pronto", "1");
+        resolve();
+      };
+      script.onerror = function () { reject(); };
+      document.head.appendChild(script);
+    });
+  }
+
+  function clientNewsletter() {
+    var base = basePath();
+    var pronto = Promise.resolve();
+    if (!window.FORUM_CONFIG) {
+      pronto = pronto.then(function () {
+        return caricaScript(base + "js/forum-config.js");
+      });
+    }
+    pronto = pronto.then(function () {
+      if (window.supabase) return null;
+      return caricaScript("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.119.2");
+    });
+    return pronto.then(function () {
+      var cfg = window.FORUM_CONFIG || {};
+      if (!cfg.url || !cfg.anonKey || !window.supabase) {
+        throw new Error("config");
+      }
+      if (!window.__newsletterClient) {
+        window.__newsletterClient = window.supabase.createClient(cfg.url, cfg.anonKey);
+      }
+      return window.__newsletterClient;
+    });
+  }
+
   function renderFooter() {
     var mount = $("#site-footer");
     if (!mount) return;
@@ -533,7 +588,7 @@
       "<span>Acconsento al trattamento dei miei dati personali per l'invio della newsletter, ai sensi del Regolamento (UE) 2016/679 (GDPR). Potrò disiscrivermi in qualsiasi momento tramite il collegamento presente in ogni messaggio.</span>" +
       "</label>" +
       '<button type="submit">Iscriviti</button>' +
-      '<p class="newsletter-msg" id="newsletter-msg" hidden></p>' +
+      '<p class="newsletter-msg" id="newsletter-msg" role="status" hidden></p>' +
       "</form></div></div>" +
       '<p class="copyright">© Gruppo Territoriale Lepini Ausoni.</p>';
 
@@ -542,11 +597,31 @@
       form.addEventListener("submit", function (ev) {
         ev.preventDefault();
         var msg = $("#newsletter-msg", mount);
-        if (msg) {
-          msg.hidden = false;
-          msg.textContent =
-            "Il modulo non è ancora attivo: questa è soltanto una prova di iscrizione. Nessun dato è stato inviato.";
+        var campo = $("#email-newsletter", mount);
+        var consenso = $("#consenso-gdpr", mount);
+        var email = campo ? campo.value.trim() : "";
+        if (!msg) return;
+        msg.hidden = false;
+        if (!email || !consenso || !consenso.checked) {
+          msg.textContent = "Per iscriverti servono un'email valida e il consenso al trattamento.";
+          return;
         }
+        msg.textContent = "Iscrizione in corso…";
+        clientNewsletter().then(function (client) {
+          return client.rpc("newsletter_iscrivi", { indirizzo: email });
+        }).then(function (esito) {
+          var codice = esito && esito.error ? String(esito.error.code || "") : "";
+          var dettaglio = esito && esito.error ? String(esito.error.message || "") : "";
+          var giaIscritto = codice === "23505" || /duplicate|unique|already exists/i.test(dettaglio);
+          if (esito && esito.error && !giaIscritto) {
+            msg.textContent = "Iscrizione non riuscita. Controlla l'email e la connessione, poi riprova.";
+            return;
+          }
+          msg.textContent = "Iscrizione completata. Grazie.";
+          form.reset();
+        }).catch(function () {
+          msg.textContent = "Iscrizione non riuscita. Controlla la connessione e riprova.";
+        });
       });
     }
   }

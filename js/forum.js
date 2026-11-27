@@ -4,6 +4,7 @@
   var client = null;
   var profilo = null;
   var schede = {};
+  var iscrittiNewsletter = [];
 
   function $(sel, root) {
     return (root || document).querySelector(sel);
@@ -708,11 +709,68 @@
     function voce(id, etichetta) {
       return '<a href="' + href({ pagina: "staff", scheda: id }) + '" role="tab" aria-selected="' + (attiva === id ? "true" : "false") + '">' + etichetta + "</a>";
     }
-    return '<div class="forum-schede" role="tablist">' +
+    var html = '<div class="forum-schede" role="tablist">' +
       voce("richieste", "Richieste di accesso") +
       voce("utenti", "Utenti e ruoli") +
-      voce("macroaree", "Macroaree") +
-      "</div>";
+      voce("macroaree", "Macroaree");
+    if (eAdmin()) html += voce("newsletter", "Newsletter");
+    return html + "</div>";
+  }
+
+  function csvCampo(valore) {
+    var testo = String(valore == null ? "" : valore);
+    if (/[;"\r\n]/.test(testo)) return '"' + testo.replace(/"/g, '""') + '"';
+    return testo;
+  }
+
+  function etichettaOrigine(origine) {
+    return origine === "lista_iniziale" ? "Lista iniziale" : "Sito";
+  }
+
+  function etichettaStato(riga) {
+    return riga && riga.revocato_il ? "Disiscritto" : "Attivo";
+  }
+
+  function esportaNewsletter(lista) {
+    var righe = ["email;iscritto_il;origine;stato"];
+    (lista || []).forEach(function (riga) {
+      righe.push(csvCampo(riga.email) + ";" + csvCampo(dataBreve(riga.creato_il)) + ";" + csvCampo(etichettaOrigine(riga.origine)) + ";" + csvCampo(etichettaStato(riga)));
+    });
+    var blob = new Blob(["\uFEFF" + righe.join("\r\n")], { type: "text/csv;charset=utf-8" });
+    var url = URL.createObjectURL(blob);
+    var link = document.createElement("a");
+    link.href = url;
+    link.download = "newsletter-iscritti.csv";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  }
+
+  async function corpoNewsletter() {
+    var esito = await client.from("newsletter_iscritti").select("id, email, creato_il, origine, revocato_il").order("creato_il", { ascending: false });
+    if (esito.error) {
+      var msg = String(esito.error.message || "") + " " + String(esito.error.details || "");
+      if (esito.error.code === "PGRST205" || esito.error.code === "42P01" || msg.indexOf("newsletter_iscritti") !== -1) {
+        return errore("La newsletter non è ancora attiva. Nel SQL Editor di Supabase esegui il file supabase/newsletter.sql.");
+      }
+      return errore("Non riesco a leggere gli iscritti alla newsletter.");
+    }
+    var lista = esito.data || [];
+    iscrittiNewsletter = lista;
+    var attivi = lista.filter(function (riga) { return !riga.revocato_il; }).length;
+    var html = '<p class="forum-meta">' + conta(lista.length, "iscritto", "iscritti") + ", di cui " + conta(attivi, "attivo", "attivi") + ".</p>";
+    html += '<div class="forum-azioni"><button type="button" id="newsletter-csv">Esporta CSV</button></div>';
+    if (!lista.length) return html + '<p class="vuoto">Nessun iscritto.</p>';
+    lista.forEach(function (riga) {
+      html += '<article class="forum-card"><h3>' + escapeHtml(riga.email) + "</h3>";
+      html += '<p class="forum-meta">' + escapeHtml(etichettaOrigine(riga.origine)) + " · " + escapeHtml(etichettaStato(riga));
+      html += " · " + escapeHtml(dataBreve(riga.creato_il));
+      if (riga.revocato_il) html += " · disiscritto il " + escapeHtml(dataBreve(riga.revocato_il));
+      html += "</p>";
+      html += '<div class="forum-azioni"><button type="button" class="secondario" data-elimina-newsletter="' + riga.id + '" data-email="' + escapeHtml(riga.email) + '">Elimina</button></div></article>';
+    });
+    return html;
   }
 
   function schedaUtente(utente) {
@@ -903,6 +961,23 @@
         });
       });
     });
+    var csv = $("#newsletter-csv");
+    if (csv) csv.addEventListener("click", function () {
+      esportaNewsletter(iscrittiNewsletter);
+    });
+    document.querySelectorAll("[data-elimina-newsletter]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var email = btn.getAttribute("data-email") || "questo indirizzo";
+        if (!window.confirm("Eliminare " + email + " dalla newsletter?")) return;
+        client.from("newsletter_iscritti").delete().eq("id", btn.getAttribute("data-elimina-newsletter")).then(function (esito) {
+          if (esito.error) {
+            segnala("Iscritto non eliminato.");
+            return;
+          }
+          vai({ pagina: "staff", scheda: "newsletter" });
+        });
+      });
+    });
     if (scheda) return;
   }
 
@@ -912,11 +987,14 @@
       return;
     }
     var stato = hash();
-    var scheda = stato.scheda === "utenti" || stato.scheda === "macroaree" ? stato.scheda : "richieste";
+    var schedeValide = { utenti: true, macroaree: true };
+    if (eAdmin()) schedeValide.newsletter = true;
+    var scheda = schedeValide[stato.scheda] ? stato.scheda : "richieste";
     var titolo = eAdmin() ? "Pannello admin" : "Pannello staff";
     var corpo = schedePannello(scheda) + '<p id="forum-avviso" class="forum-errore" role="alert" hidden></p>';
     if (scheda === "utenti") corpo += await corpoUtenti();
     else if (scheda === "macroaree") corpo += await corpoMacroaree();
+    else if (scheda === "newsletter") corpo += await corpoNewsletter();
     else corpo += await corpoRichieste();
     pagina({
       titolo: titolo,
