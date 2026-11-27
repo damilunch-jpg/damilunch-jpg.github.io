@@ -1,6 +1,6 @@
 /* Generato da scripts/sync_m5s.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_UFFICIALE = {
-  "aggiornato": "2026-11-26T19:14:50+01:00",
+  "aggiornato": "2026-11-27T18:57:09+01:00",
   "giorni": 60,
   "fonti": [
     {
@@ -17,6 +17,16 @@ window.M5S_UFFICIALE = {
     }
   ],
   "voci": [
+    {
+      "url": "https://www.movimento5stelle.eu/armi-si-cure-no-domenica-ad-avezzano-con-giuseppe-conte",
+      "titolo": "Armi sì, cure no? Domenica ad Avezzano con Giuseppe Conte",
+      "anteprima": "Chi vive nella Marsica lo sa bene. Una visita specialistica può voler dire mesi di attesa o decine di chilometri di strada. Ogni volta che un servizio si riduce, sono le famiglie a doversi organizzare: un permesso dal lavoro, un passaggio da…",
+      "data": "2026-11-27",
+      "fonte": "nazionale",
+      "fonteNome": "Movimento 5 Stelle",
+      "etichetta": "Dal Nazionale",
+      "logo": "img/m5s/movimento5stelle.png"
+    },
     {
       "url": "https://www.movimento5stelle.eu/caccia-su-terreni-privati-42mila-firme-al-presidente-della-toscana-per-fermarla",
       "titolo": "Caccia su terreni privati: 42mila firme al Presidente della Toscana per fermarla",
