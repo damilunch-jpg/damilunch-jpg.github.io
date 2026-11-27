@@ -153,13 +153,13 @@ as $$
   where t.id = discussione;
 $$;
 
-revoke all on function public.forum_ruolo() from public;
-revoke all on function public.forum_bloccato() from public;
-revoke all on function public.forum_e_staff() from public;
-revoke all on function public.forum_puo_leggere(text) from public;
-revoke all on function public.forum_puo_scrivere(text) from public;
-revoke all on function public.forum_nome(uuid) from public;
-revoke all on function public.forum_visibilita_thread(uuid) from public;
+revoke all on function public.forum_ruolo() from public, anon;
+revoke all on function public.forum_bloccato() from public, anon;
+revoke all on function public.forum_e_staff() from public, anon;
+revoke all on function public.forum_puo_leggere(text) from public, anon;
+revoke all on function public.forum_puo_scrivere(text) from public, anon;
+revoke all on function public.forum_nome(uuid) from public, anon;
+revoke all on function public.forum_visibilita_thread(uuid) from public, anon;
 grant execute on function public.forum_ruolo() to authenticated;
 grant execute on function public.forum_bloccato() to authenticated;
 grant execute on function public.forum_e_staff() to authenticated;
@@ -168,8 +168,10 @@ grant execute on function public.forum_puo_scrivere(text) to authenticated;
 grant execute on function public.forum_nome(uuid) to authenticated;
 grant execute on function public.forum_visibilita_thread(uuid) to authenticated;
 
--- Profilo creato insieme all'utente Auth.
-create or replace function public.forum_nuovo_utente()
+-- I trigger non stanno in public: anon e authenticated non possono eseguirli.
+create schema if not exists forum_private;
+
+create or replace function forum_private.forum_nuovo_utente()
 returns trigger
 language plpgsql
 security definer
@@ -188,13 +190,7 @@ begin
 end;
 $$;
 
-drop trigger if exists forum_nuovo_utente on auth.users;
-create trigger forum_nuovo_utente
-  after insert on auth.users
-  for each row execute function public.forum_nuovo_utente();
-
--- Solo lo staff cambia ruolo e blocco. Vale anche se una policy fosse troppo larga.
-create or replace function public.forum_proteggi_profilo()
+create or replace function forum_private.forum_proteggi_profilo()
 returns trigger
 language plpgsql
 security definer
@@ -213,10 +209,23 @@ begin
 end;
 $$;
 
+revoke all on function forum_private.forum_nuovo_utente() from public, anon, authenticated;
+revoke all on function forum_private.forum_proteggi_profilo() from public, anon, authenticated;
+grant execute on function forum_private.forum_nuovo_utente() to service_role;
+grant execute on function forum_private.forum_proteggi_profilo() to service_role;
+
+drop trigger if exists forum_nuovo_utente on auth.users;
 drop trigger if exists forum_proteggi_profilo on public.profiles;
+drop function if exists public.forum_nuovo_utente();
+drop function if exists public.forum_proteggi_profilo();
+
+create trigger forum_nuovo_utente
+  after insert on auth.users
+  for each row execute function forum_private.forum_nuovo_utente();
+
 create trigger forum_proteggi_profilo
   before update on public.profiles
-  for each row execute function public.forum_proteggi_profilo();
+  for each row execute function forum_private.forum_proteggi_profilo();
 
 -- Approva o rifiuta una richiesta e, se approvata, promuove a iscritto.
 create or replace function public.forum_decidi_richiesta(richiesta uuid, approva boolean)
@@ -250,7 +259,7 @@ begin
 end;
 $$;
 
-revoke all on function public.forum_decidi_richiesta(uuid, boolean) from public;
+revoke all on function public.forum_decidi_richiesta(uuid, boolean) from public, anon;
 grant execute on function public.forum_decidi_richiesta(uuid, boolean) to authenticated;
 
 -- ---------------------------------------------------------------------------

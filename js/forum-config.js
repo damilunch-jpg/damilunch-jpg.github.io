@@ -1,6 +1,5 @@
-/* Segnaposto: il forum resta spento finché non metti i valori del progetto Supabase.
-   Solo URL e anon key. Mai la service_role key. */
+/* Solo URL e chiave publishable. Mai la service_role key. */
 window.FORUM_CONFIG = {
-  url: "INSERISCI_URL_SUPABASE",
-  anonKey: "INSERISCI_ANON_KEY"
+  url: "https://rzeelfgjrykkjtzfvpnn.supabase.co",
+  anonKey: "sb_publishable_AJnBqERAm3BJxb1EiJEHYg_KatMFq4c"
 };
