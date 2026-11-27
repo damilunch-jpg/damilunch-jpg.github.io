@@ -1,14 +1,77 @@
 /* Generato da scripts/sync_albo.py. Elenco degli atti letti dagli albi pretori. */
 window.M5S_ALBO = {
-  "aggiornato": "2026-11-26T12:58:22+01:00",
+  "aggiornato": "2026-11-27T06:04:39+01:00",
   "comuni": {
     "cori": {
       "ok": true,
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954",
-      "aggiornato": "2026-11-26T06:04:26+01:00",
+      "aggiornato": "2026-11-27T05:52:59+01:00",
       "atti": [
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - VETERINARIA PACIFICO 14-10-2026/111/FT.PA (2026.01.794) (DETERMINA/2026/979/25-11-2026)(AREA 3- POLIZIA MUNICIPALE - 123)",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "1349/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8579"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - VETERINARIA PACIFICO 12-11-2026/120/FT.PA (2026.01.856) (DETERMINA/2026/980/25-11-2026)(AREA 3- POLIZIA MUNICIPALE - 124)",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "1350/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8580"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - TELEIMPIANTI SRL 17-11-2026/237/IMP (2026.01.890) (DETERMINA/2026/982/25-11-2026)(AREA 3- POLIZIA MUNICIPALE - 126)",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "1353/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8583"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - POSTE ITALIANE SPA 23-11-2026/3260796833 (2026.01.909) (DETERMINA/2026/984/25-11-2026)(AREA 5 - AFFARI GENERALI - 134)",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "1355/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8585"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - FASTWEB SPA 19-11-2026/AS03375741 (2026.01.889) (DETERMINA/2026/983/25-11-2026)(AREA 3- POLIZIA MUNICIPALE - 127)",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "1354/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8584"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - AUTOMOBIL CLUB ITALIA 11-11-2026/0000034094 (2026.01.908) (DETERMINA/2026/981/25-11-2026)(AREA 3- POLIZIA MUNICIPALE - 125)",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "1352/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8582"
+        },
+        {
+          "titolo": "ATTRIBUZIONE DELEGA DELLE FUNZIONI DI UFFICIALE DI STATO CIVILE AL DIPENDENTE MATRICOLA 252- MARAFINI FEDERICO (DECRETO/2026/3/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Decreti del sindaco",
+          "numero": "1356/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8586"
+        },
+        {
+          "titolo": "ATTRIBUZIONE DELEGA DELLE FUNZIONI DI UFFICIALE DI ANAGRAFE AL DIPENDENTE MATRICOLA 252- MARAFINI FEDERICO (DECRETO/2026/4/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Decreti del sindaco",
+          "numero": "1357/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8587"
+        },
+        {
+          "titolo": "APPROVAZIONE RENDICONTO RADURE 2026 (DETERMINA/2026/985/26-11-2026)(AREA 2 - WELFARE - 256)",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "1351/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8581"
+        },
         {
           "titolo": "LIQUIDAZIONE PER EVENTI PROGETTO RADURE 2026 A CORI . LIQUIDAZIONE CONTRIBUTO GENERALE ALL'ORGANIZZAZIONE IN FAVORE COMPAGNIA DEI LEPINI.. (DETERMINA/2026/965/24-11-2026)(AREA 2 - WELFARE - 251)",
           "data": "2026-11-25",
@@ -155,69 +218,6 @@ window.M5S_ALBO = {
           "tipo": "Determinazioni",
           "numero": "1328/2026",
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8558"
-        },
-        {
-          "titolo": "“LAVORI DI REALIZZAZIONE DELLA NUOVA PAVIMENTAZIONE BITUMINOSA, SEGNALETICA E LAVORI ACCESSORI DI VIA ANNUNZIATA ED UN TRATTO DI VIA ROMA IN CORI - CUP:J67H26001150004”. AVVISO PUBBLICO PER LA SELEZIONE DI OPERATORI ECONOMICI PER IL SERVIZIO DI D.LL. E C.S.E. DI CUI IN OGGETTO SUL PORTALE ON LINE TRASPARE DEL COMUNE DI CORI (LT) CONNESSA ALLA D.G.C. N. 65 DEL 16.10.2016",
-          "data": "2026-11-23",
-          "tipo": "Avvisi",
-          "numero": "1323/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8553"
-        },
-        {
-          "titolo": "PROCEDURA TELEMATICA NEGOZIATA SENZA PREVIA PUBBLICAZIONE DI UN BANDO DI GARA DI IMPORTO PARI O SUPERIORE A 150.000,00 EURO ED INFERIORE A1.000.000,00 EURO PER L’AFFIDAMENTO DEI “LAVORI DI REALIZZAZIONE DELLA NUOVA PAVIMENTAZIONE BITUMINOSA, SEGNALETICA E LAVORI ACCESSORI DI VIA ANNUNZIATA ED UN TRATTO DI VIA ROMA IN CORI - CUP:J67H26001150004”.",
-          "data": "2026-11-23",
-          "tipo": "Bandi di gara ed esiti",
-          "numero": "1324/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8554"
-        },
-        {
-          "titolo": "LIQUIDAZIONE FATTURA - RIDA AMBIENTE 31-10-2026/000597 (2026.01.891) (DETERMINA/2026/958/23-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 222)",
-          "data": "2026-11-23",
-          "tipo": "Determinazioni",
-          "numero": "1327/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8557"
-        },
-        {
-          "titolo": "L.R.24/2019 PIANO 2025 BENI E SERVIZI CULTURALI. BIBLIOTECA- MUSEO- ARCHIVIO–IMPEGNO DI SPESA -MUSEO LINEA A. CIG BDCB4018DD (DETERMINA/2026/946/20-11-2026)(AREA 2 - WELFARE - 243)",
-          "data": "2026-11-23",
-          "tipo": "Determinazioni",
-          "numero": "1319/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8549"
-        },
-        {
-          "titolo": "L.R.24/2019 PIANO 2025 BENI E SERVIZI CULTURALI. BIBLIOTECA- MUSEO- ARCHIVIO–IMPEGNO DI SPESA -ARCHIVIO STORICO LINEA A. CIG BDBE508C41 (DETERMINA/2026/947/20-11-2026)(AREA 2 - WELFARE - 244)",
-          "data": "2026-11-23",
-          "tipo": "Determinazioni",
-          "numero": "1320/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8550"
-        },
-        {
-          "titolo": "L.R.24/2019 PIANO 2025 BENI E SERVIZI CULTURALI. BIBLIOTECA- MUSEO- ARCHIVIO IMPEGNO DI SPESA – BIBLIOTECA LINEA B.CIG BDDDDF7B75 (DETERMINA/2026/949/20-11-2026)(AREA 2 - WELFARE - 246)",
-          "data": "2026-11-23",
-          "tipo": "Determinazioni",
-          "numero": "1322/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8552"
-        },
-        {
-          "titolo": "L.R.24/2019 PIANO 2025 BENI E SERVIZI CULTURALI. BIBLIOTECA- MUSEO- ARCHIVIO IMPEGNO DI SPESA – BIBLIOTECA LINEA A CIG BDDBEA1F7D (DETERMINA/2026/948/20-11-2026)(AREA 2 - WELFARE - 245)",
-          "data": "2026-11-23",
-          "tipo": "Determinazioni",
-          "numero": "1321/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8551"
-        },
-        {
-          "titolo": "AUTORIZZAZIONE AI SENSI DELL'ART. 146 DEL D.LGS. 42/2004 E SS.MM.II CON PROCEDURA SEMPLIFICATA AI SENSI DELL'ART. 16 DEL D.P.R. 31/2007 ALLEGATO B, PUNTO B22 DITTA OMISSIS (DETERMINA/2026/957/23-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 221)",
-          "data": "2026-11-23",
-          "tipo": "Determinazioni",
-          "numero": "1326/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8556"
-        },
-        {
-          "titolo": "AUTORIZZAZIONE AI SENSI DELL'ART. 146 DEL D.LGS. 42/2004 E SS.MM.II CON PROCEDURA SEMPLIFICATA AI SENSI DELL'ART. 16 DEL D.P.R. 31/2007 ALLEGATO B, PUNTO B22 DITTA OMISSIS (DETERMINA/2026/956/23-11-2026)(AREA 6 - AREA TECNICA - URBANISTICA - AMBIENTE - 220)",
-          "data": "2026-11-23",
-          "tipo": "Determinazioni",
-          "numero": "1325/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1233954&w3cbt=S&StwEvent=91000302&IdMePubblica=8555"
         }
       ]
     },
@@ -226,8 +226,22 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145",
-      "aggiornato": "2026-11-26T06:06:12+01:00",
+      "aggiornato": "2026-11-27T05:54:31+01:00",
       "atti": [
+        {
+          "titolo": "LIQUIDAZIONE DI SPESA PER SERVIZIO CATTURA E RICOVERO ANIMALI RANDAGI – CIG ASSEGNATO N° BB4DED0BCA - DITTA VETERINARIA PACIFICO – FATTURA FT.PA 107. (DETERMINA/2026/308/26-11-2026)(POLIZIA LOCALE - 23)",
+          "data": "2026-11-26",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "499/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11109"
+        },
+        {
+          "titolo": "LIQUIDAZIONE DI SPESA FATTURE N° N0422088 -SOC. EDENRED ITALIA SRL- BUONI PASTO - CIG ASSEGNATO: BCDA07CEEE (DETERMINA/2026/306/26-11-2026)(FINANZIARIO - 53)",
+          "data": "2026-11-26",
+          "tipo": "Determinazione dirigenziale",
+          "numero": "498/2026",
+          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11108"
+        },
         {
           "titolo": "AUTORIZZAZIONE PAESAGGISTICA CON PROCEDIMENTO SEMPLIFICATO AI SENSI DELL'ART. 146, COMMA 7, DEL D.LGS. N. 42/2004 E S.M.I. E DEL D.P.R. N. 31/2017 –PER I LAVORI DI \"EFFICIENTAMENTO ENERGETICO, MIGLIORAMENTO DELL'ACCESSIBILITÀ E DELLA FRUIZIONE DEL MUSEO DELLE SCRITTURE 'ALDO MANUZIO' DI BASSIANO, AD INTEGRAZIONE DELL'ACQUISITO PARERE AI SENSI DELL'ART. 21 DI CUI ALLA NOTA PROT. 2685 DEL 12.03.2026 RILASCIATO DALLA COMPETENTE SOPRINTENDENZA\". – CIG: B778660593 – UBICAZIONE: VIA ALDO MANUZIO N. 1 ",
           "data": "2026-11-25",
@@ -404,13 +418,6 @@ window.M5S_ALBO = {
           "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11083"
         },
         {
-          "titolo": "SERVIZIO DI RECUPERO RSU NON DIFFERENZIATI EER 200301 - LIQUIDAZIONE FATTURA RIDA AMBIENTE S.R.L. – SETTEMBRE E OTTOBRE 2026 – CIG: B9D615D73E (DETERMINA/2026/289/09-11-2026)(TECNICO - 130)",
-          "data": "2026-11-09",
-          "tipo": "Determinazione dirigenziale",
-          "numero": "468/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11078"
-        },
-        {
           "titolo": "ORD. N°17/2026OGGETTO: ORDINANZA PER LA REGOLAMENTAZIONE DELLA CIRCOLAZIONE STRADALE CON ISTITUZIONE DEL DIVIETO DI SOSTA TEMPORANEO IN VIA ALDO MANUZIO DAL CIVICO 117 AL CIVICO 08, PER ALLESTIMENTO PONTEGGIO EDILE.",
           "data": "2026-11-09",
           "tipo": "Ordinanze",
@@ -423,13 +430,6 @@ window.M5S_ALBO = {
           "tipo": "Determinazione dirigenziale",
           "numero": "470/2026",
           "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11080"
-        },
-        {
-          "titolo": "LIQUIDAZIONE ALLA DITTA VIAGGI LIFE S.R.L.S. FATTURA N° 80 PER IL SERVIZIO TRASPORTO SCOLASTICO CIG BCEEBA67F5 (DETERMINA/2026/290/09-11-2026)(AFFARI GENERALI - 89)",
-          "data": "2026-11-09",
-          "tipo": "Determinazione dirigenziale",
-          "numero": "469/2026",
-          "url": "https://servizionline.comune.bassiano.lt.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1200145&w3cbt=S&StwEvent=91000302&IdMePubblica=11079"
         },
         {
           "titolo": "COMUNE DI BASSIANO",
@@ -445,7 +445,7 @@ window.M5S_ALBO = {
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-26T12:58:22+01:00",
+      "aggiornato": "2026-11-27T06:04:39+01:00",
       "atti": []
     },
     "roccagorga": {
@@ -453,8 +453,36 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/",
-      "aggiornato": "2026-11-26T06:11:03+01:00",
+      "aggiornato": "2026-11-27T05:59:32+01:00",
       "atti": [
+        {
+          "titolo": "ORDINANZA AREA VIGILANZA NR. 60 DEL 25.11.2026 AVENTE AD OGGETTO NUOVA REGOLAMENTAZIONE TEMPORANEA DELLA CIRCOLAZIONE STRADALE IN VIA CRISTOFORO COLOMBO CIVICI DAL 56 AL 86 IL 27.11.2026 DALLE ORE 7:00 FINO A FINE LAVORI",
+          "data": "2026-11-26",
+          "tipo": "Ordinanze",
+          "numero": "",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/ordinanze/2026/Pratica_1795691427187/"
+        },
+        {
+          "titolo": "DELIBERAZIONE DEL CONSIGLIO COMUNALE N. 30 DEL 23-10-2026 AVENTE AD OGGETTO CONVENZIONE FRA I COMUNI ADERENTI ALLA SNAI (STRATEGIA NAZIONALE AREE INTERNE) – MONTI LEPINI, PER LA GESTIONE ASSOCIATA DEI SERVIZI IN MATERIA DI ICT E DELLE FUNZIONI IN MATERIA DI TRASFORMAZIONE DIGITALE - APPROVAZIONE.",
+          "data": "2026-11-26",
+          "tipo": "Delibere",
+          "numero": "30",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1795700977423/"
+        },
+        {
+          "titolo": "DELIBERAZIONE DEL CONSIGLIO COMUNALE N. 29 DEL 23-10-2026 AVENTE AD OGGETTO CONVENZIONE FRA I COMUNI ADERENTI ALLA SNAI (STRATEGIA NAZIONALE AREE INTERNE) – MONTI LEPINI, PER LA GESTIONE ASSOCIATA DEI SERVIZI IN MATERIA DI GESTIONE ECONOMICA ED AMMINISTRATIVA DEL PERSONALE - APPROVAZIONE.",
+          "data": "2026-11-26",
+          "tipo": "Delibere",
+          "numero": "29",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1795700298004/"
+        },
+        {
+          "titolo": "ATTO DI PUBBLICAZIONE DI MATRIMONIO N. 17/2026",
+          "data": "2026-11-26",
+          "tipo": "Pubblicazioni matrimoniali",
+          "numero": "17",
+          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/pubblicazioni_matrimoniali/2026/Pratica_1795717982090/"
+        },
         {
           "titolo": "DETERIMNAZIONE DIPARTIMENTO 3 A.T. N.393 DEL 25-11-2026",
           "data": "2026-11-25",
@@ -617,13 +645,6 @@ window.M5S_ALBO = {
           "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1794408338831/"
         },
         {
-          "titolo": "DELIBERAZIONE DELLA GIUNTA COMUNALE N.84 DEL 06-11-2026 AVENTE AD OGGETTO DOMANDA PER LA CONCESSIONE DI CONTRIBUTI, AI SENSI DELL'ART.12 DEL \"REGOLAMENTO PER LA CONCESSIONE DI PATROCINI E DI CONTRIBUTI DA PARTE DELL'UFFICIO DI PRESIDENZA DEL CONSIGLIO REGIONALE\" DI CUI ALL'ALLEGATO A) DELLA DELIBERAZIONE DI PRESIDENZA DEL 13 SETTEMBRE 2022, N.127. PROGETTO \"\"ROCCAGORGA LUCIGRAFICHE INCANTATE NELLA MERAVIGLIA DEL BAROCСО\".",
-          "data": "2026-11-10",
-          "tipo": "Delibere",
-          "numero": "84",
-          "url": "https://ww2.gazzettaamministrativa.it/opencms/opencms/_gazzetta_amministrativa/albo_pretorio/_lazio/_comuni/_roccagorga/delibere/2026/Pratica_1794335671952/"
-        },
-        {
           "titolo": "Pubblicazione avviso deposito del motociclo, di colore blu, marca Yamaha, modello Majesty, targato AF29968 presso custode acquirente convenzionato \"Italsoccorso Ditta Falso\" in Pontinia (LT) via Migliara 47 n. 1100",
           "data": "2026-11-05",
           "tipo": "Avvisi",
@@ -633,11 +654,11 @@ window.M5S_ALBO = {
       ]
     },
     "norma": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059016/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059016",
-      "aggiornato": "2026-11-26T06:06:51+01:00",
+      "aggiornato": "2026-11-27T05:54:31+01:00",
       "atti": [
         {
           "titolo": "LAVORI VIABILITA' COMUNALE G. MARCONI-REGOLAMENTAZIONE TRAFFICIO VEICOLARE-",
@@ -691,11 +712,11 @@ window.M5S_ALBO = {
       ]
     },
     "cisterna-di-latina": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile",
       "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
-      "aggiornato": "2026-11-26T05:39:41+01:00",
+      "aggiornato": "2026-11-27T05:40:12+01:00",
       "atti": [
         {
           "titolo": "REGOLAMENTAZIONE PROVVISORIA DELLA CIRCOLAZIONE VEICOLARE, DAL 01 AL 05 DICEMBRE 2026 (E COMUNQUE FINO AL TERMINE DEI LAVORI), IN VIA TIVERA FRONTE CIVICO 33, PER TAGLIO DI RAMI ED ALBERATURE PERICOLANTI.",
@@ -749,11 +770,11 @@ window.M5S_ALBO = {
       ]
     },
     "sezze": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028",
-      "aggiornato": "2026-11-26T05:39:08+01:00",
+      "aggiornato": "2026-11-27T05:40:12+01:00",
       "atti": [
         {
           "titolo": ": AFFIDAMENTO INCARICO DEL \"SERVIZIO DI SPAMPA IMBUSTAMENTO E POSTALIZZAZIONE E RECAPITO\" PER IL COMUNE DI SEZZE(LT). Affidamento ai sensi dell'art. 50 comma 1 lett. b) del D.Lgs. n. 36/2023 all'operatore economico società Mercurio Service - P.I. 01413270669; CIG: BDF88E0799",
@@ -898,11 +919,11 @@ window.M5S_ALBO = {
       ]
     },
     "priverno": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile: il sito non ha risposto in tempo",
       "fonte": "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "aggiornato": "2026-11-26T05:47:57+01:00",
+      "aggiornato": "2026-11-27T05:41:46+01:00",
       "atti": [
         {
           "titolo": "Concessione Patrocinio Coro Polyphonia città di Sezze - 06.12.2026",
@@ -981,8 +1002,22 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611",
-      "aggiornato": "2026-11-26T05:53:24+01:00",
+      "aggiornato": "2026-11-27T05:47:30+01:00",
       "atti": [
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - WE - COM SRL 12-03-2025/FPA/2025/00211 (2025.99.122) PRIMO E SECONDO SEMESTRE 2025 (DETERMINA/2026/337/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Determine",
+          "numero": "523/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3495"
+        },
+        {
+          "titolo": "AUTORIZZAZIONE IN VIA ECCEZIONALE E TEMPORANEA ALL'APERTURA DELL'IMPIANTO SPORTIVO COMUNALE \"A. DE SIMONI\" (LOC. SERRONI) PER LO SVOLGIMENTO DELLA PARTITA UFFICIALE DI CAMPIONATO DI TERZA CATEGORIA TRA LE SQUADRE \"POLISPORTIVA ROCCASECCA DEI VOLSCI A.S.D.\" E \"ASD OMNIA CECCANO\", PROGRAMMATA PER DOMENICA 29 NOVEMBRE 2026 DALLE ORE 11:00 ALLE ORE 14:00. (ORDINANZE/2026/40/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Ordinanze sindacali",
+          "numero": "522/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3493"
+        },
         {
           "titolo": "LIQUIDAZIONE FATTURA - DITTA EDILE DI MARRONI ROCCO . 18-09-2026/04 (2026.99.366) (DETERMINA/2026/335/24-11-2026)",
           "data": "2026-11-24",
@@ -1166,25 +1201,11 @@ window.M5S_ALBO = {
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3467"
         },
         {
-          "titolo": "LIQUIDAZIONE FATTURA - IMPRESA DIONISIO PICOZZA DI LAURENZIO PICOZZA E C. S.N. 26-10-2026/FPA 10/26 (2026.99.424) (DETERMINA/2026/315/09-11-2026)",
-          "data": "2026-11-09",
-          "tipo": "Determine",
-          "numero": "492/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3463"
-        },
-        {
           "titolo": "ESONERO PER I SERVIZI COMUNALI PER L' ANNO SCOLASTICO 2026/2027 E ANNO 2027/2028. (DETERMINA/2026/317/09-11-2026)",
           "data": "2026-11-09",
           "tipo": "Determine",
           "numero": "494/2026",
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3465"
-        },
-        {
-          "titolo": "DETERMINAZIONE A CONTRARRE AI SENSI DELL'ART. L'ART. 17, COMMA 2, DEL D.LGS. 36/2023 PER L'AFFIDAMENTO, AI SENSI DELL'ART. 50, COMMA 1, LETTERA B) DEL D.LGS. 36/2023, DEL SERVIZIO DI FORNITURA DI ATTREZZATURE SPORTIVE E DI PROTEZIONE PER IL CAMPO DA GIOCO, ARREDI ED ALLESTIMENTI DI CAMPO E SPOGLIATOIO, PRESIDI MEDICO-SANITARI E DI SICUREZZA, A SERVIZIO DELL'IMPIANTO SPORTIVO A. DE SIMONI, PREVISTO ALL'INTERNO DEL QUADRO ECONOMICO DELL'INTERVENTO PRINCIPALE DENOMINATO: SPORT MISSIONE COMUNE - BAN",
-          "data": "2026-11-09",
-          "tipo": "Determine",
-          "numero": "493/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=wt00034611&w3cbt=S&StwEvent=91000302&IdMePubblica=3464"
         },
         {
           "titolo": "COMUNE DI ROCCASECCA DEI VOLSCI",
@@ -1196,11 +1217,11 @@ window.M5S_ALBO = {
       ]
     },
     "sermoneta": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile",
       "fonte": "https://www.comunedisermoneta.it/c059027/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-26T06:08:24+01:00",
+      "aggiornato": "2026-11-27T05:55:02+01:00",
       "atti": [
         {
           "titolo": "SCIA per modifica di impianti radioelettrici esistenti. Impianto localizzato in Sermoneta, Via Tufette snc",
@@ -1310,11 +1331,11 @@ window.M5S_ALBO = {
       ]
     },
     "rocca-massima": {
-      "ok": true,
-      "esito": "atti",
-      "errore": "",
+      "ok": false,
+      "esito": "errore",
+      "errore": "Fonte non raggiungibile",
       "fonte": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-26T06:08:54+01:00",
+      "aggiornato": "2026-11-27T05:55:02+01:00",
       "atti": [
         {
           "titolo": "Convocazione del Consiglio Comunale in sessione \"URGENZA\" DEL 26/11/2026",
@@ -1372,8 +1393,64 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597",
-      "aggiornato": "2026-11-26T06:26:48+01:00",
+      "aggiornato": "2026-11-27T06:04:28+01:00",
       "atti": [
+        {
+          "titolo": "LIQUIDAZIONE SPESA PREMI ASSICURATIVI. PERIODO TEMPORALE 31.10.2026 - 31.10.2027. (DETERMINA/2026/1310/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Determine",
+          "numero": "2013/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21486"
+        },
+        {
+          "titolo": "LIQUIDAZIONE GIUDIZIALE C.P. N. 124/2012 \"TOR CERVARA INDUSTRIE ALIMENTARI S.P.A.\" CONTESTUALE IMPEGNO E LIQUIDAZIONE PER RESTITUZIONE SOMMA NON DOVUTA IN FAVORE DEL COMUNE DI PATRICA PER ERRATO ACCREDITO (DETERMINA/2026/1312/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Determine",
+          "numero": "2015/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21488"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - LOGOS P.A. S.R.L. 13-11-2026/257/FE (2026.AA.1716) (DETERMINA/2026/1308/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Determine",
+          "numero": "2011/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21484"
+        },
+        {
+          "titolo": "LIQUIDAZIONE FATTURA - DE LEONI INFORMATICA S.R.L. 10-11-2026/271 (2026.AA.1712) (DETERMINA/2026/1314/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Determine",
+          "numero": "2017/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21490"
+        },
+        {
+          "titolo": "IMPEGNO DI SPESA PER SERVIZI DIGITALI ED INFORMATICI DI CONFIGURAZIONE/APPLICATIVI. CIG: BE004D6354. (DETERMINA/2026/1309/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Determine",
+          "numero": "2012/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21485"
+        },
+        {
+          "titolo": "IMPEGNO DI SPESA PER L'ASSOCIAZIONE DI VOLONTARIATO \"E.C. CECCANO - SEZ. TONINO D'ANNIBALE - ODV\" PER ATTIVITA' SVOLTA NEL CAMPO DELLA PROTEZIOE CIVILE - ACCONTO PERIODO: GENNAIO/GIUGNO 2026 (DETERMINA/2026/1313/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Determine",
+          "numero": "2016/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21489"
+        },
+        {
+          "titolo": "DETERMINAZIONE DIRIGENZIALE DI LIQUIDAZIONE PER LAVORI DI SFALCIO VEGETAZIONE E POTATURE ALBERATURE PRESSO AREE VERDI ED IMMOBILI DI PROPRIETA' COMUNALE CIG: BD9DB5AB4F (DETERMINA/2026/1307/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Determine",
+          "numero": "2010/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21483"
+        },
+        {
+          "titolo": "2^ EDIZIONE DEL CONCORSO DI POESIA DENOMINATO \"LIBERA ME\". APPROVAZIONE AVVISO PUBBLICO E RELATIVA MODULISTICA. (DETERMINA/2026/1311/26-11-2026)",
+          "data": "2026-11-26",
+          "tipo": "Determine",
+          "numero": "2014/2026",
+          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21487"
+        },
         {
           "titolo": "SMALTIMENTO DEI RIFIUTI COD. EER 20.01.08 (UMIDO) E DELLA FRAZIONE SECCO INDIFFERENZIATO PRESSO LA SOCIETÀ AMBIENTE FROSINONE S.P.A. PERIODO \"SETTEMBRE 2026\". LIQUIDAZIONE FATTURE. (DETERMINA/2026/1304/25-11-2026)",
           "data": "2026-11-25",
@@ -1494,53 +1571,11 @@ window.M5S_ALBO = {
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21467"
         },
         {
-          "titolo": "PROCEDURA APERTA TELEMATICA AI SENSI DELL'ARTICOLO 71 DEL D. LGS. 31 MARZO 2023, N. 36 PER L'AFFIDAMENTO DEL SERVIZIO DI TRASPORTO SCOLASTICO DEL COMUNE DI CECCANO IN FAVORE DEGLI ALUNNI DELLA SCUOLA PRIMARIA E SECONDARIA DI PRIMO GRADO, CON CONNESSO SERVIZIO DI ASSISTENZA, ACCOMPAGNAMENTO E VIGILANZA, PER LE ANNUALITÀ SCOLASTICHE \"2026/2027\", \"2027/2028\", \"2028/2029\" E \"2029/2030\". NOMINA COMMISSIONE GIUDICATRICE AI SENSI DELL'ARTICOLO 93 DEL D. LGS. N. 36/2023. (DETERMINA/2026/1287/24-11-2026)",
-          "data": "2026-11-24",
-          "tipo": "Determine",
-          "numero": "1987/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21460"
-        },
-        {
-          "titolo": "PRESA D'ATTO RAGGIUNGIMENTO ACCORDO TRANSATTIVO RICHIESTA RISARCITORIA IN MATERIA DI RESPONSABILITÀ CIVILE VERSO TERZI (R.C.T.) E CONTESTUALE ASSUNZIONE DEL RELATIVO IMPEGNO DI SPESA. (DETERMINA/2026/1285/24-11-2026)",
-          "data": "2026-11-24",
-          "tipo": "Determine",
-          "numero": "1985/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21458"
-        },
-        {
           "titolo": "MODERAZIONE DEL TALK \"LONTANO DAL CENTRO\" NELL'AMBITO DEL FESTIVAL \"PERIFERIE\" IN OCCASIONE DELLA PROGETTUALITÀ \"VIBRAZIONI – LE FESTE DI CECCANO\" - CUP B89I26000920002. LIQUIDAZIONE FATTURA (DETERMINA/2026/1290/24-11-2026)",
           "data": "2026-11-24",
           "tipo": "Determine",
           "numero": "1990/2026",
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21463"
-        },
-        {
-          "titolo": "LIQUIDAZIONE FATTURE - GEA S.R.L. 30-09-2026/856/2026 (2026.AA.1660) - GEA S.R.L. 31-10-2026/990/2026 (2026.AA.1783) (DETERMINA/2026/1286/24-11-2026)",
-          "data": "2026-11-24",
-          "tipo": "Determine",
-          "numero": "1986/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21459"
-        },
-        {
-          "titolo": "IMPEGNO DI SPESA DI € 3.300,00 PER PAGAMENTO RETTA DI ACCOGLIENXA IN CASA FAMIGLIA - PERIODO NOVEMBRE 2026 (DETERMINA/2026/1281/24-11-2026)",
-          "data": "2026-11-24",
-          "tipo": "Determine",
-          "numero": "1980/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21453"
-        },
-        {
-          "titolo": "IMPEGNO DI SPESA DI € 2079 PER PAGAMENTO RETTA CASA FAMIGLIA - MESE DI NOVEMBRE 2026 (DETERMINA/2026/1282/24-11-2026)",
-          "data": "2026-11-24",
-          "tipo": "Determine",
-          "numero": "1981/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21454"
-        },
-        {
-          "titolo": "IMPEGNO DI SPESA DI € 1000 PER TRASFERIMENTO CONTRIBUTO ANNUALE APS \"GLI CONCUN\" QUALE ENTE GESTORE DEL CENTRO SOCIALE ANZIANI DEL COMUNE DI CECCANO (DETERMINA/2026/1283/24-11-2026)",
-          "data": "2026-11-24",
-          "tipo": "Determine",
-          "numero": "1982/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21455"
         },
         {
           "titolo": "FORNITURA GRATUITA DEI LIBRI DI TESTO AGLI ALUNNI FREQUENTANTI LA SCUOLA ELEMENTARE RESIDENTI NEL COMUNE DI CECCANO. LIQUIDAZIONE FATTURE MALIZIA MARTINA (DETERMINA/2026/1298/24-11-2026)",
@@ -1569,20 +1604,6 @@ window.M5S_ALBO = {
           "tipo": "Determine",
           "numero": "1995/2026",
           "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21468"
-        },
-        {
-          "titolo": "AVVISO INTERPELLO INTERNO REPERIBILITA' TECNICA",
-          "data": "2026-11-24",
-          "tipo": "Avvisi",
-          "numero": "1983/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21456"
-        },
-        {
-          "titolo": "AFFIDAMENTO DIRETTO AI SENSI DELL'ART. 50, COMMA 1, LETT. B), DEL D. LGS. 36/2023 PER COORDINAMENTO DEL SISTEMA BIBLIOTECARIO E GESTIONE ORGANIZZATIVA DELLE ATTIVITÀ DI RETE INERENTI IL MONITORAGGIO DELLO STATO DI AGGIORNAMENTO, COMPLETEZZA E COERENZA DEL CATALOGO BIBLIOGRAFICO NONCHE' ATTRAVERSO ATTIVITÀ DI CATALOGAZIONE, COME PREVISTO PER LA PROGETTUALITÀ \"BIBLIOCONNESSIONI – COMUNITA' CHE LEGGONO E CONDIVIDONO NELLA VALLE DEL SACCO\" (DETERMINA/2026/1284/24-11-2026)",
-          "data": "2026-11-24",
-          "tipo": "Determine",
-          "numero": "1984/2026",
-          "url": "https://cloud.urbi.it/urbi/progs/urp/ur1ME002.sto?DB_NAME=n201597&w3cbt=S&StwEvent=91000302&IdMePubblica=21457"
         }
       ]
     },
@@ -1591,21 +1612,84 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://comune.lenola.lt.it/albo-pretorio",
-      "aggiornato": "2026-11-26T06:07:19+01:00",
+      "aggiornato": "2026-11-27T05:55:02+01:00",
       "atti": [
+        {
+          "titolo": "Determinazione n11 del 22.10.2026- Servizio ricovero/cure sanitarie e mantenimento ad vitam cani randagi prelevati su suolo comunale. Integrazione impEgno di spesa anno 2026. CIG B07CD28CA3",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "2026001285",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3689310-determinazione-n11-22-10-2026-servizio-ricovero"
+        },
+        {
+          "titolo": "Determinazione n. 52 del 25.11.2026- Affidamento copertura assicurativa mediante polizza RCT per utilizzo della sala ricevimenti della XXII Comunità Montana per lo svolgimento della prova scritta del concorso pubblico indetto dal comune di Lenola -Impegno di spesa e liquidazione Howden Spa",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "2026001288",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3689324-determinazione-n-52-25-11-2026-affidamento"
+        },
+        {
+          "titolo": "Determinazione n 51 del 23.11.2026- Assunzione a tempo pieno ed indeterminato di n. 2 unità dell'Area Istruttori del CCNL 16.11.2022. profilo professionale Istruttore amministrativo. Integrazione fornitura noleggio sedie a ribaltino per svolgimento prova scritta a ditta specializzata media eventi srl",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "2026001289",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3689352-determinazione-n-51-23-11-2026-assunzione-tempo"
+        },
+        {
+          "titolo": "Determinazione n 234 del 26.10.2026-Supporto per servizio di raccolta differenziata porta a porta -Coop. sociale Onlus La Pettegola anno 2026 Integrazione impegno di spesa CIG B9C3DE71D4",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "2026001287",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3689317-determinazione-n-234-26-10-2026-supporto-servizio"
+        },
+        {
+          "titolo": "Determinazione n 231 del 19.10.2026- Progetto di riqualificazione e ampliamento della strada di via Passignano nel Comune di Lenola LT CUP D35F25000190002. Affidamento incarico di servizio tecnico per relazione geologica e indagini geognostiche e servizio Agronomico",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "2026001284",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3689295-determinazione-n-231-19-10-2026-progetto"
+        },
+        {
+          "titolo": "Determinazione n 230 del 19.10.2026- Servizio di manutenzione ordinaria e revisione semestrale estintori a norma UNI9994-1/2024. Integrazione impegno di spesa ditta Fire Antincendio srls anno 2026 CIG BAC6D4F110",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "2026001286",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3689312-determinazione-n-230-19-10-2026-servizio"
+        },
+        {
+          "titolo": "Determinazione n 215 del 10.09.2026-Affidamentodiretto ai sensi del D.Lgs 36/2023 del servizio di trasporto e conferimento dei rifiuti urbani e speciali in favore dell'operatore economico in seguito a manifestazione di interesse eseguito sul MEPA. CIG BBEFFB338F",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "2026001283",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3689285-determinazione-n-215-10-09-2026"
+        },
+        {
+          "titolo": "Determinazione n 174 del 25.11.2026-Servizio di trasporto pubblico locale. Liquidazione a favore della ditta EUROPA VIAGGI Ronci srl-V° Bimestre 2026- Settembre/Ottobre 2026. CIG 70932818A6 CUP D99D17001370006.",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "2026001282",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3689238-determinazione-n-174-25-11-2026-servizio"
+        },
+        {
+          "titolo": "Determinazione n 173 del 25.11.2026-Servizio di trasporto pubblico locale. Liquidazione a favore della ditta EUROPA VIAGGI Ronci srl-IV° Bimestre 2026- luglio agosto 2026. CIG 70932818A6 CUP D99D17001370006.",
+          "data": "2026-11-26",
+          "tipo": "Determinazioni",
+          "numero": "2026001281",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3689217-determinazione-n-173-25-11-2026-servizio"
+        },
+        {
+          "titolo": "Deliberazione G.C. n. 116 del 25.11.2026-Approvazione del progetto esecutivo relativo ai lavori di \"Messa in sicurezza, manutenzione straordinaria e rifacimento di tratti stradali di proprietà comunale\", finalizzato alla partecipazione all'avviso pubblico MIT prot n. 26286 del 03.11.2026 \"Fondo investimenti stradali nei piccoli comuni \" annualità 2026. CUP D37H26010740001.",
+          "data": "2026-11-26",
+          "tipo": "Deliberazioni",
+          "numero": "2026001290",
+          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977858/pubblicazioni/3689360-deliberazione-g-c-n-116-25-11-2026-approvazione"
+        },
         {
           "titolo": "LIQUIDAZIONE AFFARI GENERALI N. 229 DEL 17.11.2026 - PA DIGITALE_ABILITAZIONE AL CLOUD",
           "data": "2026-11-25",
           "tipo": "Atti di Liquidazione",
           "numero": "2026001280",
           "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3688737-liquidazione-affari-generali-n-229-17-11-2026-pa"
-        },
-        {
-          "titolo": "Agenzia delle Entrate Riscossione- Avvio di Deposito art. 143 del C.p.C.",
-          "data": "2026-11-25",
-          "tipo": "Notifiche",
-          "numero": "2026001279",
-          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2263419/pubblicazioni/3688665-agenzia-entrate-riscossione-avvio-deposito-art"
         },
         {
           "titolo": "Liquidazione n. 27 Del 13/11/2026",
@@ -1699,13 +1783,6 @@ window.M5S_ALBO = {
           "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977859/pubblicazioni/3684771-determinazione-n-46-04-11-2026-fondo-salario"
         },
         {
-          "titolo": "Atto di liquidazione n 233 del 16.11.2026- Di Manno Luca",
-          "data": "2026-11-18",
-          "tipo": "Atti di Liquidazione",
-          "numero": "2026001258",
-          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3684591-atto-liquidazione-n-233-16-11-2026-manno-luca"
-        },
-        {
           "titolo": "Atto di Liquidazione n. 237 del 16.11.2026- Forcina Michael",
           "data": "2026-11-18",
           "tipo": "Atti di Liquidazione",
@@ -1746,62 +1823,6 @@ window.M5S_ALBO = {
           "tipo": "Atti di Liquidazione",
           "numero": "2026001264",
           "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3684617-atto-liquidazione-n-19-16-11-2026-indennita"
-        },
-        {
-          "titolo": "LIQUIDAZIONE N. 232 DEL 16/11/2026",
-          "data": "2026-11-17",
-          "tipo": "Atti di Liquidazione",
-          "numero": "2026001252",
-          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683820-liquidazione-n-232-16-11-2026"
-        },
-        {
-          "titolo": "LIQUIDAZIONE N. 231 DEL 16/11/2026",
-          "data": "2026-11-17",
-          "tipo": "Atti di Liquidazione",
-          "numero": "2026001251",
-          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683816-liquidazione-n-231-16-11-2026"
-        },
-        {
-          "titolo": "LIQUIDAZIONE N. 230 DEL 16/11/2026",
-          "data": "2026-11-17",
-          "tipo": "Atti di Liquidazione",
-          "numero": "2026001250",
-          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683813-liquidazione-n-230-16-11-2026"
-        },
-        {
-          "titolo": "LIQUIDAZIONE AFFARI GENERAKI N. 228 DEL 17.11.2026 GENERI ALIMENTARI SCUOLA DELL'INFANZIA_OTTOBRE 2026",
-          "data": "2026-11-17",
-          "tipo": "Atti di Liquidazione",
-          "numero": "2026001253",
-          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683829-liquidazione-affari-generaki-n-228-17-11-2026"
-        },
-        {
-          "titolo": "LIQUIDAZIONE AFFARI GENERAKI N. 227 DEL 13.11.2026 GENERI ALIMENTARI SCUOLA DELL'INFANZIA_NOVEMBRE 2026",
-          "data": "2026-11-17",
-          "tipo": "Atti di Liquidazione",
-          "numero": "2026001254",
-          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683834-liquidazione-affari-generaki-n-227-13-11-2026"
-        },
-        {
-          "titolo": "LIQUIDAZIONE AFFARI GENERAKI N. 226 DEL 13.11.2026 GENERI ALIMENTARI SCUOLA DELL'INFANZIA_OTTOBRE 2026",
-          "data": "2026-11-17",
-          "tipo": "Atti di Liquidazione",
-          "numero": "2026001255",
-          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683836-liquidazione-affari-generaki-n-226-13-11-2026"
-        },
-        {
-          "titolo": "LIQUIDAZIONE AFFARI GENERAKI N. 225 DEL 13.11.2026 MATERIALI PER SCUOLA DELL'INFANZIA",
-          "data": "2026-11-17",
-          "tipo": "Atti di Liquidazione",
-          "numero": "2026001256",
-          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/2373862/pubblicazioni/3683838-liquidazione-affari-generaki-n-225-13-11-2026"
-        },
-        {
-          "titolo": "Deliberazione G.C. 87 del 04.09.2026- Intitolazione dello spazio pubblico \"Passeggiata del Colle\" alla memoria del maestro Angelo De Filippis (1920-2005). Approvazione della relazione illustrativa e richiesta di autorizzazione al Prefetto della Provincia di Latina.",
-          "data": "2026-11-17",
-          "tipo": "Deliberazioni",
-          "numero": "2026001257",
-          "url": "https://comune.lenola.lt.it/albo-pretorio/tipologie/1977858/pubblicazioni/3683924-deliberazione-g-c-87-04-09-2026-intitolazione"
         }
       ]
     },
@@ -1810,77 +1831,77 @@ window.M5S_ALBO = {
       "esito": "atti",
       "errore": "",
       "fonte": "https://www.comune.montesanbiagio.lt.it/EG0/EGHOMEPAGE.HBL?ss=1&F=MC09&en=eg255&freeze=1",
-      "aggiornato": "2026-11-26T05:51:55+01:00",
+      "aggiornato": "2026-11-27T05:45:57+01:00",
       "atti": [
         {
-          "titolo": "Prima edizione dell'iniziativa \"Il valore del sapere - Monte San Biagio premia i suoi laureati - Anno 2026\" - Promozione dell'iniziativa e indirizzi per la realizzazione e pubblicazione degli schemi di avviso pubblico e di domanda di adesione.",
-          "data": "2026-11-25",
-          "tipo": "DELIBERE",
-          "numero": "154/2026",
-          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM923501.pdf"
+          "titolo": "LIQUIDAZIONE SALDO SERVIZIO DELLA CAMPAGNA DI SENSIBILIZZAZIONE E COMUNICAZIONE ALL'UTENZA DEL POTENZIAMENTO, EFFICIENTAMENTO E INNOVAZIONE DEL SERVIZIO DI RACCOLTA DIFFERENZIATA DEI RIFIUTI URBANI ATTRAVERSO L'INSTALLAZIONE DI N. 5 ISOLE ECOLOGICHE \"INTELLIGENTI\" DOTATE DI SISTEMA DI IDENTIFICAZIONE DELL'UTENZA TRAMITE LETTORE QRCODE, BARCODE E BARRA MAGNETICA - ALLA DITTA \"CITY NET ECOLOGIA E AMBIENTE S.R.L.\" DI MONTEROTONDO (RM). - CUP G69I24000990002 - CIG BDE5601AA8",
+          "data": "2026-11-26",
+          "tipo": "DETERMINE",
+          "numero": "414/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/EG0/EGHOMEPAGE.HBL?ss=1&F=MC09&en=eg255&freeze=1"
         },
         {
-          "titolo": "PRESA D'ATTO VALUTAZIONE POSIZIONI ORGANIZZATIVE ANNO 2025",
-          "data": "2026-11-25",
-          "tipo": "DELIBERE",
-          "numero": "151/2026",
-          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM923576.pdf"
+          "titolo": "DETERMINAZIONE REGIONE LAZIO N. G13381/2024 E DETERMINAZIONE N. G12970/2025 PER IL POTENZIAMENTO, EFFICIENTAMENTO E INNOVAZIONE DEL SERVIZIO DI RACCOLTA DIFFERENZIATA DEI RIFIUTI URBANI ATTRAVERSO L'INSTALLAZIONE DI N. 5 ISOLE ECOLOGICHE \"INTELLIGENTI\" DOTATE DI SISTEMA DI IDENTIFICAZIONE DELL'UTENZA TRAMITE LETTORE QRCODE, BARCODE E BARRA MAGNETICA-APPROVAZIONE CERTIFICATO DI REGOLARE ESECUZIONE DELLA FORNITURA",
+          "data": "2026-11-26",
+          "tipo": "DETERMINE",
+          "numero": "420/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM966092.pdf"
         },
         {
-          "titolo": "PRESA D'ATTO DETERMINAZIONE N. 1426 DEL 29/10/2026 DEL COMUNE DI FONDI, N.Q. DI COMUNE CAPOFILA DEL SISTEMA BIBLIOTECARIO SUD PONTINO AVENTE AD OGGETTO: INCARICO DIRETTORE SISTEMA BIBLIOTECARIO SUD PONTINO",
-          "data": "2026-11-25",
-          "tipo": "DELIBERE",
-          "numero": "153/2026",
-          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM923526.pdf"
+          "titolo": "DETERMINAZIONE REGIONE LAZIO N. G13381/2024 E DETERMINAZIONE N. G12970/2025 PER IL POTENZIAMENTO, EFFICIENTAMENTO E INNOVAZIONE DEL SERVIZIO DI RACCOLTA DIFFERENZIATA DEI RIFIUTI URBANI ATTRAVERSO L'INSTALLAZIONE DI N. 5 ISOLE ECOLOGICHE \"INTELLIGENTI\" DOTATE DI SISTEMA DI IDENTIFICAZIONE DELL'UTENZA TRAMITE LETTORE QRCODE, BARCODE E BARRA MAGNETICA- APPROVAZIONE QUADRO ECONOMICO POST GARA E DELLA SPESA SOSTENUTA - CUP G69I24000990002",
+          "data": "2026-11-26",
+          "tipo": "DETERMINE",
+          "numero": "419/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM966024.pdf"
+        },
+        {
+          "titolo": "DETERMINAZIONE REGIONE LAZIO N. G13381/2024 E DETERMINAZIONE N. G12970/2025 PER IL POTENZIAMENTO, EFFICIENTAMENTO E INNOVAZIONE DEL SERVIZIO DI RACCOLTA DIFFERENZIATA DEI RIFIUTI URBANI ATTRAVERSO L'INSTALLAZIONE DI N. 5 ISOLE ECOLOGICHE \"INTELLIGENTI\" DOTATE DI SISTEMA DI IDENTIFICAZIONE DELL'UTENZA TRAMITE LETTORE QRCODE, BARCODE E BARRA MAGNETICA - LIQUIDAZIONE SALDO ALLA DITTA \"CITY NET ECOLOGIA E AMBIENTE S.R.L.\" DI MONTEROTONDO (RM) - CUP G69I24000990002 - CIG BB237848F9",
+          "data": "2026-11-26",
+          "tipo": "DETERMINE",
+          "numero": "418/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/EG0/EGHOMEPAGE.HBL?ss=1&F=MC09&en=eg255&freeze=1"
+        },
+        {
+          "titolo": "DETERMINAZIONE DELLA REGIONE LAZIO DIREZIONE CICLO DEI RIFIUTI N. G06506 DEL 26 MAGGIO 2025 - POTENZIAMENTO E INNOVAZIONE DEL SERVIZIO DI RACCOLTA DIFFERENZIATA DEI RIFIUTI URBANI, NEL COMUNE DI MONTE SAN BIAGIO\" - LIQUIDAZIONE A SALDO INCENTIVI FUNZIONI TECNICHE",
+          "data": "2026-11-26",
+          "tipo": "DETERMINE",
+          "numero": "412/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM966187.pdf"
+        },
+        {
+          "titolo": "Autorizzazione Paesaggistica ai sensi del D.lgs. 42/2004 e ss.mm. ed ii. - Realizzazione tettoia in acciaio nella parte retrostante del manufatto commerciale e installazione totem luminoso con insegna mono facciale sito nel Comune di Monte San Biagio (LT) in Via Provinciale San Magno in Catasto al Foglio 25 part. 1528 - Sig. Di Crescenzo Enrico in qualità di Amministratore Unico della Erma's Uno S.r.l.",
+          "data": "2026-11-26",
+          "tipo": "DETERMINE",
+          "numero": "421/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM966123.pdf"
+        },
+        {
+          "titolo": "AFFIDAMENTO DEL SERVIZIO DI COORDINATORE DELLA SICUREZZA IN FASE DI ESECUZIONE, DIREZIONE LAVORI E CONTABILITA' PER L'INTERVENTO DI \"POTENZIAMENTO E INNOVAZIONE DELLA RACCOLTA DIFFERENZIATA DEI RIFIUTI URBANI\" - LIQUIDAZIONE DI SPESA PROFESSIONISTA INCARICATO - CUP G69I24000990002 - CIG BB22D432C3",
+          "data": "2026-11-26",
+          "tipo": "DETERMINE",
+          "numero": "411/2026",
+          "url": "https://www.comune.montesanbiagio.lt.it/EG0/EGHOMEPAGE.HBL?ss=1&F=MC09&en=eg255&freeze=1"
         },
         {
           "titolo": "LIQUIDAZIONE DELLA RETRIBUZIONE DI RISULTATO SPETTANTE AI TITOLARI DI INCARICHI DI ELEVATA QUALIFICAZIONE PER L'ANNO 2025.",
           "data": "2026-11-25",
           "tipo": "DETERMINE",
           "numero": "65/2026",
-          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM923345.pdf"
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM966250.pdf"
         },
         {
           "titolo": "LIQUIDAZIONE DEGLI ARRETRATI SPETTANTI AL PERSONALE DIPENDENTE A SEGUITO DELL'ATTRIBUZIONE DELLE PROGRESSIONI ECONOMICHE ORIZZONTALI (EX PEO) - DIFFERENZIALI STIPENDIALI, CON DECORRENZA DAL 01/01/2025.",
           "data": "2026-11-25",
           "tipo": "DETERMINE",
           "numero": "64/2026",
-          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM923370.pdf"
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM966275.pdf"
         },
         {
           "titolo": "LIQUIDAZIONE A SALDO COMPETENZE ACCESSORIE DI CUI AL CCDI SOTTOSCRITTO IN DATA 30/12/2025 RIFERITE ALL'ANNO 2025",
           "data": "2026-11-25",
           "tipo": "DETERMINE",
           "numero": "63/2026",
-          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM923401.pdf"
-        },
-        {
-          "titolo": "IMPEGNO DI SPESA E LIQUIDAZIONE DI MASSIMA PER IL SERVIZIO REFEZIONE SCOLASTICA ANNO 2026/2027 A FAVORE DI E.P. SPA",
-          "data": "2026-11-25",
-          "tipo": "DETERMINE",
-          "numero": "164/2026",
-          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM923426.pdf"
-        },
-        {
-          "titolo": "AUTORIZZAZIONE ALLO SVOLGIMENTO DI TIROCINIO DI INSERIMENTO O REINSERIMENTO FINALIZZATI ALLA RIABILITAZIONE E ALL'INCLUSIONE SOCIALE",
-          "data": "2026-11-25",
-          "tipo": "DELIBERE",
-          "numero": "155/2026",
-          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM923476.pdf"
-        },
-        {
-          "titolo": "ASSEGNO DI INCLUSIONE: APPROVAZIONE E STIPULA NUOVA CONVENZIONE PER LA PIATTAFORMA GEPI",
-          "data": "2026-11-25",
-          "tipo": "DELIBERE",
-          "numero": "156/2026",
-          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM923451.pdf"
-        },
-        {
-          "titolo": "APPROVAZIONE DEL REGOLAMENTO PER LA DISCIPLINA DEGLI INCARICHI DI ELEVATA QUALIFICAZIONE - CONFERIMENTO, DURATA, REVOCA, GRADUAZIONE, RETRIBUZIONE E VALUTAZIONE.",
-          "data": "2026-11-25",
-          "tipo": "DELIBERE",
-          "numero": "152/2026",
-          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM923551.pdf"
+          "url": "https://www.comune.montesanbiagio.lt.it/halley//ht/eg255/DOCM966300.pdf"
         }
       ]
     }
