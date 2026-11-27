@@ -1,6 +1,6 @@
 /* Generato da scripts/sync_rassegna.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_RASSEGNA = {
-  "aggiornato": "2026-11-27T01:37:48+01:00",
+  "aggiornato": "2026-11-27T20:29:42+01:00",
   "giorni": 60,
   "fonti": [
     {
@@ -25,16 +25,88 @@ window.M5S_RASSEGNA = {
       "id": "h24notizie",
       "nome": "H24 Notizie",
       "esito": "ok",
-      "nuove": 3
+      "nuove": 4
     },
     {
       "id": "frosinonetoday",
       "nome": "Frosinone Today",
       "esito": "ok",
-      "nuove": 2
+      "nuove": 0
     }
   ],
   "notizie": [
+    {
+      "url": "https://www.latinacorriere.it/io-francesco-a-sezze-il-musical-sul-santo-di-assisi",
+      "titolo": "“Io Francesco”, a Sezze il musical sul santo di Assisi",
+      "anteprima": "Grande attesa a Sezze per la prima assoluta di “Io Francesco”, il nuovo musical scritto e diretto da Piero Formicuccia, in scena domenica 29 novembre alle ore 17.30 nella Concattedrale di Santa Maria. Prodotto dall’Associazione della Passione di…",
+      "data": "2026-11-27",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "sezze"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/eventi/winter-vibes-natale-2026-fondi.html",
+      "titolo": "Winter Vibes: gli eventi di Natale a Fondi da fine novembre al 10 gennaio",
+      "anteprima": "Sono tantissimi gli eventi che animeranno il Natale a Fondi all’interno della rassegna Winter…",
+      "data": "2026-11-27",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "fondi"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/attualita/terracina-open-day-carta-identita-elettronica.html",
+      "titolo": "Terracina, sabato 28 novembre ultimo open day per la carta d'identità elettronica",
+      "anteprima": "Sportelli aperti dalle 9 alle 17 in via Appia Km 101. Dal 31 gennaio 2027 il documento cartaceo non sarà più valido in alcun contesto",
+      "data": "2026-11-27",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/furto-bancomat-prelievo-cisterna.html",
+      "titolo": "Rubano una borsa al supermercato: i ladri sorpresi mentre prelevano 1.200 euro",
+      "anteprima": "I loro movimenti sospetti non sono sfuggiti ai poliziotti del commissariato di Cisterna, che li hanno fermati e controllati",
+      "data": "2026-11-27",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/27/ordigno-bellico-a-monte-san-biagio-circolazione-ferroviaria-ripresa-dopo-lintervento-dei-guastatori",
+      "titolo": "Ordigno bellico a Monte San Biagio, circolazione ferroviaria ripresa dopo l’intervento dei guastatori",
+      "anteprima": "Ci sono volute ore per mettere in sicurezza la bomba trovata giovedì mattina a Monte San Biagio, durante i lavori per il parcheggio della stazione. Un ordigno bellico di fabbricazione anglo-americana, dal peso di circa 200 chilogrammi e dalla…",
+      "data": "2026-11-27",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "monte-san-biagio"
+      ]
+    },
+    {
+      "url": "https://www.h24notizie.com/2026/11/27/cisterna-coppia-denunciata-dopo-il-furto-di-una-borsa-a-latina",
+      "titolo": "Cisterna, coppia denunciata dopo il furto di una borsa a Latina",
+      "anteprima": "A Cisterna di Latina, nell’ambito della costante attività di controllo del territorio, la polizia prosegue nell’attento monitoraggio di persone e veicoli sospetti, con particolare attenzione anche all’utilizzo di autovetture a noleggio, al fine di…",
+      "data": "2026-11-27",
+      "testata": "h24notizie",
+      "testataNome": "H24 Notizie",
+      "logo": "img/testate/h24notizie.ico",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
     {
       "url": "https://www.frosinonetoday.it/politica/valle-del-sacco-controlli-inquinamento-verifiche-depuratori.html",
       "titolo": "Valle del Sacco, più controlli contro l'inquinamento e verifiche sui depuratori. Avviati in Prefettura i lavori del Tavolo dei sindaci",
