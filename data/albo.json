@@ -1,5 +1,5 @@
 {
-  "aggiornato": "2026-11-27T08:09:57+01:00",
+  "aggiornato": "2026-11-27T10:53:19+01:00",
   "comuni": {
     "cori": {
       "ok": true,
@@ -444,7 +444,7 @@
       "esito": "errore",
       "errore": "Il portale dell'albo segnala una manutenzione in corso",
       "fonte": "https://servizionline.comune.sonnino.latina.it/urbi/progs/urp/ur1ME001.sto?DB_NAME=n1201895",
-      "aggiornato": "2026-11-27T08:09:57+01:00",
+      "aggiornato": "2026-11-27T10:53:19+01:00",
       "atti": []
     },
     "roccagorga": {
@@ -657,7 +657,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059016/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059016",
-      "aggiornato": "2026-11-27T08:09:45+01:00",
+      "aggiornato": "2026-11-27T10:53:06+01:00",
       "atti": [
         {
           "titolo": "LAVORI VIABILITA' COMUNALE G. MARCONI-REGOLAMENTAZIONE TRAFFICIO VEICOLARE-",
@@ -715,7 +715,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://cisterna-di-latina.halleyweb.it/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059005",
-      "aggiornato": "2026-11-27T08:08:13+01:00",
+      "aggiornato": "2026-11-27T10:51:37+01:00",
       "atti": [
         {
           "titolo": "REGOLAMENTAZIONE PROVVISORIA DELLA CIRCOLAZIONE VEICOLARE, DAL 01 AL 05 DICEMBRE 2026 (E COMUNQUE FINO AL TERMINE DEI LAVORI), IN VIA TIVERA FRONTE CIVICO 33, PER TAGLIO DI RAMI ED ALBERATURE PERICOLANTI.",
@@ -773,7 +773,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.halleyweb.com/c059028/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059028",
-      "aggiornato": "2026-11-27T08:08:13+01:00",
+      "aggiornato": "2026-11-27T10:51:37+01:00",
       "atti": [
         {
           "titolo": ": AFFIDAMENTO INCARICO DEL \"SERVIZIO DI SPAMPA IMBUSTAMENTO E POSTALIZZAZIONE E RECAPITO\" PER IL COMUNE DI SEZZE(LT). Affidamento ai sensi dell'art. 50 comma 1 lett. b) del D.Lgs. n. 36/2023 all'operatore economico società Mercurio Service - P.I. 01413270669; CIG: BDF88E0799",
@@ -922,7 +922,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile: il sito non ha risposto in tempo",
       "fonte": "https://www.halleyweb.com/c059019/mc/mc_p_ricerca.php?noHeaderFooter=1&multiente=c059019",
-      "aggiornato": "2026-11-27T08:09:45+01:00",
+      "aggiornato": "2026-11-27T10:53:06+01:00",
       "atti": [
         {
           "titolo": "Concessione Patrocinio Coro Polyphonia città di Sezze - 06.12.2026",
@@ -1220,7 +1220,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "https://www.comunedisermoneta.it/c059027/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-27T08:09:45+01:00",
+      "aggiornato": "2026-11-27T10:53:06+01:00",
       "atti": [
         {
           "titolo": "SCIA per modifica di impianti radioelettrici esistenti. Impianto localizzato in Sermoneta, Via Tufette snc",
@@ -1334,7 +1334,7 @@
       "esito": "errore",
       "errore": "Fonte non raggiungibile",
       "fonte": "http://www.comune.roccamassima.latina.it/c059022/mc/mc_p_ricerca.php",
-      "aggiornato": "2026-11-27T08:09:45+01:00",
+      "aggiornato": "2026-11-27T10:53:06+01:00",
       "atti": [
         {
           "titolo": "Convocazione del Consiglio Comunale in sessione \"URGENZA\" DEL 26/11/2026",
