@@ -1,11 +1,8 @@
 -- Forum del Gruppo Territoriale Lepini Ausoni.
 -- Da eseguire nel SQL Editor di Supabase (piano free). Non usa la service_role nel sito.
--- Ruoli: registrato (chi si iscrive), iscritto (iscritto M5S, approvato dallo staff),
--- staff (staff del gruppo territoriale: iniziative, organizzazione e moderazione).
+-- Ruoli: registrato, iscritto (approvato dallo staff), staff (moderatori del gruppo),
+-- admin (uno solo: Damiano, damilunch@gmail.com). Lo staff non nomina altri staff.
 -- Sezioni: Sezione aperta, Area iscritti M5S, Area staff.
-
--- Primo staff, dopo che Damiano ha confermato l'email:
---   update public.profiles set role = 'staff' where email = 'EMAIL_DI_DAMIANO';
 
 create extension if not exists pgcrypto;
 
@@ -17,7 +14,7 @@ create table if not exists public.profiles (
   id uuid primary key references auth.users (id) on delete cascade,
   email text not null,
   display_name text not null,
-  role text not null default 'registrato' check (role in ('registrato', 'iscritto', 'staff')),
+  role text not null default 'registrato' check (role in ('registrato', 'iscritto', 'staff', 'admin')),
   blocked boolean not null default false,
   created_at timestamptz not null default now()
 );
@@ -90,6 +87,19 @@ as $$
   select coalesce((select blocked from public.profiles where id = auth.uid()), true);
 $$;
 
+create or replace function public.forum_e_admin()
+returns boolean
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select exists (
+    select 1 from public.profiles
+    where id = auth.uid() and role = 'admin' and blocked = false
+  );
+$$;
+
 create or replace function public.forum_e_staff()
 returns boolean
 language sql
@@ -99,8 +109,33 @@ set search_path = public
 as $$
   select exists (
     select 1 from public.profiles
-    where id = auth.uid() and role = 'staff' and blocked = false
+    where id = auth.uid() and role in ('staff', 'admin') and blocked = false
   );
+$$;
+
+create or replace function public.forum_e_admin_id(utente uuid)
+returns boolean
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select exists (
+    select 1 from public.profiles
+    where id = utente and role = 'admin'
+  );
+$$;
+
+create or replace function public.forum_etichetta(utente uuid)
+returns text
+language sql
+stable
+security definer
+set search_path = public
+as $$
+  select case when role = 'admin' then 'Admin' else '' end
+  from public.profiles
+  where id = utente;
 $$;
 
 create or replace function public.forum_puo_leggere(visibilita text)
@@ -113,6 +148,7 @@ as $$
   select case
     when auth.uid() is null then false
     when public.forum_bloccato() then false
+    when public.forum_ruolo() = 'admin' then true
     when visibilita = 'aperta' then public.forum_ruolo() in ('registrato', 'iscritto', 'staff')
     when visibilita = 'iscritti' then public.forum_ruolo() in ('iscritto', 'staff')
     when visibilita = 'staff' then public.forum_ruolo() = 'staff'
@@ -155,14 +191,20 @@ $$;
 
 revoke all on function public.forum_ruolo() from public, anon;
 revoke all on function public.forum_bloccato() from public, anon;
+revoke all on function public.forum_e_admin() from public, anon;
 revoke all on function public.forum_e_staff() from public, anon;
+revoke all on function public.forum_e_admin_id(uuid) from public, anon;
+revoke all on function public.forum_etichetta(uuid) from public, anon;
 revoke all on function public.forum_puo_leggere(text) from public, anon;
 revoke all on function public.forum_puo_scrivere(text) from public, anon;
 revoke all on function public.forum_nome(uuid) from public, anon;
 revoke all on function public.forum_visibilita_thread(uuid) from public, anon;
 grant execute on function public.forum_ruolo() to authenticated;
 grant execute on function public.forum_bloccato() to authenticated;
+grant execute on function public.forum_e_admin() to authenticated;
 grant execute on function public.forum_e_staff() to authenticated;
+grant execute on function public.forum_e_admin_id(uuid) to authenticated;
+grant execute on function public.forum_etichetta(uuid) to authenticated;
 grant execute on function public.forum_puo_leggere(text) to authenticated;
 grant execute on function public.forum_puo_scrivere(text) to authenticated;
 grant execute on function public.forum_nome(uuid) to authenticated;
@@ -197,14 +239,40 @@ security definer
 set search_path = public
 as $$
 begin
-  if new.role is distinct from old.role or new.blocked is distinct from old.blocked or new.id is distinct from old.id then
-    if not public.forum_e_staff() then
-      raise exception 'solo lo staff del gruppo può cambiare ruolo o blocco';
-    end if;
+  if new.id is distinct from old.id then
+    raise exception 'id non modificabile';
   end if;
-  if new.role not in ('registrato', 'iscritto', 'staff') then
+
+  if new.role = 'admin' and old.role is distinct from 'admin' then
+    raise exception 'non si può nominare un admin da qui';
+  end if;
+
+  if new.role not in ('registrato', 'iscritto', 'staff', 'admin') then
     raise exception 'ruolo non valido';
   end if;
+
+  if old.role = 'admin' then
+    if auth.uid() is distinct from old.id then
+      raise exception 'solo l''admin può modificare il proprio profilo';
+    end if;
+    return new;
+  end if;
+
+  if public.forum_e_admin() then
+    return new;
+  end if;
+
+  if public.forum_e_staff() then
+    if old.role not in ('registrato', 'iscritto') or new.role not in ('registrato', 'iscritto') then
+      raise exception 'lo staff non può nominare o togliere lo staff, né agire su staff o admin';
+    end if;
+    return new;
+  end if;
+
+  if new.role is distinct from old.role or new.blocked is distinct from old.blocked then
+    raise exception 'solo lo staff del gruppo può cambiare ruolo o blocco';
+  end if;
+
   return new;
 end;
 $$;
@@ -292,8 +360,28 @@ create policy profiles_leggi on public.profiles
 drop policy if exists profiles_staff_aggiorna on public.profiles;
 create policy profiles_staff_aggiorna on public.profiles
   for update to authenticated
-  using (public.forum_e_staff())
-  with check (public.forum_e_staff());
+  using (
+    (public.forum_e_admin() and (id = auth.uid() or role <> 'admin'))
+    or (
+      public.forum_e_staff()
+      and not public.forum_e_admin()
+      and role in ('registrato', 'iscritto')
+    )
+  )
+  with check (
+    (
+      public.forum_e_admin()
+      and (
+        (id = auth.uid() and role in ('registrato', 'iscritto', 'staff', 'admin'))
+        or (id <> auth.uid() and role in ('registrato', 'iscritto', 'staff'))
+      )
+    )
+    or (
+      public.forum_e_staff()
+      and not public.forum_e_admin()
+      and role in ('registrato', 'iscritto')
+    )
+  );
 
 drop policy if exists sections_leggi on public.sections;
 create policy sections_leggi on public.sections
@@ -326,7 +414,18 @@ create policy threads_crea on public.threads
 drop policy if exists threads_staff_cancella on public.threads;
 create policy threads_staff_cancella on public.threads
   for delete to authenticated
-  using (public.forum_e_staff());
+  using (
+    public.forum_e_admin()
+    or (
+      public.forum_e_staff()
+      and not public.forum_e_admin_id(author_id)
+      and not exists (
+        select 1 from public.posts p
+        where p.thread_id = threads.id
+          and public.forum_e_admin_id(p.author_id)
+      )
+    )
+  );
 
 drop policy if exists posts_leggi on public.posts;
 create policy posts_leggi on public.posts
@@ -344,7 +443,13 @@ create policy posts_crea on public.posts
 drop policy if exists posts_staff_cancella on public.posts;
 create policy posts_staff_cancella on public.posts
   for delete to authenticated
-  using (public.forum_e_staff());
+  using (
+    public.forum_e_admin()
+    or (
+      public.forum_e_staff()
+      and not public.forum_e_admin_id(author_id)
+    )
+  );
 
 drop policy if exists richieste_leggi on public.access_requests;
 create policy richieste_leggi on public.access_requests
@@ -393,7 +498,7 @@ values
     '11111111-1111-4111-8111-111111111103',
     'staff',
     'Area staff',
-    'Iniziative e organizzazione dello staff del Gruppo Territoriale Lepini Ausoni. Solo lo staff può leggere e scrivere.',
+    'Iniziative e organizzazione dello staff del Gruppo Territoriale Lepini Ausoni. Solo lo staff e l''admin possono leggere e scrivere.',
     'staff',
     3
   )
@@ -402,3 +507,26 @@ set nome = excluded.nome,
     descrizione = excluded.descrizione,
     visibilita = excluded.visibilita,
     ordine = excluded.ordine;
+
+-- Se l'account esiste già, è l'unico admin. Il trigger è spento solo per questo update.
+do $$
+begin
+  if to_regclass('public.profiles') is null then
+    return;
+  end if;
+  if not exists (select 1 from public.profiles where lower(email) = 'damilunch@gmail.com') then
+    return;
+  end if;
+  alter table public.profiles disable trigger forum_proteggi_profilo;
+  update public.profiles
+  set role = 'staff'
+  where role = 'admin' and lower(email) <> 'damilunch@gmail.com';
+  update public.profiles
+  set role = 'admin'
+  where lower(email) = 'damilunch@gmail.com';
+  alter table public.profiles enable trigger forum_proteggi_profilo;
+exception
+  when others then
+    alter table public.profiles enable trigger forum_proteggi_profilo;
+    raise;
+end $$;

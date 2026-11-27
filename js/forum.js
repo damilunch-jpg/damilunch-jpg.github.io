@@ -65,9 +65,32 @@
     return String(iso).replace("T", " ").slice(0, 16);
   }
 
+  function eAdmin() {
+    return profilo && profilo.role === "admin" && !profilo.blocked;
+  }
+
+  function eModeratore() {
+    return profilo && (profilo.role === "staff" || profilo.role === "admin") && !profilo.blocked;
+  }
+
+  function etichettaRuolo(ruolo) {
+    if (ruolo === "admin") return "Admin";
+    if (ruolo === "staff") return "Staff";
+    if (ruolo === "iscritto") return "Iscritto";
+    return "Registrato";
+  }
+
   async function nomeDi(id) {
     var esito = await client.rpc("forum_nome", { utente: id });
-    return esito.data || "Utente";
+    var etichetta = await client.rpc("forum_etichetta", { utente: id });
+    var nome = esito.data || "Utente";
+    if (etichetta.data) nome += " · " + etichetta.data;
+    return nome;
+  }
+
+  async function autoreAdmin(id) {
+    var etichetta = await client.rpc("forum_etichetta", { utente: id });
+    return etichetta.data === "Admin";
   }
 
   async function caricaProfilo() {
@@ -89,12 +112,12 @@
     if (profilo.role === "registrato" && !profilo.blocked) {
       html += '<button type="button" id="forum-richiedi">Richiedi accesso iscritti</button>';
     }
-    if (profilo.role === "staff" && !profilo.blocked) {
+    if (eModeratore()) {
       html += '<button type="button" id="forum-staff">Pannello staff</button>';
     }
     html += '<button type="button" class="secondario" id="forum-esci">Esci</button>';
     html += "</div>";
-    html += '<p class="forum-meta">Sei entrato come ' + escapeHtml(profilo.display_name) + " · " + escapeHtml(profilo.role) + "</p>";
+    html += '<p class="forum-meta">Sei entrato come ' + escapeHtml(profilo.display_name) + " · " + escapeHtml(etichettaRuolo(profilo.role)) + "</p>";
     return html;
   }
 
@@ -222,22 +245,29 @@
     }
     var sezione = await client.from("sections").select("slug, nome").eq("id", thread.data.section_id).maybeSingle();
     var messaggi = await client.from("posts").select("id, author_id, corpo, created_at").eq("thread_id", id).order("created_at");
+    var threadDiAdmin = await autoreAdmin(thread.data.author_id);
+    var messaggioDiAdmin = threadDiAdmin;
+    var blocchi = [];
+    for (var i = 0; i < (messaggi.data || []).length; i++) {
+      var post = messaggi.data[i];
+      var diAdmin = await autoreAdmin(post.author_id);
+      if (diAdmin) messaggioDiAdmin = true;
+      blocchi.push({ post: post, diAdmin: diAdmin, autore: await nomeDi(post.author_id) });
+    }
     document.title = thread.data.titolo + " – Forum";
     var html = '<p class="page-kicker"><a href="#sezione=' + encodeURIComponent(sezione.data ? sezione.data.slug : "") + '">' + escapeHtml(sezione.data ? sezione.data.nome : "Forum") + "</a></p>";
     html += "<h1>" + escapeHtml(thread.data.titolo) + "</h1>" + barra();
-    if (profilo && profilo.role === "staff") {
+    if (eAdmin() || (eModeratore() && !messaggioDiAdmin)) {
       html += '<div class="forum-azioni"><button type="button" class="secondario" id="forum-cancella-thread">Cancella discussione</button></div>';
     }
-    for (var i = 0; i < (messaggi.data || []).length; i++) {
-      var post = messaggi.data[i];
-      var autore = await nomeDi(post.author_id);
-      html += '<article class="forum-messaggio"><p class="forum-meta">' + escapeHtml(autore) + " · " + escapeHtml(dataBreve(post.created_at)) + "</p>";
-      html += "<p>" + escapeHtml(post.corpo) + "</p>";
-      if (profilo && profilo.role === "staff") {
-        html += '<button type="button" class="secondario" data-cancella-post="' + post.id + '">Cancella messaggio</button>';
+    blocchi.forEach(function (blocco) {
+      html += '<article class="forum-messaggio"><p class="forum-meta">' + escapeHtml(blocco.autore) + " · " + escapeHtml(dataBreve(blocco.post.created_at)) + "</p>";
+      html += "<p>" + escapeHtml(blocco.post.corpo) + "</p>";
+      if (eAdmin() || (eModeratore() && !blocco.diAdmin)) {
+        html += '<button type="button" class="secondario" data-cancella-post="' + blocco.post.id + '">Cancella messaggio</button>';
       }
       html += "</article>";
-    }
+    });
     if (!profilo.blocked) {
       html += '<form id="forum-risposta" class="forum-form"><label for="risposta-corpo">Rispondi</label><textarea id="risposta-corpo" required maxlength="8000"></textarea>';
       html += '<div class="forum-azioni"><button type="submit">Pubblica risposta</button></div><p id="risposta-msg" class="forum-errore" hidden></p></form>';
@@ -337,8 +367,30 @@
     });
   }
 
+  function opzioneRuolo(valore, etichetta, attuale) {
+    return '<option value="' + valore + '"' + (attuale === valore ? " selected" : "") + ">" + etichetta + "</option>";
+  }
+
+  function schedaUtente(utente) {
+    var html = '<article class="forum-card"><h3>' + escapeHtml(utente.display_name);
+    if (utente.role === "admin") html += " · Admin";
+    html += "</h3>";
+    html += '<p class="forum-meta">' + escapeHtml(utente.email) + " · " + escapeHtml(etichettaRuolo(utente.role)) + "</p>";
+    if (utente.role === "admin") return html + "</article>";
+    if (!eAdmin() && utente.role === "staff") return html + "</article>";
+    html += '<form class="forum-form" data-utente="' + utente.id + '">';
+    html += "<label>Ruolo<select data-ruolo>";
+    html += opzioneRuolo("registrato", "Registrato", utente.role);
+    html += opzioneRuolo("iscritto", "Iscritto", utente.role);
+    if (eAdmin()) html += opzioneRuolo("staff", "Staff", utente.role);
+    html += "</select></label>";
+    html += '<label><input type="checkbox" data-blocco' + (utente.blocked ? " checked" : "") + "> Account bloccato</label>";
+    html += '<div class="forum-azioni"><button type="submit">Salva</button></div></form></article>';
+    return html;
+  }
+
   async function pannelloStaff() {
-    if (!profilo || profilo.role !== "staff") {
+    if (!eModeratore()) {
       monta(barra() + errore("Pannello riservato allo staff del gruppo."));
       collegaBarra();
       return;
@@ -357,15 +409,9 @@
       html += '<button type="button" class="secondario" data-rifiuta="' + richiesta.id + '">Rifiuta</button></div></article>';
     }
     html += "<h2>Utenti</h2>";
+    if (eAdmin()) html += '<p class="forum-meta">Solo l\'admin può nominare o togliere lo staff. Nessuno può nominare un altro admin da qui.</p>';
     (utenti.data || []).forEach(function (utente) {
-      html += '<article class="forum-card"><h3>' + escapeHtml(utente.display_name) + "</h3>";
-      html += '<p class="forum-meta">' + escapeHtml(utente.email) + "</p>";
-      html += '<form class="forum-form" data-utente="' + utente.id + '">';
-      html += '<label>Ruolo<select data-ruolo><option value="registrato"' + (utente.role === "registrato" ? " selected" : "") + ">registrato</option>";
-      html += '<option value="iscritto"' + (utente.role === "iscritto" ? " selected" : "") + ">iscritto</option>";
-      html += '<option value="staff"' + (utente.role === "staff" ? " selected" : "") + ">staff</option></select></label>";
-      html += '<label><input type="checkbox" data-blocco' + (utente.blocked ? " checked" : "") + "> Account bloccato</label>";
-      html += '<div class="forum-azioni"><button type="submit">Salva</button></div></form></article>';
+      html += schedaUtente(utente);
     });
     monta(html);
     collegaBarra();
