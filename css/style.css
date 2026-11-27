@@ -1075,3 +1075,94 @@ body{padding-bottom:6.2rem}
 .albo-atto h3 a:focus-visible {
   text-decoration: underline;
 }
+
+.forum-box,
+.forum-card {
+  background: var(--bianco);
+  border: 1px solid var(--bordo);
+  border-radius: var(--raggio);
+  box-shadow: var(--ombra);
+  padding: 1rem 1.05rem 1.1rem;
+  margin: 0 0 0.9rem;
+}
+
+.forum-card h2,
+.forum-card h3 {
+  margin: 0 0 0.35rem;
+}
+
+.forum-card h2 a,
+.forum-card h3 a {
+  text-decoration: none;
+}
+
+.forum-azioni {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.8rem 0;
+}
+
+.forum-form label {
+  display: block;
+  font-weight: 700;
+  margin: 0.7rem 0 0.25rem;
+}
+
+.forum-form input,
+.forum-form textarea,
+.forum-form select {
+  width: 100%;
+  max-width: 40rem;
+  font: inherit;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--bordo);
+  border-radius: 8px;
+  background: var(--bianco);
+}
+
+.forum-form textarea {
+  min-height: 8rem;
+}
+
+.forum-form button,
+.forum-azioni button,
+.forum-linkbtn {
+  display: inline-block;
+  background: var(--giallo);
+  color: var(--grigio-scuro);
+  font: inherit;
+  font-weight: 800;
+  border: 0;
+  border-radius: 8px;
+  padding: 0.55rem 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.forum-form button.secondario,
+.forum-azioni button.secondario {
+  background: var(--bianco);
+  border: 1px solid var(--bordo);
+}
+
+.forum-errore {
+  color: #7a2e2e;
+  font-weight: 700;
+}
+
+.forum-meta {
+  color: var(--testo-soft);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.forum-messaggio {
+  border-top: 1px solid var(--bordo);
+  padding-top: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.forum-messaggio p {
+  white-space: pre-wrap;
+}

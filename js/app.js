@@ -407,6 +407,7 @@
     var isHome = /index\.html$/.test(path) || (/\/$/.test(path) && path.indexOf("/comuni/") === -1);
     var isRassegna = /rassegna\.html$/.test(path);
     var isGruppo = /gruppo\.html$/.test(path);
+    var isForum = /forum\.html$/.test(path);
 
     var comuni = "";
     DATA.comuni.forEach(function (c) {
@@ -450,6 +451,11 @@
       'gruppo.html"' +
       (isGruppo ? ' aria-current="page"' : "") +
       ">Gruppo Territoriale</a></li>" +
+      '<li><a href="' +
+      base +
+      'forum.html"' +
+      (isForum ? ' aria-current="page"' : "") +
+      ">Forum</a></li>" +
       '<li class="voce-comuni">' +
       '<button type="button" class="comuni-toggle" aria-expanded="false" aria-controls="elenco-comuni">Comuni</button>' +
       '<ul class="elenco-comuni" id="elenco-comuni" hidden>' +
