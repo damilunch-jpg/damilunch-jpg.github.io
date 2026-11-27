@@ -1,6 +1,6 @@
 /* Generato da scripts/sync_rassegna.py. Anteprime prese solo dal campo description/summary del feed. */
 window.M5S_RASSEGNA = {
-  "aggiornato": "2026-11-26T16:22:05+01:00",
+  "aggiornato": "2026-11-27T01:37:48+01:00",
   "giorni": 60,
   "fonti": [
     {
@@ -25,7 +25,7 @@ window.M5S_RASSEGNA = {
       "id": "h24notizie",
       "nome": "H24 Notizie",
       "esito": "ok",
-      "nuove": 4
+      "nuove": 3
     },
     {
       "id": "frosinonetoday",
@@ -72,6 +72,18 @@ window.M5S_RASSEGNA = {
       ]
     },
     {
+      "url": "https://www.latinatoday.it/eventi/natale-2026-monte-san-biagio.html",
+      "titolo": "Natale Monticelliano: atmosfere festive, tombolate e luminarie fino alla Befana",
+      "anteprima": "Anche a Monte San Biagio ci si appresta a festeggiare il periodo natalizio con una serie di…",
+      "data": "2026-11-26",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "monte-san-biagio"
+      ]
+    },
+    {
       "url": "https://www.latinatoday.it/cronaca/maltempo-tromba-aria-minturno-frana-castelforte-disagi-sud-pontino.html",
       "titolo": "Maltempo: danni e disagi per pioggia e vento. Tromba d'aria a Minturno, doppia frana a Castelforte",
       "anteprima": "Chiusa via delle Terme per la presenza di fango e materiale franoso sulla carreggiata; sul posto anche il sindaco Pompeo. Richieste di intervento ai vigili del fuoco tra Fondi, Terracina, Formia e Minturno",
@@ -81,6 +93,18 @@ window.M5S_RASSEGNA = {
       "logo": "img/testate/latinatoday.png",
       "comuni": [
         "fondi",
+        "terracina"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/cronaca/maltempo-allagamento-appia-terracina-consorzio-bonifica-anas.html",
+      "titolo": "Maltempo, Appia allagata: Consorzio di bonifica e Anas lavorano alla messa in sicurezza dell'area",
+      "anteprima": "Gli interventi in località Pontalto, a Terracina, dopo le abbondanti precipitazioni delle scorse ore",
+      "data": "2026-11-26",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
         "terracina"
       ]
     },
