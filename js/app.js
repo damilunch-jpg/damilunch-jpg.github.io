@@ -535,7 +535,7 @@
       '<button type="submit">Iscriviti</button>' +
       '<p class="newsletter-msg" id="newsletter-msg" hidden></p>' +
       "</form></div></div>" +
-      '<p class="copyright">© Movimento 5 Stelle – Gruppo Territoriale Lepini Ausoni.</p>';
+      '<p class="copyright">© Gruppo Territoriale Lepini Ausoni.</p>';
 
     var form = $("#form-newsletter", mount);
     if (form) {
