@@ -1,12 +1,12 @@
 {
-  "aggiornato": "2026-11-27T20:29:42+01:00",
+  "aggiornato": "2026-11-28T12:51:54+01:00",
   "giorni": 60,
   "fonti": [
     {
       "id": "latinatoday",
       "nome": "Latina Today",
       "esito": "ok",
-      "nuove": 4
+      "nuove": 5
     },
     {
       "id": "latinacorriere",
@@ -34,6 +34,43 @@
     }
   ],
   "notizie": [
+    {
+      "url": "https://www.latinatoday.it/attualita/viabilita-sezze-strade-lavori-pubblici.html",
+      "titolo": "Viabilità, a Sezze 500mila euro per la manutenzione e la riqualificazione delle strade",
+      "anteprima": "Il Comune conquista il quarto posto nella graduatoria regionale con 93 punti. Gli interventi interesseranno via Montagna, via Chiesa Nuova, via Boccioni, via Colli, via San Leonardo e via Fanfara",
+      "data": "2026-11-28",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "sezze"
+      ]
+    },
+    {
+      "url": "https://www.latinatoday.it/attualita/trasporto-pubblico-cori-rocca-massima-orari.html",
+      "titolo": "Trasporto pubblico, cambiano gli orari delle linee tra Cori e Rocca Massima",
+      "anteprima": "Astral Spa ha annunciato che, a partire da lunedì 30 novembre 2026, entreranno in vigore alcuni aggiornamenti agli orari delle linee CO1CIRC, relativa alla circolare di Cori, e CRMS",
+      "data": "2026-11-28",
+      "testata": "latinatoday",
+      "testataNome": "Latina Today",
+      "logo": "img/testate/latinatoday.png",
+      "comuni": [
+        "cori",
+        "rocca-massima"
+      ]
+    },
+    {
+      "url": "https://www.latinacorriere.it/cisterna-supera-il-72-di-differenziata-a-palazzo-caetani-il-punto-sui-risultati",
+      "titolo": "Cisterna, supera il 72% di differenziata: a Palazzo Caetani il punto sui risultati",
+      "anteprima": "Oltre il 72% di raccolta differenziata, un servizio porta a porta esteso a tutto il territorio comunale e nuovi investimenti in innovazione e organizzazione. Sono i risultati raggiunti da Cisterna Ambiente, al centro dell’evento “Thematic Review…",
+      "data": "2026-11-28",
+      "testata": "latinacorriere",
+      "testataNome": "Latina Corriere",
+      "logo": "img/testate/latinacorriere.png",
+      "comuni": [
+        "cisterna-di-latina"
+      ]
+    },
     {
       "url": "https://www.latinacorriere.it/io-francesco-a-sezze-il-musical-sul-santo-di-assisi",
       "titolo": "“Io Francesco”, a Sezze il musical sul santo di Assisi",
